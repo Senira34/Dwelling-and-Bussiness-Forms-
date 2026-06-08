@@ -1,0 +1,2066 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <title>Private Dwelling House â€” Insurance Proposal Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ["'Playfair Display'", "Georgia", "serif"],
+                        body: ["'Source Sans 3'", "system-ui", "sans-serif"],
+                        mono: ["'JetBrains Mono'", "monospace"],
+                    },
+                    colors: {
+                        navy: {
+                            50: "#f0f4ff",
+                            100: "#dde6ff",
+                            200: "#c0d0ff",
+                            300: "#92adff",
+                            400: "#637dff",
+                            500: "#3d4fff",
+                            600: "#2530f0",
+                            700: "#1c22d6",
+                            800: "#1a1fac",
+                            900: "#1b2087",
+                            950: "#10134f",
+                        },
+                        gold: {
+                            400: "#f6c944",
+                            500: "#e5b320",
+                            600: "#c98f0a",
+                        },
+                        tealCustom: {
+                            50: "#e6f7f8",
+                            100: "#cceff1",
+                            200: "#99dfe3",
+                            300: "#66cfd5",
+                            400: "#33bfc7",
+                            500: "#0d7f8a",
+                            600: "#0b6e78",
+                            700: "#095d66",
+                            800: "#074c54",
+                            900: "#053b42",
+                            950: "#022126",
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        /* Section Toggle Styles */
+        .section-collapsed> :not(.bg-tealCustom-500) {
+            display: none !important;
+        }
+
+        .toggle-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .section-collapsed .toggle-icon {
+            transform: rotate(-90deg);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen font-body text-gray-800">
+    <div id="digital-form-page" class="max-w-4xl mx-auto px-2 py-12">
+        <!-- HEADER -->
+        <div class="bg-tealCustom-500 rounded-2xl overflow-hidden mb-8 print-shadow shadow-xl">
+            <div class="flex items-center justify-center px-8 py-1 border-b border-white/20">
+                <div class="text-center align-items-center">
+                    <h1 class="font-heading text-white text-2xl font-bold tracking-tight mb-2">
+                        Proposal Form Private-Dwelling-Houses
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="bg-amber-50 border border-amber-200 rounded-xl p-2 text-xs text-amber-800 leading-relaxed mb-6 text-center">
+            <strong>Note:</strong> Any misdescription or misrepresentation made in this proposal form is
+            liable to render the policy void.
+        </div>
+
+        <!-- FORM -->
+        <form id="proposalForm" class="space-y-8" onsubmit="return false;">
+            <!-- SECTION A: PROPOSER DETAILS -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
+                <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                    <!-- <span class="w-7 h-7 rounded-full bg-gold-400 text-navy-950 text-xs font-mono font-bold flex items-center justify-center">A</span> -->
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        Proposer Details
+                    </h3>
+                </div>
+                <div class="p-6 space-y-5">
+                    <!-- Row 1 -->
+                    <div class="grid grid-cols-12 gap-4 items-end">
+                        <div class="col-span-1">
+                            <label
+                                class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">No.</label>
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">1</span>
+                            </div>
+                        </div>
+                        <div class="col-span-10">
+                            <label
+                                class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Proposer's
+                                Full
+                                Name</label>
+                            <div class="flex gap-3">
+                                <select
+                                    class="w-28 border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 text-gray-700 font-body">
+                                    <option>Mr.</option>
+                                    <option>Mrs.</option>
+                                    <option>Miss.</option>
+                                    <option>Dr.</option>
+                                </select>
+                                <input type="text"
+                                    class="flex-1 border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="grid grid-cols-12 gap-4 items-end">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">2</span>
+                            </div>
+                        </div>
+                        <div class="col-span-3">
+                            <label
+                                class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">National
+                                Identity
+                                Card No.</label>
+                            <input type="text"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-mono" />
+                        </div>
+                        <div class="col-span-3">
+                            <label
+                                class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Bussiness
+                                Registration
+                                No.</label>
+                            <input type="text"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                        </div>
+                        <div class="col-span-4">
+                            <label
+                                class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Passport
+                                No.</label>
+                            <input type="text"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                        </div>
+                    </div>
+
+                    <!-- Document Upload -->
+                    <div class="grid grid-cols-12 gap-4 items-start mt-2">
+                        <div class="col-span-1"></div>
+                        <div class="col-span-10">
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Upload
+                                Scanned Copies (NIC / BR / Passport)</label>
+                            <input type="file" multiple
+                                class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs font-mono bg-gray-50" />
+                        </div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="grid grid-cols-12 gap-4 items-end">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">3</span>
+                            </div>
+                        </div>
+                        <div class="col-span-4">
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Date
+                                Of Incorporation / Date Of Birth</label>
+                            <input type="date"
+                                class="border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body w-full" />
+                        </div>
+                    </div>
+
+                    <!-- Row 4 (VAT) -->
+                    <div class="grid grid-cols-12 gap-4 items-start">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">4</span>
+                            </div>
+                        </div>
+                        <div class="col-span-10 space-y-3">
+                            <div>
+                                <label
+                                    class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Are
+                                    you a VAT registered entity?</label>
+                                <div class="flex gap-4 mb-2">
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio"
+                                            name="vat_registered" value="yes" class="accent-navy-900" /><span
+                                            class="text-sm">Yes</span></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio"
+                                            name="vat_registered" value="no" class="accent-navy-900" checked /><span
+                                            class="text-sm">No</span></label>
+                                </div>
+                            </div>
+                            <div id="vatDetailsSection" class="hidden grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label
+                                        class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Please
+                                        state your VAT Registration Number:</label>
+                                    <input type="text"
+                                        class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Upload
+                                        VAT Registration Certificate:</label>
+                                    <input type="file"
+                                        class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-mono" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Details of Directors (New Table) -->
+                    <div class="grid grid-cols-12 gap-4 items-start mt-4">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">5</span>
+                            </div>
+                        </div>
+                        <div class="col-span-10">
+                            <label
+                                class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Details
+                                of Directors <span class="text-gray-400 normal-case font-normal">(For corporate
+                                    clients)</span></label>
+                            <table class="w-full border-collapse rounded-lg overflow-hidden">
+                                <thead class="bg-navy-100">
+                                    <tr>
+                                        <th
+                                            class="border border-gray-200 px-3 py-2 text-center text-xs font-semibold text-navy-950">
+                                            Full Names of Directors</th>
+                                        <th
+                                            class="border border-gray-200 px-3 py-2 text-center text-xs font-semibold text-navy-950 w-32">
+                                            Role</th>
+                                        <th
+                                            class="border border-gray-200 px-3 py-2 text-center text-xs font-semibold text-navy-950 w-32">
+                                            Nationality</th>
+                                        <th
+                                            class="border border-gray-200 px-3 py-2 text-center text-xs font-semibold text-navy-950 w-40">
+                                            NIC or Passport Number</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody id="directorsTableBody">
+                                    <tr>
+                                        <td class="border border-gray-200 px-3 py-2 text-xs">
+                                            <input type="text"
+                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        </td>
+                                        <td class="border border-gray-200 px-3 py-2 text-xs">
+                                            <input type="text"
+                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        </td>
+                                        <td class="border border-gray-200 px-3 py-2 text-xs">
+                                            <input type="text"
+                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        </td>
+                                        <td class="border border-gray-200 px-3 py-2 text-xs">
+                                            <input type="text"
+                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-200 px-3 py-2 text-xs">
+                                            <input type="text"
+                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        </td>
+                                        <td class="border border-gray-200 px-3 py-2 text-xs">
+                                            <input type="text"
+                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        </td>
+                                        <td class="border border-gray-200 px-3 py-2 text-xs">
+                                            <input type="text"
+                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        </td>
+                                        <td class="border border-gray-200 px-3 py-2 text-xs">
+                                            <input type="text"
+                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-200 px-3 py-2 text-xs">
+                                            <input type="text"
+                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        </td>
+                                        <td class="border border-gray-200 px-3 py-2 text-xs">
+                                            <input type="text"
+                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        </td>
+                                        <td class="border border-gray-200 px-3 py-2 text-xs">
+                                            <input type="text"
+                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        </td>
+                                        <td class="border border-gray-200 px-3 py-2 text-xs">
+                                            <input type="text"
+                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                    <!-- Row 6 -->
+                    <div class="grid grid-cols-12 gap-4 items-end">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">6</span>
+                            </div>
+                        </div>
+                        <div class="col-span-10">
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Term
+                                of
+                                Insurance</label>
+                            <div class="flex items-center gap-3 flex-wrap">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-xs text-gray-500 font-semibold uppercase">From</span>
+                                    <input type="date"
+                                        class="border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <span class="text-xs text-gray-500 font-semibold uppercase">To</span>
+                                    <input type="date"
+                                        class="border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 7 -->
+                    <div class="grid grid-cols-12 gap-4 items-start">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">7</span>
+                            </div>
+                        </div>
+                        <div class="col-span-10">
+                            <label
+                                class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Personal
+                                Address</label>
+                            <textarea rows="2"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body resize-none "></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Row 8 -->
+                    <div class="grid grid-cols-12 gap-4 items-start">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">8</span>
+                            </div>
+                        </div>
+                        <div class="col-span-10">
+                            <label
+                                class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Business
+                                Address</label>
+                            <textarea rows="2"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body resize-none"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Row 9 -->
+                    <div class="grid grid-cols-12 gap-4 items-end">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">9</span>
+                            </div>
+                        </div>
+                        <div class="col-span-5">
+                            <label
+                                class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Telephone
+                                (Home)</label>
+                            <input type="tel"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                        </div>
+                        <div class="col-span-5">
+                            <label
+                                class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Telephone
+                                (Mobile)</label>
+                            <input type="tel"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                        </div>
+                    </div>
+
+                    <!-- Row 10 (Moved from Q24) -->
+                    <div class="grid grid-cols-12 gap-4 items-start">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">10</span>
+                            </div>
+                        </div>
+                        <div class="col-span-10">
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Are
+                                there any other
+                                circumstance which appear to increase the
+                                risks ?</label>
+                            <div class="flex gap-4 mb-2">
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="risk"
+                                        value="yes" class="accent-navy-900" /><span class="text-sm">Yes</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="risk"
+                                        value="no" class="accent-navy-900" /><span class="text-sm">No</span></label>
+                            </div>
+                            <textarea rows="1"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body resize-none"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Row 11 -->
+                    <div class="grid grid-cols-12 gap-4 items-end">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">11</span>
+                            </div>
+                        </div>
+                        <div class="col-span-5">
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Email
+                                Address</label>
+                            <input type="email"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                        </div>
+                        <div class="col-span-5">
+                            <label
+                                class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Occupation</label>
+                            <input type="text"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                        </div>
+                    </div>
+
+                    <!-- Row 12 (Currency Type) -->
+                    <div class="grid grid-cols-12 gap-4 items-end">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">12</span>
+                            </div>
+                        </div>
+                        <div class="col-span-5">
+                            <label
+                                class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Currency
+                                Type</label>
+                            <input type="text"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                        </div>
+                    </div>
+
+
+
+                    <!-- Row 13 (Multiple Locations) -->
+                    <div class="grid grid-cols-12 gap-4 items-start mt-4">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">13</span>
+                            </div>
+                        </div>
+                        <div class="col-span-10">
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Risk
+                                Locations</label>
+                            <p class="text-xs text-gray-500 mb-2">Define multiple risk locations here. They will be
+                                available in the Sums Insured table below.</p>
+                            <div id="locationsContainer" class="space-y-3">
+                                <div class="location-entry flex gap-2 items-center" data-index="1">
+                                    <span class="text-xs font-semibold text-navy-800 w-20">Location 01</span>
+                                    <input type="text"
+                                        class="location-input flex-1 border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                </div>
+                                <div class="location-entry flex gap-2 items-center" data-index="2">
+                                    <span class="text-xs font-semibold text-navy-800 w-20">Location 02</span>
+                                    <input type="text"
+                                        class="location-input flex-1 border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                </div>
+                                <div class="location-entry flex gap-2 items-center" data-index="3">
+                                    <span class="text-xs font-semibold text-navy-800 w-20">Location 03</span>
+                                    <input type="text"
+                                        class="location-input flex-1 border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Row 14 (Mortgagee Details) -->
+                    <div class="grid grid-cols-12 gap-4 items-start">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">14</span>
+                            </div>
+                        </div>
+                        <div class="col-span-11">
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-4">
+                                Mortgagee Details
+                            </label>
+                            <div class="overflow-x-auto">
+                                <table class="w-full border-collapse rounded-lg overflow-hidden min-w-[700px]">
+                                    <thead class="bg-navy-100 ">
+                                        <tr>
+                                            <th
+                                                class="border border-gray-200 px-3 py-2 text-center text-xs font-semibold text-navy-950">
+                                                Name of the Bank</th>
+                                            <th
+                                                class="border border-gray-200 px-3 py-2 text-center text-xs font-semibold text-navy-950">
+                                                Branch Address</th>
+                                            <th
+                                                class="border border-gray-200 px-3 py-2 text-center text-xs font-semibold text-navy-950">
+                                                Risk Location Address</th>
+                                            <th
+                                                class="border border-gray-200 px-3 py-2 text-center text-xs font-semibold text-navy-950">
+                                                Description of Sum Insured</th>
+                                            <th
+                                                class="border border-gray-200 px-3 py-2 text-center text-xs font-semibold text-navy-950">
+                                                Sum Insured Value</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody id="mortgageeTableBody">
+                                        <tr>
+                                            <td class="border border-gray-200 px-3 py-2 text-xs">
+                                                <select
+                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body">
+                                                    <option value="" disabled selected>Select Bank</option>
+                                                    <option>People's Bank</option>
+                                                    <option>Bank of Ceylon</option>
+                                                    <option>Commercial Bank</option>
+                                                    <option>Hatton National Bank (HNB)</option>
+                                                    <option>Sampath Bank</option>
+                                                    <option>Seylan Bank</option>
+                                                    <option>Other</option>
+                                                </select>
+                                            </td>
+                                            <td class="border border-gray-200 px-3 py-2 text-xs">
+                                                <input type="text"
+                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body" />
+                                            </td>
+                                            <td class="border border-gray-200 px-3 py-2 text-xs">
+                                                <select
+                                                    class="location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body">
+                                                    <option value="">Select Location</option>
+                                                </select>
+                                            </td>
+                                            <td class="border border-gray-200 px-3 py-2 text-xs">
+                                                <input type="text"
+                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body" />
+                                            </td>
+                                            <td class="border border-gray-200 px-3 py-2 text-xs">
+                                                <input type="text"
+                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body" />
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-200 px-3 py-2 text-xs">
+                                                <select
+                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body">
+                                                    <option value="" disabled selected>Select Bank</option>
+                                                    <option>People's Bank</option>
+                                                    <option>Bank of Ceylon</option>
+                                                    <option>Commercial Bank</option>
+                                                    <option>Hatton National Bank (HNB)</option>
+                                                    <option>Sampath Bank</option>
+                                                    <option>Seylan Bank</option>
+                                                    <option>Other</option>
+                                                </select>
+                                            </td>
+                                            <td class="border border-gray-200 px-3 py-2 text-xs">
+                                                <input type="text"
+                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body" />
+                                            </td>
+                                            <td class="border border-gray-200 px-3 py-2 text-xs">
+                                                <select
+                                                    class="location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body">
+                                                    <option value="">Select Location</option>
+                                                </select>
+                                            </td>
+                                            <td class="border border-gray-200 px-3 py-2 text-xs">
+                                                <input type="text"
+                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body" />
+                                            </td>
+                                            <td class="border border-gray-200 px-3 py-2 text-xs">
+                                                <input type="text"
+                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body" />
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-200 px-3 py-2 text-xs">
+                                                <select
+                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body">
+                                                    <option value="" disabled selected>Select Bank</option>
+                                                    <option>People's Bank</option>
+                                                    <option>Bank of Ceylon</option>
+                                                    <option>Commercial Bank</option>
+                                                    <option>Hatton National Bank (HNB)</option>
+                                                    <option>Sampath Bank</option>
+                                                    <option>Seylan Bank</option>
+                                                    <option>Other</option>
+                                                </select>
+                                            </td>
+                                            <td class="border border-gray-200 px-3 py-2 text-xs">
+                                                <input type="text"
+                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body" />
+                                            </td>
+                                            <td class="border border-gray-200 px-3 py-2 text-xs">
+                                                <select
+                                                    class="location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body">
+                                                    <option value="">Select Location</option>
+                                                </select>
+                                            </td>
+                                            <td class="border border-gray-200 px-3 py-2 text-xs">
+                                                <input type="text"
+                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body" />
+                                            </td>
+                                            <td class="border border-gray-200 px-3 py-2 text-xs">
+                                                <input type="text"
+                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body" />
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Row 15 -->
+                    <div class="grid grid-cols-12 gap-4 items-start mt-4">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">15</span>
+                            </div>
+                        </div>
+                        <div class="col-span-10">
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Are
+                                you a
+                                Politically Exposed Person (PEP)?</label>
+                            <div class="flex gap-4 mb-2">
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="pep"
+                                        value="yes" class="accent-navy-900" /><span class="text-sm">Yes</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="pep"
+                                        value="no" class="accent-navy-900" /><span class="text-sm">No</span></label>
+                            </div>
+                            <textarea rows="1"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body resize-none"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION B: PROPERTY DETAILS -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
+                <div class="bg-tealCustom-500 px-6 py-2 flex items-center gap-3">
+                    <!-- <span class="w-7 h-7 rounded-full bg-gold-400 text-navy-950 text-xs font-mono font-bold flex items-center justify-center">B</span> -->
+                    <h3 class="font-heading text-white text-mdX font-semibold">
+                        Property to be Insured
+                    </h3>
+                </div>
+                <div class="px-6 py-3 bg-navy-50 border-b border-navy-100">
+                    <p class="text-xs text-navy-700 italic">
+                        The description of the building must be given even if the building
+                        is not to be insured.
+                    </p>
+                </div>
+                <div class="p-6 space-y-5">
+                    <!-- Row 11 -->
+                    <div class="grid grid-cols-12 gap-4 items-start">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">11</span>
+                            </div>
+                        </div>
+                        <div class="col-span-10">
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Full
+                                Address of
+                                Premises to be Insured</label>
+                            <textarea rows="2"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body resize-none"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Row 12 -->
+                    <div class="grid grid-cols-12 gap-4 items-end">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">12</span>
+                            </div>
+                        </div>
+                        <div class="col-span-10">
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Name
+                                of Land
+                                <span class="text-gray-400 font-normal normal-case">(if any)</span></label>
+                            <input type="text"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                        </div>
+                    </div>
+
+                    <!-- Row 13 -->
+                    <div class="grid grid-cols-12 gap-4 items-start">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">13</span>
+                            </div>
+                        </div>
+                        <div class="col-span-10">
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Of
+                                what materials
+                                are the Walls Constructed?</label>
+                            <div class="flex flex-wrap gap-4 items-center mb-2">
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                        class="accent-navy-900" /> <span class="text-xs">Bricks</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                        class="accent-navy-900" /> <span class="text-xs">Cement blocks</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                        class="accent-navy-900" /> <span class="text-xs">Concrete</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                        class="accent-navy-900" /> <span class="text-xs">Amano sheets</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                        class="accent-navy-900" /> <span class="text-xs">Other</span></label>
+                            </div>
+                            <input type="text" id="wallOtherInput"
+                                class="hidden w-full max-w-sm border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                        </div>
+                    </div>
+
+                    <!-- Row 14 -->
+                    <div class="grid grid-cols-12 gap-4 items-start">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">14</span>
+                            </div>
+                        </div>
+                        <div class="col-span-10">
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Of
+                                what materials
+                                are the Roof Constructed?</label>
+                            <div class="flex flex-wrap gap-4 items-center mb-2">
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                        class="accent-navy-900" /> <span class="text-xs">Roofing Tiles</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                        class="accent-navy-900" /> <span class="text-xs">Asbestos sheets</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                        class="accent-navy-900" /> <span class="text-xs">Amano sheets</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                        class="accent-navy-900" /> <span class="text-xs">Iron Sheets</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                        class="accent-navy-900" /> <span class="text-xs">Other</span></label>
+                            </div>
+                            <input type="text" id="roofOtherInput"
+                                class="hidden w-full max-w-sm border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                        </div>
+                    </div>
+
+                    <!-- Row 15 -->
+                    <div class="grid grid-cols-12 gap-4 items-end">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">15</span>
+                            </div>
+                        </div>
+                        <div class="col-span-4">
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Number
+                                of floors
+                                <span class="text-gray-400 font-normal normal-case">(incl. Ground Floor)</span></label>
+                            <input type="text"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                        </div>
+                    </div>
+
+                    <!-- Row 16-17 -->
+                    <div class="grid grid-cols-12 gap-4 items-start">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">16</span>
+                            </div>
+                        </div>
+                        <div class="col-span-4">
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Is the
+                                Building
+                                Under Construction?</label>
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio"
+                                        name="construction" value="yes" class="accent-navy-900" /><span
+                                        class="text-sm">Yes</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio"
+                                        name="construction" value="no" class="accent-navy-900" /><span
+                                        class="text-sm">No</span></label>
+                            </div>
+                        </div>
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">17</span>
+                            </div>
+                        </div>
+                        <div class="col-span-4">
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">
+                                If Completed and occupied, state Name of Occupant?</label>
+                            <input type="text"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                        </div>
+                    </div>
+
+                    <!-- Row 18 -->
+                    <div class="grid grid-cols-12 gap-4 items-start">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">18</span>
+                            </div>
+                        </div>
+                        <div class="col-span-10 space-y-3">
+                            <div>
+                                <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">
+                                    Are there or have there been any insurance on the same
+                                    property in force with Sri Lanka Insurance Corporation
+                                    General Ltd. or any other insurer. If so the policy No and
+                                    the Name of Insurer?<span class="text-gray-400 font-normal normal-case">
+                                    </span>
+                                </label>
+                                <textarea rows="2"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 font-body resize-none"></textarea>
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Has
+                                    the risk, or
+                                    any part thereof, been declined by any
+                                    insurer or imposed special terms or refused renewal?</label>
+                                <div class="flex gap-4 mb-2">
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio"
+                                            name="declined" value="yes" class="accent-navy-900" /><span
+                                            class="text-sm">Yes</span></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio"
+                                            name="declined" value="no" class="accent-navy-900" /><span
+                                            class="text-sm">No</span></label>
+                                </div>
+                                <textarea rows="1"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body resize-none"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 19 -->
+                    <div class="grid grid-cols-12 gap-4 items-end">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">19</span>
+                            </div>
+                        </div>
+                        <div class="col-span-10">
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">How is
+                                the Building
+                                Lighted?</label>
+                            <input type="text"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                        </div>
+                    </div>
+
+                    <!-- Row 20 -->
+                    <div class="grid grid-cols-12 gap-4 items-start">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">20</span>
+                            </div>
+                        </div>
+                        <div class="col-span-10 space-y-3">
+                            <div>
+                                <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">
+                                    Are there any other buildings within radius of 30ft. of the
+                                    property to be insured?</label>
+                                <div class="flex gap-4">
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio"
+                                            name="nearby" value="yes" class="accent-navy-900" /><span
+                                            class="text-sm">Yes</span></label>
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio"
+                                            name="nearby" value="no" class="accent-navy-900" /><span
+                                            class="text-sm">No</span></label>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">If
+                                    Yes â€” describe
+                                    construction of walls, roofs and
+                                    occupation</label>
+                                <textarea rows="2"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body resize-none"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 21 -->
+                    <div class="grid grid-cols-12 gap-4 items-start">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">21</span>
+                            </div>
+                        </div>
+                        <div class="col-span-10 space-y-3">
+                            <div>
+                                <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">
+                                    Have you ever had any property been damaged or loss by fire
+                                    or by any other peril againt which cover is required?</label>
+                                <textarea rows="2"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body resize-none"></textarea>
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Have
+                                    you at any
+                                    time had occasion to make a claim for loss
+                                    or damaged by fire or by any other peril against which cover
+                                    is required?</label>
+                                <textarea rows="2"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body resize-none"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 22 -->
+                    <div class="grid grid-cols-12 gap-4 items-start">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">22</span>
+                            </div>
+                        </div>
+                        <div class="col-span-10">
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">
+                                Is the policy to be on Reinstatement value basis in respect of
+                                property excluding clothing and building under construction ?
+                                <span class="block text-gray-400 font-normal normal-case text-xs mt-0.5">(The Sum
+                                    insured at all times
+                                    should be the cost of
+                                    reinstatement/replacement of the property likely to be
+                                    icurred at least during the next 12 months)</span>
+                            </label>
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio"
+                                        name="reinstatement" value="yes" class="accent-navy-900" /><span
+                                        class="text-sm">Yes</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio"
+                                        name="reinstatement" value="no" class="accent-navy-900" /><span
+                                        class="text-sm">No</span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 23 -->
+                    <div class="grid grid-cols-12 gap-4 items-start">
+                        <div class="col-span-1">
+                            <div class="h-10 flex items-center">
+                                <span class="text-sm font-mono text-navy-700 font-semibold">23 </span>
+                            </div>
+                        </div>
+                        <div class="col-span-10">
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">If the
+                                building used
+                                solely as a private dwelling house
+                                ?</label>
+                            <div class="flex gap-4 mb-2">
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio"
+                                        name="dwelling" value="yes" class="accent-navy-900" /><span
+                                        class="text-sm">Yes</span></label>
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio"
+                                        name="dwelling" value="no" class="accent-navy-900" /><span
+                                        class="text-sm">No</span></label>
+                            </div>
+                            <textarea rows="1"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body resize-none"></textarea>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+            <!-- SECTION C: SUMS INSURED -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
+                <div class="bg-tealCustom-500 px-6 py-2 flex items-center gap-3">
+                    <!-- <span class="w-7 h-7 rounded-full bg-gold-400 text-navy-950 text-xs font-mono font-bold flex items-center justify-center">C</span> -->
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        Sums to be Insured
+                    </h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm" id="sumsInsuredTable">
+                        <thead>
+                            <tr class="bg-navy-50 border-b border-navy-100">
+                                <th
+                                    class="px-4 py-3 text-center text-xs font-semibold text-navy-700 uppercase tracking-wide w-12">
+                                    Item</th>
+                                <th
+                                    class="px-2 py-3 text-center text-xs font-semibold text-navy-700 uppercase tracking-wide w-32">
+                                    Location</th>
+                                <th
+                                    class="px-4 py-3 text-center text-xs font-semibold text-navy-700 uppercase tracking-wide">
+                                    Property to be Insured</th>
+                                <th
+                                    class="px-4 py-3 text-center text-xs font-semibold text-navy-700 uppercase tracking-wide w-48">
+                                    Sum Insured (LKR.)</th>
+                                <th
+                                    class="px-2 py-3 text-center text-xs font-semibold text-navy-700 uppercase tracking-wide w-10">
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="sumsInsuredTableBody" class="divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-4 py-3 font-mono text-navy-600 text-xs font-semibold text-center">
+                                    (i)
+                                </td>
+                                <td class="px-2 py-3">
+                                    <select
+                                        class="location-dropdown w-full border border-gray-200 rounded-lg px-1 py-1.5 text-xs bg-gray-50 font-body">
+                                        <option value="">Select</option>
+                                    </select>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <input type="text"
+                                        value="On the building of private dwelling house including permanant fixtures and fittings"
+                                        class="w-full bg-transparent border border-transparent hover:border-gray-200 text-xs text-gray-700 font-body px-2 py-1.5 rounded-lg focus:bg-white focus:border-navy-300 focus:ring-1 focus:ring-navy-200 outline-none transition-all" />
+                                </td>
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-xs text-gray-400 font-mono">LKR.</span>
+                                        <input type="text"
+                                            class="w-36 border border-gray-200 rounded-lg px-3 py-1.5 text-xs bg-gray-50 font-mono text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-2 py-3 text-center">
+                                    <button type="button" class="text-gray-400 hover:text-red-500 transition-colors"
+                                        title="Remove Row">
+                                        <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-4 py-3 font-mono text-navy-600 text-xs font-semibold text-center">
+                                    (ii)
+                                </td>
+                                <td class="px-2 py-3">
+                                    <select
+                                        class="location-dropdown w-full border border-gray-200 rounded-lg px-1 py-1.5 text-xs bg-gray-50 font-body">
+                                        <option value="">Select</option>
+                                    </select>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <input type="text" value="On boundary walls and gates"
+                                        class="w-full bg-transparent border border-transparent hover:border-gray-200 text-xs text-gray-700 font-body px-2 py-1.5 rounded-lg focus:bg-white focus:border-navy-300 focus:ring-1 focus:ring-navy-200 outline-none transition-all" />
+                                </td>
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-xs text-gray-400 font-mono">LKR.</span>
+                                        <input type="text"
+                                            class="w-36 border border-gray-200 rounded-lg px-3 py-1.5 text-sm bg-gray-50 font-mono text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-2 py-3 text-center">
+                                    <button type="button" class="text-gray-400 hover:text-red-500 transition-colors"
+                                        title="Remove Row">
+                                        <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-4 py-3 font-mono text-navy-600 text-xs font-semibold text-center">
+                                    (iii)
+                                </td>
+                                <td class="px-2 py-3">
+                                    <select
+                                        class="location-dropdown w-full border border-gray-200 rounded-lg px-1 py-1.5 text-xs bg-gray-50 font-body">
+                                        <option value="">Select</option>
+                                    </select>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <input type="text"
+                                        value="On house hold furniture and electrical items etc. (Any articles other than furniture must be separately declared with values)"
+                                        class="w-full bg-transparent border border-transparent hover:border-gray-200 text-xs text-gray-700 font-body px-2 py-1.5 rounded-lg focus:bg-white focus:border-navy-300 focus:ring-1 focus:ring-navy-200 outline-none transition-all" />
+                                </td>
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-xs text-gray-400 font-mono">LKR.</span>
+                                        <input type="text"
+                                            class="w-36 border border-gray-200 rounded-lg px-3 py-1.5 text-sm bg-gray-50 font-mono text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-2 py-3 text-center">
+                                    <button type="button" class="text-gray-400 hover:text-red-500 transition-colors"
+                                        title="Remove Row">
+                                        <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-4 py-3 font-mono text-navy-600 text-xs font-semibold text-center">
+                                    (iv)
+                                </td>
+                                <td class="px-2 py-3">
+                                    <select
+                                        class="location-dropdown w-full border border-gray-200 rounded-lg px-1 py-1.5 text-xs bg-gray-50 font-body">
+                                        <option value="">Select</option>
+                                    </select>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <input type="text" value="On personal effects"
+                                        class="w-full bg-transparent border border-transparent hover:border-gray-200 text-xs text-gray-700 font-body px-2 py-1.5 rounded-lg focus:bg-white focus:border-navy-300 focus:ring-1 focus:ring-navy-200 outline-none transition-all" />
+                                </td>
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-xs text-gray-400 font-mono">LKR.</span>
+                                        <input type="text"
+                                            class="w-36 border border-gray-200 rounded-lg px-3 py-1.5 text-sm bg-gray-50 font-mono text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-2 py-3 text-center">
+                                    <button type="button" class="text-gray-400 hover:text-red-500 transition-colors"
+                                        title="Remove Row">
+                                        <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-4 py-3 font-mono text-navy-600 text-xs font-semibold text-center">
+                                    (v)
+                                </td>
+                                <td class="px-2 py-3">
+                                    <select
+                                        class="location-dropdown w-full border border-gray-200 rounded-lg px-1 py-1.5 text-xs bg-gray-50 font-body">
+                                        <option value="">Select</option>
+                                    </select>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <input type="text" value="On Architectural fees"
+                                        class="w-full bg-transparent border border-transparent hover:border-gray-200 text-xs text-gray-700 font-body px-2 py-1.5 rounded-lg focus:bg-white focus:border-navy-300 focus:ring-1 focus:ring-navy-200 outline-none transition-all" />
+                                </td>
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-xs text-gray-400 font-mono">LKR.</span>
+                                        <input type="text"
+                                            class="w-36 border border-gray-200 rounded-lg px-3 py-1.5 text-sm bg-gray-50 font-mono text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-2 py-3 text-center">
+                                    <button type="button" class="text-gray-400 hover:text-red-500 transition-colors"
+                                        title="Remove Row">
+                                        <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-4 py-3 font-mono text-navy-600 text-xs font-semibold text-center">
+                                    (vi)
+                                </td>
+                                <td class="px-2 py-3">
+                                    <select
+                                        class="location-dropdown w-full border border-gray-200 rounded-lg px-1 py-1.5 text-xs bg-gray-50 font-body">
+                                        <option value="">Select</option>
+                                    </select>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <input type="text" value="On removal of debris"
+                                        class="w-full bg-transparent border border-transparent hover:border-gray-200 text-xs text-gray-700 font-body px-2 py-1.5 rounded-lg focus:bg-white focus:border-navy-300 focus:ring-1 focus:ring-navy-200 outline-none transition-all" />
+                                </td>
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-xs text-gray-400 font-mono">LKR.</span>
+                                        <input type="text"
+                                            class="w-36 border border-gray-200 rounded-lg px-3 py-1.5 text-sm bg-gray-50 font-mono text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-2 py-3 text-center">
+                                    <button type="button" class="text-gray-400 hover:text-red-500 transition-colors"
+                                        title="Remove Row">
+                                        <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-4 py-3 font-mono text-navy-600 text-xs font-semibold text-center">
+                                    (vii)
+                                </td>
+                                <td class="px-2 py-3">
+                                    <select
+                                        class="location-dropdown w-full border border-gray-200 rounded-lg px-1 py-1.5 text-xs bg-gray-50 font-body">
+                                        <option value="">Select</option>
+                                    </select>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <input type="text" value="Loss of Rent/Cost of Alternative Accommodation"
+                                        class="w-full bg-transparent border border-transparent hover:border-gray-200 text-xs text-gray-700 font-body px-2 py-1.5 rounded-lg focus:bg-white focus:border-navy-300 focus:ring-1 focus:ring-navy-200 outline-none transition-all" />
+                                </td>
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-xs text-gray-400 font-mono">LKR.</span>
+                                        <input type="text"
+                                            class="w-36 border border-gray-200 rounded-lg px-3 py-1.5 text-sm bg-gray-50 font-mono text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-2 py-3 text-center">
+                                    <button type="button" class="text-gray-400 hover:text-red-500 transition-colors"
+                                        title="Remove Row">
+                                        <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-4 py-3 font-mono text-navy-600 text-xs font-semibold text-center">
+                                    (viii)
+                                </td>
+                                <td class="px-2 py-3">
+                                    <select
+                                        class="location-dropdown w-full border border-gray-200 rounded-lg px-1 py-1.5 text-xs bg-gray-50 font-body">
+                                        <option value="">Select</option>
+                                    </select>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <input type="text" value="Generators / Elevators / Escalators"
+                                        class="w-full bg-transparent border border-transparent hover:border-gray-200 text-xs text-gray-700 font-body px-2 py-1.5 rounded-lg focus:bg-white focus:border-navy-300 focus:ring-1 focus:ring-navy-200 outline-none transition-all" />
+                                </td>
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-xs text-gray-400 font-mono">LKR.</span>
+                                        <input type="text"
+                                            class="w-36 border border-gray-200 rounded-lg px-3 py-1.5 text-sm bg-gray-50 font-mono text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-2 py-3 text-center">
+                                    <button type="button" class="text-gray-400 hover:text-red-500 transition-colors"
+                                        title="Remove Row">
+                                        <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="px-4 py-3 font-mono text-navy-600 text-xs font-semibold text-center">
+                                    (ix)
+                                </td>
+                                <td class="px-2 py-3">
+                                    <select
+                                        class="location-dropdown w-full border border-gray-200 rounded-lg px-1 py-1.5 text-xs bg-gray-50 font-body">
+                                        <option value="">Select</option>
+                                    </select>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <input type="text"
+                                        value="On Solar power panels/ Solar power systems &amp; other accessories"
+                                        class="w-full bg-transparent border border-transparent hover:border-gray-200 text-xs text-gray-700 font-body px-2 py-1.5 rounded-lg focus:bg-white focus:border-navy-300 focus:ring-1 focus:ring-navy-200 outline-none transition-all" />
+                                </td>
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-xs text-gray-400 font-mono">LKR.</span>
+                                        <input type="text"
+                                            class="w-36 border border-gray-200 rounded-lg px-3 py-1.5 text-sm bg-gray-50 font-mono text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-2 py-3 text-center">
+                                    <button type="button" class="text-gray-400 hover:text-red-500 transition-colors"
+                                        title="Remove Row">
+                                        <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="bg-navy-50 border-t-2 border-navy-200">
+                                <td class="px-4 py-3" colspan="3">
+                                    <span class="text-sm font-semibold text-navy-950 uppercase tracking-wide">Total Sum
+                                        Insured</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-xs text-navy-600 font-mono font-semibold">LKR.</span>
+                                        <input type="text" id="totalSum" readonly
+                                            class="w-36 border border-navy-200 rounded-lg px-3 py-1.5 text-sm bg-navy-50 font-mono font-semibold text-right text-navy-900 cursor-default" />
+                                    </div>
+                                </td>
+                                <td class="px-2 py-3"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="p-3 flex justify-end border-t border-gray-100">
+                        <button type="button"
+                            class="bg-navy-50 text-navy-700 border border-navy-200 hover:bg-navy-100 hover:text-navy-800 text-xs font-semibold px-4 py-1.5 rounded-lg flex items-center gap-2 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 4v16m8-8H4"></path>
+                            </svg>
+                            Add Row
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION D: ADDITIONAL COVERS -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
+                <div class="bg-tealCustom-500 px-6 py-2 flex items-center gap-3">
+                    <!-- <span
+              class="w-7 h-7 rounded-full bg-gold-400 text-navy-950 text-xs font-mono font-bold flex items-center justify-center"
+              >D</span
+            > -->
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        Peril Covers
+                    </h3>
+                    <span class="ml-auto text-white text-xs font-mono"></span>
+                </div>
+                <div class="p-6">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        <!-- Each cover as a toggle card -->
+                        <label
+                            class="flex items-center gap-3 border border-gray-200 rounded-xl px-4 py-3 cursor-pointer hover:border-navy-300 hover:bg-navy-50 transition-all has-[:checked]:border-navy-700 has-[:checked]:bg-navy-50">
+                            <input type="checkbox" class="accent-navy-900 w-4 h-4" />
+                            <span class="text-sm text-gray-700">Riot &amp; Strike</span>
+                        </label>
+                        <label
+                            class="flex items-center gap-3 border border-gray-200 rounded-xl px-4 py-3 cursor-pointer hover:border-navy-300 hover:bg-navy-50 transition-all has-[:checked]:border-navy-700 has-[:checked]:bg-navy-50">
+                            <input type="checkbox" class="accent-navy-900 w-4 h-4" />
+                            <span class="text-sm text-gray-700">Malicious Damage</span>
+                        </label>
+                        <label
+                            class="flex items-center gap-3 border border-gray-200 rounded-xl px-4 py-3 cursor-pointer hover:border-navy-300 hover:bg-navy-50 transition-all has-[:checked]:border-navy-700 has-[:checked]:bg-navy-50">
+                            <input type="checkbox" class="accent-navy-900 w-4 h-4" />
+                            <span class="text-sm text-gray-700">Terrorism</span>
+                        </label>
+                        <label
+                            class="flex items-center gap-3 border border-gray-200 rounded-xl px-4 py-3 cursor-pointer hover:border-navy-300 hover:bg-navy-50 transition-all has-[:checked]:border-navy-700 has-[:checked]:bg-navy-50">
+                            <input type="checkbox" class="accent-navy-900 w-4 h-4" />
+                            <span class="text-sm text-gray-700">Explosion</span>
+                        </label>
+                        <label
+                            class="flex items-center gap-3 border border-gray-200 rounded-xl px-4 py-3 cursor-pointer hover:border-navy-300 hover:bg-navy-50 transition-all has-[:checked]:border-navy-700 has-[:checked]:bg-navy-50">
+                            <input type="checkbox" class="accent-navy-900 w-4 h-4" />
+                            <span class="text-sm text-gray-700">Cyclone / Storm / Tempest</span>
+                        </label>
+                        <label
+                            class="flex items-center gap-3 border border-gray-200 rounded-xl px-4 py-3 cursor-pointer hover:border-navy-300 hover:bg-navy-50 transition-all has-[:checked]:border-navy-700 has-[:checked]:bg-navy-50">
+                            <input type="checkbox" class="accent-navy-900 w-4 h-4" />
+                            <span class="text-sm text-gray-700">Flood</span>
+                        </label>
+                        <label
+                            class="flex items-center gap-3 border border-gray-200 rounded-xl px-4 py-3 cursor-pointer hover:border-navy-300 hover:bg-navy-50 transition-all has-[:checked]:border-navy-700 has-[:checked]:bg-navy-50">
+                            <input type="checkbox" class="accent-navy-900 w-4 h-4" />
+                            <span class="text-sm text-gray-700">Earthquake (Fire &amp; Shock)</span>
+                        </label>
+                        <label
+                            class="flex items-center gap-3 border border-gray-200 rounded-xl px-4 py-3 cursor-pointer hover:border-navy-300 hover:bg-navy-50 transition-all has-[:checked]:border-navy-700 has-[:checked]:bg-navy-50">
+                            <input type="checkbox" class="accent-navy-900 w-4 h-4" />
+                            <span class="text-sm text-gray-700">Natural Disasters</span>
+                        </label>
+                        <label
+                            class="flex items-center gap-3 border border-gray-200 rounded-xl px-4 py-3 cursor-pointer hover:border-navy-300 hover:bg-navy-50 transition-all has-[:checked]:border-navy-700 has-[:checked]:bg-navy-50">
+                            <input type="checkbox" class="accent-navy-900 w-4 h-4" />
+                            <span class="text-sm text-gray-700">Impact Damage</span>
+                        </label>
+                        <label
+                            class="flex items-center gap-3 border border-gray-200 rounded-xl px-4 py-3 cursor-pointer hover:border-navy-300 hover:bg-navy-50 transition-all has-[:checked]:border-navy-700 has-[:checked]:bg-navy-50">
+                            <input type="checkbox" class="accent-navy-900 w-4 h-4" />
+                            <span class="text-sm text-gray-700">Aircraft Damage</span>
+                        </label>
+                        <label
+                            class="flex items-center gap-3 border border-gray-200 rounded-xl px-4 py-3 cursor-pointer hover:border-navy-300 hover:bg-navy-50 transition-all has-[:checked]:border-navy-700 has-[:checked]:bg-navy-50 col-span-2 sm:col-span-1">
+                            <input type="checkbox" class="accent-navy-900 w-4 h-4 shrink-0" />
+                            <span class="text-sm text-gray-700">Bursting and overflowing of water tank apparatus or
+                                pipes</span>
+                        </label>
+                        <label
+                            class="flex items-center gap-3 border border-gray-200 rounded-xl px-4 py-3 cursor-pointer hover:border-navy-300 hover:bg-navy-50 transition-all has-[:checked]:border-navy-700 has-[:checked]:bg-navy-50">
+                            <input type="checkbox" class="accent-navy-900 w-4 h-4" />
+                            <span class="text-sm text-gray-700">Electrical Extra</span>
+                        </label>
+                        <label
+                            class="flex items-center gap-3 border border-gray-200 rounded-xl px-4 py-3 cursor-pointer hover:border-navy-300 hover:bg-navy-50 transition-all has-[:checked]:border-navy-700 has-[:checked]:bg-navy-50">
+                            <input type="checkbox" class="accent-navy-900 w-4 h-4" />
+                            <span class="text-sm text-gray-700">Architectural Fees</span>
+                        </label>
+                        <label
+                            class="flex items-center gap-3 border border-gray-200 rounded-xl px-4 py-3 cursor-pointer hover:border-navy-300 hover:bg-navy-50 transition-all has-[:checked]:border-navy-700 has-[:checked]:bg-navy-50">
+                            <input type="checkbox" class="accent-navy-900 w-4 h-4" />
+                            <span class="text-sm text-gray-700">Removal of Debris</span>
+                        </label>
+                    </div>
+
+                    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Extensions -->
+                        <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 shadow-sm">
+                            <div class="flex items-center gap-3 mb-3">
+
+                                <h3 class="font-heading text-blue-900 text-base font-bold">
+                                    Extensions
+                                </h3>
+                            </div>
+                            <p class="text-xs text-blue-800 leading-relaxed mb-3 font-bold">
+                                Additional coverage extensions will be automatically applied based on your final
+                                quotation parameters.
+                            </p>
+                            <div
+                                class="bg-white/60 rounded-lg p-3 text-xs text-blue-900 border border-blue-100 flex items-start gap-2">
+                                <svg class="w-4 h-4 text-blue-600 shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span><span class="font-semibold">Note:</span> Specific extensions are determined by the
+                                    selected premium plan and property type <span class="font-bold">as per the
+                                        quotation</span>.</span>
+                            </div>
+                        </div>
+
+                        <!-- Clauses -->
+                        <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 shadow-sm">
+                            <div class="flex items-center gap-3 mb-3">
+
+                                <h3 class="font-heading text-blue-900 text-base font-bold">
+                                    Clauses
+                                </h3>
+                            </div>
+                            <p class="text-xs text-blue-800 leading-relaxed mb-3 font-bold">
+                                Standard policy clauses and coverage conditions are governed by the approved quotation
+                                terms.
+                            </p>
+                            <div
+                                class="bg-white/60 rounded-lg p-3 text-xs text-blue-900 border border-blue-100 flex items-start gap-2">
+                                <svg class="w-4 h-4 text-blue-600 shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span><span class="font-semibold">Note:</span> Please refer to the final quotation
+                                    document for the comprehensive and legally binding list of clauses.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION F: Select Premium Plans -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
+                <div class="bg-tealCustom-500 px-6 py-2 flex items-center gap-3">
+                    <!-- <span class="w-7 h-7 rounded-full bg-gold-400 text-navy-950 text-xs font-mono font-bold flex items-center justify-center">F</span> -->
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        Select Premium Plans
+                    </h3>
+                </div>
+                <div class="p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                        <!-- Plan 1 -->
+                        <label
+                            class="relative flex flex-col p-6 border-2 border-gray-200 rounded-2xl cursor-pointer hover:border-tealCustom-300 hover:bg-tealCustom-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl has-[:checked]:border-tealCustom-600 has-[:checked]:bg-tealCustom-50/50 group bg-white">
+                            <input type="radio" name="premium_plan" value="Premium with SRCC & Terrorism"
+                                class="peer sr-only" />
+                            <div
+                                class="absolute -top-3 left-1/2 -translate-x-1/2 bg-tealCustom-600 text-white text-[10px] font-bold uppercase tracking-wider py-1 px-3 rounded-full shadow-sm">
+                                Recommended
+                            </div>
+                            <!-- <div class="flex justify-between items-start mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-tealCustom-100 flex items-center justify-center text-tealCustom-600 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-shield-alt text-xl"></i>
+                                </div>
+                                <div
+                                    class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center peer-checked:border-tealCustom-600 peer-checked:bg-tealCustom-600 transition-colors">
+                                    <i class="fas fa-check text-white text-xs opacity-0 peer-checked:opacity-100"></i>
+                                </div>
+                            </div> -->
+                            <!-- <h3 class="font-bold text-navy-900 text-lg mb-1 group-hover:text-tealCustom-700 transition-colors">Comprehensive</h3> -->
+                            <div class="font-semibold text-tealCustom-900 text-sm mb-3 text-xl">SRCC &amp; Terrorism
+                            </div>
+                            <div class="text-2xl font-bold text-navy-900 mb-3">Rs. 30,000<span
+                                    class="text-xs text-gray-500 font-normal"> /yr</span></div>
+                            <p class="text-xs text-gray-500 leading-relaxed mt-auto">
+                                Full protection including Strikes, Riots, Civil Commotion, and Terrorism coverage.
+                            </p>
+                        </label>
+
+                        <!-- Plan 2 -->
+                        <label
+                            class="relative flex flex-col p-6 border-2 border-gray-200 rounded-2xl cursor-pointer hover:border-tealCustom-300 hover:bg-tealCustom-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl has-[:checked]:border-tealCustom-600 has-[:checked]:bg-tealCustom-50/50 group bg-white">
+                            <input type="radio" name="premium_plan" value="Premium with SRCC Only"
+                                class="peer sr-only" />
+                            <!-- <div class="flex justify-between items-start mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-bolt text-xl"></i>
+                                </div>
+                                <div
+                                    class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center peer-checked:border-tealCustom-600 peer-checked:bg-tealCustom-600 transition-colors">
+                                    <i class="fas fa-check text-white text-xs opacity-0 peer-checked:opacity-100"></i>
+                                </div>
+                            </div> -->
+                            <!-- <h3 class="font-bold text-navy-900 text-lg mb-1 group-hover:text-blue-700 transition-colors">Standard</h3> -->
+                            <div class="font-semibold text-blue-900 text-sm mb-3 text-xl">SRCC Only</div>
+                            <div class="text-2xl font-bold text-navy-900 mb-3">Rs. 25,000<span
+                                    class="text-xs text-gray-500 font-normal"> /yr</span></div>
+                            <p class="text-xs text-gray-500 leading-relaxed mt-auto">
+                                Coverage includes Strikes, Riots, and Civil Commotion. Excludes Terrorism.
+                            </p>
+                        </label>
+
+                        <!-- Plan 3 -->
+                        <label
+                            class="relative flex flex-col p-6 border-2 border-gray-200 rounded-2xl cursor-pointer hover:border-tealCustom-300 hover:bg-tealCustom-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl has-[:checked]:border-tealCustom-600 has-[:checked]:bg-tealCustom-50/50 group bg-white">
+                            <input type="radio" name="premium_plan" value="Basic Premium (No SRCC & Terrorism)"
+                                class="peer sr-only" />
+                            <!-- <div class="flex justify-between items-start mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-home text-xl"></i>
+                                </div>
+                                <div
+                                    class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center peer-checked:border-tealCustom-600 peer-checked:bg-tealCustom-600 transition-colors">
+                                    <i class="fas fa-check text-white text-xs opacity-0 peer-checked:opacity-100"></i>
+                                </div>
+                            </div> -->
+                            <!-- <h3 class="font-bold text-navy-900 text-lg mb-1 group-hover:text-gray-700 transition-colors">Basic</h3> -->
+                            <div class="font-semibold text-xl text-gray-700 text-sm mb-3">Without SRCC &amp; Terrorism
+                            </div>
+                            <div class="text-2xl font-bold text-navy-900 mb-3">Rs. 18,000<span
+                                    class="text-xs text-gray-500 font-normal"> /yr</span></div>
+                            <p class="text-xs text-gray-500 leading-relaxed mt-auto">
+                                Standard fire coverage. Does not include SRCC or Terrorism protection.
+                            </p>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION E: GROUND PLAN -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
+                <div class="bg-tealCustom-500 px-6 py-2 flex items-center gap-3">
+                    <!-- <span class="w-7 h-7 rounded-full bg-gold-400 text-navy-950 text-xs font-mono font-bold flex items-center justify-center">E</span> -->
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        Ground Plan of Premises
+                    </h3>
+                </div>
+                <div class="p-6">
+                    <p class="text-xs text-gray-500 mb-4">
+                        Ground Plan of the Premises to be insured (Please indicate the
+                        dimensions of the buildings and distances between them.)
+                    </p>
+                    <div
+                        class="border-2 border-dashed border-gray-200 rounded-xl h-64 flex flex-col items-center justify-center gap-3 bg-gray-50 cursor-pointer hover:border-navy-300 hover:bg-navy-50 transition-all">
+                        <svg class="w-10 h-10 text-gray-300" fill="none" stroke="currentColor" stroke-width="1.5"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M13.5 12h.008v.008H13.5V12zm0 0v-.008m0 .008A7.5 7.5 0 1021 12H3A7.5 7.5 0 0013.5 12z" />
+                        </svg>
+                        <div class="text-center">
+                            <p class="text-sm text-gray-500 font-semibold">
+                                Upload Ground Plan
+                            </p>
+                            <p class="text-xs text-gray-400">
+                                or draw/attach a sketch â€” PNG, JPG, PDF accepted
+                            </p>
+                        </div>
+                        <input type="file" id="planUpload" accept="image/*,.pdf" class="hidden" />
+                    </div>
+                    <p class="text-xs text-gray-400 mt-3">
+                        Alternatively, you may attach a hand-drawn plan to the completed
+                        form.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION F: DATA PROTECTION -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
+                <div class="bg-tealCustom-500 px-6 py-2 flex items-center gap-3">
+                    <!-- <span class="w-7 h-7 rounded-full bg-gold-400 text-navy-950 text-xs font-mono font-bold flex items-center justify-center">F</span> -->
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        Personal Data Protection Clause
+                    </h3>
+                </div>
+                <div class="p-6">
+                    <div
+                        class="bg-gray-50 cursor-pointer hover:border-navy-300 hover:bg-navy-50 border border-navy-100 rounded-xl p-5 text-xs text-gray-600 leading-relaxed space-y-3">
+                        <p>
+                            The undersigned hereby consents to the collection, use and
+                            transfer of Personal Data as mentioned in this paragraph. The
+                            undersigned understands that the Company holds certain personal
+                            information about him/her including Full Name, Address, Date of
+                            Birth, Gender, National Identity Card/Passport Details, Job
+                            Title, Telephone Number, Email Address, Educational &amp;
+                            Professional Experience, Business Activities, Travel &amp;
+                            Expenses Information, Financial Details (e.g. Credit/Debit Card
+                            &amp; Bank Account Details etc.), Identification Checks &amp;
+                            Background Vetting, and Other Information including family life.
+                        </p>
+                        <p>
+                            The undersigned further understands that the Company holds
+                            special categories of personal data concerning health and such
+                            other information which may fall within the definition of
+                            "special categories of personal data", as defined in the Data
+                            Protection Act, No. 09 of 2022.
+                        </p>
+                        <p>
+                            The undersigned further understands that it may be necessary for
+                            the purposes of the relationship with the Company to share data
+                            with Reinsurers, Actuaries, and such other required parties for
+                            the purpose of assessing the risk. The undersigned authorises
+                            the Company to receive, possess, process and transfer the data
+                            for the purpose of the pre-insurance contract evaluation and for
+                            the purpose of servicing insurance contracts.
+                        </p>
+                    </div>
+                    <label class="flex items-start gap-3 mt-4 cursor-pointer">
+
+                        <span class="text-sm text-gray-700 ml-2">I have read and understood the Personal Data Protection
+                            Clause
+                            and hereby provide my consent.</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Intermediary Details -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
+                <div class="bg-tealCustom-500 px-6 py-2 flex items-center gap-3">
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        Intermediary Details
+                    </h3>
+                </div>
+
+                <div class="p-6 space-y-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Name
+                                of Insurance
+                                Intermediary</label>
+                            <input type="text"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 font-body" />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Code
+                                No.</label>
+                            <input type="text"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 font-body" />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Branch
+                                Code</label>
+                            <input type="text"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 font-body" />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">SLI
+                                Code</label>
+                            <input type="text"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 font-body" />
+                        </div>
+                        <div class="col-span-2">
+                            <label
+                                class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Address
+                                of Insurance
+                                Intermediary</label>
+                            <textarea rows="2"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 font-body resize-none"></textarea>
+                        </div>
+                        <div>
+                            <label
+                                class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Telephone
+                                No.</label>
+                            <input type="tel"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 font-body" />
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <label
+                                class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Insurance
+                                Intermediary's
+                                Signature</label>
+                            <div
+                                class="border-2 border-dashed border-gray-200 rounded-xl h-20 bg-gray-50 flex items-center justify-center">
+                                <span class="text-xs text-gray-400">Signature here</span>
+                            </div>
+                        </div>
+
+                        <!-- <div>
+              <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Date</label>
+              <input type="date" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 font-body" />
+            </div> -->
+                    </div>
+                    <label class="flex items-start gap-3 mt-4 cursor-pointer">
+                        <input type="checkbox" class="accent-navy-900 w-4 h-4 mt-0.5" required />
+                        <span class="text-sm text-gray-700">I/We Certify that the Insurance was canvassed by the above
+                            Intermediary.</span>
+                    </label>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <label
+                                class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Signature
+                                of
+                                Proposer</label>
+                            <div
+                                class="border-2 border-dashed border-gray-200 rounded-xl h-20 bg-gray-50 flex items-center justify-center">
+                                <span class="text-xs text-gray-400">Signature here</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <label
+                                class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Date</label>
+                            <input type="date"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 font-body" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION G: SIGNATURES -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
+                <div class="bg-tealCustom-500 px-6 py-2 flex items-center gap-3">
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        Signatures &amp; Declarations
+                    </h3>
+                </div>
+                <div class="p-6 space-y-6">
+                    <!-- Proposer signature -->
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <label
+                                class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Signature
+                                of
+                                Proposer</label>
+                            <div
+                                class="border-2 border-dashed border-gray-200 rounded-xl h-20 bg-gray-50 flex items-center justify-center">
+                                <span class="text-xs text-gray-400">Signature here</span>
+                            </div>
+                        </div>
+                        <div>
+                            <label
+                                class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Date</label>
+                            <input type="date"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 font-body" />
+                        </div>
+                    </div>
+
+                    <!-- Warning note -->
+                    <div class="flex gap-3 bg-amber-50 border border-amber-200 rounded-xl px-5 py-4">
+                        <svg class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <p class="text-xs text-amber-800 leading-relaxed">
+                            <strong>Note:</strong> Any misdescription or misrepresentation
+                            of material facts known to the proposer in this proposal form is
+                            liable to render the policy void from the inception.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <!-- SUBMIT BUTTONS -->
+            <div class="flex gap-4 justify-end no-print pb-4">
+                <button type="button"
+                    class="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-tealCustom-500 text-tealCustom-500 text-sm font-semibold hover:bg-tealCustom-100 transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0110.56 0m-10.56 0L6.75 19.5m10.56-5.671-.008.096M17.25 19.5l-2.38-9.5m0 0l-5.745 0m5.745 0c.207.038.412.082.614.131M6.75 19.5l-.22-.89M6.75 19.5H5.25m12 0h1.5M6.75 19.5l2.38-9.5" />
+                    </svg>
+                    Print Form
+                </button>
+                <button type="submit"
+                    class="flex items-center gap-2 px-7 py-2.5 rounded-xl bg-tealCustom-500 text-white text-sm font-semibold hover:bg-tealCustom-600 transition-colors shadow-lg">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.269 20.876L5.999 12zm0 0h7.5" />
+                    </svg>
+                    Submit Proposal
+                </button>
+            </div>
+
+
+    </div>
+    </form>
+    <script>
+        // Global Functions for inline event handlers
+        function toggleVatSection(radio) {
+            const vatContainer = document.getElementById('vatDetailsSection');
+            if (vatContainer) {
+                if (radio.value === 'yes') {
+                    vatContainer.classList.remove('hidden');
+                } else {
+                    vatContainer.classList.add('hidden');
+                }
+            }
+        }
+
+        function toggleOtherInput(inputId, checkbox) {
+            const inputField = document.getElementById(inputId);
+            if (inputField) {
+                if (checkbox.checked) {
+                    inputField.classList.remove('hidden');
+                } else {
+                    inputField.classList.add('hidden');
+                }
+            }
+        }
+
+        function addDirectorRow() {
+            const tbody = document.getElementById('directorsTableBody');
+            if (!tbody) return;
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td class="border border-gray-200 px-3 py-2 text-xs">
+                    <input type="text" class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                </td>
+                <td class="border border-gray-200 px-3 py-2 text-xs">
+                    <select class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body">
+                        <option value="" disabled selected>Select Role</option>
+                        <option>Managing Director</option>
+                        <option>Executive Director</option>
+                        <option>Non-Executive Director</option>
+                        <option>Chairman</option>
+                    </select>
+                </td>
+                <td class="border border-gray-200 px-3 py-2 text-xs">
+                    <input type="text" class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                </td>
+                <td class="border border-gray-200 px-3 py-2 text-xs">
+                    <input type="text" class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                </td>
+                
+            `;
+            tbody.appendChild(newRow);
+        }
+
+        function addMortgageeRow() {
+            const tbody = document.getElementById('mortgageeTableBody');
+            if (!tbody) return;
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td class="border border-gray-200 px-3 py-2 text-xs">
+                    <select class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body">
+                        <option value="" disabled selected>Select Bank</option>
+                        <option>People's Bank</option>
+                        <option>Bank of Ceylon</option>
+                        <option>Commercial Bank</option>
+                        <option>Hatton National Bank (HNB)</option>
+                        <option>Sampath Bank</option>
+                        <option>Seylan Bank</option>
+                        <option>Other</option>
+                    </select>
+                </td>
+                <td class="border border-gray-200 px-3 py-2 text-xs">
+                    <input type="text" class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body" />
+                </td>
+                <td class="border border-gray-200 px-3 py-2 text-xs">
+                    <select class="location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body">
+                        <option value="">Select Location</option>
+                    </select>
+                </td>
+                <td class="border border-gray-200 px-3 py-2 text-xs">
+                    <input type="text" class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body" />
+                </td>
+                <td class="border border-gray-200 px-3 py-2 text-xs">
+                    <input type="text" class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body" />
+                </td>
+                
+            `;
+            tbody.appendChild(newRow);
+            updateLocationDropdowns(); // Populate the new location dropdown
+        }
+
+        let locationCount = 1;
+        function addLocationRow() {
+            locationCount++;
+            const container = document.getElementById('locationsContainer');
+            if (!container) return;
+            const row = document.createElement('div');
+            row.className = 'location-entry flex gap-2 items-center';
+            row.setAttribute('data-index', locationCount);
+            row.innerHTML = `
+                <span class="text-xs font-semibold text-navy-800 w-20"> ${locationCount.toString().padStart(2, '0')}</span>
+                <input type="text" class="location-input flex-1 border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                <button type="button" class="text-red-500 hover:text-red-700 p-1" title="Remove Location">
+                    <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                </button>
+            `;
+            container.appendChild(row);
+            updateLocationDropdowns();
+        }
+
+        function updateLocationDropdowns() {
+            const locations = Array.from(document.querySelectorAll('.location-entry')).map(entry => {
+                const label = entry.querySelector('span').innerText.trim();
+                const value = entry.querySelector('.location-input').value.trim();
+                const displayText = value ? `${label} - ${value}` : label;
+                return { id: label, text: displayText };
+            });
+
+            const dropdowns = document.querySelectorAll('.location-dropdown');
+            dropdowns.forEach(dropdown => {
+                const currentVal = dropdown.value;
+                dropdown.innerHTML = '<option value="">Select Location</option>';
+                locations.forEach(loc => {
+                    const opt = document.createElement('option');
+                    opt.value = loc.id;
+                    opt.textContent = loc.text;
+                    if (currentVal === loc.id) opt.selected = true;
+                    dropdown.appendChild(opt);
+                });
+            });
+        }
+
+        let sumsInsuredCount = 9;
+        function addSumsInsuredRow() {
+            sumsInsuredCount++;
+            const tbody = document.getElementById('sumsInsuredTableBody');
+            if (!tbody) return;
+            const newRow = document.createElement('tr');
+            newRow.className = 'hover:bg-gray-50 transition-colors';
+            const romanNumerals = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x', 'xi', 'xii', 'xiii', 'xiv', 'xv', 'xvi', 'xvii', 'xviii', 'xix', 'xx'];
+            const itemLabel = romanNumerals[sumsInsuredCount - 1] ? `(${romanNumerals[sumsInsuredCount - 1]})` : `(${sumsInsuredCount})`;
+
+            newRow.innerHTML = `
+                <td class="px-4 py-3 font-mono text-navy-600 text-xs font-semibold text-center">${itemLabel}</td>
+                <td class="px-2 py-3">
+                    <select class="location-dropdown w-full border border-gray-200 rounded-lg px-1 py-1.5 text-xs bg-gray-50 font-body">
+                        <option value="">Select</option>
+                    </select>
+                </td>
+                <td class="px-4 py-3">
+                    <input type="text" class="w-full bg-transparent border border-transparent hover:border-gray-200 text-xs text-gray-700 font-body px-2 py-1.5 rounded-lg focus:bg-white focus:border-navy-300 focus:ring-1 focus:ring-navy-200 outline-none transition-all" />
+                </td>
+                <td class="px-4 py-3">
+                    <div class="flex items-center justify-end gap-1">
+                        <span class="text-xs text-gray-400 font-mono">LKR.</span>
+                        <input type="text" class="w-36 border border-gray-200 rounded-lg px-3 py-1.5 text-xs bg-gray-50 font-mono text-right" />
+                    </div>
+                </td>
+                <td class="px-2 py-3 text-center">
+                    <button type="button" class="text-gray-400 hover:text-red-500 transition-colors" title="Remove Row">
+                        <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                    </button>
+                </td>
+            `;
+            const totalRow = tbody.querySelector('.bg-navy-50.border-t-2');
+            if (totalRow) {
+                tbody.insertBefore(newRow, totalRow);
+            } else {
+                tbody.appendChild(newRow);
+            }
+            updateLocationDropdowns();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize dynamic states
+            updateLocationDropdowns();
+
+            const viewProposalFormBtn = document.getElementById('viewProposalFormBtn');
+            const backToQuotationsBtn = document.getElementById('backToQuotationsBtn');
+            const quotationFilteringPage = document.getElementById('quotation-filtering-page');
+            const digitalFormPage = document.getElementById('digital-form-page');
+
+            if (viewProposalFormBtn && quotationFilteringPage && digitalFormPage) {
+                viewProposalFormBtn.addEventListener('click', () => {
+                    quotationFilteringPage.classList.add('hidden');
+                    digitalFormPage.classList.remove('hidden');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            if (backToQuotationsBtn && quotationFilteringPage && digitalFormPage) {
+                backToQuotationsBtn.addEventListener('click', () => {
+                    digitalFormPage.classList.add('hidden');
+                    quotationFilteringPage.classList.remove('hidden');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // Form Section Toggle Feature
+            const sectionHeaders = document.querySelectorAll('#proposalForm .bg-tealCustom-500.px-6');
+            sectionHeaders.forEach((header, index) => {
+                header.classList.add('cursor-pointer', 'select-none');
+
+                if (!header.querySelector('.toggle-icon')) {
+                    const iconHTML = `<svg class="w-3 h-3 text-white toggle-icon shrink-0 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>`;
+                    header.insertAdjacentHTML('beforeend', iconHTML);
+                }
+
+                const sectionContainer = header.closest('.bg-white.rounded-2xl.shadow-md');
+
+                if (index > 0 && sectionContainer) {
+                    sectionContainer.classList.add('section-collapsed');
+                }
+
+                header.addEventListener('click', () => {
+                    if (sectionContainer) {
+                        sectionContainer.classList.toggle('section-collapsed');
+                    }
+                });
+            });
+
+        });
+    </script>
+
+
+</body>
+
+</html>

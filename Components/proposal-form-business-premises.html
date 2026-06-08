@@ -1,0 +1,2381 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Premises – Fire Insurance Proposal Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            50: "#f0f4ff",
+                            100: "#dde6ff",
+                            200: "#c0d0ff",
+                            300: "#92adff",
+                            400: "#637dff",
+                            500: "#3d4fff",
+                            600: "#2530f0",
+                            700: "#1c22d6",
+                            800: "#1a1fac",
+                            900: "#1b2087",
+                            950: "#10134f",
+                        },
+                        gold: {
+                            400: "#f6c944",
+                            500: "#e5b320",
+                            600: "#c98f0a",
+                        },
+                        tealCustom: {
+                            50: "#e6f7f8",
+                            100: "#cceff1",
+                            200: "#99dfe3",
+                            300: "#66cfd5",
+                            400: "#33bfc7",
+                            500: "#0d7f8a",
+                            600: "#0b6e78",
+                            700: "#095d66",
+                            800: "#074c54",
+                            900: "#053b42",
+                            950: "#022126",
+                        },
+                    },
+                    fontFamily: {
+                        heading: ['"Playfair Display"', "serif"],
+                        body: ['"DM Sans"', "sans-serif"],
+                        mono: ['"JetBrains Mono"', "monospace"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: "DM Sans", sans-serif;
+        }
+
+        input,
+        select,
+        textarea {
+            font-family: "DM Sans", sans-serif;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            accent-color: #0b6e6e;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #0b6e6e !important;
+            box-shadow: 0 0 0 3px rgba(11, 110, 110, 0.12);
+        }
+
+        .cover-card:has(input:checked) {
+            border-color: #0b6e6e;
+            background-color: #e6f4f4;
+        }
+
+        .plan-card:has(input:checked) {
+            border-color: #0b6e6e;
+            background-color: #e6f4f4;
+        }
+
+        .construction-table td input:focus {
+            outline: none;
+            box-shadow: none;
+            border: none;
+        }
+
+        .haz-table td input:focus {
+            outline: none;
+            box-shadow: none;
+            border: none;
+        }
+
+        /* Section Toggle Styles */
+        .section-collapsed> :not(.bg-tealCustom-500) {
+            display: none !important;
+        }
+
+        .toggle-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .section-collapsed .toggle-icon {
+            transform: rotate(-90deg);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-100 min-h-screen">
+    <div id="digital-form-page" class="max-w-4xl mx-auto px-2 py-12">
+        <div class="bg-tealCustom-500 rounded-2xl overflow-hidden mb-2 print-shadow shadow-xl">
+            <div class="flex items-center justify-center px-8 py-1 border-b border-white/20">
+                <div class="text-center align-items-center">
+                    <h1 class="font-heading text-white text-2xl font-bold tracking-tight mb-2">
+                        Proposal Form Business-Premises
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-800 leading-relaxed mb-6 text-center">
+            <strong>Note:</strong> This form can be used to describe 3 building and/or their contents <br>
+            ⚠ Any misdescription or misrepresentation made in this proposal form is
+            liable to render the policy void.
+        </div>
+
+        <form id="proposalForm" class="space-y-8" onsubmit="return false;">
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        Proposer Details
+                    </h3>
+                </div>
+                <div class="p-6 space-y-5">
+                    <!-- 1 Name -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                        <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">1</span>
+                        <div class="space-y-1 flex-1 w-full">
+                            <label
+                                class="block text-[10.5px] font-bold uppercase tracking-wide text-navy-900">Proposer's
+                                Full Name</label>
+                            <div class="flex gap-2">
+                                <select
+                                    class="w-24 border border-gray-200 rounded-lg px-2 py-2 text-xs bg-gray-50 text-gray-700">
+                                    <option>Mr.</option>
+                                    <option>Mrs.</option>
+                                    <option>Miss.</option>
+                                    <option>Dr.</option>
+                                </select>
+                                <input type="text" placeholder="Full name as per NIC"
+                                    class="flex-1 border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 min-w-0" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2 NIC + Business Reg -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                        <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">2</span>
+                        <div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                            <div class="space-y-1">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Address
+                                    of Proposer</label>
+                                <input type="text" placeholder="Enter address of proposer"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 font-mono" />
+                            </div>
+                            <div class="space-y-1">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">NIC
+                                    / Business Registration No. / Passport Number
+                                </label>
+                                <input type="text" placeholder="Registration number"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 font-mono" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Document Upload & Date of Incorporation -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                        <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0"></span>
+                        <div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                            <div class="space-y-1">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Upload
+                                    Document (NIC / BR / Passport)</label>
+                                <div class="border-2 border-dashed border-gray-200 rounded-xl h-10 flex flex-col items-center justify-center bg-gray-50 cursor-pointer hover:border-tealCustom-400 hover:bg-tealCustom-50 transition-all"
+                                    onclick="document.getElementById('docUploadField2').click()">
+                                    <p class="text-xs font-semibold text-gray-500">Click to Upload File</p>
+                                    <input type="file" id="docUploadField2" accept="image/*,.pdf" class="hidden" />
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Date
+                                    of Incorporation / Date of Birth</label>
+                                <input type="date"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3 Trade / Business -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                        <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">3</span>
+                        <div class="space-y-1 flex-1 w-full">
+                            <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Trade
+                                or Business of Proposer
+                                <span class="font-normal normal-case text-gray-400">(if more than one, please name
+                                    all)</span></label>
+                            <input type="text" placeholder="e.g. Retail, Manufacturing"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                        </div>
+                    </div>
+
+                    <!-- 4 Address -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                        <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">4</span>
+                        <div class="space-y-1 flex-1 w-full">
+                            <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">
+                                Address of the premises in respect of which this Insurance is
+                                required</label>
+                            <textarea rows="2" placeholder="Full residential / postal address"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 resize-none"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- 5 PEP -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                        <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">5</span>
+                        <div class="space-y-2 flex-1 w-full">
+                            <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Are
+                                you a Politically Exposed Person (PEP)?</label>
+                            <div class="flex gap-5">
+                                <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                        name="pep" value="yes" /> Yes</label>
+                                <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                        name="pep" value="no" /> No</label>
+                            </div>
+                            <textarea rows="1" placeholder="If Yes, please specify"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 resize-none"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- 6 Telephone + Email -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                        <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">6</span>
+                        <div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                            <div class="space-y-1">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Telephone
+                                    Number</label>
+                                <input type="tel" placeholder="011-1234567"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                            </div>
+                            <div class="space-y-1">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Email
+                                    Address</label>
+                                <input type="email" placeholder="example@email.com"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VAT Question -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                        <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0"></span>
+                        <div class="space-y-2 flex-1 w-full">
+                            <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Are
+                                you a VAT registered entity?</label>
+                            <div class="flex gap-5">
+                                <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                        name="vat_registered" value="yes"
+                                        onchange="document.getElementById('vatSection').classList.remove('hidden')" />
+                                    Yes</label>
+                                <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                        name="vat_registered" value="no"
+                                        onchange="document.getElementById('vatSection').classList.add('hidden')" />
+                                    No</label>
+                            </div>
+                            <div id="vatSection" class="hidden grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+                                <div class="space-y-1">
+                                    <label
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Please
+                                        state your VAT Registration Number:</label>
+                                    <input type="text" placeholder="VAT Registration Number"
+                                        class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 font-mono" />
+                                </div>
+                                <div class="space-y-1">
+                                    <label
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Upload
+                                        VAT Registration Certificate</label>
+                                    <div class="border-2 border-dashed border-gray-200 rounded-xl h-10 flex flex-col items-center justify-center bg-gray-50 cursor-pointer hover:border-tealCustom-400 hover:bg-tealCustom-50 transition-all"
+                                        onclick="document.getElementById('vatDocUpload').click()">
+                                        <p class="text-xs font-semibold text-gray-500">Click to Upload File</p>
+                                        <input type="file" id="vatDocUpload" accept="image/*,.pdf" class="hidden" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Directors Table -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                        <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0"></span>
+                        <div class="space-y-2 flex-1 w-full overflow-hidden">
+                            <label
+                                class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Details
+                                of Directors (For Corporate Clients)</label>
+                            <div class="overflow-x-auto w-full pb-2">
+                                <table class="w-full text-sm border border-gray-200 rounded-lg overflow-hidden"
+                                    id="directorsTable">
+                                    <thead class="bg-navy-50">
+                                        <tr>
+                                            <th
+                                                class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                Full Names of Directors</th>
+                                            <th
+                                                class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200 w-32">
+                                                Role</th>
+                                            <th
+                                                class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                Nationality</th>
+                                            <th
+                                                class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                NIC or Passport Number</th>
+                                            <th
+                                                class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200 w-12">
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-gray-100" id="directorsBody">
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-2 py-1.5"><input type="text" placeholder="Full Name"
+                                                    class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
+                                            </td>
+                                            <td class="px-2 py-1.5">
+                                                <select
+                                                    class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50">
+                                                    <option value="">Select Role</option>
+                                                    <option value="Director">Director</option>
+                                                    <option value="Chairman">Chairman</option>
+                                                    <option value="Managing Director">Managing Director</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                            </td>
+                                            <td class="px-2 py-1.5"><input type="text" placeholder="Nationality"
+                                                    class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
+                                            </td>
+                                            <td class="px-2 py-1.5"><input type="text" placeholder="NIC / Passport"
+                                                    class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
+                                            </td>
+                                            <td class="px-2 py-1.5 text-center"><button type="button"
+                                                    class="text-red-500 hover:text-red-700 font-bold"
+                                                    onclick="this.closest('tr').remove()">&times;</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button type="button"
+                                class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800"
+                                onclick="addDirectorRow()">+ Add Row</button>
+                        </div>
+                    </div>
+
+                    <!-- 7 BOI/GCEC -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                        <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">7</span>
+                        <div class="space-y-3 flex-1 w-full">
+                            <div class="space-y-2">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Is
+                                    your business an approved BOI / GCEC Project?</label>
+                                <div class="flex gap-5">
+                                    <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                            name="boi" value="yes" /> Yes</label>
+                                    <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                            name="boi" value="no" /> No</label>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">If
+                                    yes, are you entitled to insure overseas?</label>
+                                <div class="flex gap-5">
+                                    <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                            name="overseas" value="yes" />
+                                        Yes</label>
+                                    <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                            name="overseas" value="no" />
+                                        No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8 Banking and Risk Details -->
+                     <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                        <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">8</span>
+                        <div class="space-y-2 flex-1 w-full overflow-hidden">
+                            <label
+                                class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Details
+                                of Mortgagee </label>
+                            <div class="overflow-x-auto w-full pb-2">
+                                <table class="w-full text-sm border border-gray-200 rounded-lg overflow-hidden"
+                                    id="directorsTable">
+                                    <thead class="bg-navy-50">
+                                        <tr>
+                                            <th
+                                                class="px-2 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                Name of the Bank</th>
+                                            <th
+                                                class="px-2 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200 w-32">
+                                                Branch Address</th>
+                                            <th
+                                                class="px-2 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                 Risk Location Address</th>
+                                            <th
+                                                class="px-2 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                Description of Sum Insured</th>
+                                            <th
+                                                class="px-2 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200 w-12">
+                                            </th>
+                                            <th
+                                                class="px-2 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                            Sum Insured Value</th>
+                                            <th
+                                                class="px-2 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-gray-100" id="directorsBody">
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-2 py-1.5"><input type="text" placeholder="Full Name"
+                                                    class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
+                                            </td>
+                                            <td class="px-2 py-1.5">
+                                                <select
+                                                    class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50">
+                                                    <option value="">Select Role</option>
+                                                    <option value="Director">Director</option>
+                                                    <option value="Chairman">Chairman</option>
+                                                    <option value="Managing Director">Managing Director</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                            </td>
+                                            <td class="px-2 py-1.5"><input type="text" placeholder="Nationality"
+                                                    class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
+                                            </td>
+                                            <td class="px-2 py-1.5"><input type="text" placeholder="NIC / Passport"
+                                                    class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
+                                            </td>
+                                            <td class="px-2 py-1.5"><input type="text" placeholder="Nationality"
+                                                    class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
+                                            </td>
+                                            
+                                            <td class="px-2 py-1.5 text-center"><button type="button"
+                                                    class="text-red-500 hover:text-red-700 font-bold"
+                                                    onclick="this.closest('tr').remove()">&times;</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button type="button"
+                                class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800"
+                                onclick="addDirectorRow()">+ Add Row</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════ 09: RISK LOCATIONS ════ -->
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        Risk Locations
+                    </h3>
+                </div>
+                <div class="p-6 space-y-4">
+                    <div id="locationsContainer" class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <span class="font-mono text-xs font-semibold text-navy-700 w-24">Location 01</span>
+                            <input type="text" placeholder="Address for Location 01"
+                                class="flex-1 border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                        </div>
+                    </div>
+                    <button type="button" class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800"
+                        onclick="addLocationRow()">+ Add Another Location</button>
+                </div>
+            </div>
+
+            <!-- ════ G: TYPE OF COVER ════ -->
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        Type of Cover Required
+                    </h3>
+                </div>
+                <div class="p-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                        <label
+                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span class="text-sm text-gray-700">
+                                Fire &amp; Lightning</span></label>
+                        <label
+                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
+                                class="text-sm text-gray-700">Explosion</span></label>
+                        <label
+                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
+                                class="text-sm text-gray-700">Terrorism</span></label>
+                        <label
+                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
+                                class="text-sm text-gray-700">Riot &amp; Strike</span></label>
+                        <label
+                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span class="text-sm text-gray-700">
+                                Malicious Damage</span></label>
+                        <label
+                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
+                                class="text-sm text-gray-700">Cyclone / Storm / Tempest</span></label>
+                        <label
+                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
+                                class="text-sm text-gray-700">Flood</span></label>
+                        <label
+                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
+                                class="text-sm text-gray-700">Earthquake (Fire &amp; Shock)</span></label>
+                        <label
+                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
+                                class="text-sm text-gray-700">Natural Disasters</span></label>
+                        <label
+                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span class="text-sm text-gray-700">
+                                Impact Damage</span></label>
+                        <label
+                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
+                                class="text-sm text-gray-700">Aircraft Damage</span></label>
+                        <label
+                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
+                                class="text-sm text-gray-700">Bursting / Overflowing of Water Tanks &amp;
+                                Pipes</span></label>
+                        <label
+                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
+                                class="text-sm text-gray-700">Spontaneous Combustion</span></label>
+                        <label
+                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
+                                class="text-sm text-gray-700">Electrical Inclusion with Burn Marks</span></label>
+                        <label
+                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
+                                class="text-sm text-gray-700">Burglary — 10% First Loss Basis</span></label>
+                        <label
+                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
+                                class="text-sm text-gray-700">Others (Specify below)</span></label>
+                    </div>
+                    <div class="mt-4 space-y-1">
+                        <label class="text-sm font-semibold text-navy-900">Other covers (Specify)</label>
+                        <input type="text" placeholder="Any other coverage required"
+                            class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start mt-6">
+                        <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">10</span>
+                        <div class="space-y-2 flex-1 w-full">
+                            <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Is
+                                the Policy to be on Reinstatement Value Basis?
+                                <span class="font-normal normal-case text-gray-400 text-xs">(Except on
+                                    stocks)</span></label>
+                            <div class="flex gap-5">
+                                <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                        name="reinstatement" value="yes" />
+                                    Yes</label>
+                                <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                        name="reinstatement" value="no" />
+                                    No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start mt-6">
+                        <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">11</span>
+                        <div class="space-y-2 flex-1 w-full">
+                            <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Is
+                                the Policy to be on Reinstatement Value Basis?
+                                <span class="font-normal normal-case text-gray-400 text-xs">(Except on
+                                    stocks)</span></label>
+                            <div class="flex gap-5">
+                                <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                        name="reinstatement" value="yes" />
+                                    Yes</label>
+                                <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                        name="reinstatement" value="no" />
+                                    No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════ F: SUMS INSURED ════ -->
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        Sums to be Insured
+                    </h3>
+                </div>
+                <div
+                    class="px-6 py-2.5 bg-tealCustom-50 border-b border-tealCustom-100 text-xs text-tealCustom-700 italic">
+                    Please submit an inventory with make/model number, year of
+                    manufacture and values separately for marked (*) items.
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-navy-50 border-b border-gray-200">
+                            <tr>
+                                <th
+                                    class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 w-12">
+                                    Item
+                                </th>
+                                <th
+                                    class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 w-24">
+                                    Location No.
+                                </th>
+                                <th
+                                    class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700">
+                                    Property to be Insured
+                                </th>
+                                <th
+                                    class="px-4 py-3 text-right text-[10px] font-bold uppercase tracking-wide text-navy-700 w-40">
+                                    Building 1 (Rs.)
+                                </th>
+                                <th
+                                    class="px-4 py-3 text-right text-[10px] font-bold uppercase tracking-wide text-navy-700 w-40">
+                                    Building 2 (Rs.)
+                                </th>
+                                <th
+                                    class="px-4 py-3 text-right text-[10px] font-bold uppercase tracking-wide text-navy-700 w-40">
+                                    Building 3 (Rs.)
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100" id="sumsBody">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
+                                    (i)
+                                </td>
+                                <td class="px-4 py-2">
+                                    <select
+                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
+                                        <option value="">Select</option>
+                                        <option value="1">Location 01</option>
+                                    </select>
+                                </td>
+                                <td class="px-4 py-3 text-gray-700 text-sm leading-snug">
+                                    <input type="text"
+                                        value="On the building fixtures and fittings (incl. water & gas installation and electric wiring)"
+                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
+                                    (ii)
+                                </td>
+                                <td class="px-4 py-2">
+                                    <select
+                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
+                                        <option value="">Select</option>
+                                        <option value="1">Location 01</option>
+                                    </select>
+                                </td>
+                                <td class="px-4 py-3 text-gray-700 text-sm">
+                                    <input type="text" value="On boundary and parapet walls, gates"
+                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
+                                    (iii)
+                                </td>
+                                <td class="px-4 py-2">
+                                    <select
+                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
+                                        <option value="">Select</option>
+                                        <option value="1">Location 01</option>
+                                    </select>
+                                </td>
+                                <td class="px-4 py-3 text-gray-700 text-sm">
+                                    <input type="text" value="On office furniture and equipment*"
+                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
+                                    (iv)
+                                </td>
+                                <td class="px-4 py-2">
+                                    <select
+                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
+                                        <option value="">Select</option>
+                                        <option value="1">Location 01</option>
+                                    </select>
+                                </td>
+                                <td class="px-4 py-3 text-gray-700 text-sm">
+                                    <input type="text" value="On office equipment including telephones"
+                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
+                                    (v)
+                                </td>
+                                <td class="px-4 py-2">
+                                    <select
+                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
+                                        <option value="">Select</option>
+                                        <option value="1">Location 01</option>
+                                    </select>
+                                </td>
+                                <td class="px-4 py-3 text-gray-700 text-sm">
+                                    <input type="text" value="On stock in trade, Work-in-Progress and finished goods"
+                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
+                                    (vi)
+                                </td>
+                                <td class="px-4 py-2">
+                                    <select
+                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
+                                        <option value="">Select</option>
+                                        <option value="1">Location 01</option>
+                                    </select>
+                                </td>
+                                <td class="px-4 py-3 text-gray-700 text-sm">
+                                    <input type="text" value="On stocks held in trust"
+                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
+                                    (vii)
+                                </td>
+                                <td class="px-4 py-2">
+                                    <select
+                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
+                                        <option value="">Select</option>
+                                        <option value="1">Location 01</option>
+                                    </select>
+                                </td>
+                                <td class="px-4 py-3 text-gray-700 text-sm">
+                                    <input type="text" value="On machinery and utensils*"
+                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
+                                    (viii)
+                                </td>
+                                <td class="px-4 py-2">
+                                    <select
+                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
+                                        <option value="">Select</option>
+                                        <option value="1">Location 01</option>
+                                    </select>
+                                </td>
+                                <td class="px-4 py-3 text-gray-700 text-sm">
+                                    <input type="text" value="On removal of debris"
+                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
+                                    (ix)
+                                </td>
+                                <td class="px-4 py-2">
+                                    <select
+                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
+                                        <option value="">Select</option>
+                                        <option value="1">Location 01</option>
+                                    </select>
+                                </td>
+                                <td class="px-4 py-3 text-gray-700 text-sm">
+                                    <input type="text" value="On architects and surveyor's fees"
+                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
+                                    (x)
+                                </td>
+                                <td class="px-4 py-2">
+                                    <select
+                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
+                                        <option value="">Select</option>
+                                        <option value="1">Location 01</option>
+                                    </select>
+                                </td>
+                                <td class="px-4 py-3 text-gray-700 text-sm">
+                                    <input type="text" value="On lifts / generators / escalators / elevators"
+                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
+                                    (xi)
+                                </td>
+                                <td class="px-4 py-2">
+                                    <select
+                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
+                                        <option value="">Select</option>
+                                        <option value="1">Location 01</option>
+                                    </select>
+                                </td>
+                                <td class="px-4 py-3 text-gray-700 text-sm">
+                                    <input type="text"
+                                        value="On solar power panels / solar power systems and other accessories"
+                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
+                                            placeholder="0.00" oninput="calcTotal()"
+                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- TOTAL ROW -->
+                            <tr class="bg-navy-50/50">
+                                <td colspan="3" class="px-4 py-3 text-right">
+                                    <span class="text-xs font-bold text-navy-900 uppercase tracking-wide">Total Sum
+                                        Insured</span>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-500 font-mono font-bold">Rs.</span>
+                                        <input type="text" readonly value="0.00"
+                                            class="w-28 bg-transparent text-right font-mono text-sm font-bold text-navy-900 border-none p-0 focus:ring-0" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-500 font-mono font-bold">Rs.</span>
+                                        <input type="text" readonly value="0.00"
+                                            class="w-28 bg-transparent text-right font-mono text-sm font-bold text-navy-900 border-none p-0 focus:ring-0" />
+                                    </div>
+                                </td>
+                                <td class="px-4 py-3">
+                                    <div class="flex items-center justify-end gap-1">
+                                        <span class="text-[11px] text-gray-500 font-mono font-bold">Rs.</span>
+                                        <input type="text" readonly value="0.00"
+                                            class="w-28 bg-transparent text-right font-mono text-sm font-bold text-navy-900 border-none p-0 focus:ring-0" />
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="px-6 py-3 border-t border-gray-200 bg-white">
+                    <button type="button" class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800"
+                        onclick="addSumRow()">+ Add Row</button>
+                </div>
+            </div>
+
+            <!-- ════ B: PROPERTY / PREMISES ════ -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
+                <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        Property to be Insured
+                    </h3>
+                </div>
+                <div
+                    class="px-6 py-2.5 bg-tealCustom-50 border-b border-tealCustom-100 text-xs text-tealCustom-700 italic">
+                    The description of the building must be given even if the building
+                    is not to be insured.
+                </div>
+                <div class="p-6 space-y-5">
+                    <!-- 11 Construction Table -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                        <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">13</span>
+                        <div class="space-y-2 flex-1 w-full overflow-hidden">
+                            <label
+                                class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Construction
+                                of the Building(s)</label>
+                            <div class="overflow-x-auto w-full pb-2">
+                                <table
+                                    class="construction-table w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
+                                    <thead class="bg-navy-50">
+                                        <tr>
+                                            <th
+                                                class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200 w-2/5">
+                                                Feature
+                                            </th>
+                                            <th
+                                                class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                Building 1
+                                            </th>
+                                            <th
+                                                class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                Building 2
+                                            </th>
+                                            <th
+                                                class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                Building 3
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-gray-100">
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                External walls
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <select
+                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
+                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
+                                                    <option value="">Select</option>
+                                                    <option value="Brick">Brick</option>
+                                                    <option value="Concrete">Cement blocks</option>
+                                                    <option value="Tiles">Concrete</option>
+                                                    <option value="Asbestos">Amano sheets</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <input type="text" placeholder="Specify other"
+                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <select
+                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
+                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
+                                                    <option value="">Select</option>
+                                                    <option value="Brick">Brick</option>
+                                                    <option value="Concrete">Cement blocks</option>
+                                                    <option value="Tiles">Concrete</option>
+                                                    <option value="Asbestos">Amano sheets</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <input type="text" placeholder="Specify other"
+                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <select
+                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
+                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
+                                                    <option value="">Select</option>
+                                                    <option value="Brick">Brick</option>
+                                                    <option value="Concrete">Cement blocks</option>
+                                                    <option value="Tiles">Concrete</option>
+                                                    <option value="Asbestos">Amano sheets</option>
+                                                    <option value="Zinc">Zinc</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <input type="text" placeholder="Specify other"
+                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                External pillars
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                Linings of walls
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                Roof
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <select
+                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
+                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
+                                                    <option value="">Select</option>
+                                                    <option value="Brick">Roofing Tiles</option>
+                                                    <option value="Concrete">Asbestos sheets</option>
+                                                    <option value="Tiles">Amano sheets</option>
+                                                    <option value="Asbestos">Iron Sheets</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <input type="text" placeholder="Specify other"
+                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <select
+                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
+                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
+                                                    <option value="">Select</option>
+                                                    <option value="Brick">Roofing Tiles</option>
+                                                    <option value="Concrete">Asbestos sheets</option>
+                                                    <option value="Tiles">Amano sheets</option>
+                                                    <option value="Asbestos">Iron Sheets</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <input type="text" placeholder="Specify other"
+                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <select
+                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
+                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
+                                                    <option value="">Select</option>
+                                                    <option value="Brick">Roofing Tiles</option>
+                                                    <option value="Concrete">Asbestos sheets</option>
+                                                    <option value="Tiles">Amano sheets</option>
+                                                    <option value="Asbestos">Iron Sheets</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <input type="text" placeholder="Specify other"
+                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                Framework of Roof
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                Any part of roof hatched?
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" placeholder="Yes/No"
+                                                    class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" placeholder="Yes/No"
+                                                    class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" placeholder="Yes/No"
+                                                    class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                How many floors are there including the ground floor?
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                Is any "Prepex" or similar substance used any where in
+                                                the building?
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" placeholder="Yes/No"
+                                                    class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" placeholder="Yes/No"
+                                                    class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" placeholder="Yes/No"
+                                                    class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                Is there an adult occupant after business hours in the
+                                                premises?
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100" text-sm>
+                                                <input type="text" placeholder="Yes/No"
+                                                    class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" placeholder="Yes/No"
+                                                    class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" placeholder="Yes/No"
+                                                    class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════ C: POWER LIGHTING HEATING ════ -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
+                <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        Power Lighting and Heating
+                    </h3>
+                </div>
+                <div
+                    class="px-6 py-2.5 bg-tealCustom-50 border-b border-tealCustom-100 text-xs text-tealCustom-700 italic">
+                    The description of the building must be given even if the building
+                    is not to be insured.
+                </div>
+                <div class="p-6 space-y-5">
+                    <!-- 11 Construction Table -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                        <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">14</span>
+                        <div class="space-y-2 flex-1 w-full overflow-hidden">
+                            <label
+                                class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Power,
+                                Lighting and Heating</label>
+                            <div class="overflow-x-auto w-full pb-2">
+                                <table
+                                    class="construction-table w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
+                                    <thead class="bg-navy-50">
+                                        <tr>
+                                            <th
+                                                class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200 w-2/5">
+                                                Feature
+                                            </th>
+                                            <th
+                                                class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                Building 1
+                                            </th>
+                                            <th
+                                                class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                Building 2
+                                            </th>
+                                            <th
+                                                class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                Building 3
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-gray-100">
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                What is the source of the power?<span class="text-xs text-gray-700">(
+                                                    i.e. mains, solar power electric generator,
+                                                    etc.)</span>
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <select
+                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
+                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
+                                                    <option value="">Select</option>
+                                                    <option value="National Grid">Main</option>
+                                                    <option value="Solar">Generators</option>
+                                                    <option value="Generator">Solar Power</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <input type="text" placeholder="Specify other"
+                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <select
+                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
+                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
+                                                    <option value="">Select</option>
+                                                    <option value="National Grid">Main</option>
+                                                    <option value="Solar">Generators</option>
+                                                    <option value="Generator">Solar Power</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <input type="text" placeholder="Specify other"
+                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <select
+                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
+                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
+                                                    <option value="">Select</option>
+                                                    <option value="National Grid">Main</option>
+                                                    <option value="Solar">Generators</option>
+                                                    <option value="Generator">Solar Power</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <input type="text" placeholder="Specify other"
+                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                How is the building illuminated?
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                Availability of Security arrangement in the premises
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <select
+                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
+                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
+                                                    <option value="">Select</option>
+                                                    <option value="">Security personal for 24 hours</option>
+                                                    <option value="">CCTV cameras	</option>
+                                                    <option value="">Burglary Alarm	</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <input type="text" placeholder="Specify other"
+                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <select
+                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
+                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
+                                                    <option value="">Select</option>
+                                                    <option value="CCTV">Security personal for 24 hours</option>
+                                                    <option value="Security Guards">CCTV cameras	</option>
+                                                    <option value="Alarm System">Burglary Alarm	</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <input type="text" placeholder="Specify other"
+                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <select
+                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
+                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
+                                                    <option value="">Select</option>
+                                                    <option value="CCTV">Security personal for 24 hours</option>
+                                                    <option value="Security Guards">CCTV cameras	</option>
+                                                    <option value="Alarm System">Burglary Alarm	</option>
+                                                    
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <input type="text" placeholder="Specify other"
+                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                Is any firewood, coconut shells, or coconut husks
+                                                stored in or within thirty (30) feet of the building?
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════ D: OCCUPATION ════ -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
+                <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        Occupation
+                    </h3>
+                </div>
+
+                <div class="p-6 space-y-5">
+                    <!-- 11 Construction Table -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                        <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">15</span>
+                        <div class="space-y-2 flex-1 w-full overflow-hidden">
+                            <label
+                                class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Occupation</label>
+                            <div class="overflow-x-auto w-full pb-2">
+                                <table
+                                    class="construction-table w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
+                                    <thead class="bg-navy-50">
+                                        <tr>
+                                            <th
+                                                class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200 w-2/5">
+                                                Feature
+                                            </th>
+                                            <th
+                                                class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                Building 1
+                                            </th>
+                                            <th
+                                                class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                Building 2
+                                            </th>
+                                            <th
+                                                class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                Building 3
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-gray-100">
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                Name by which the building is known
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                For what purpose is the building used? If more than
+                                                one, please name all in details.
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                Is any process of manufacture carried on? If so,
+                                                describe its nature.
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                Is the building in the solo occupation of the
+                                                Proposer?
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                If the building is variously tenanted, state the names
+                                                of the tenants and the trades or business carried on
+                                                by them therein.
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════ E: GENERAL Informations ════ -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
+                <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        General Information
+                    </h3>
+                </div>
+
+                <div class="p-6 space-y-5">
+                    <!-- 11 Construction Table -->
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                        <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">16</span>
+                        <div class="space-y-2 flex-1 w-full overflow-hidden">
+                            <label
+                                class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">General</label>
+                            <div class="overflow-x-auto w-full pb-2">
+                                <table
+                                    class="construction-table w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
+                                    <thead class="bg-navy-50">
+                                        <tr>
+                                            <th
+                                                class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200 w-2/5">
+                                                Feature
+                                            </th>
+                                            <th
+                                                class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                Building 1
+                                            </th>
+                                            <th
+                                                class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                Building 2
+                                            </th>
+                                            <th
+                                                class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                Building 3
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-gray-100">
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                Are there or have there been any Fire Insurance on the
+                                                same property? If so give details, amount Policy
+                                                Number
+                                            </td>
+
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                Has this risk or any part there of been declined by
+                                                any Insurer, if so give details?
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                What appliances are there for extinguishing fire?
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                Have you had your property been damaged or loss by
+                                                Fire or any other peril now proposed for Insurane. If
+                                                yes, Please give details
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                Has there ever been a fire in this premises or in any
+                                                adjoining premises? If so, give details
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                Please give details of other premises within 30 feet
+                                                of the property now proposed for insurance.
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                Has any Insurance porposed of effected by you ever
+                                                been declined? If so, state particulars.
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                How long have you carried on business in the premises
+                                                to which proposed insurance referes?
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                If this insurance is to be on stock - (see note
+                                                bellow) <br />
+                                                <span class="font-normal ml-3">a. Do you keep proper stock books and are
+                                                    they up
+                                                    to date?</span>
+                                            </td>
+
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                b. How often do you check stock books?
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                c. Do you keep proper stock books and are they up to
+                                                date?
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                If this Insurance is to be on machinery, do you keep a
+                                                proper and up to date inventory of the machine?
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">
+                                                Are there any other circumstance which appear to
+                                                increase the risk?
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                            <td class="px-3 py-1.5 border-l border-gray-100">
+                                                <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start mt-6">
+                                    <span
+                                        class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">17</span>
+                                    <div class="space-y-2 flex-1 w-full">
+                                        <label
+                                            class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Is
+                                            the insured building/s under Construction?</label>
+                                        <div class="flex gap-5">
+                                            <label class="flex items-center gap-2 cursor-pointer text-sm"><input
+                                                    type="radio" name="risk_inc" value="yes" />
+                                                Yes</label>
+                                            <label class="flex items-center gap-2 cursor-pointer text-sm"><input
+                                                    type="radio" name="risk_inc" value="no" />
+                                                No</label>
+                                        </div>
+                                        <textarea rows="1" placeholder="If Yes, provide details"
+                                            class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 resize-none"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start mt-6">
+                                    <span
+                                        class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">18</span>
+                                    <div class="space-y-2 flex-1 w-full">
+                                        <label
+                                            class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Term
+                                            of Insurance</label>
+
+                                        <textarea rows="1" placeholder="From - 4.00 pm To - 4.00 pm"
+                                            class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 resize-none"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════ J: HAZARDOUS GOODS ════ -->
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        Hazardous Goods
+                    </h3>
+                </div>
+                <div class="p-6 space-y-4">
+                    <div
+                        class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-800 leading-relaxed">
+                        <strong>Note:</strong> This list below is not complete. Any items
+                        not appearing but deemed hazardous must be disclosed. 1. Acetylene
+                        (Liquid) 2. Acids of all kinds (except Citric and Tartaric) 3.
+                        Bamboo Mats 4. Benzene 5. Benzine 6. Benzoline 7. Brimstone 8.
+                        Calcium Carbide 9. Carbon Bi-Suphide 10. Camphene 11. Camphor 12.
+                        Candles 13. Caustic Patash 14. Caustic Soda 15. Celluloid,
+                        Xylonite and other similar substances 16. Charcoal or Coal 17.
+                        Chlorates of all kinds 18. Cinematograph Films 19. Coconut Oil 20.
+                        Codilla 21. Coir and Coir Yarn 22. Cotton (whether in fully -
+                        pressed bales or otherwise) 23. Crackers 24. Explosives of all
+                        kinds (including Ammunition and Percussion Caps) 25. Films:
+                        Non-Safety base, in lengths exceeding 6 feet 26. Fireworks of all
+                        kinds 27. Ghee (other than vegetable ghee in tins not exceeding
+                        10lbs. In weight, or in bottles in cases) 28. Glycerinein bulk 29.
+                        Grasses of all kinds 30. Gunny bags (other than fully pressed
+                        bales) Hay 31. Hessians (other than in bales) 32. Jute (in fully
+                        pressed bales or otherwise) 33. Kerosene 34. Lampblack 35. Lime,
+                        Unstacked (Quikelime) 36. Lubricants containing Mineral Oil or
+                        other Mineral Products 37. Matches of all kinds 38. Mungo 39.
+                        Naphtha 40. Naphthaline 41. Nitrates of all kinds 42. Nitrites of
+                        all kinds 43. Oils-Animal, Fish and Essential (except medical
+                        edible and essential oils packed in bottles in cases or tins in
+                        cases 44. Oils-Mineral, Rock Slate, Petroleum, Tar and their
+                        Liquid Products (excepts medicinal) packed in bottles in cases or
+                        tins in cases 45. Oils Vegetable (except in Tins not exceedings
+                        10lbs. in weight or bottles in cases) 46. Paints (Liquid) 47.
+                        Paper, Asphalted, Tarred or oiled, Paraffin 48. Perchlorates of
+                        all kinds 49. Permanganates of all kinds 50. Peroxides of all
+                        kinds 51. Petrol 52. Petroleum and its Products 53. Phosphours 54.
+                        Pitch 55. Poisons, if stored on the same floor as or on floors
+                        above, foodstuffs 56. Potassium 57. Potassium Bi-Chromate 58. Rags
+                        59. Resins of all kinds 60. Rubber Solutions 61. Saw dust 62.
+                        Shoddy 63. Sodium 64. Sodium Bi-Chromate 65. Sprits (other than
+                        Potable Sprits packed in cases or in jars in cases) 66. Stearine
+                        67. Straw 68. Suphides, Metallic of all kinds 69. Sulphur 70.
+                        Sulphur Dys or Colours (excluding those packed in air tight matal
+                        vessels labelled with a Certificate by the Manufactures that the
+                        Dyes (or Colours) contain at least 10% of inert inorganic salts)
+                        71. Tallow 72. Tar 73. Turpentine 74. Varnish 75. Vegetables
+                        fibres of all kinds 76. Waste of all kinds (excluding Silk and Tea
+                        waste) 77. Wax of all kinds.
+                    </div>
+                    <p class="text-sm text-gray-500">
+                        Are any hazardous goods stored in the premises or within 30 feet
+                        thereof? If so, please state below:
+                    </p>
+                    <div class="overflow-x-auto">
+                        <table class="haz-table w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
+                            <thead class="bg-navy-50">
+                                <tr>
+                                    <th
+                                        class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                        Article
+                                    </th>
+                                    <th
+                                        class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200 w-28">
+                                        Quantity
+                                    </th>
+                                    <th
+                                        class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200 w-32">
+                                        Value (Rs.)
+                                    </th>
+                                    <th
+                                        class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                        Method of Storage
+                                    </th>
+                                    <th
+                                        class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                        Location
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100">
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-3 py-2">
+                                        <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                    </td>
+                                    <td class="px-3 py-2 border-l border-gray-100">
+                                        <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                    </td>
+                                    <td class="px-3 py-2 border-l border-gray-100">
+                                        <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                    </td>
+                                    <td class="px-3 py-2 border-l border-gray-100">
+                                        <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                    </td>
+                                    <td class="px-3 py-2 border-l border-gray-100">
+                                        <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-3 py-2">
+                                        <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                    </td>
+                                    <td class="px-3 py-2 border-l border-gray-100">
+                                        <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                    </td>
+                                    <td class="px-3 py-2 border-l border-gray-100">
+                                        <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                    </td>
+                                    <td class="px-3 py-2 border-l border-gray-100">
+                                        <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                    </td>
+                                    <td class="px-3 py-2 border-l border-gray-100">
+                                        <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-3 py-2">
+                                        <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                    </td>
+                                    <td class="px-3 py-2 border-l border-gray-100">
+                                        <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                    </td>
+                                    <td class="px-3 py-2 border-l border-gray-100">
+                                        <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                    </td>
+                                    <td class="px-3 py-2 border-l border-gray-100">
+                                        <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                    </td>
+                                    <td class="px-3 py-2 border-l border-gray-100">
+                                        <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════ K: GROUND PLAN ════ -->
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        Ground Plan of Premises
+                    </h3>
+                </div>
+                <div class="p-6 space-y-4">
+                    <div
+                        class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-800 leading-relaxed">
+                        <strong>Note:</strong> The plan need not be to scale. Dimensions
+                        of the building should be shown. All buildings within 30 feet of
+                        the premises should be indicated, including distances between each
+                        building.
+                    </div>
+                    <div class="border-2 border-dashed border-gray-200 rounded-xl h-48 flex flex-col items-center justify-center gap-3 bg-gray-50 cursor-pointer hover:border-tealCustom-400 hover:bg-tealCustom-50 transition-all"
+                        onclick="document.getElementById('planUpload').click()">
+                        <svg class="w-10 h-10 text-gray-300" fill="none" stroke="currentColor" stroke-width="1.5"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+                        </svg>
+                        <div class="text-center">
+                            <p class="text-sm font-semibold text-gray-500">
+                                Upload Ground Plan
+                            </p>
+                            <p class="text-xs text-gray-400">
+                                PNG, JPG, or PDF accepted — or attach a hand-drawn sketch
+                            </p>
+                        </div>
+                        <input type="file" id="planUpload" accept="image/*,.pdf" class="hidden" />
+                    </div>
+                    <div
+                        class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-800 leading-relaxed">
+                        <strong>Note:</strong> If the space provided herein insufficient, please attach ground plan
+                        drawn on a separate sheet of paper. <br>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════ L: DATA PROTECTION ════ -->
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        Personal Data Protection Clause
+                    </h3>
+                </div>
+                <div class="p-6 space-y-4">
+                    <div
+                        class="bg-gray-50 border border-gray-200 rounded-xl p-5 text-xs text-gray-600 leading-relaxed space-y-3">
+                        <p>
+                            The undersigned hereby consents to the collection, use and
+                            transfer of Personal Data as mentioned in this paragraph. The
+                            undersigned understands that the Company holds certain personal
+                            information about him/her including Full Name, Address, Date of
+                            Birth, Gender, National Identity Card/Passport Details, Job
+                            Title, Telephone Number, Email Address, Educational &amp;
+                            Professional Experience, Business Activities, Travel &amp;
+                            Expenses Information, Financial Details (e.g. Credit/Debit Card
+                            &amp; Bank Account Details etc.), Identification Checks &amp;
+                            Background Vetting, and Other Information including family life.
+                        </p>
+                        <p>
+                            The undersigned further understands that the Company holds
+                            special categories of personal data concerning health and such
+                            other information which may fall within the definition of
+                            "special categories of personal data", as defined in the Data
+                            Protection Act, No. 09 of 2022.
+                        </p>
+                        <p>
+                            The undersigned further understands that it may be necessary for
+                            the purposes of the relationship with the Company to share data
+                            with Reinsurers, Actuaries, and such other required parties for
+                            the purpose of assessing the risk. The undersigned authorises
+                            the Company to receive, possess, process and transfer the data
+                            for the purpose of the pre-insurance contract evaluation and for
+                            the purpose of servicing insurance contracts.
+                        </p>
+                    </div>
+                    <label class="flex items-start gap-3 cursor-pointer">
+                        <input type="checkbox" required class="mt-0.5 w-4 h-4 shrink-0" />
+                        <span class="text-sm text-gray-700">I have read and understood the Personal Data Protection
+                            Clause
+                            and hereby provide my consent.</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- ════ M: SIGNATURES ════ -->
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        Signatures &amp; Declarations
+                    </h3>
+                </div>
+                <div class="p-6 space-y-5">
+                    <div class="flex gap-3 bg-amber-50 border border-amber-200 rounded-xl px-5 py-4">
+                        <svg class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <p class="text-xs text-amber-800 leading-relaxed">
+                            <strong>Note:</strong> I/We hereby warrant the truth of the
+                            above statements and declare that no information has been
+                            withheld which might tend in any way to increase the risk. I/We
+                            agree this proposal shall be the basis of the contract and the
+                            liability of Sri Lanka Insurance Corporation General Ltd. shall
+                            not commence until the proposal is accepted and premium is paid
+                            in full.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-1">
+                            <label
+                                class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Signature
+                                of Proposer</label>
+                            <div
+                                class="border-2 border-dashed border-gray-200 rounded-xl h-20 flex items-center justify-center bg-gray-50">
+                                <span class="text-xs text-gray-400">Signature here</span>
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <label
+                                class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Date</label>
+                            <input type="date"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════ N: INTERMEDIARY DETAILS ════ -->
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        Intermediary Details
+                    </h3>
+                </div>
+                <div class="p-6 space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="space-y-1">
+                            <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Name
+                                of Insurance Intermediary
+                                <span class="font-normal normal-case text-gray-400">(block letters)</span></label>
+                            <input type="text" placeholder="Full name in block letters"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                        </div>
+                        <div class="space-y-1">
+                            <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Code
+                                No.</label>
+                            <input type="text" placeholder="Intermediary code"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 font-mono" />
+                        </div>
+                        <div class="space-y-1">
+                            <label
+                                class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Service
+                                Branch</label>
+                            <input type="text" placeholder="Service Branch"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Address
+                            of Insurance Intermediary
+                            <span class="font-normal normal-case text-gray-400">(block letters)</span></label>
+                        <textarea rows="2" placeholder="Full address in block letters"
+                            class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 resize-none"></textarea>
+                    </div>
+                    <div class="space-y-1 max-w-xs">
+                        <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Telephone
+                            No.</label>
+                        <input type="tel" placeholder="Contact number"
+                            class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-1">
+                            <label
+                                class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Insurance
+                                Intermediary's Signature</label>
+                            <div
+                                class="border-2 border-dashed border-gray-200 rounded-xl h-20 flex items-center justify-center bg-gray-50">
+                                <span class="text-xs text-gray-400">Signature here</span>
+                            </div>
+                        </div>
+                    </div>
+                    <label class="flex items-start gap-3 cursor-pointer">
+                        <input type="checkbox" required class="mt-0.5 w-4 h-4 shrink-0" />
+                        <span class="text-sm text-gray-700">I/We certify that the Insurance was canvassed by the above
+                            Insurance Intermediary.</span>
+                    </label>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-1">
+                            <label
+                                class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Signature
+                                of Proposer</label>
+                            <div
+                                class="border-2 border-dashed border-gray-200 rounded-xl h-20 flex items-center justify-center bg-gray-50">
+                                <span class="text-xs text-gray-400">Signature here</span>
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <label
+                                class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Date</label>
+                            <input type="date"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════ O: OFFICE USE ONLY ════ -->
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                    <h3 class="font-heading text-white text-md font-semibold">
+                        For Office Use Only
+                    </h3>
+                </div>
+                <div class="p-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="space-y-1">
+                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-gray-400">Rate and
+                            Calculated</label><input type="text"
+                            class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                    </div>
+                    <div class="space-y-1">
+                        <label
+                            class="block text-[10px] font-semibold uppercase tracking-wide text-gray-400">Checked</label><input
+                            type="text" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                    </div>
+                    <div class="space-y-1">
+                        <label
+                            class="block text-[10px] font-semibold uppercase tracking-wide text-gray-400">Accepted</label><input
+                            type="text" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                    </div>
+                    <div class="space-y-1">
+                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-gray-400">Proposal
+                            No.</label><input type="text"
+                            class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 font-mono" />
+                    </div>
+                    <div class="space-y-1">
+                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-gray-400">Policy
+                            No.</label><input type="text"
+                            class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 font-mono" />
+                    </div>
+                </div>
+            </div>
+    </div>
+    </form>
+    </div>
+
+    <script>
+        function parseNum(v) {
+            const n = parseFloat((v || "").replace(/,/g, ""));
+            return isNaN(n) ? 0 : n;
+        }
+        function fmt(n) {
+            return n === 0
+                ? ""
+                : n.toLocaleString("en-LK", {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                });
+        }
+        function calcTotal() {
+            const rows = document.querySelectorAll("#sumsBody tr:not(:last-child)");
+            let t = [0, 0, 0];
+            rows.forEach((row) => {
+                const inputs = row.querySelectorAll('input[type="text"]');
+                inputs.forEach((inp, i) => {
+                    t[i] = (t[i] || 0) + parseNum(inp.value);
+                });
+            });
+            document.getElementById("total1").value = fmt(t[0]);
+            document.getElementById("total2").value = fmt(t[1]);
+            document.getElementById("total3").value = fmt(t[2]);
+        }
+        // Form Section Toggle Feature (Accordion Style)
+        const sectionHeaders = document.querySelectorAll('#proposalForm .bg-tealCustom-500.px-6');
+        const allSections = [];
+
+        sectionHeaders.forEach((header, index) => {
+            header.classList.add('cursor-pointer', 'select-none');
+
+            // Add the toggle icon if not present
+            if (!header.querySelector('.toggle-icon')) {
+                const iconHTML = `<svg class="w-3 h-3 text-white toggle-icon shrink-0 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>`;
+                header.insertAdjacentHTML('beforeend', iconHTML);
+            }
+
+            const sectionContainer = header.closest('.bg-white.rounded-2xl');
+            if (sectionContainer) {
+                allSections.push(sectionContainer);
+
+                // Collapse all sections except the first one by default
+                if (index > 0) {
+                    sectionContainer.classList.add('section-collapsed');
+                }
+
+                header.addEventListener('click', () => {
+                    sectionContainer.classList.toggle('section-collapsed');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
