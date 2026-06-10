@@ -477,6 +477,41 @@
                                 onclick="addDirectorRow()">+ Add Row</button>
                         </div>
                     </div>
+
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start mt-6">
+                        <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">9</span>
+                        <div class="space-y-2 flex-1 w-full">
+                            <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Is
+                                the Policy to be on Reinstatement Value Basis?
+                                <span class="font-normal normal-case text-gray-400 text-xs">(Except on
+                                    stocks)</span></label>
+                            <div class="flex gap-5">
+                                <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                        name="reinstatement" value="yes" />
+                                    Yes</label>
+                                <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                        name="reinstatement" value="no" />
+                                    No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start mt-6">
+                        <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">10</span>
+                        <div class="space-y-2 flex-1 w-full">
+                            <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Is
+                                the Policy to be on Reinstatement Value Basis?
+                                <span class="font-normal normal-case text-gray-400 text-xs">(Except on
+                                    stocks)</span></label>
+                            <div class="flex gap-5">
+                                <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                        name="reinstatement" value="yes" />
+                                    Yes</label>
+                                <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                        name="reinstatement" value="no" />
+                                    No</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -509,9 +544,13 @@
                 </div>
                 <div class="p-6">
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                        <button class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all" id="selectAllBtn">
+                            Select All 
+
+                        </button>
                         <label
                             class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span class="text-sm text-gray-700">
+                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0 selected " /><span class="text-sm text-gray-700">
                                 Fire &amp; Lightning</span></label>
                         <label
                             class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
@@ -581,40 +620,60 @@
                             class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
                     </div>
 
-                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start mt-6">
-                        <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">10</span>
-                        <div class="space-y-2 flex-1 w-full">
-                            <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Is
-                                the Policy to be on Reinstatement Value Basis?
-                                <span class="font-normal normal-case text-gray-400 text-xs">(Except on
-                                    stocks)</span></label>
-                            <div class="flex gap-5">
-                                <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
-                                        name="reinstatement" value="yes" />
-                                    Yes</label>
-                                <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
-                                        name="reinstatement" value="no" />
-                                    No</label>
+                     <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Extensions -->
+                            <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 shadow-sm">
+                                <div class="flex items-center gap-3 mb-3">
+
+                                    <h3 class="font-heading text-blue-900 text-base font-bold">
+                                        Extensions
+                                    </h3>
+                                </div>
+                                <p class="text-xs text-blue-800 leading-relaxed mb-3 font-bold">
+                                    Additional coverage extensions will be automatically applied based on your final
+                                    quotation parameters.
+                                </p>
+                                <div
+                                    class="bg-white/60 rounded-lg p-3 text-xs text-blue-900 border border-blue-100 flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-blue-600 shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span><span class="font-semibold">Note:</span> Specific extensions are determined by
+                                        the
+                                        selected premium plan and property type <span class="font-bold">as per the
+                                            quotation</span>.</span>
+                                </div>
+                            </div>
+
+                            <!-- Clauses -->
+                            <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 shadow-sm">
+                                <div class="flex items-center gap-3 mb-3">
+
+                                    <h3 class="font-heading text-blue-900 text-base font-bold">
+                                        Clauses
+                                    </h3>
+                                </div>
+                                <p class="text-xs text-blue-800 leading-relaxed mb-3 font-bold">
+                                    Standard policy clauses and coverage conditions are governed by the approved
+                                    quotation
+                                    terms.
+                                </p>
+                                <div
+                                    class="bg-white/60 rounded-lg p-3 text-xs text-blue-900 border border-blue-100 flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-blue-600 shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span><span class="font-semibold">Note:</span> Please refer to the final quotation
+                                        document for the comprehensive and legally binding list of clauses.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start mt-6">
-                        <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">11</span>
-                        <div class="space-y-2 flex-1 w-full">
-                            <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Is
-                                the Policy to be on Reinstatement Value Basis?
-                                <span class="font-normal normal-case text-gray-400 text-xs">(Except on
-                                    stocks)</span></label>
-                            <div class="flex gap-5">
-                                <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
-                                        name="reinstatement" value="yes" />
-                                    Yes</label>
-                                <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
-                                        name="reinstatement" value="no" />
-                                    No</label>
-                            </div>
-                        </div>
-                    </div>
+
+                    
                 </div>
             </div>
 
