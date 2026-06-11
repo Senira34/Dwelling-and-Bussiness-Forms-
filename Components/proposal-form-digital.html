@@ -873,689 +873,201 @@
                 </div>
 
                 <!-- ════ SUMS TO BE INSURED ════ -->
-
-                <!-- ════ F: SUMS INSURED ════ -->
-            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
-                <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
-                    <h3 class="font-heading text-white text-md font-semibold">
-                        Sums to be Insured
-                    </h3>
-                </div>
-                <div
-                    class="px-6 py-2.5 bg-tealCustom-50 border-b border-tealCustom-100 text-xs text-tealCustom-700 italic">
-                    Please submit an inventory with make/model number, year of
-                    manufacture and values separately for marked (*) items.
-                </div>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-sm">
-                        <thead class="bg-navy-50 border-b border-gray-200">
-                            <tr>
-                                <th
-                                    class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 w-12">
-                                    Item
-                                </th>
-                                <th
-                                    class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 w-24">
-                                    Location No.
-                                </th>
-                                <th
-                                    class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700">
-                                    Property to be Insured
-                                </th>
-                                <th class="px-4 py-2"><select
-                                            class="location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs text-navy-700 bg-navy-50">
-                                            <option value="">Select</option>
-                                        </select>
-                                </th>
-                                <th class="px-4 py-2"><select
-                                            class="location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs text-navy-700 bg-navy-50">
-                                            <option value="">Select</option>
-                                        </select>
-                                </th>>
-                                <th class="px-4 py-2"><select
-                                            class="location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs text-navy-700 bg-navy-50">
-                                            <option value="">Select</option>
-                                        </select>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-100" id="sumsBody">
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (i)
-                                </td>
-                                <td class="px-4 py-2"><select
-                                            class="location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                            <option value="">Select</option>
-                                        </select></td>
-                                <td class="px-4 py-3"><input type="text"
-                                            value="On the building of private dwelling house including permanent fixtures and fittings"
-                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                    </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (ii)
-                                </td>
-                                <td class="px-4 py-2">
-                                    <select
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                        <option value="">Select</option>
-                                        <option value="1">Location 01</option>
-                                    </select>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700 text-sm">
-                                    <input type="text" value="On boundary and parapet walls, gates"
-                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (iii)
-                                </td>
-                                <td class="px-4 py-2">
-                                    <select
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                        <option value="">Select</option>
-                                        <option value="1">Location 01</option>
-                                    </select>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700 text-sm">
-                                    <input type="text" value="On office furniture and equipment*"
-                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (iv)
-                                </td>
-                                <td class="px-4 py-2">
-                                    <select
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                        <option value="">Select</option>
-                                        <option value="1">Location 01</option>
-                                    </select>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700 text-sm">
-                                    <input type="text" value="On office equipment including telephones"
-                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (v)
-                                </td>
-                                <td class="px-4 py-2">
-                                    <select
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                        <option value="">Select</option>
-                                        <option value="1">Location 01</option>
-                                    </select>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700 text-sm">
-                                    <input type="text" value="On stock in trade, Work-in-Progress and finished goods"
-                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (vi)
-                                </td>
-                                <td class="px-4 py-2">
-                                    <select
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                        <option value="">Select</option>
-                                        <option value="1">Location 01</option>
-                                    </select>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700 text-sm">
-                                    <input type="text" value="On stocks held in trust"
-                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (vii)
-                                </td>
-                                <td class="px-4 py-2">
-                                    <select
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                        <option value="">Select</option>
-                                        <option value="1">Location 01</option>
-                                    </select>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700 text-sm">
-                                    <input type="text" value="On machinery and utensils*"
-                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (viii)
-                                </td>
-                                <td class="px-4 py-2">
-                                    <select
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                        <option value="">Select</option>
-                                        <option value="1">Location 01</option>
-                                    </select>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700 text-sm">
-                                    <input type="text" value="On removal of debris"
-                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (ix)
-                                </td>
-                                <td class="px-4 py-2">
-                                    <select
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                        <option value="">Select</option>
-                                        <option value="1">Location 01</option>
-                                    </select>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700 text-sm">
-                                    <input type="text" value="On architects and surveyor's fees"
-                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (x)
-                                </td>
-                                <td class="px-4 py-2">
-                                    <select
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                        <option value="">Select</option>
-                                        <option value="1">Location 01</option>
-                                    </select>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700 text-sm">
-                                    <input type="text" value="On lifts / generators / escalators / elevators"
-                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (xi)
-                                </td>
-                                <td class="px-4 py-2">
-                                    <select
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                        <option value="">Select</option>
-                                        <option value="1">Location 01</option>
-                                    </select>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700 text-sm">
-                                    <input type="text"
-                                        value="On solar power panels / solar power systems and other accessories"
-                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- TOTAL ROW -->
-                            <tr class="bg-navy-50/50">
-                                <td colspan="3" class="px-4 py-3 text-right">
-                                    <span class="text-xs font-bold text-navy-900 uppercase tracking-wide">Total Sum
-                                        Insured</span>
-                                </td>
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-500 font-mono font-bold">Rs.</span>
-                                        <input type="text" readonly value="0.00"
-                                            class="w-28 bg-transparent text-right font-mono text-sm font-bold text-navy-900 border-none p-0 focus:ring-0" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-500 font-mono font-bold">Rs.</span>
-                                        <input type="text" readonly value="0.00"
-                                            class="w-28 bg-transparent text-right font-mono text-sm font-bold text-navy-900 border-none p-0 focus:ring-0" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-500 font-mono font-bold">Rs.</span>
-                                        <input type="text" readonly value="0.00"
-                                            class="w-28 bg-transparent text-right font-mono text-sm font-bold text-navy-900 border-none p-0 focus:ring-0" />
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="px-6 py-3 border-t border-gray-200 bg-white">
-                    <button type="button" class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800"
-                        onclick="addSumRow()">+ Add Row</button>
-                </div>
-            </div>
                 <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
                     <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
                         <h3 class="font-heading text-white text-md font-semibold">Sums to be Insured</h3>
                     </div>
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-sm">
+                    <div class="px-6 py-2.5 bg-tealCustom-50 border-b border-tealCustom-100 text-xs text-tealCustom-700 italic">
+                        Please submit an inventory with make/model number, year of manufacture and values separately for marked (*) items.
+                    </div>
+                    <div class="px-6 pt-3 pb-0 flex items-center justify-end">
+                        <button type="button" onclick="addLocationColumn()"
+                            class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                            Add Location
+                        </button>
+                    </div>
+                    <div class="overflow-x-auto w-full mt-3">
+                        <table class="w-full text-sm min-w-[500px]" id="sumsTable">
                             <thead class="bg-navy-50 border-b border-gray-200">
                                 <tr>
-                                    <th
-                                        class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 w-12">
-                                        Item</th>
-                                    <th
-                                        class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 w-24">
-                                        Location No.</th>
-                                    <th
-                                        class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700">
+                                    <th class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 min-w-[260px]">
                                         Property to be Insured</th>
-                                    <th
-                                        class="px-4 py-3 text-right text-[10px] font-bold uppercase tracking-wide text-navy-700 w-40">
-                                        Sum Insured (LKR.)</th>
+                                    <th class="px-4 py-2 loc-header-col min-w-[180px]">
+                                        <div class="flex items-center gap-1">
+                                            <select class="location-dropdown flex-1 border border-gray-200 rounded-lg px-2 py-1.5 text-xs text-navy-700 bg-white">
+                                                <option value="">Select Location</option>
+                                            </select>
+                                        </div>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-gray-100" id="sumsBody">
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">(i)</td>
-                                    <td class="px-4 py-2"><select
-                                            class="location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                            <option value="">Select</option>
-                                        </select></td>
-                                    <td class="px-4 py-3"><input type="text"
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text"
                                             value="On the building of private dwelling house including permanent fixtures and fittings"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
-                                    <td class="px-4 py-2">
-                                        <div class="flex items-center justify-end gap-1"><span
-                                                class="text-[11px] text-gray-400 font-mono">LKR.</span><input
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
                                                 type="text" placeholder="0.00" oninput="calcTotal()"
-                                                class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">(ii)</td>
-                                    <td class="px-4 py-2"><select
-                                            class="location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                            <option value="">Select</option>
-                                        </select></td>
-                                    <td class="px-4 py-3"><input type="text" value="On boundary walls and gates"
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On boundary and parapet walls, gates"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
-                                    <td class="px-4 py-2">
-                                        <div class="flex items-center justify-end gap-1"><span
-                                                class="text-[11px] text-gray-400 font-mono">LKR.</span><input
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
                                                 type="text" placeholder="0.00" oninput="calcTotal()"
-                                                class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">(iii)</td>
-                                    <td class="px-4 py-2"><select
-                                            class="location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                            <option value="">Select</option>
-                                        </select></td>
-                                    <td class="px-4 py-3"><input type="text"
-                                            value="On house hold furniture and electrical items etc. (Any articles other than furniture must be separately declared with values)"
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On office furniture and equipment*"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
-                                    <td class="px-4 py-2">
-                                        <div class="flex items-center justify-end gap-1"><span
-                                                class="text-[11px] text-gray-400 font-mono">LKR.</span><input
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
                                                 type="text" placeholder="0.00" oninput="calcTotal()"
-                                                class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">(iv)</td>
-                                    <td class="px-4 py-2"><select
-                                            class="location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                            <option value="">Select</option>
-                                        </select></td>
-                                    <td class="px-4 py-3"><input type="text" value="On personal effects"
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On office equipment including telephones"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
-                                    <td class="px-4 py-2">
-                                        <div class="flex items-center justify-end gap-1"><span
-                                                class="text-[11px] text-gray-400 font-mono">LKR.</span><input
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
                                                 type="text" placeholder="0.00" oninput="calcTotal()"
-                                                class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">(v)</td>
-                                    <td class="px-4 py-2"><select
-                                            class="location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                            <option value="">Select</option>
-                                        </select></td>
-                                    <td class="px-4 py-3"><input type="text" value="On Architectural fees"
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text"
+                                            value="On stock in trade, Work-in-Progress and finished goods"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
-                                    <td class="px-4 py-2">
-                                        <div class="flex items-center justify-end gap-1"><span
-                                                class="text-[11px] text-gray-400 font-mono">LKR.</span><input
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
                                                 type="text" placeholder="0.00" oninput="calcTotal()"
-                                                class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">(vi)</td>
-                                    <td class="px-4 py-2"><select
-                                            class="location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                            <option value="">Select</option>
-                                        </select></td>
-                                    <td class="px-4 py-3"><input type="text" value="On removal of debris"
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On stocks held in trust"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
-                                    <td class="px-4 py-2">
-                                        <div class="flex items-center justify-end gap-1"><span
-                                                class="text-[11px] text-gray-400 font-mono">LKR.</span><input
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
                                                 type="text" placeholder="0.00" oninput="calcTotal()"
-                                                class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">(vii)</td>
-                                    <td class="px-4 py-2"><select
-                                            class="location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                            <option value="">Select</option>
-                                        </select></td>
-                                    <td class="px-4 py-3"><input type="text"
-                                            value="Loss of Rent/Cost of Alternative Accommodation"
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On machinery and utensils*"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
-                                    <td class="px-4 py-2">
-                                        <div class="flex items-center justify-end gap-1"><span
-                                                class="text-[11px] text-gray-400 font-mono">LKR.</span><input
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
                                                 type="text" placeholder="0.00" oninput="calcTotal()"
-                                                class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">(viii)
-                                    </td>
-                                    <td class="px-4 py-2"><select
-                                            class="location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                            <option value="">Select</option>
-                                        </select></td>
-                                    <td class="px-4 py-3"><input type="text" value="Generators / Elevators / Escalators"
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On removal of debris"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
-                                    <td class="px-4 py-2">
-                                        <div class="flex items-center justify-end gap-1"><span
-                                                class="text-[11px] text-gray-400 font-mono">LKR.</span><input
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
                                                 type="text" placeholder="0.00" oninput="calcTotal()"
-                                                class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">(ix)</td>
-                                    <td class="px-4 py-2"><select
-                                            class="location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                            <option value="">Select</option>
-                                        </select></td>
-                                    <td class="px-4 py-3"><input type="text"
-                                            value="On Solar power panels / Solar power systems &amp; other accessories"
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On architects and surveyor's fees"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
-                                    <td class="px-4 py-2">
-                                        <div class="flex items-center justify-end gap-1"><span
-                                                class="text-[11px] text-gray-400 font-mono">LKR.</span><input
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
                                                 type="text" placeholder="0.00" oninput="calcTotal()"
-                                                class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On lifts / generators / escalators / elevators"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text"
+                                            value="On solar power panels / solar power systems and other accessories"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
                                 </tr>
                                 <!-- TOTAL ROW -->
-                                <tr class="bg-navy-50/50">
-                                    <td colspan="3" class="px-4 py-3 text-right">
+                                <tr class="bg-navy-50/50" id="totalRow">
+                                    <td class="px-4 py-3 text-right">
                                         <span class="text-xs font-bold text-navy-900 uppercase tracking-wide">Total Sum
                                             Insured</span>
                                     </td>
-                                    <td class="px-4 py-3">
+                                    <td class="px-4 py-3 loc-total-cell">
                                         <div class="flex items-center justify-end gap-1">
-                                            <span class="text-[11px] text-gray-500 font-mono font-bold">LKR.</span>
-                                            <input type="text" id="totalSum" readonly value="0.00"
-                                                class="w-28 bg-transparent text-right font-mono text-sm font-bold text-navy-900 border-none p-0 focus:ring-0" />
+                                            <span class="text-[11px] text-gray-500 font-mono font-bold">Rs.</span>
+                                            <input type="text" readonly value="0.00"
+                                                class="w-full bg-transparent text-right font-mono text-sm font-bold text-navy-900 border-none p-0 focus:ring-0 total-sum-input" />
                                         </div>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div class="px-6 py-3 border-t border-gray-200 bg-white">
-                        <button type="button"
-                            class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800"
-                            onclick="addSumRow()">+ Add Row</button>
+                    <div class="px-6 py-3 border-t border-gray-200 bg-white flex items-center justify-between">
+                        <button type="button" class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800" onclick="addSumRow()">+ Add Property Row</button>
                     </div>
                 </div>
 
@@ -1565,67 +1077,107 @@
                         <h3 class="font-heading text-white text-md font-semibold">Peril Covers</h3>
                     </div>
                     <div class="p-6">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                        <div class="flex items-center justify-between mb-4">
+                            <p class="text-xs text-gray-500">Select the perils you wish to be covered against. <span class="text-tealCustom-600 font-semibold">Fire &amp; Lightning</span> is always included.</p>
+                            <button type="button" id="selectAllBtn" onclick="selectAllPerils()"
+                                class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm whitespace-nowrap">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                Select All
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3" id="perilCoversGrid">
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">Riot &amp; Strike</span></label>
+                                class="cover-card flex items-start gap-3 border border-tealCustom-500 bg-tealCustom-50 rounded-xl px-3 py-3 cursor-not-allowed transition-all opacity-80">
+                                <input type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" checked disabled
+                                    value="Fire & Lightning" />
+                                <span class="text-sm text-gray-700 font-medium">Fire &amp; Lightning</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">Malicious Damage</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Riot & Strike" />
+                                <span class="text-sm text-gray-700">Riot &amp; Strike</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">Terrorism</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Malicious Damage" />
+                                <span class="text-sm text-gray-700">Malicious Damage</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">Explosion</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Terrorism" />
+                                <span class="text-sm text-gray-700">Terrorism</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">Cyclone / Storm / Tempest</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Explosion" />
+                                <span class="text-sm text-gray-700">Explosion</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">Flood</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Cyclone / Storm / Tempest" />
+                                <span class="text-sm text-gray-700">Cyclone / Storm / Tempest</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">Earthquake (Fire &amp; Shock)</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0" value="Flood" />
+                                <span class="text-sm text-gray-700">Flood</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">Natural Disasters</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Earthquake (Fire & Shock)" />
+                                <span class="text-sm text-gray-700">Earthquake (Fire &amp; Shock)</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">Impact Damage</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Natural Disasters" />
+                                <span class="text-sm text-gray-700">Natural Disasters</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">Aircraft Damage</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Impact Damage" />
+                                <span class="text-sm text-gray-700">Impact Damage</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">Bursting and overflowing of water tank apparatus or
-                                    pipes</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Aircraft Damage" />
+                                <span class="text-sm text-gray-700">Aircraft Damage</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">Electrical Extra</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Bursting and overflowing" />
+                                <span class="text-sm text-gray-700">Bursting and overflowing of water tank
+                                    apparatus or pipes</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">Architectural Fees</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Electrical Extra" />
+                                <span class="text-sm text-gray-700">Electrical Extra</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">Removal of Debris</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" value="Architectural Fees" />
+                                <span class="text-sm text-gray-700">Architectural Fees</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" value="Removal of Debris" />
+                                <span class="text-sm text-gray-700">Removal of Debris</span>
+                            </label>
                         </div>
                     </div>
                 </div>
+
 
                 <!-- ════ SELECT PREMIUM PLANS ════ -->
                 <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
@@ -1640,7 +1192,8 @@
                                     class="mt-0.5 w-4 h-4 shrink-0" />
                                 <div>
                                     <p class="text-sm font-semibold text-gray-800">SRCC &amp; Terrorism</p>
-                                    <p class="text-xs text-tealCustom-600 font-mono font-bold mt-0.5">Rs. 30,000 /yr</p>
+                                    <p class="text-xs text-tealCustom-600 font-mono font-bold mt-0.5">Rs. 30,000 /yr
+                                    </p>
                                     <p class="text-xs text-gray-500 mt-1">Full protection including Strikes, Riots,
                                         Civil Commotion, and Terrorism coverage.</p>
                                 </div>
@@ -1651,8 +1204,10 @@
                                     class="mt-0.5 w-4 h-4 shrink-0" />
                                 <div>
                                     <p class="text-sm font-semibold text-gray-800">SRCC Only</p>
-                                    <p class="text-xs text-tealCustom-600 font-mono font-bold mt-0.5">Rs. 25,000 /yr</p>
-                                    <p class="text-xs text-gray-500 mt-1">Coverage includes Strikes, Riots, and Civil
+                                    <p class="text-xs text-tealCustom-600 font-mono font-bold mt-0.5">Rs. 25,000 /yr
+                                    </p>
+                                    <p class="text-xs text-gray-500 mt-1">Coverage includes Strikes, Riots, and
+                                        Civil
                                         Commotion. Excludes Terrorism.</p>
                                 </div>
                             </label>
@@ -1662,8 +1217,10 @@
                                     class="mt-0.5 w-4 h-4 shrink-0" />
                                 <div>
                                     <p class="text-sm font-semibold text-gray-800">Without SRCC &amp; Terrorism</p>
-                                    <p class="text-xs text-tealCustom-600 font-mono font-bold mt-0.5">Rs. 18,000 /yr</p>
-                                    <p class="text-xs text-gray-500 mt-1">Standard fire coverage. Does not include SRCC
+                                    <p class="text-xs text-tealCustom-600 font-mono font-bold mt-0.5">Rs. 18,000 /yr
+                                    </p>
+                                    <p class="text-xs text-gray-500 mt-1">Standard fire coverage. Does not include
+                                        SRCC
                                         or Terrorism protection.</p>
                                 </div>
                             </label>
@@ -1698,7 +1255,8 @@
                         </div>
                         <div
                             class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-800 leading-relaxed">
-                            <strong>Note:</strong> If the space provided herein insufficient, please attach ground plan
+                            <strong>Note:</strong> If the space provided herein insufficient, please attach ground
+                            plan
                             drawn on a separate sheet of paper.
                         </div>
                     </div>
@@ -1707,32 +1265,46 @@
                 <!-- ════ DATA PROTECTION ════ -->
                 <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
                     <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
-                        <h3 class="font-heading text-white text-md font-semibold">Personal Data Protection Clause</h3>
+                        <h3 class="font-heading text-white text-md font-semibold">Personal Data Protection Clause
+                        </h3>
                     </div>
                     <div class="p-6 space-y-4">
                         <div
                             class="bg-gray-50 border border-gray-200 rounded-xl p-5 text-xs text-gray-600 leading-relaxed space-y-3">
-                            <p>The undersigned hereby consents to the collection, use and transfer of Personal Data as
-                                mentioned in this paragraph. The undersigned understands that the Company holds certain
-                                personal information about him/her including Full Name, Address, Date of Birth, Gender,
+                            <p>The undersigned hereby consents to the collection, use and transfer of Personal Data
+                                as
+                                mentioned in this paragraph. The undersigned understands that the Company holds
+                                certain
+                                personal information about him/her including Full Name, Address, Date of Birth,
+                                Gender,
                                 National Identity Card/Passport Details, Job Title, Telephone Number, Email Address,
-                                Educational &amp; Professional Experience, Business Activities, Travel &amp; Expenses
-                                Information, Financial Details (e.g. Credit/Debit Card &amp; Bank Account Details etc.),
-                                Identification Checks &amp; Background Vetting, and Other Information including family
+                                Educational &amp; Professional Experience, Business Activities, Travel &amp;
+                                Expenses
+                                Information, Financial Details (e.g. Credit/Debit Card &amp; Bank Account Details
+                                etc.),
+                                Identification Checks &amp; Background Vetting, and Other Information including
+                                family
                                 life.</p>
-                            <p>The undersigned further understands that the Company holds special categories of personal
-                                data concerning health and such other information which may fall within the definition
-                                of "special categories of personal data", as defined in the Data Protection Act, No. 09
+                            <p>The undersigned further understands that the Company holds special categories of
+                                personal
+                                data concerning health and such other information which may fall within the
+                                definition
+                                of "special categories of personal data", as defined in the Data Protection Act, No.
+                                09
                                 of 2022.</p>
                             <p>The undersigned further understands that it may be necessary for the purposes of the
-                                relationship with the Company to share data with Reinsurers, Actuaries, and such other
-                                required parties for the purpose of assessing the risk. The undersigned authorises the
+                                relationship with the Company to share data with Reinsurers, Actuaries, and such
+                                other
+                                required parties for the purpose of assessing the risk. The undersigned authorises
+                                the
                                 Company to receive, possess, process and transfer the data for the purpose of the
-                                pre-insurance contract evaluation and for the purpose of servicing insurance contracts.
+                                pre-insurance contract evaluation and for the purpose of servicing insurance
+                                contracts.
                             </p>
                         </div>
                         <label class="flex items-start gap-3 cursor-pointer">
-                            <span class="text-sm text-red-400">I have read and understood the Personal Data Protection
+                            <span class="text-sm text-red-400">I have read and understood the Personal Data
+                                Protection
                                 Clause and hereby provide my consent.</span>
                         </label>
                     </div>
@@ -1834,28 +1406,40 @@
                     <div class="p-6 space-y-5">
                         <div class="flex gap-3 bg-amber-50 border border-amber-200 rounded-xl px-5 py-4">
                             <p class="text-xs text-amber-800 leading-relaxed">
-                                <strong>Note:</strong> Any misdescription or misrepresentation of material facts known
-                                to the proposer in this proposal form is liable to render the policy void from the
-                                inception.
+                                <strong>Note:</strong> Any misdescription or misrepresentation of material facts known to the proposer in this proposal form is liable to render the policy void from the inception.
                             </p>
                         </div>
+
+                        <!-- Joint Account Toggle -->
+                        <div class="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-xl px-4 py-3">
+                            <label class="flex items-center gap-3 cursor-pointer select-none">
+                                <input type="checkbox" id="jointAccountChk" onchange="toggleJointAccount()" class="w-4 h-4 accent-tealCustom-500" />
+                                <span class="text-sm font-semibold text-navy-900">Joint Account</span>
+                                <span class="text-xs text-gray-500">(Check if there are multiple proposers)</span>
+                            </label>
+                            <button type="button" id="addJointSigBtn" onclick="addJointSignature()" style="display:none;"
+                                class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                                Add Signature
+                            </button>
+                        </div>
+
+                        <!-- Primary Proposer Signature -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div class="space-y-1">
-                                <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Signature
-                                    of Proposer</label>
-                                <div
-                                    class="border-2 border-dashed border-gray-200 rounded-xl h-20 flex items-center justify-center bg-gray-50">
+                                <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Signature of Proposer</label>
+                                <div class="border-2 border-dashed border-gray-200 rounded-xl h-20 flex items-center justify-center bg-gray-50">
                                     <span class="text-xs text-gray-400">Signature here</span>
                                 </div>
                             </div>
                             <div class="space-y-1">
-                                <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Date</label>
-                                <input type="date"
-                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                                <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Date</label>
+                                <input type="date" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
                             </div>
                         </div>
+
+                        <!-- Additional Joint Signatures Container -->
+                        <div id="jointSignaturesContainer" class="space-y-4"></div>
                     </div>
                 </div>
 
@@ -1866,17 +1450,21 @@
                     </div>
                     <div class="p-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="space-y-1"><label
-                                class="block text-[10px] font-semibold uppercase tracking-wide text-gray-400">Rate and
+                                class="block text-[10px] font-semibold uppercase tracking-wide text-gray-400">Rate
+                                and
                                 Calculated</label><input type="text"
-                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" /></div>
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                        </div>
                         <div class="space-y-1"><label
                                 class="block text-[10px] font-semibold uppercase tracking-wide text-gray-400">Checked</label><input
                                 type="text"
-                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" /></div>
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                        </div>
                         <div class="space-y-1"><label
                                 class="block text-[10px] font-semibold uppercase tracking-wide text-gray-400">Accepted</label><input
                                 type="text"
-                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" /></div>
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                        </div>
                         <div class="space-y-1"><label
                                 class="block text-[10px] font-semibold uppercase tracking-wide text-gray-400">Proposal
                                 No.</label><input type="text"
@@ -3044,27 +2632,40 @@
                                     clip-rule="evenodd" />
                             </svg>
                             <p class="text-xs text-amber-800 leading-relaxed">
-                                <strong>සටහන:</strong> මෙම යෝජනා පත්‍රයෙහි යෝජකයා දන්නා වැදගත් කරුණු කිසිවක් වැරදි ලෙස
-                                හෝ අසත්‍ය ලෙස ප්‍රකාශ කිරීම මගින් ආරම්භයේ සිටම ඔප්පුව අවලංගු වීමට හේතු වේ.
+                                <strong>සටහන:</strong> මෙම යෝජනා පත්‍රයෙහි යෝජකයා දන්නා වැදගත් කරුණු කිසිවක් වැරදි ලෙස හෝ අසත්‍ය ලෙස ප්‍රකාශ කිරීම මගින් ආරම්භයේ සිටම ඔප්පුව අවලංගු වීමට හේතු වේ.
                             </p>
                         </div>
+
+                        <!-- ඒකාබද්ධ ගිණුම ටොගල් -->
+                        <div class="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-xl px-4 py-3">
+                            <label class="flex items-center gap-3 cursor-pointer select-none">
+                                <input type="checkbox" id="siJointAccountChk" onchange="toggleSiJointAccount()" class="w-4 h-4 accent-tealCustom-500" />
+                                <span class="text-sm font-semibold text-navy-900">ඒකාබද්ධ ගිණුම</span>
+                                <span class="text-xs text-gray-500">(යෝජකයන් කිහිප දෙනෙකු සිටී නම් සලකුණු කරන්න)</span>
+                            </label>
+                            <button type="button" id="siAddJointSigBtn" onclick="addSiJointSignature()" style="display:none;"
+                                class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                                අත්සනක් එකතු කරන්න
+                            </button>
+                        </div>
+
+                        <!-- ප්‍රාථමික යෝජකයාගේ අත්සන -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div class="space-y-1">
-                                <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">යෝජකයාගේ
-                                    අත්සන</label>
-                                <div
-                                    class="border-2 border-dashed border-gray-200 rounded-xl h-20 flex items-center justify-center bg-gray-50">
+                                <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">යෝජකයාගේ අත්සන</label>
+                                <div class="border-2 border-dashed border-gray-200 rounded-xl h-20 flex items-center justify-center bg-gray-50">
                                     <span class="text-xs text-gray-400">මෙහි අත්සන් කරන්න</span>
                                 </div>
                             </div>
                             <div class="space-y-1">
-                                <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">දිනය</label>
-                                <input type="date"
-                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                                <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">දිනය</label>
+                                <input type="date" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
                             </div>
                         </div>
+
+                        <!-- Additional Joint Signatures Container -->
+                        <div id="siJointSignaturesContainer" class="space-y-4"></div>
                     </div>
                 </div>
 
@@ -3100,12 +2701,189 @@
             document.getElementById(id).classList.toggle('hidden', !cb.checked);
         }
 
+        // ── EN: Toggle Joint Account ────────────────────────────────────────
+        let jointSigCount = 0;
+        function toggleJointAccount() {
+            const checked = document.getElementById('jointAccountChk').checked;
+            const btn = document.getElementById('addJointSigBtn');
+            btn.style.display = checked ? 'inline-flex' : 'none';
+            if (!checked) {
+                document.getElementById('jointSignaturesContainer').innerHTML = '';
+                jointSigCount = 0;
+            }
+        }
+        function addJointSignature() {
+            jointSigCount++;
+            const container = document.getElementById('jointSignaturesContainer');
+            const div = document.createElement('div');
+            div.className = 'border border-gray-200 rounded-xl p-4 space-y-3 bg-gray-50 relative';
+            div.id = `jointSig_${jointSigCount}`;
+            div.innerHTML = `
+                <div class="flex items-center justify-between mb-1">
+                    <span class="text-xs font-bold uppercase tracking-wide text-navy-700">Joint Proposer ${jointSigCount}</span>
+                    <button type="button" onclick="document.getElementById('jointSig_${jointSigCount}').remove()" class="text-red-400 hover:text-red-600 font-bold text-base leading-none">&times; Remove</button>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="space-y-1">
+                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-navy-900">Full Name</label>
+                        <input type="text" placeholder="Full name" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-white" />
+                    </div>
+                    <div class="space-y-1">
+                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-navy-900">NIC / Passport</label>
+                        <input type="text" placeholder="NIC or Passport No." class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-white" />
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="space-y-1">
+                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-navy-900">Signature</label>
+                        <div class="border-2 border-dashed border-gray-200 rounded-xl h-16 flex items-center justify-center bg-white">
+                            <span class="text-xs text-gray-400">Signature here</span>
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-navy-900">Date</label>
+                        <input type="date" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white" />
+                    </div>
+                </div>`;
+            container.appendChild(div);
+        }
+
+        // ── SI: Toggle Joint Account ────────────────────────────────────────
+        let siJointSigCount = 0;
+        function toggleSiJointAccount() {
+            const checked = document.getElementById('siJointAccountChk').checked;
+            const btn = document.getElementById('siAddJointSigBtn');
+            btn.style.display = checked ? 'inline-flex' : 'none';
+            if (!checked) {
+                document.getElementById('siJointSignaturesContainer').innerHTML = '';
+                siJointSigCount = 0;
+            }
+        }
+        function addSiJointSignature() {
+            siJointSigCount++;
+            const container = document.getElementById('siJointSignaturesContainer');
+            const div = document.createElement('div');
+            div.className = 'border border-gray-200 rounded-xl p-4 space-y-3 bg-gray-50 relative';
+            div.id = `siJointSig_${siJointSigCount}`;
+            div.innerHTML = `
+                <div class="flex items-center justify-between mb-1">
+                    <span class="text-xs font-bold uppercase tracking-wide text-navy-700">ඒකාබද්ධ යෝජකයා ${siJointSigCount}</span>
+                    <button type="button" onclick="document.getElementById('siJointSig_${siJointSigCount}').remove()" class="text-red-400 hover:text-red-600 font-bold text-base leading-none">&times; ඉවත් කරන්න</button>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="space-y-1">
+                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-navy-900">සම්පූර්ණ නම</label>
+                        <input type="text" placeholder="සම්පූර්ණ නම" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-white" />
+                    </div>
+                    <div class="space-y-1">
+                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-navy-900">ජා.හැ.පත / ගමන් බලපත්‍රය</label>
+                        <input type="text" placeholder="ජා.හැ.පත් අංකය" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-white" />
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="space-y-1">
+                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-navy-900">අත්සන</label>
+                        <div class="border-2 border-dashed border-gray-200 rounded-xl h-16 flex items-center justify-center bg-white">
+                            <span class="text-xs text-gray-400">මෙහි අත්සන් කරන්න</span>
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-navy-900">දිනය</label>
+                        <input type="date" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white" />
+                    </div>
+                </div>`;
+            container.appendChild(div);
+        }
         // ── EN: Total calculation ────────────────────────────────────────
         function calcTotal() {
-            const rows = document.querySelectorAll('#sumsBody tr:not(:last-child)');
-            let total = 0;
-            rows.forEach(r => r.querySelectorAll('input[type="text"]').forEach((inp, i) => { if (i > 0) total += parseNum(inp.value); }));
-            document.getElementById('totalSum').value = fmt(total);
+            const sumRows = document.querySelectorAll('#sumsBody tr.sum-row');
+            const totalCells = document.querySelectorAll('#totalRow td.loc-total-cell');
+            totalCells.forEach((tc, colIdx) => {
+                let colTotal = 0;
+                sumRows.forEach(row => {
+                    const locCells = row.querySelectorAll('td.loc-cell');
+                    if (locCells[colIdx]) {
+                        const inp = locCells[colIdx].querySelector('input[type="text"]');
+                        if (inp) colTotal += parseNum(inp.value);
+                    }
+                });
+                const display = tc.querySelector('.total-sum-input');
+                if (display) display.value = colTotal > 0 ? fmt(colTotal) : '0.00';
+            });
+        }
+
+        // ── EN: Select All Perils ────────────────────────────────────────
+        function selectAllPerils() {
+            const checkboxes = document.querySelectorAll('#perilCoversGrid .peril-checkbox');
+            const allChecked = Array.from(checkboxes).every(c => c.checked);
+            checkboxes.forEach(c => { c.checked = !allChecked; });
+            const btn = document.getElementById('selectAllBtn');
+            if (btn) {
+                btn.innerHTML = allChecked
+                    ? `<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Select All`
+                    : `<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> Deselect All`;
+            }
+        }
+
+        // ── EN: Add Location Column ──────────────────────────────────────
+        function addLocationColumn() {
+            const theadTr = document.querySelector('#sumsTable thead tr');
+            const th = document.createElement('th');
+            th.className = 'px-4 py-2 loc-header-col min-w-[180px]';
+            th.innerHTML = `
+                <div class="flex items-center gap-1">
+                    <select class="location-dropdown flex-1 border border-gray-200 rounded-lg px-2 py-1.5 text-xs text-navy-700 bg-white">
+                        <option value="">Select Location</option>
+                    </select>
+                    <button type="button" title="Remove column" onclick="removeLocationColumn(this)" class="text-red-400 hover:text-red-600 font-bold text-base leading-none px-0.5">&times;</button>
+                </div>`;
+            theadTr.appendChild(th);
+
+            // Add a loc-cell to every sum-row
+            document.querySelectorAll('#sumsBody tr.sum-row').forEach(row => {
+                const td = document.createElement('td');
+                td.className = 'px-4 py-2 loc-cell';
+                td.innerHTML = `
+                    <div class="flex items-center justify-end gap-1">
+                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span>
+                        <input type="text" placeholder="0.00" oninput="calcTotal()" class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right" />
+                    </div>`;
+                row.appendChild(td);
+            });
+
+            // Add a total cell to #totalRow
+            const totalRow = document.getElementById('totalRow');
+            const totalTd = document.createElement('td');
+            totalTd.className = 'px-4 py-3 loc-total-cell';
+            totalTd.innerHTML = `
+                <div class="flex items-center justify-end gap-1">
+                    <span class="text-[11px] text-gray-500 font-mono font-bold">Rs.</span>
+                    <input type="text" readonly value="0.00" class="w-full bg-transparent text-right font-mono text-sm font-bold text-navy-900 border-none p-0 focus:ring-0 total-sum-input" />
+                </div>`;
+            totalRow.appendChild(totalTd);
+
+            updateLocationDropdowns();
+            calcTotal();
+        }
+
+        function removeLocationColumn(btn) {
+            const th = btn.closest('th');
+            const allTh = Array.from(th.parentNode.children);
+            // column index among loc-header-col only
+            const locHeaders = th.parentNode.querySelectorAll('th.loc-header-col');
+            const locIdx = Array.from(locHeaders).indexOf(th);
+            th.remove();
+
+            document.querySelectorAll('#sumsBody tr.sum-row').forEach(row => {
+                const locCells = row.querySelectorAll('td.loc-cell');
+                if (locCells[locIdx]) locCells[locIdx].remove();
+            });
+
+            const totalRow = document.getElementById('totalRow');
+            const totalCells = totalRow.querySelectorAll('td.loc-total-cell');
+            if (totalCells[locIdx]) totalCells[locIdx].remove();
+
+            calcTotal();
         }
 
         // ── EN: Directors row ────────────────────────────────────────────
@@ -3162,28 +2940,36 @@
             }));
             document.querySelectorAll('.location-dropdown').forEach(sel => {
                 const cur = sel.value;
-                sel.innerHTML = '<option value="">Select</option>';
+                sel.innerHTML = '<option value="">Select Location</option>';
                 locs.forEach(l => { const o = document.createElement('option'); o.value = l.id; o.textContent = l.text; if (cur === l.id) o.selected = true; sel.appendChild(o); });
             });
         }
 
         // ── EN: Sums add row ─────────────────────────────────────────────
-        let sumRowCount = 9;
-        const roman = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x', 'xi', 'xii', 'xiii', 'xiv', 'xv'];
+        let sumRowCount = 11;
         function addSumRow() {
             sumRowCount++;
             const tbody = document.getElementById('sumsBody');
-            const lastRow = tbody.querySelector('tr:last-child');
+            const totalRow = document.getElementById('totalRow');
             const tr = document.createElement('tr');
-            tr.className = 'hover:bg-gray-50';
-            const lbl = roman[sumRowCount - 1] ? `(${roman[sumRowCount - 1]})` : `(${sumRowCount})`;
-            tr.innerHTML = `
-                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">${lbl}</td>
-                <td class="px-4 py-2"><select class="location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50"><option value="">Select</option></select></td>
-                <td class="px-4 py-3"><input type="text" placeholder="Description of property" class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" /></td>
-                <td class="px-4 py-2"><div class="flex items-center justify-end gap-1"><span class="text-[11px] text-gray-400 font-mono">LKR.</span><input type="text" placeholder="0.00" oninput="calcTotal()" class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" /></div></td>`;
-            tbody.insertBefore(tr, lastRow);
-            updateLocationDropdowns();
+            tr.className = 'hover:bg-gray-50 sum-row';
+
+            // Count how many loc-header-col exist in thead
+            const locColCount = document.querySelectorAll('#sumsTable thead th.loc-header-col').length;
+
+            let cells = `<td class="px-4 py-3 text-gray-700 text-sm">
+                <input type="text" placeholder="Description of property" class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+            </td>`;
+            for (let i = 0; i < locColCount; i++) {
+                cells += `<td class="px-4 py-2 loc-cell">
+                    <div class="flex items-center justify-end gap-1">
+                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span>
+                        <input type="text" placeholder="0.00" oninput="calcTotal()" class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right" />
+                    </div>
+                </td>`;
+            }
+            tr.innerHTML = cells;
+            tbody.insertBefore(tr, totalRow);
         }
 
         // ── SI equivalents ───────────────────────────────────────────────
