@@ -1175,54 +1175,155 @@
                                 <span class="text-sm text-gray-700">Removal of Debris</span>
                             </label>
                         </div>
+                         <div class="mt-4 space-y-1">
+                        <label class="text-sm font-semibold text-navy-900">Other covers (Specify)</label>
+                        <input type="text" placeholder="Any other coverage required"
+                            class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                    </div>
+
+                        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Extensions -->
+                            <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 shadow-sm">
+                                <div class="flex items-center gap-3 mb-3">
+
+                                    <h3 class="font-heading text-blue-900 text-base font-bold">
+                                        Extensions
+                                    </h3>
+                                </div>
+                                <p class="text-xs text-blue-800 leading-relaxed mb-3 font-bold">
+                                    Additional coverage extensions will be automatically applied based on your final
+                                    quotation parameters.
+                                </p>
+                                <div
+                                    class="bg-white/60 rounded-lg p-3 text-xs text-blue-900 border border-blue-100 flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-blue-600 shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span><span class="font-semibold">Note:</span> Specific extensions are determined by
+                                        the
+                                        selected premium plan and property type <span class="font-bold">as per the
+                                            quotation</span>.</span>
+                                </div>
+                            </div>
+
+                            <!-- Clauses -->
+                            <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 shadow-sm">
+                                <div class="flex items-center gap-3 mb-3">
+
+                                    <h3 class="font-heading text-blue-900 text-base font-bold">
+                                        Clauses
+                                    </h3>
+                                </div>
+                                <p class="text-xs text-blue-800 leading-relaxed mb-3 font-bold">
+                                    Standard policy clauses and coverage conditions are governed by the approved
+                                    quotation
+                                    terms.
+                                </p>
+                                <div
+                                    class="bg-white/60 rounded-lg p-3 text-xs text-blue-900 border border-blue-100 flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-blue-600 shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span><span class="font-semibold">Note:</span> Please refer to the final quotation
+                                        document for the comprehensive and legally binding list of clauses.</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
 
-                <!-- ════ SELECT PREMIUM PLANS ════ -->
-                <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
-                    <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
-                        <h3 class="font-heading text-white text-md font-semibold">Select Premium Plans</h3>
+                 <!-- ════════ SECTION F: Select Premium Plans ════════ -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
+                    <div class="bg-tealCustom-500 px-6 py-2 flex items-center gap-3">
+                        <!-- <span class="w-7 h-7 rounded-full bg-gold-400 text-navy-950 text-xs font-mono font-bold flex items-center justify-center">F</span> -->
+                        <h3 class="font-heading text-white text-md font-semibold">
+                            Select Premium Plans
+                        </h3>
                     </div>
                     <div class="p-6">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                            <!-- Plan 1 -->
                             <label
-                                class="plan-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                class="relative flex flex-col p-6 border-2 border-gray-200 rounded-2xl cursor-pointer hover:border-tealCustom-300 hover:bg-tealCustom-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl has-[:checked]:border-tealCustom-600 has-[:checked]:bg-tealCustom-50/50 group bg-white">
                                 <input type="radio" name="premium_plan" value="Premium with SRCC & Terrorism"
-                                    class="mt-0.5 w-4 h-4 shrink-0" />
-                                <div>
-                                    <p class="text-sm font-semibold text-gray-800">SRCC &amp; Terrorism</p>
-                                    <p class="text-xs text-tealCustom-600 font-mono font-bold mt-0.5">Rs. 30,000 /yr
-                                    </p>
-                                    <p class="text-xs text-gray-500 mt-1">Full protection including Strikes, Riots,
-                                        Civil Commotion, and Terrorism coverage.</p>
+                                    class="peer sr-only" />
+                                <div
+                                    class="absolute -top-3 left-1/2 -translate-x-1/2 bg-tealCustom-600 text-white text-[10px] font-bold uppercase tracking-wider py-1 px-3 rounded-full shadow-sm">
+                                    Recommended
                                 </div>
+                                <!-- <div class="flex justify-between items-start mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-tealCustom-100 flex items-center justify-center text-tealCustom-600 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-shield-alt text-xl"></i>
+                                </div>
+                                <div
+                                    class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center peer-checked:border-tealCustom-600 peer-checked:bg-tealCustom-600 transition-colors">
+                                    <i class="fas fa-check text-white text-xs opacity-0 peer-checked:opacity-100"></i>
+                                </div>
+                            </div> -->
+                                <!-- <h3 class="font-bold text-navy-900 text-lg mb-1 group-hover:text-tealCustom-700 transition-colors">Comprehensive</h3> -->
+                                <div class="font-semibold text-tealCustom-900 text-sm mb-3 text-xl"> With SRCC &amp; Terrorism
+                                </div>
+                                <div class="text-2xl font-bold text-navy-900 mb-3">Rs. 30,000<span
+                                        class="text-xs text-gray-500 font-normal"> /yr</span></div>
+                                <p class="text-xs text-gray-500 leading-relaxed mt-auto">
+                                    Full protection including Strikes, Riots, Civil Commotion, and Terrorism coverage.
+                                </p>
                             </label>
+
+                            <!-- Plan 2 -->
                             <label
-                                class="plan-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                class="relative flex flex-col p-6 border-2 border-gray-200 rounded-2xl cursor-pointer hover:border-tealCustom-300 hover:bg-tealCustom-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl has-[:checked]:border-tealCustom-600 has-[:checked]:bg-tealCustom-50/50 group bg-white">
                                 <input type="radio" name="premium_plan" value="Premium with SRCC Only"
-                                    class="mt-0.5 w-4 h-4 shrink-0" />
-                                <div>
-                                    <p class="text-sm font-semibold text-gray-800">SRCC Only</p>
-                                    <p class="text-xs text-tealCustom-600 font-mono font-bold mt-0.5">Rs. 25,000 /yr
-                                    </p>
-                                    <p class="text-xs text-gray-500 mt-1">Coverage includes Strikes, Riots, and
-                                        Civil
-                                        Commotion. Excludes Terrorism.</p>
+                                    class="peer sr-only" />
+                                <!-- <div class="flex justify-between items-start mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-bolt text-xl"></i>
                                 </div>
+                                <div
+                                    class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center peer-checked:border-tealCustom-600 peer-checked:bg-tealCustom-600 transition-colors">
+                                    <i class="fas fa-check text-white text-xs opacity-0 peer-checked:opacity-100"></i>
+                                </div>
+                            </div> -->
+                                <!-- <h3 class="font-bold text-navy-900 text-lg mb-1 group-hover:text-blue-700 transition-colors">Standard</h3> -->
+                                <div class="font-semibold text-blue-900 text-sm mb-3 text-xl">With SRCC</div>
+                                <div class="text-2xl font-bold text-navy-900 mb-3">Rs. 25,000<span
+                                        class="text-xs text-gray-500 font-normal"> /yr</span></div>
+                                <p class="text-xs text-gray-500 leading-relaxed mt-auto">
+                                    Coverage includes Strikes, Riots, and Civil Commotion. Excludes Terrorism.
+                                </p>
                             </label>
+
+                            <!-- Plan 3 -->
                             <label
-                                class="plan-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                class="relative flex flex-col p-6 border-2 border-gray-200 rounded-2xl cursor-pointer hover:border-tealCustom-300 hover:bg-tealCustom-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl has-[:checked]:border-tealCustom-600 has-[:checked]:bg-tealCustom-50/50 group bg-white">
                                 <input type="radio" name="premium_plan" value="Basic Premium (No SRCC & Terrorism)"
-                                    class="mt-0.5 w-4 h-4 shrink-0" />
-                                <div>
-                                    <p class="text-sm font-semibold text-gray-800">Without SRCC &amp; Terrorism</p>
-                                    <p class="text-xs text-tealCustom-600 font-mono font-bold mt-0.5">Rs. 18,000 /yr
-                                    </p>
-                                    <p class="text-xs text-gray-500 mt-1">Standard fire coverage. Does not include
-                                        SRCC
-                                        or Terrorism protection.</p>
+                                    class="peer sr-only" />
+                                <!-- <div class="flex justify-between items-start mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-home text-xl"></i>
                                 </div>
+                                <div
+                                    class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center peer-checked:border-tealCustom-600 peer-checked:bg-tealCustom-600 transition-colors">
+                                    <i class="fas fa-check text-white text-xs opacity-0 peer-checked:opacity-100"></i>
+                                </div>
+                            </div> -->
+                                <!-- <h3 class="font-bold text-navy-900 text-lg mb-1 group-hover:text-gray-700 transition-colors">Basic</h3> -->
+                                <div class="font-semibold text-xl text-gray-700 text-sm mb-3">Without SRCC &amp;
+                                    Terrorism
+                                </div>
+                                <div class="text-2xl font-bold text-navy-900 mb-3">Rs. 18,000<span
+                                        class="text-xs text-gray-500 font-normal"> /yr</span></div>
+                                <p class="text-xs text-gray-500 leading-relaxed mt-auto">
+                                    Standard fire coverage. Does not include SRCC or Terrorism protection.
+                                </p>
                             </label>
                         </div>
                     </div>
@@ -1414,8 +1515,8 @@
                         <div class="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-xl px-4 py-3">
                             <label class="flex items-center gap-3 cursor-pointer select-none">
                                 <input type="checkbox" id="jointAccountChk" onchange="toggleJointAccount()" class="w-4 h-4 accent-tealCustom-500" />
-                                <span class="text-sm font-semibold text-navy-900">Joint Account</span>
-                                <span class="text-xs text-gray-500">(Check if there are multiple proposers)</span>
+                                <span class="text-sm font-semibold text-navy-900">(Check if there are multiple proposers)</span>
+                                <!-- <span class="text-xs text-gray-500">(Check if there are multiple proposers)</span> -->
                             </label>
                             <button type="button" id="addJointSigBtn" onclick="addJointSignature()" style="display:none;"
                                 class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm">
@@ -1763,20 +1864,36 @@
                             </div>
                         </div>
 
+
                         <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">11</span>
-                            <div class="space-y-1 flex-1 w-full max-w-xs">
+                            <div class="space-y-2 flex-1 w-full">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">මුදල්
-                                    වර්ගය</label>
-                                <select class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50">
-                                    <option value="LKR">LKR (Sri Lankan Rupee)</option>
-                                    <option value="USD">USD (US Dollar)</option>
-                                    <option value="EUR">EUR (Euro)</option>
-                                    <option value="GBP">GBP (British Pound)</option>
-                                </select>
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">මුදල් වර්ගය</label>
+                                <div class="flex flex-wrap gap-4 items-center">
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">ශ්‍රී ලංකා රුපියල්</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">ඇමරිකානු ඩොලර්</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">යූරෝ</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">පවුම්</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4"
+                                            onchange="toggleOtherInput('wallOtherInput',this)" /><span
+                                            class="text-xs">වෙනත්</span></label>
+                                </div>
+                                <input type="text" id="wallOtherInput" placeholder="Please specify"
+                                    class="hidden w-full max-w-sm border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
                             </div>
                         </div>
+
 
                         <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">12</span>
@@ -2053,16 +2170,37 @@
                             </div>
                         </div>
 
+                        
+
                         <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
-                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">19</span>
-                            <div class="space-y-1 flex-1 w-full">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">13</span>
+                            <div class="space-y-2 flex-1 w-full">
                                 <label
                                     class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">ගොඩනැගිල්ල
                                     ආලෝකමත් කරන්නේ කෙසේද?</label>
-                                <input type="text" placeholder="උදා: විදුලිය, විදුලි ජනක යන්ත්‍රය"
-                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                                <div class="flex flex-wrap gap-4 items-center">
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span
+                                            class="text-xs">විදුලිය</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span
+                                            class="text-xs">විදුලි ජනක යන්ත්‍රය</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">සූර්ය පැනල</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4"
+                                            onchange="toggleOtherInput('wallOtherInput',this)" /><span
+                                            class="text-xs">වෙනත්</span></label>
+                                </div>
+                                <input type="text" id="wallOtherInput" placeholder="Please specify"
+                                    class="hidden w-full max-w-sm border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
                             </div>
                         </div>
+
 
                         <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">20</span>
@@ -2151,323 +2289,412 @@
                 </div>
 
                 <!-- ════ රක්ෂිත මුදල ════ -->
+
                 <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
                     <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
                         <h3 class="font-heading text-white text-md font-semibold">රක්ෂිත මුදල</h3>
                     </div>
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-sm">
+                    <div class="px-6 py-2.5 bg-tealCustom-50 border-b border-tealCustom-100 text-xs text-tealCustom-700 italic">
+                        සලකුණු කර ඇති (*) අයිතම සඳහා වෙළඳ නාමය/මාදිලි අංකය, නිෂ්පාදිත වර්ෂය සහ වටිනාකම් වෙන වෙනම ඇතුළත් කරන්න.
+                    </div>
+                    <div class="px-6 pt-3 pb-0 flex items-center justify-end">
+                        <button type="button" onclick="addLocationColumn()"
+                            class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                            ස්ථානයක් එක් කරන්න
+                        </button>
+                    </div>
+                    <div class="overflow-x-auto w-full mt-3">
+                        <table class="w-full text-sm min-w-[500px]" id="sumsTable">
                             <thead class="bg-navy-50 border-b border-gray-200">
                                 <tr>
-                                    <th
-                                        class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 w-12">
-                                        අයිතමය</th>
-                                    <th
-                                        class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 w-24">
-                                        ස්ථාන අංකය</th>
-                                    <th
-                                        class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700">
+                                    <th class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 min-w-[260px]">
                                         රක්ෂණය කළ යුතු දේපල</th>
-                                    <th
-                                        class="px-4 py-3 text-right text-[10px] font-bold uppercase tracking-wide text-navy-700 w-40">
-                                        රක්ෂිත මුදල (LKR.)</th>
+                                    <th class="px-4 py-2 loc-header-col min-w-[180px]">
+                                        <div class="flex items-center gap-1">
+                                            <select class="location-dropdown flex-1 border border-gray-200 rounded-lg px-2 py-1.5 text-xs text-navy-700 bg-white">
+                                                <option value="">රක්ෂිත ස්ථානය </option>
+                                            </select>
+                                        </div>
+                                    </th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y divide-gray-100" id="siSumsBody">
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">(i)</td>
-                                    <td class="px-4 py-2"><select
-                                            class="si-location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                            <option value="">තෝරන්න</option>
-                                        </select></td>
-                                    <td class="px-4 py-3"><input type="text"
+                            <tbody class="divide-y divide-gray-100" id="sumsBody">
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text"
                                             value="On the building of private dwelling house including permanent fixtures and fittings"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
-                                    <td class="px-4 py-2">
-                                        <div class="flex items-center justify-end gap-1"><span
-                                                class="text-[11px] text-gray-400 font-mono">LKR.</span><input
-                                                type="text" placeholder="0.00" oninput="calcSiTotal()"
-                                                class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">(ii)</td>
-                                    <td class="px-4 py-2"><select
-                                            class="si-location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                            <option value="">තෝරන්න</option>
-                                        </select></td>
-                                    <td class="px-4 py-3"><input type="text" value="On boundary walls and gates"
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On boundary and parapet walls, gates"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
-                                    <td class="px-4 py-2">
-                                        <div class="flex items-center justify-end gap-1"><span
-                                                class="text-[11px] text-gray-400 font-mono">LKR.</span><input
-                                                type="text" placeholder="0.00" oninput="calcSiTotal()"
-                                                class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">(iii)</td>
-                                    <td class="px-4 py-2"><select
-                                            class="si-location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                            <option value="">තෝරන්න</option>
-                                        </select></td>
-                                    <td class="px-4 py-3"><input type="text"
-                                            value="On house hold furniture and electrical items etc."
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On office furniture and equipment*"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
-                                    <td class="px-4 py-2">
-                                        <div class="flex items-center justify-end gap-1"><span
-                                                class="text-[11px] text-gray-400 font-mono">LKR.</span><input
-                                                type="text" placeholder="0.00" oninput="calcSiTotal()"
-                                                class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">(iv)</td>
-                                    <td class="px-4 py-2"><select
-                                            class="si-location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                            <option value="">තෝරන්න</option>
-                                        </select></td>
-                                    <td class="px-4 py-3"><input type="text" value="On personal effects"
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On office equipment including telephones"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
-                                    <td class="px-4 py-2">
-                                        <div class="flex items-center justify-end gap-1"><span
-                                                class="text-[11px] text-gray-400 font-mono">LKR.</span><input
-                                                type="text" placeholder="0.00" oninput="calcSiTotal()"
-                                                class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">(v)</td>
-                                    <td class="px-4 py-2"><select
-                                            class="si-location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                            <option value="">තෝරන්න</option>
-                                        </select></td>
-                                    <td class="px-4 py-3"><input type="text" value="On Architectural fees"
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text"
+                                            value="On stock in trade, Work-in-Progress and finished goods"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
-                                    <td class="px-4 py-2">
-                                        <div class="flex items-center justify-end gap-1"><span
-                                                class="text-[11px] text-gray-400 font-mono">LKR.</span><input
-                                                type="text" placeholder="0.00" oninput="calcSiTotal()"
-                                                class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">(vi)</td>
-                                    <td class="px-4 py-2"><select
-                                            class="si-location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                            <option value="">තෝරන්න</option>
-                                        </select></td>
-                                    <td class="px-4 py-3"><input type="text" value="On removal of debris"
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On stocks held in trust"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
-                                    <td class="px-4 py-2">
-                                        <div class="flex items-center justify-end gap-1"><span
-                                                class="text-[11px] text-gray-400 font-mono">LKR.</span><input
-                                                type="text" placeholder="0.00" oninput="calcSiTotal()"
-                                                class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">(vii)</td>
-                                    <td class="px-4 py-2"><select
-                                            class="si-location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                            <option value="">තෝරන්න</option>
-                                        </select></td>
-                                    <td class="px-4 py-3"><input type="text"
-                                            value="Loss of Rent/Cost of Alternative Accommodation"
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On machinery and utensils*"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
-                                    <td class="px-4 py-2">
-                                        <div class="flex items-center justify-end gap-1"><span
-                                                class="text-[11px] text-gray-400 font-mono">LKR.</span><input
-                                                type="text" placeholder="0.00" oninput="calcSiTotal()"
-                                                class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">(viii)
-                                    </td>
-                                    <td class="px-4 py-2"><select
-                                            class="si-location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                            <option value="">තෝරන්න</option>
-                                        </select></td>
-                                    <td class="px-4 py-3"><input type="text" value="Generators / Elevators / Escalators"
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On removal of debris"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
-                                    <td class="px-4 py-2">
-                                        <div class="flex items-center justify-end gap-1"><span
-                                                class="text-[11px] text-gray-400 font-mono">LKR.</span><input
-                                                type="text" placeholder="0.00" oninput="calcSiTotal()"
-                                                class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">(ix)</td>
-                                    <td class="px-4 py-2"><select
-                                            class="si-location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                            <option value="">තෝරන්න</option>
-                                        </select></td>
-                                    <td class="px-4 py-3"><input type="text"
-                                            value="On Solar power panels / Solar power systems &amp; other accessories"
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On architects and surveyor's fees"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
-                                    <td class="px-4 py-2">
-                                        <div class="flex items-center justify-end gap-1"><span
-                                                class="text-[11px] text-gray-400 font-mono">LKR.</span><input
-                                                type="text" placeholder="0.00" oninput="calcSiTotal()"
-                                                class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="bg-navy-50/50">
-                                    <td colspan="3" class="px-4 py-3 text-right"><span
-                                            class="text-xs font-bold text-navy-900 uppercase tracking-wide">මුළු රක්ෂිත
-                                            මුදල</span></td>
-                                    <td class="px-4 py-3">
-                                        <div class="flex items-center justify-end gap-1"><span
-                                                class="text-[11px] text-gray-500 font-mono font-bold">LKR.</span><input
-                                                type="text" id="siTotalSum" readonly value="0.00"
-                                                class="w-28 bg-transparent text-right font-mono text-sm font-bold text-navy-900 border-none p-0 focus:ring-0" />
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On lifts / generators / escalators / elevators"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text"
+                                            value="On solar power panels / solar power systems and other accessories"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- TOTAL ROW -->
+                                <tr class="bg-navy-50/50" id="totalRow">
+                                    <td class="px-4 py-3 text-right">
+                                        <span class="text-xs font-bold text-navy-900 uppercase tracking-wide">Total Sum
+                                            Insured</span>
+                                    </td>
+                                    <td class="px-4 py-3 loc-total-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-500 font-mono font-bold">Rs.</span>
+                                            <input type="text" readonly value="0.00"
+                                                class="w-full bg-transparent text-right font-mono text-sm font-bold text-navy-900 border-none p-0 focus:ring-0 total-sum-input" />
                                         </div>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div class="px-6 py-3 border-t border-gray-200 bg-white">
+                   <div class="px-6 py-3 border-t border-gray-200 bg-white">
                         <button type="button"
                             class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800"
                             onclick="addSiSumRow()">+ පේළියක් එක් කරන්න</button>
                     </div>
                 </div>
 
+                
+                
+
                 <!-- ════ උපද්‍රව ආවරණ ════ -->
+                
+
                 <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
                     <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
                         <h3 class="font-heading text-white text-md font-semibold">උපද්‍රව ආවරණ</h3>
                     </div>
                     <div class="p-6">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                        <div class="flex items-center justify-between mb-4">
+                            <p class="text-xs text-gray-500">Select the perils you wish to be covered against. <span class="text-tealCustom-600 font-semibold">Fire &amp; Lightning</span> is always included.</p>
+                            <button type="button" id="selectAllBtn" onclick="selectAllPerils()"
+                                class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm whitespace-nowrap">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                Select All
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3" id="perilCoversGrid">
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">කැරලි සහ වැඩ වර්ජන</span></label>
+                                class="cover-card flex items-start gap-3 border border-tealCustom-500 bg-tealCustom-50 rounded-xl px-3 py-3 cursor-not-allowed transition-all opacity-80">
+                                <input type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" checked disabled
+                                    value="Fire & Lightning" />
+                                <span class="text-sm text-gray-700 font-medium">Fire &amp; Lightning</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">ද්වේශසහගත හානිය</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Riot & Strike" />
+                                <span class="text-sm text-gray-700">කැරලි සහ වැඩ වර්ජන</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">ත්‍රස්තවාදය</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Malicious Damage" />
+                                <span class="text-sm text-gray-700">ද්වේශසහගත හානිය</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">පිපිරීම</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Terrorism" />
+                                <span class="text-sm text-gray-700">ත්‍රස්තවාදය</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">සුළි කුණාටු / කුණාටු / සැඩ සුළං</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Explosion" />
+                                <span class="text-sm text-gray-700">පිපිරීම</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">ගංවතුර</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Cyclone / Storm / Tempest" />
+                                <span class="text-sm text-gray-700">සුළි කුණාටු / කුණාටු / සැඩ සුළං</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">භූමිකම්පා (ගිනි සහ කම්පන)</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0" value="Flood" />
+                                <span class="text-sm text-gray-700">ගංවතුර</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">ස්වභාවික විපත්</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Earthquake (Fire & Shock)" />
+                                <span class="text-sm text-gray-700">භූමිකම්පා (ගිනි සහ කම්පන)</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">ගැටීමෙන් සිදුවන හානි</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Natural Disasters" />
+                                <span class="text-sm text-gray-700">ස්වභාවික විපත්</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">ගුවන් යානා මගින් සිදුවන හානි</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Impact Damage" />
+                                <span class="text-sm text-gray-700">ගැටීමෙන් සිදුවන හානි</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">ජල ටැංකි, උපකරණ හෝ නල පුපුරා යාම සහ උතුරා
-                                    යාම</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Aircraft Damage" />
+                                <span class="text-sm text-gray-700">ගුවන් යානා මගින් සිදුවන හානි</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">අතිරේක විදුලි ආවරණ</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Bursting and overflowing" />
+                                <span class="text-sm text-gray-700">ජල ටැංකි, උපකරණ හෝ නල පුපුරා යාම සහ උතුරා
+                                    යාම</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">ගෘහ නිර්මාණ ශිල්පීන්ගේ ගාස්තු</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Electrical Extra" />
+                                <span class="text-sm text-gray-700">අතිරේක විදුලි ආවරණ</span>
+                            </label>
                             <label
-                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                    type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                    class="text-sm text-gray-700">සුන්බුන් ඉවත් කිරීම</span></label>
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" value="Architectural Fees" />
+                                <span class="text-sm text-gray-700">ගෘහ නිර්මාණ ශිල්පීන්ගේ ගාස්තු</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" value="Removal of Debris" />
+                                <span class="text-sm text-gray-700">සුන්බුන් ඉවත් කිරීම</span>
+                            </label>
                         </div>
                     </div>
                 </div>
 
                 <!-- ════ වාරික සැලසුම් ════ -->
-                <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
-                    <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
-                        <h3 class="font-heading text-white text-md font-semibold">වාරික සැලසුම් තෝරන්න</h3>
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
+                    <div class="bg-tealCustom-500 px-6 py-2 flex items-center gap-3">
+                        <!-- <span class="w-7 h-7 rounded-full bg-gold-400 text-navy-950 text-xs font-mono font-bold flex items-center justify-center">F</span> -->
+                        <h3 class="font-heading text-white text-md font-semibold">
+                           වාරික සැලසුම් තෝරන්න
+                        </h3>
                     </div>
                     <div class="p-6">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                            <!-- Plan 1 -->
                             <label
-                                class="plan-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
-                                <input type="radio" name="si_premium_plan" value="Premium with SRCC & Terrorism"
-                                    class="mt-0.5 w-4 h-4 shrink-0" />
-                                <div>
-                                    <p class="text-sm font-semibold text-gray-800">SRCC &amp; Terrorism</p>
-                                    <p class="text-xs text-tealCustom-600 font-mono font-bold mt-0.5">Rs. 30,000 /වසරකට
-                                    </p>
-                                    <p class="text-xs text-gray-500 mt-1">Full protection including Strikes, Riots,
-                                        Civil Commotion, and Terrorism coverage.</p>
+                                class="relative flex flex-col p-6 border-2 border-gray-200 rounded-2xl cursor-pointer hover:border-tealCustom-300 hover:bg-tealCustom-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl has-[:checked]:border-tealCustom-600 has-[:checked]:bg-tealCustom-50/50 group bg-white">
+                                <input type="radio" name="premium_plan" value="Premium with SRCC & Terrorism"
+                                    class="peer sr-only" />
+                                <div
+                                    class="absolute -top-3 left-1/2 -translate-x-1/2 bg-tealCustom-600 text-white text-[10px] font-bold uppercase tracking-wider py-1 px-3 rounded-full shadow-sm">
+                                    Recommended
                                 </div>
+                                <!-- <div class="flex justify-between items-start mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-tealCustom-100 flex items-center justify-center text-tealCustom-600 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-shield-alt text-xl"></i>
+                                </div>
+                                <div
+                                    class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center peer-checked:border-tealCustom-600 peer-checked:bg-tealCustom-600 transition-colors">
+                                    <i class="fas fa-check text-white text-xs opacity-0 peer-checked:opacity-100"></i>
+                                </div>
+                            </div> -->
+                                <!-- <h3 class="font-bold text-navy-900 text-lg mb-1 group-hover:text-tealCustom-700 transition-colors">Comprehensive</h3> -->
+                                <div class="font-semibold text-tealCustom-900 text-sm mb-3 text-xl">Wiith SRCC &amp; Terrorism
+                                </div>
+                                <div class="text-2xl font-bold text-navy-900 mb-3">Rs. 30,000<span
+                                        class="text-xs text-gray-500 font-normal"> /වසරකට</span></div>
+                                <p class="text-xs text-gray-500 leading-relaxed mt-auto">
+                                    Full protection including Strikes, Riots, Civil Commotion, and Terrorism coverage.
+                                </p>
                             </label>
+
+                            <!-- Plan 2 -->
                             <label
-                                class="plan-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
-                                <input type="radio" name="si_premium_plan" value="Premium with SRCC Only"
-                                    class="mt-0.5 w-4 h-4 shrink-0" />
-                                <div>
-                                    <p class="text-sm font-semibold text-gray-800">SRCC Only</p>
-                                    <p class="text-xs text-tealCustom-600 font-mono font-bold mt-0.5">Rs. 25,000 /වසරකට
-                                    </p>
-                                    <p class="text-xs text-gray-500 mt-1">Coverage includes Strikes, Riots, and Civil
-                                        Commotion. Excludes Terrorism.</p>
+                                class="relative flex flex-col p-6 border-2 border-gray-200 rounded-2xl cursor-pointer hover:border-tealCustom-300 hover:bg-tealCustom-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl has-[:checked]:border-tealCustom-600 has-[:checked]:bg-tealCustom-50/50 group bg-white">
+                                <input type="radio" name="premium_plan" value="Premium with SRCC Only"
+                                    class="peer sr-only" />
+                                <!-- <div class="flex justify-between items-start mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-bolt text-xl"></i>
                                 </div>
+                                <div
+                                    class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center peer-checked:border-tealCustom-600 peer-checked:bg-tealCustom-600 transition-colors">
+                                    <i class="fas fa-check text-white text-xs opacity-0 peer-checked:opacity-100"></i>
+                                </div>
+                            </div> -->
+                                <!-- <h3 class="font-bold text-navy-900 text-lg mb-1 group-hover:text-blue-700 transition-colors">Standard</h3> -->
+                                <div class="font-semibold text-blue-900 text-sm mb-3 text-xl">With SRCC</div>
+                                <div class="text-2xl font-bold text-navy-900 mb-3">Rs. 25,000<span
+                                        class="text-xs text-gray-500 font-normal"> /වසරකට</span></div>
+                                <p class="text-xs text-gray-500 leading-relaxed mt-auto">
+                                    Coverage includes Strikes, Riots, and Civil Commotion. Excludes Terrorism.
+                                </p>
                             </label>
+
+                            <!-- Plan 3 -->
                             <label
-                                class="plan-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
-                                <input type="radio" name="si_premium_plan" value="Basic Premium (No SRCC & Terrorism)"
-                                    class="mt-0.5 w-4 h-4 shrink-0" />
-                                <div>
-                                    <p class="text-sm font-semibold text-gray-800">Without SRCC &amp; Terrorism</p>
-                                    <p class="text-xs text-tealCustom-600 font-mono font-bold mt-0.5">Rs. 18,000 /වසරකට
-                                    </p>
-                                    <p class="text-xs text-gray-500 mt-1">Standard fire coverage. Does not include SRCC
-                                        or Terrorism protection.</p>
+                                class="relative flex flex-col p-6 border-2 border-gray-200 rounded-2xl cursor-pointer hover:border-tealCustom-300 hover:bg-tealCustom-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl has-[:checked]:border-tealCustom-600 has-[:checked]:bg-tealCustom-50/50 group bg-white">
+                                <input type="radio" name="premium_plan" value="Basic Premium (No SRCC & Terrorism)"
+                                    class="peer sr-only" />
+                                <!-- <div class="flex justify-between items-start mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-home text-xl"></i>
                                 </div>
+                                <div
+                                    class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center peer-checked:border-tealCustom-600 peer-checked:bg-tealCustom-600 transition-colors">
+                                    <i class="fas fa-check text-white text-xs opacity-0 peer-checked:opacity-100"></i>
+                                </div>
+                            </div> -->
+                                <!-- <h3 class="font-bold text-navy-900 text-lg mb-1 group-hover:text-gray-700 transition-colors">Basic</h3> -->
+                                <div class="font-semibold text-xl text-gray-700 text-sm mb-3">Without SRCC &amp;
+                                    Terrorism
+                                </div>
+                                <div class="text-2xl font-bold text-navy-900 mb-3">Rs. 18,000<span
+                                        class="text-xs text-gray-500 font-normal"> /වසරකට</span></div>
+                                <p class="text-xs text-gray-500 leading-relaxed mt-auto">
+                                    Standard fire coverage. Does not include SRCC or Terrorism protection.
+                                </p>
                             </label>
                         </div>
                     </div>
                 </div>
+
+               
 
                 <!-- ════ බිම් සැලැස්ම ════ -->
                 <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
@@ -2527,7 +2754,7 @@
                             </p>
                         </div>
                         <label class="flex items-start gap-3 cursor-pointer">
-                            <input type="checkbox" required class="mt-0.5 w-4 h-4 shrink-0" />
+                            <!-- <input type="checkbox" required class="mt-0.5 w-4 h-4 shrink-0" /> -->
                             <span class="text-sm text-gray-700">මම පුද්ගලික දත්ත ආරක්ෂණ වගන්තිය කියවා තේරුම් ගෙන ඇති අතර
                                 මෙයින් මගේ කැමැත්ත ලබා දෙමි.</span>
                         </label>
@@ -2640,8 +2867,8 @@
                         <div class="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-xl px-4 py-3">
                             <label class="flex items-center gap-3 cursor-pointer select-none">
                                 <input type="checkbox" id="siJointAccountChk" onchange="toggleSiJointAccount()" class="w-4 h-4 accent-tealCustom-500" />
-                                <span class="text-sm font-semibold text-navy-900">ඒකාබද්ධ ගිණුම</span>
-                                <span class="text-xs text-gray-500">(යෝජකයන් කිහිප දෙනෙකු සිටී නම් සලකුණු කරන්න)</span>
+                                <span class="text-sm font-semibold text-navy-900">(යෝජකයන් කිහිප දෙනෙකු සිටී නම් සලකුණු කරන්න)</span>
+                                
                             </label>
                             <button type="button" id="siAddJointSigBtn" onclick="addSiJointSignature()" style="display:none;"
                                 class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm">
@@ -2720,7 +2947,7 @@
             div.id = `jointSig_${jointSigCount}`;
             div.innerHTML = `
                 <div class="flex items-center justify-between mb-1">
-                    <span class="text-xs font-bold uppercase tracking-wide text-navy-700">Joint Proposer ${jointSigCount}</span>
+                    <span class="text-xs font-bold uppercase tracking-wide text-navy-700">Other Proposer ${jointSigCount}</span>
                     <button type="button" onclick="document.getElementById('jointSig_${jointSigCount}').remove()" class="text-red-400 hover:text-red-600 font-bold text-base leading-none">&times; Remove</button>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -2733,17 +2960,14 @@
                         <input type="text" placeholder="NIC or Passport No." class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-white" />
                     </div>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="grid gap-4">
                     <div class="space-y-1">
                         <label class="block text-[10px] font-semibold uppercase tracking-wide text-navy-900">Signature</label>
                         <div class="border-2 border-dashed border-gray-200 rounded-xl h-16 flex items-center justify-center bg-white">
                             <span class="text-xs text-gray-400">Signature here</span>
                         </div>
                     </div>
-                    <div class="space-y-1">
-                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-navy-900">Date</label>
-                        <input type="date" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white" />
-                    </div>
+                    
                 </div>`;
             container.appendChild(div);
         }
@@ -2767,7 +2991,7 @@
             div.id = `siJointSig_${siJointSigCount}`;
             div.innerHTML = `
                 <div class="flex items-center justify-between mb-1">
-                    <span class="text-xs font-bold uppercase tracking-wide text-navy-700">ඒකාබද්ධ යෝජකයා ${siJointSigCount}</span>
+                    <span class="text-xs font-bold uppercase tracking-wide text-navy-700"> යෝජකයා ${siJointSigCount}</span>
                     <button type="button" onclick="document.getElementById('siJointSig_${siJointSigCount}').remove()" class="text-red-400 hover:text-red-600 font-bold text-base leading-none">&times; ඉවත් කරන්න</button>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -2780,17 +3004,14 @@
                         <input type="text" placeholder="ජා.හැ.පත් අංකය" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-white" />
                     </div>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="grid gap-4">
                     <div class="space-y-1">
                         <label class="block text-[10px] font-semibold uppercase tracking-wide text-navy-900">අත්සන</label>
                         <div class="border-2 border-dashed border-gray-200 rounded-xl h-16 flex items-center justify-center bg-white">
                             <span class="text-xs text-gray-400">මෙහි අත්සන් කරන්න</span>
                         </div>
                     </div>
-                    <div class="space-y-1">
-                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-navy-900">දිනය</label>
-                        <input type="date" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white" />
-                    </div>
+                    
                 </div>`;
             container.appendChild(div);
         }

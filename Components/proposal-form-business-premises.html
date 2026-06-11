@@ -414,7 +414,7 @@
                                 of Mortgagee </label>
                             <div class="overflow-x-auto w-full pb-2">
                                 <table class="w-full text-sm border border-gray-200 rounded-lg overflow-hidden"
-                                    id="directorsTable">
+                                    id="mortgageeTable">
                                     <thead class="bg-navy-50">
                                         <tr>
                                             <th
@@ -430,41 +430,30 @@
                                                 class="px-2 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
                                                 Description of Sum Insured</th>
                                             <th
-                                                class="px-2 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200 w-12">
-                                            </th>
-                                            <th
                                                 class="px-2 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
                                             Sum Insured Value</th>
                                             <th
-                                                class="px-2 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                class="px-2 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200 w-12">
                                             </th>
                                         </tr>
                                     </thead>
-                                    <tbody class="divide-y divide-gray-100" id="directorsBody">
+                                    <tbody class="divide-y divide-gray-100" id="mortgageeBody">
                                         <tr class="hover:bg-gray-50">
-                                            <td class="px-2 py-1.5"><input type="text" placeholder="Full Name"
+                                            <td class="px-2 py-1.5"><input type="text" placeholder="Name of Bank"
                                                     class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
                                             </td>
-                                            <td class="px-2 py-1.5">
-                                                <select
-                                                    class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50">
-                                                    <option value="">Select Role</option>
-                                                    <option value="Director">Director</option>
-                                                    <option value="Chairman">Chairman</option>
-                                                    <option value="Managing Director">Managing Director</option>
-                                                    <option value="Other">Other</option>
-                                                </select>
-                                            </td>
-                                            <td class="px-2 py-1.5"><input type="text" placeholder="Nationality"
+                                            <td class="px-2 py-1.5"><input type="text" placeholder="Branch Address"
                                                     class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
                                             </td>
-                                            <td class="px-2 py-1.5"><input type="text" placeholder="NIC / Passport"
+                                            <td class="px-2 py-1.5"><input type="text" placeholder="Risk Location"
                                                     class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
                                             </td>
-                                            <td class="px-2 py-1.5"><input type="text" placeholder="Nationality"
+                                            <td class="px-2 py-1.5"><input type="text" placeholder="Description"
                                                     class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
                                             </td>
-                                            
+                                            <td class="px-2 py-1.5"><input type="text" placeholder="Sum Insured"
+                                                    class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
+                                            </td>
                                             <td class="px-2 py-1.5 text-center"><button type="button"
                                                     class="text-red-500 hover:text-red-700 font-bold"
                                                     onclick="this.closest('tr').remove()">&times;</button></td>
@@ -474,7 +463,7 @@
                             </div>
                             <button type="button"
                                 class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800"
-                                onclick="addDirectorRow()">+ Add Row</button>
+                                onclick="addMortgageeRow()">+ Add Row</button>
                         </div>
                     </div>
 
@@ -536,91 +525,118 @@
             </div>
 
             <!-- ════ G: TYPE OF COVER ════ -->
-            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
-                <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
-                    <h3 class="font-heading text-white text-md font-semibold">
-                        Type of Cover Required
-                    </h3>
-                </div>
-                <div class="p-6">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                        <button class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all" id="selectAllBtn">
-                            Select All 
 
-                        </button>
-                        <label
-                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0 selected " /><span class="text-sm text-gray-700">
-                                Fire &amp; Lightning</span></label>
-                        <label
-                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                class="text-sm text-gray-700">Explosion</span></label>
-                        <label
-                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                class="text-sm text-gray-700">Terrorism</span></label>
-                        <label
-                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                class="text-sm text-gray-700">Riot &amp; Strike</span></label>
-                        <label
-                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span class="text-sm text-gray-700">
-                                Malicious Damage</span></label>
-                        <label
-                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                class="text-sm text-gray-700">Cyclone / Storm / Tempest</span></label>
-                        <label
-                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                class="text-sm text-gray-700">Flood</span></label>
-                        <label
-                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                class="text-sm text-gray-700">Earthquake (Fire &amp; Shock)</span></label>
-                        <label
-                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                class="text-sm text-gray-700">Natural Disasters</span></label>
-                        <label
-                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span class="text-sm text-gray-700">
-                                Impact Damage</span></label>
-                        <label
-                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                class="text-sm text-gray-700">Aircraft Damage</span></label>
-                        <label
-                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                class="text-sm text-gray-700">Bursting / Overflowing of Water Tanks &amp;
-                                Pipes</span></label>
-                        <label
-                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                class="text-sm text-gray-700">Spontaneous Combustion</span></label>
-                        <label
-                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                class="text-sm text-gray-700">Electrical Inclusion with Burn Marks</span></label>
-                        <label
-                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                class="text-sm text-gray-700">Burglary — 10% First Loss Basis</span></label>
-                        <label
-                            class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" /><span
-                                class="text-sm text-gray-700">Others (Specify below)</span></label>
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                        <h3 class="font-heading text-white text-md font-semibold">Type of Cover Required</h3>
                     </div>
-                    <div class="mt-4 space-y-1">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <p class="text-xs text-gray-500">Select the perils you wish to be covered against. <span class="text-tealCustom-600 font-semibold">Fire &amp; Lightning</span> is always included.</p>
+                            <button type="button" id="selectAllBtn" onclick="selectAllPerils()"
+                                class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm whitespace-nowrap">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                Select All
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3" id="perilCoversGrid">
+                            <label
+                                class="cover-card flex items-start gap-3 border border-tealCustom-500 bg-tealCustom-50 rounded-xl px-3 py-3 cursor-not-allowed transition-all opacity-80">
+                                <input type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" checked disabled
+                                    value="Fire & Lightning" />
+                                <span class="text-sm text-gray-700 font-medium">Fire &amp; Lightning</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Riot & Strike" />
+                                <span class="text-sm text-gray-700">Explosion</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Malicious Damage" />
+                                <span class="text-sm text-gray-700">Terrorism</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Terrorism" />
+                                <span class="text-sm text-gray-700">Riot &amp; Strike</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Explosion" />
+                                <span class="text-sm text-gray-700">Malicious Damage</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Cyclone / Storm / Tempest" />
+                                <span class="text-sm text-gray-700">Cyclone / Storm / Tempest</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0" value="Flood" />
+                                <span class="text-sm text-gray-700">Flood</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Earthquake (Fire & Shock)" />
+                                <span class="text-sm text-gray-700">Earthquake (Fire &amp; Shock)</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Natural Disasters" />
+                                <span class="text-sm text-gray-700">Natural Disasters</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Impact Damage" />
+                                <span class="text-sm text-gray-700">Impact Damage</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Aircraft Damage" />
+                                <span class="text-sm text-gray-700">Aircraft Damage</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Bursting and overflowing" />
+                                <span class="text-sm text-gray-700">Bursting and overflowing of water tank
+                                    apparatus or pipes</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="mt-0.5 w-4 h-4 shrink-0"
+                                    value="Electrical Extra" />
+                                <span class="text-sm text-gray-700">Spontaneous Combustion</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" value="Architectural Fees" />
+                                <span class="text-sm text-gray-700">Electrical Inclusion with Burn Marks</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" value="Removal of Debris" />
+                                <span class="text-sm text-gray-700">Burglary — 10% First Loss Basis</span>
+                            </label>
+                            
+
+                        </div>
+                        <div class="mt-4 space-y-1">
                         <label class="text-sm font-semibold text-navy-900">Other covers (Specify)</label>
                         <input type="text" placeholder="Any other coverage required"
                             class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
                     </div>
-
-                     <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
                             <!-- Extensions -->
                             <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 shadow-sm">
                                 <div class="flex items-center gap-3 mb-3">
@@ -672,492 +688,209 @@
                                 </div>
                             </div>
                         </div>
-
-                    
+                    </div>
                 </div>
-            </div>
 
+           
             <!-- ════ F: SUMS INSURED ════ -->
             <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
-                <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
-                    <h3 class="font-heading text-white text-md font-semibold">
-                        Sums to be Insured
-                    </h3>
+                    <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                        <h3 class="font-heading text-white text-md font-semibold">Sums to be Insured</h3>
+                    </div>
+                    <div class="px-6 py-2.5 bg-tealCustom-50 border-b border-tealCustom-100 text-xs text-tealCustom-700 italic">
+                        Please submit an inventory with make/model number, year of manufacture and values separately for marked (*) items.
+                    </div>
+                    <div class="px-6 pt-3 pb-0 flex items-center justify-end">
+                        <button type="button" onclick="addLocationColumn()"
+                            class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                            Add Location
+                        </button>
+                    </div>
+                    <div class="overflow-x-auto w-full mt-3">
+                        <table class="w-full text-sm min-w-[500px]" id="sumsTable">
+                            <thead class="bg-navy-50 border-b border-gray-200">
+                                <tr>
+                                    <th class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 min-w-[260px]">
+                                        Property to be Insured</th>
+                                    <th class="px-4 py-2 loc-header-col min-w-[180px]">
+                                        <div class="flex items-center gap-1">
+                                            <select class="location-dropdown flex-1 border border-gray-200 rounded-lg px-2 py-1.5 text-xs text-navy-700 bg-white">
+                                                <option value="">Select Location</option>
+                                            </select>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100" id="sumsBody">
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text"
+                                            value="On the building of private dwelling house including permanent fixtures and fittings"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On boundary and parapet walls, gates"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On office furniture and equipment*"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On office equipment including telephones"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text"
+                                            value="On stock in trade, Work-in-Progress and finished goods"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On stocks held in trust"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On machinery and utensils*"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On removal of debris"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On architects and surveyor's fees"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On lifts / generators / escalators / elevators"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text"
+                                            value="On solar power panels / solar power systems and other accessories"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- TOTAL ROW -->
+                                <tr class="bg-navy-50/50" id="totalRow">
+                                    <td class="px-4 py-3 text-right">
+                                        <span class="text-xs font-bold text-navy-900 uppercase tracking-wide">Total Sum
+                                            Insured</span>
+                                    </td>
+                                    <td class="px-4 py-3 loc-total-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-500 font-mono font-bold">Rs.</span>
+                                            <input type="text" readonly value="0.00"
+                                                class="w-full bg-transparent text-right font-mono text-sm font-bold text-navy-900 border-none p-0 focus:ring-0 total-sum-input" />
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="px-6 py-3 border-t border-gray-200 bg-white flex items-center justify-between">
+                        <button type="button" class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800" onclick="addSumRow()">+ Add Property Row</button>
+                    </div>
                 </div>
-                <div
-                    class="px-6 py-2.5 bg-tealCustom-50 border-b border-tealCustom-100 text-xs text-tealCustom-700 italic">
-                    Please submit an inventory with make/model number, year of
-                    manufacture and values separately for marked (*) items.
-                </div>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-sm">
-                        <thead class="bg-navy-50 border-b border-gray-200">
-                            <tr>
-                                <th
-                                    class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 w-12">
-                                    Item
-                                </th>
-                                <th
-                                    class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 w-24">
-                                    Location No.
-                                </th>
-                                <th
-                                    class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700">
-                                    Property to be Insured
-                                </th>
-                                <th
-                                    class="px-4 py-3 text-right text-[10px] font-bold uppercase tracking-wide text-navy-700 w-40">
-                                    Building 1 (Rs.)
-                                </th>
-                                <th
-                                    class="px-4 py-3 text-right text-[10px] font-bold uppercase tracking-wide text-navy-700 w-40">
-                                    Building 2 (Rs.)
-                                </th>
-                                <th
-                                    class="px-4 py-3 text-right text-[10px] font-bold uppercase tracking-wide text-navy-700 w-40">
-                                    Building 3 (Rs.)
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-100" id="sumsBody">
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (i)
-                                </td>
-                                <td class="px-4 py-2">
-                                    <select
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                        <option value="">Select</option>
-                                        <option value="1">Location 01</option>
-                                    </select>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700 text-sm leading-snug">
-                                    <input type="text"
-                                        value="On the building fixtures and fittings (incl. water & gas installation and electric wiring)"
-                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (ii)
-                                </td>
-                                <td class="px-4 py-2">
-                                    <select
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                        <option value="">Select</option>
-                                        <option value="1">Location 01</option>
-                                    </select>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700 text-sm">
-                                    <input type="text" value="On boundary and parapet walls, gates"
-                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (iii)
-                                </td>
-                                <td class="px-4 py-2">
-                                    <select
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                        <option value="">Select</option>
-                                        <option value="1">Location 01</option>
-                                    </select>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700 text-sm">
-                                    <input type="text" value="On office furniture and equipment*"
-                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (iv)
-                                </td>
-                                <td class="px-4 py-2">
-                                    <select
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                        <option value="">Select</option>
-                                        <option value="1">Location 01</option>
-                                    </select>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700 text-sm">
-                                    <input type="text" value="On office equipment including telephones"
-                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (v)
-                                </td>
-                                <td class="px-4 py-2">
-                                    <select
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                        <option value="">Select</option>
-                                        <option value="1">Location 01</option>
-                                    </select>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700 text-sm">
-                                    <input type="text" value="On stock in trade, Work-in-Progress and finished goods"
-                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (vi)
-                                </td>
-                                <td class="px-4 py-2">
-                                    <select
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                        <option value="">Select</option>
-                                        <option value="1">Location 01</option>
-                                    </select>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700 text-sm">
-                                    <input type="text" value="On stocks held in trust"
-                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (vii)
-                                </td>
-                                <td class="px-4 py-2">
-                                    <select
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                        <option value="">Select</option>
-                                        <option value="1">Location 01</option>
-                                    </select>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700 text-sm">
-                                    <input type="text" value="On machinery and utensils*"
-                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (viii)
-                                </td>
-                                <td class="px-4 py-2">
-                                    <select
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                        <option value="">Select</option>
-                                        <option value="1">Location 01</option>
-                                    </select>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700 text-sm">
-                                    <input type="text" value="On removal of debris"
-                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (ix)
-                                </td>
-                                <td class="px-4 py-2">
-                                    <select
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                        <option value="">Select</option>
-                                        <option value="1">Location 01</option>
-                                    </select>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700 text-sm">
-                                    <input type="text" value="On architects and surveyor's fees"
-                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (x)
-                                </td>
-                                <td class="px-4 py-2">
-                                    <select
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                        <option value="">Select</option>
-                                        <option value="1">Location 01</option>
-                                    </select>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700 text-sm">
-                                    <input type="text" value="On lifts / generators / escalators / elevators"
-                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">
-                                    (xi)
-                                </td>
-                                <td class="px-4 py-2">
-                                    <select
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50">
-                                        <option value="">Select</option>
-                                        <option value="1">Location 01</option>
-                                    </select>
-                                </td>
-                                <td class="px-4 py-3 text-gray-700 text-sm">
-                                    <input type="text"
-                                        value="On solar power panels / solar power systems and other accessories"
-                                        class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-2">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input type="text"
-                                            placeholder="0.00" oninput="calcTotal()"
-                                            class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" />
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- TOTAL ROW -->
-                            <tr class="bg-navy-50/50">
-                                <td colspan="3" class="px-4 py-3 text-right">
-                                    <span class="text-xs font-bold text-navy-900 uppercase tracking-wide">Total Sum
-                                        Insured</span>
-                                </td>
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-500 font-mono font-bold">Rs.</span>
-                                        <input type="text" readonly value="0.00"
-                                            class="w-28 bg-transparent text-right font-mono text-sm font-bold text-navy-900 border-none p-0 focus:ring-0" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-500 font-mono font-bold">Rs.</span>
-                                        <input type="text" readonly value="0.00"
-                                            class="w-28 bg-transparent text-right font-mono text-sm font-bold text-navy-900 border-none p-0 focus:ring-0" />
-                                    </div>
-                                </td>
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center justify-end gap-1">
-                                        <span class="text-[11px] text-gray-500 font-mono font-bold">Rs.</span>
-                                        <input type="text" readonly value="0.00"
-                                            class="w-28 bg-transparent text-right font-mono text-sm font-bold text-navy-900 border-none p-0 focus:ring-0" />
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="px-6 py-3 border-t border-gray-200 bg-white">
-                    <button type="button" class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800"
-                        onclick="addSumRow()">+ Add Row</button>
-                </div>
-            </div>
+
 
             <!-- ════ B: PROPERTY / PREMISES ════ -->
             <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
@@ -1208,47 +941,37 @@
                                                 External walls
                                             </td>
                                             <td class="px-3 py-1.5 border-l border-gray-100">
-                                                <select
-                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
-                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
-                                                    <option value="">Select</option>
-                                                    <option value="Brick">Brick</option>
-                                                    <option value="Concrete">Cement blocks</option>
-                                                    <option value="Tiles">Concrete</option>
-                                                    <option value="Asbestos">Amano sheets</option>
-                                                    <option value="Other">Other</option>
-                                                </select>
-                                                <input type="text" placeholder="Specify other"
-                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Brick" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Brick</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Cement blocks" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Cement blocks</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Concrete" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Concrete</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Amano sheets" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Amano sheets</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Zinc" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Zinc</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Other" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500" onchange="this.parentElement.nextElementSibling.style.display = this.checked ? 'block' : 'none'"> Other</label>
+                                                    <input type="text" placeholder="Specify other" class="w-full text-xs border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                </div>
                                             </td>
                                             <td class="px-3 py-1.5 border-l border-gray-100">
-                                                <select
-                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
-                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
-                                                    <option value="">Select</option>
-                                                    <option value="Brick">Brick</option>
-                                                    <option value="Concrete">Cement blocks</option>
-                                                    <option value="Tiles">Concrete</option>
-                                                    <option value="Asbestos">Amano sheets</option>
-                                                    <option value="Other">Other</option>
-                                                </select>
-                                                <input type="text" placeholder="Specify other"
-                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Brick" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Brick</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Cement blocks" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Cement blocks</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Concrete" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Concrete</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Amano sheets" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Amano sheets</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Zinc" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Zinc</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Other" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500" onchange="this.parentElement.nextElementSibling.style.display = this.checked ? 'block' : 'none'"> Other</label>
+                                                    <input type="text" placeholder="Specify other" class="w-full text-xs border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                </div>
                                             </td>
                                             <td class="px-3 py-1.5 border-l border-gray-100">
-                                                <select
-                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
-                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
-                                                    <option value="">Select</option>
-                                                    <option value="Brick">Brick</option>
-                                                    <option value="Concrete">Cement blocks</option>
-                                                    <option value="Tiles">Concrete</option>
-                                                    <option value="Asbestos">Amano sheets</option>
-                                                    <option value="Zinc">Zinc</option>
-                                                    <option value="Other">Other</option>
-                                                </select>
-                                                <input type="text" placeholder="Specify other"
-                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Brick" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Brick</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Cement blocks" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Cement blocks</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Concrete" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Concrete</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Amano sheets" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Amano sheets</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Zinc" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Zinc</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Other" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500" onchange="this.parentElement.nextElementSibling.style.display = this.checked ? 'block' : 'none'"> Other</label>
+                                                    <input type="text" placeholder="Specify other" class="w-full text-xs border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr class="hover:bg-gray-50">
@@ -1284,46 +1007,34 @@
                                                 Roof
                                             </td>
                                             <td class="px-3 py-1.5 border-l border-gray-100">
-                                                <select
-                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
-                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
-                                                    <option value="">Select</option>
-                                                    <option value="Brick">Roofing Tiles</option>
-                                                    <option value="Concrete">Asbestos sheets</option>
-                                                    <option value="Tiles">Amano sheets</option>
-                                                    <option value="Asbestos">Iron Sheets</option>
-                                                    <option value="Other">Other</option>
-                                                </select>
-                                                <input type="text" placeholder="Specify other"
-                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Roofing Tiles" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Roofing Tiles</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Asbestos sheets" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Asbestos sheets</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Amano sheets" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Amano sheets</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Iron Sheets" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Iron Sheets</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Other" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500" onchange="this.parentElement.nextElementSibling.style.display = this.checked ? 'block' : 'none'"> Other</label>
+                                                    <input type="text" placeholder="Specify other" class="w-full text-xs border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                </div>
                                             </td>
                                             <td class="px-3 py-1.5 border-l border-gray-100">
-                                                <select
-                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
-                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
-                                                    <option value="">Select</option>
-                                                    <option value="Brick">Roofing Tiles</option>
-                                                    <option value="Concrete">Asbestos sheets</option>
-                                                    <option value="Tiles">Amano sheets</option>
-                                                    <option value="Asbestos">Iron Sheets</option>
-                                                    <option value="Other">Other</option>
-                                                </select>
-                                                <input type="text" placeholder="Specify other"
-                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Roofing Tiles" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Roofing Tiles</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Asbestos sheets" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Asbestos sheets</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Amano sheets" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Amano sheets</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Iron Sheets" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Iron Sheets</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Other" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500" onchange="this.parentElement.nextElementSibling.style.display = this.checked ? 'block' : 'none'"> Other</label>
+                                                    <input type="text" placeholder="Specify other" class="w-full text-xs border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                </div>
                                             </td>
                                             <td class="px-3 py-1.5 border-l border-gray-100">
-                                                <select
-                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
-                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
-                                                    <option value="">Select</option>
-                                                    <option value="Brick">Roofing Tiles</option>
-                                                    <option value="Concrete">Asbestos sheets</option>
-                                                    <option value="Tiles">Amano sheets</option>
-                                                    <option value="Asbestos">Iron Sheets</option>
-                                                    <option value="Other">Other</option>
-                                                </select>
-                                                <input type="text" placeholder="Specify other"
-                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Roofing Tiles" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Roofing Tiles</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Asbestos sheets" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Asbestos sheets</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Amano sheets" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Amano sheets</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Iron Sheets" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Iron Sheets</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Other" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500" onchange="this.parentElement.nextElementSibling.style.display = this.checked ? 'block' : 'none'"> Other</label>
+                                                    <input type="text" placeholder="Specify other" class="w-full text-xs border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr class="hover:bg-gray-50">
@@ -1467,43 +1178,31 @@
                                                     etc.)</span>
                                             </td>
                                             <td class="px-3 py-1.5 border-l border-gray-100">
-                                                <select
-                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
-                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
-                                                    <option value="">Select</option>
-                                                    <option value="National Grid">Main</option>
-                                                    <option value="Solar">Generators</option>
-                                                    <option value="Generator">Solar Power</option>
-                                                    <option value="Other">Other</option>
-                                                </select>
-                                                <input type="text" placeholder="Specify other"
-                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Main" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Main</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Generators" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Generators</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Solar Power" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Solar Power</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Other" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500" onchange="this.parentElement.nextElementSibling.style.display = this.checked ? 'block' : 'none'"> Other</label>
+                                                    <input type="text" placeholder="Specify other" class="w-full text-xs border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                </div>
                                             </td>
                                             <td class="px-3 py-1.5 border-l border-gray-100">
-                                                <select
-                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
-                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
-                                                    <option value="">Select</option>
-                                                    <option value="National Grid">Main</option>
-                                                    <option value="Solar">Generators</option>
-                                                    <option value="Generator">Solar Power</option>
-                                                    <option value="Other">Other</option>
-                                                </select>
-                                                <input type="text" placeholder="Specify other"
-                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Main" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Main</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Generators" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Generators</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Solar Power" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Solar Power</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Other" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500" onchange="this.parentElement.nextElementSibling.style.display = this.checked ? 'block' : 'none'"> Other</label>
+                                                    <input type="text" placeholder="Specify other" class="w-full text-xs border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                </div>
                                             </td>
                                             <td class="px-3 py-1.5 border-l border-gray-100">
-                                                <select
-                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
-                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
-                                                    <option value="">Select</option>
-                                                    <option value="National Grid">Main</option>
-                                                    <option value="Solar">Generators</option>
-                                                    <option value="Generator">Solar Power</option>
-                                                    <option value="Other">Other</option>
-                                                </select>
-                                                <input type="text" placeholder="Specify other"
-                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Main" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Main</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Generators" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Generators</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Solar Power" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Solar Power</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Other" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500" onchange="this.parentElement.nextElementSibling.style.display = this.checked ? 'block' : 'none'"> Other</label>
+                                                    <input type="text" placeholder="Specify other" class="w-full text-xs border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr class="hover:bg-gray-50">
@@ -1525,44 +1224,31 @@
                                                 Availability of Security arrangement in the premises
                                             </td>
                                             <td class="px-3 py-1.5 border-l border-gray-100">
-                                                <select
-                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
-                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
-                                                    <option value="">Select</option>
-                                                    <option value="">Security personal for 24 hours</option>
-                                                    <option value="">CCTV cameras	</option>
-                                                    <option value="">Burglary Alarm	</option>
-                                                    <option value="Other">Other</option>
-                                                </select>
-                                                <input type="text" placeholder="Specify other"
-                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Security personal for 24 hours" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Security personal for 24 hours</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="CCTV cameras" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> CCTV cameras</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Burglary Alarm" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Burglary Alarm</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Other" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500" onchange="this.parentElement.nextElementSibling.style.display = this.checked ? 'block' : 'none'"> Other</label>
+                                                    <input type="text" placeholder="Specify other" class="w-full text-xs border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                </div>
                                             </td>
                                             <td class="px-3 py-1.5 border-l border-gray-100">
-                                                <select
-                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
-                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
-                                                    <option value="">Select</option>
-                                                    <option value="CCTV">Security personal for 24 hours</option>
-                                                    <option value="Security Guards">CCTV cameras	</option>
-                                                    <option value="Alarm System">Burglary Alarm	</option>
-                                                    <option value="Other">Other</option>
-                                                </select>
-                                                <input type="text" placeholder="Specify other"
-                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Security personal for 24 hours" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Security personal for 24 hours</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="CCTV cameras" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> CCTV cameras</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Burglary Alarm" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Burglary Alarm</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Other" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500" onchange="this.parentElement.nextElementSibling.style.display = this.checked ? 'block' : 'none'"> Other</label>
+                                                    <input type="text" placeholder="Specify other" class="w-full text-xs border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                </div>
                                             </td>
                                             <td class="px-3 py-1.5 border-l border-gray-100">
-                                                <select
-                                                    class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700"
-                                                    onchange="this.nextElementSibling.style.display = this.value === 'Other' ? 'block' : 'none'">
-                                                    <option value="">Select</option>
-                                                    <option value="CCTV">Security personal for 24 hours</option>
-                                                    <option value="Security Guards">CCTV cameras	</option>
-                                                    <option value="Alarm System">Burglary Alarm	</option>
-                                                    
-                                                    <option value="Other">Other</option>
-                                                </select>
-                                                <input type="text" placeholder="Specify other"
-                                                    class="w-full text-sm border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Security personal for 24 hours" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Security personal for 24 hours</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="CCTV cameras" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> CCTV cameras</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Burglary Alarm" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500"> Burglary Alarm</label>
+                                                    <label class="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" value="Other" class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500" onchange="this.parentElement.nextElementSibling.style.display = this.checked ? 'block' : 'none'"> Other</label>
+                                                    <input type="text" placeholder="Specify other" class="w-full text-xs border border-gray-200 rounded mt-1 px-2 py-1 hidden" />
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr class="hover:bg-gray-50">
@@ -2211,7 +1897,7 @@
                         </p>
                     </div>
                     <label class="flex items-start gap-3 cursor-pointer">
-                        <input type="checkbox" required class="mt-0.5 w-4 h-4 shrink-0" />
+                        <!-- <input type="checkbox" required class="mt-0.5 w-4 h-4 shrink-0" /> -->
                         <span class="text-sm text-gray-700">I have read and understood the Personal Data Protection
                             Clause
                             and hereby provide my consent.</span>
@@ -2219,50 +1905,7 @@
                 </div>
             </div>
 
-            <!-- ════ M: SIGNATURES ════ -->
-            <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
-                <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
-                    <h3 class="font-heading text-white text-md font-semibold">
-                        Signatures &amp; Declarations
-                    </h3>
-                </div>
-                <div class="p-6 space-y-5">
-                    <div class="flex gap-3 bg-amber-50 border border-amber-200 rounded-xl px-5 py-4">
-                        <svg class="w-5 h-5 text-amber-500 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        <p class="text-xs text-amber-800 leading-relaxed">
-                            <strong>Note:</strong> I/We hereby warrant the truth of the
-                            above statements and declare that no information has been
-                            withheld which might tend in any way to increase the risk. I/We
-                            agree this proposal shall be the basis of the contract and the
-                            liability of Sri Lanka Insurance Corporation General Ltd. shall
-                            not commence until the proposal is accepted and premium is paid
-                            in full.
-                        </p>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="space-y-1">
-                            <label
-                                class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Signature
-                                of Proposer</label>
-                            <div
-                                class="border-2 border-dashed border-gray-200 rounded-xl h-20 flex items-center justify-center bg-gray-50">
-                                <span class="text-xs text-gray-400">Signature here</span>
-                            </div>
-                        </div>
-                        <div class="space-y-1">
-                            <label
-                                class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Date</label>
-                            <input type="date"
-                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+           
             <!-- ════ N: INTERMEDIARY DETAILS ════ -->
             <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
                 <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
@@ -2318,7 +1961,7 @@
                         </div>
                     </div>
                     <label class="flex items-start gap-3 cursor-pointer">
-                        <input type="checkbox" required class="mt-0.5 w-4 h-4 shrink-0" />
+                        <!-- <input type="checkbox" required class="mt-0.5 w-4 h-4 shrink-0" /> -->
                         <span class="text-sm text-gray-700">I/We certify that the Insurance was canvassed by the above
                             Insurance Intermediary.</span>
                     </label>
@@ -2341,6 +1984,59 @@
                     </div>
                 </div>
             </div>
+
+            <!-- ════ SIGNATURES & DECLARATIONS ════ -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                        <h3 class="font-heading text-white text-md font-semibold">Signatures &amp; Declarations</h3>
+                    </div>
+                    <div class="p-6 space-y-5">
+                        <div class="flex gap-3 bg-amber-50 border border-amber-200 rounded-xl px-5 py-4">
+                            <p class="text-xs text-amber-800 leading-relaxed">
+                                <strong>Note:</strong> I/We hereby warrant the truth of the
+                            above statements and declare that no information has been
+                            withheld which might tend in any way to increase the risk. I/We
+                            agree this proposal shall be the basis of the contract and the
+                            liability of Sri Lanka Insurance Corporation General Ltd. shall
+                            not commence until the proposal is accepted and premium is paid
+                            in full.
+                            </p>
+                        </div>
+
+                        <!-- Joint Account Toggle -->
+                        <div class="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-xl px-4 py-3">
+                            <label class="flex items-center gap-3 cursor-pointer select-none">
+                                <input type="checkbox" id="jointAccountChk" onchange="toggleJointAccount()" class="w-4 h-4 accent-tealCustom-500" />
+                                <span class="text-sm font-semibold text-navy-900">(Check if there are multiple proposers)</span>
+                                
+                            </label>
+                            <button type="button" id="addJointSigBtn" onclick="addJointSignature()" style="display:none;"
+                                class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                                Add Signature
+                            </button>
+                        </div>
+
+                        <!-- Primary Proposer Signature -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-1">
+                                <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Signature of Proposer</label>
+                                <div class="border-2 border-dashed border-gray-200 rounded-xl h-20 flex items-center justify-center bg-gray-50">
+                                    <span class="text-xs text-gray-400">Signature here</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Date</label>
+                                <input type="date" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                            </div>
+                        </div>
+
+                        <!-- Additional Joint Signatures Container -->
+                        <div id="jointSignaturesContainer" class="space-y-4"></div>
+                    </div>
+                </div>
+
+
 
             <!-- ════ O: OFFICE USE ONLY ════ -->
             <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
@@ -2395,18 +2091,163 @@
                 });
         }
         function calcTotal() {
-            const rows = document.querySelectorAll("#sumsBody tr:not(:last-child)");
-            let t = [0, 0, 0];
+            const rows = document.querySelectorAll("#sumsBody .sum-row");
+            const totals = [];
             rows.forEach((row) => {
-                const inputs = row.querySelectorAll('input[type="text"]');
+                const inputs = row.querySelectorAll('.loc-cell input[type="text"]');
                 inputs.forEach((inp, i) => {
-                    t[i] = (t[i] || 0) + parseNum(inp.value);
+                    totals[i] = (totals[i] || 0) + parseNum(inp.value);
                 });
             });
-            document.getElementById("total1").value = fmt(t[0]);
-            document.getElementById("total2").value = fmt(t[1]);
-            document.getElementById("total3").value = fmt(t[2]);
+            
+            const totalInputs = document.querySelectorAll('#totalRow .total-sum-input');
+            totalInputs.forEach((inp, i) => {
+                inp.value = fmt(totals[i] || 0);
+            });
         }
+
+        function addDirectorRow() {
+            const tbody = document.getElementById('directorsBody');
+            const row = document.createElement('tr');
+            row.className = 'hover:bg-gray-50';
+            row.innerHTML = `
+                <td class="px-2 py-1.5"><input type="text" placeholder="Full Name" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5">
+                    <select class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50">
+                        <option value="">Select Role</option>
+                        <option value="Director">Director</option>
+                        <option value="Chairman">Chairman</option>
+                        <option value="Managing Director">Managing Director</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="Nationality" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="NIC / Passport" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5 text-center"><button type="button" class="text-red-500 hover:text-red-700 font-bold" onclick="this.closest('tr').remove()">&times;</button></td>
+            `;
+            tbody.appendChild(row);
+        }
+
+        function addMortgageeRow() {
+            const tbody = document.getElementById('mortgageeBody');
+            const row = document.createElement('tr');
+            row.className = 'hover:bg-gray-50';
+            row.innerHTML = `
+                <td class="px-2 py-1.5"><input type="text" placeholder="Name of Bank" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="Branch Address" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="Risk Location" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="Description" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="Sum Insured" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5 text-center"><button type="button" class="text-red-500 hover:text-red-700 font-bold" onclick="this.closest('tr').remove()">&times;</button></td>
+            `;
+            tbody.appendChild(row);
+        }
+
+        function addLocationRow() {
+            const container = document.getElementById('locationsContainer');
+            const index = container.children.length + 1;
+            const div = document.createElement('div');
+            div.className = 'flex items-center gap-4';
+            div.innerHTML = `
+                <span class="font-mono text-xs font-semibold text-navy-700 w-24">Location 0${index}</span>
+                <input type="text" placeholder="Address for Location 0${index}" class="flex-1 border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+            `;
+            container.appendChild(div);
+        }
+
+        function addLocationColumn() {
+            const table = document.getElementById('sumsTable');
+            const headerRow = table.querySelector('thead tr');
+            const numCols = headerRow.querySelectorAll('.loc-header-col').length + 1;
+            
+            // Add Header
+            const th = document.createElement('th');
+            th.className = 'px-4 py-2 loc-header-col min-w-[180px]';
+            th.innerHTML = `
+                <div class="flex items-center gap-1">
+                    <select class="location-dropdown flex-1 border border-gray-200 rounded-lg px-2 py-1.5 text-xs text-navy-700 bg-white">
+                        <option value="">Select Location ${numCols}</option>
+                    </select>
+                </div>`;
+            headerRow.appendChild(th);
+            
+            // Add body cells
+            const rows = table.querySelectorAll('tbody .sum-row');
+            rows.forEach(row => {
+                const td = document.createElement('td');
+                td.className = 'px-4 py-2 loc-cell';
+                td.innerHTML = `
+                    <div class="flex items-center justify-end gap-1">
+                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                            type="text" placeholder="0.00" oninput="calcTotal()"
+                            class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                    </div>`;
+                row.appendChild(td);
+            });
+            
+            // Add total cell
+            const totalRow = document.getElementById('totalRow');
+            if (totalRow) {
+                const tdTotal = document.createElement('td');
+                tdTotal.className = 'px-4 py-3 loc-total-cell';
+                tdTotal.innerHTML = `
+                    <div class="flex items-center justify-end gap-1">
+                        <span class="text-[11px] text-gray-500 font-mono font-bold">Rs.</span>
+                        <input type="text" readonly value="0.00"
+                            class="w-full bg-transparent text-right font-mono text-sm font-bold text-navy-900 border-none p-0 focus:ring-0 total-sum-input" />
+                    </div>`;
+                totalRow.appendChild(tdTotal);
+            }
+        }
+
+        function addSumRow() {
+            const tbody = document.getElementById('sumsBody');
+            const headerRow = document.querySelector('#sumsTable thead tr');
+            const numCols = headerRow.querySelectorAll('.loc-header-col').length;
+            
+            const tr = document.createElement('tr');
+            tr.className = 'hover:bg-gray-50 sum-row';
+            
+            let cellsHTML = `
+                <td class="px-4 py-3 text-gray-700 text-sm">
+                    <input type="text" placeholder="Description of Property"
+                        class="w-full text-sm border border-gray-200 rounded px-2 py-1 focus:ring-0 text-gray-700" />
+                </td>
+            `;
+            
+            for (let i = 0; i < numCols; i++) {
+                cellsHTML += `
+                <td class="px-4 py-2 loc-cell">
+                    <div class="flex items-center justify-end gap-1">
+                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                            type="text" placeholder="0.00" oninput="calcTotal()"
+                            class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                    </div>
+                </td>`;
+            }
+            tr.innerHTML = cellsHTML;
+            
+            // Insert before the totalRow
+            const totalRow = document.getElementById('totalRow');
+            if (totalRow) {
+                tbody.insertBefore(tr, totalRow);
+            } else {
+                tbody.appendChild(tr);
+            }
+        }
+
+        function selectAllPerils() {
+            const checkboxes = document.querySelectorAll('#perilCoversGrid .peril-checkbox');
+            const allChecked = Array.from(checkboxes).every(c => c.checked);
+            checkboxes.forEach(c => { c.checked = !allChecked; });
+            const btn = document.getElementById('selectAllBtn');
+            if (btn) {
+                btn.innerHTML = allChecked
+                    ? `<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Select All`
+                    : `<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> Deselect All`;
+            }
+        }
+
         // Form Section Toggle Feature (Accordion Style)
         const sectionHeaders = document.querySelectorAll('#proposalForm .bg-tealCustom-500.px-6');
         const allSections = [];
@@ -2434,6 +2275,51 @@
                 });
             }
         });
+
+          // ── EN: Toggle Joint Account ────────────────────────────────────────
+        let jointSigCount = 0;
+        function toggleJointAccount() {
+            const checked = document.getElementById('jointAccountChk').checked;
+            const btn = document.getElementById('addJointSigBtn');
+            btn.style.display = checked ? 'inline-flex' : 'none';
+            if (!checked) {
+                document.getElementById('jointSignaturesContainer').innerHTML = '';
+                jointSigCount = 0;
+            }
+        }
+        function addJointSignature() {
+            jointSigCount++;
+            const container = document.getElementById('jointSignaturesContainer');
+            const div = document.createElement('div');
+            div.className = 'border border-gray-200 rounded-xl p-4 space-y-3 bg-gray-50 relative';
+            div.id = `jointSig_${jointSigCount}`;
+            div.innerHTML = `
+                <div class="flex items-center justify-between mb-1">
+                    <span class="text-xs font-bold uppercase tracking-wide text-navy-700">Other Proposer ${jointSigCount}</span>
+                    <button type="button" onclick="document.getElementById('jointSig_${jointSigCount}').remove()" class="text-red-400 hover:text-red-600 font-bold text-base leading-none">&times; Remove</button>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="space-y-1">
+                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-navy-900">Full Name</label>
+                        <input type="text" placeholder="Full name" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-white" />
+                    </div>
+                    <div class="space-y-1">
+                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-navy-900">NIC / Passport</label>
+                        <input type="text" placeholder="NIC or Passport No." class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-white" />
+                    </div>
+                </div>
+                <div class="grid gap-4 items-center">
+                    <div class="space-y-1">
+                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-navy-900">Signature</label>
+                        <div class="border-2 border-dashed border-gray-200 rounded-xl h-16 flex items-center justify-center bg-white">
+                            <span class="text-xs text-gray-400">Signature here</span>
+                        </div>
+                    </div>
+                    
+                </div>`;
+            container.appendChild(div);
+        }
+
     </script>
 </body>
 
