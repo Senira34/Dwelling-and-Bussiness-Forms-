@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -129,6 +129,8 @@
                 class="bg-tealCustom-500 text-white px-4 py-2 rounded-lg hover:bg-tealCustom-600 font-semibold shadow-sm text-sm">English</button>
             <button id="btn-si" onclick="setLanguage('si')"
                 class="bg-white text-tealCustom-600 border border-tealCustom-300 px-4 py-2 rounded-lg hover:bg-tealCustom-50 font-medium text-sm">සිංහල</button>
+                <button id="btn-t" onclick="setLanguage('ta')"
+                class="bg-white text-tealCustom-600 border border-tealCustom-300 px-4 py-2 rounded-lg hover:bg-tealCustom-50 font-medium text-sm">தமிழ்</button>
         </div>
 
         <!-- ══════════ ENGLISH FORM ══════════ -->
@@ -2899,6 +2901,1445 @@
             </form>
         </div><!-- end form-si -->
 
+        <div id="form-ta" style="display:none;">
+            <form id="proposalForm" class="space-y-8" onsubmit="return false;">
+
+                <!-- ════ PROPOSER DETAILS ════ -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                        <h3 class="font-heading text-white text-md font-semibold">முன்மொழிபவர் விவரங்கள்</h3>
+                    </div>
+                    <div class="p-6 space-y-5">
+
+                        <!-- 1 Name -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">1</span>
+                            <div class="space-y-1 flex-1 w-full">
+                                <label
+                                    class="block text-[10.5px] font-bold uppercase tracking-wide text-navy-900">முன்மொழிபவரின்
+                                    முழு பெயர்</label>
+                                <div class="flex gap-2">
+                                    <select
+                                        class="w-24 border border-gray-200 rounded-lg px-2 py-2 text-xs bg-gray-50 text-gray-700">
+                                        <option>Mr.</option>
+                                        <option>Mrs.</option>
+                                        <option>Miss.</option>
+                                        <option>Dr.</option>
+                                    </select>
+                                    <input type="text" placeholder="Full name as per NIC"
+                                        class="flex-1 border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 min-w-0" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2 NIC / BR / Passport -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">2</span>
+                            <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+                                <div class="space-y-1">
+                                    <label
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">தேசிய அடையாள அட்டை எண்</label>
+                                    <input type="text" placeholder="e.g. 123456789V"
+                                        class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 font-mono" />
+                                </div>
+                                <div class="space-y-1">
+                                    <label
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">வணிக பதிவு எண்</label>
+                                    <input type="text" placeholder="பயன்பாட்டு கூட்டம் / தனியார் வர்த்தக සමාගම"
+                                        class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 font-mono" />
+                                </div>
+                                <div class="space-y-1">
+                                    <label
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Passport
+                                        No.</label>
+                                    <input type="text" placeholder="If applicable"
+                                        class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 font-mono" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Document Upload & DOB -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0"></span>
+                            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                                <div class="space-y-1">
+                                    <label
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Upload
+                                        Scanned Copies (NIC / BR / Passport)</label>
+                                    <div class="border-2 border-dashed border-gray-200 rounded-xl h-10 flex flex-col items-center justify-center bg-gray-50 cursor-pointer hover:border-tealCustom-400 hover:bg-tealCustom-50 transition-all"
+                                        onclick="document.getElementById('docUploadField').click()">
+                                        <p class="text-xs font-semibold text-gray-500">Click to Upload File</p>
+                                        <input type="file" id="docUploadField" accept="image/*,.pdf" multiple
+                                            class="hidden" />
+                                    </div>
+                                </div>
+                                <div class="space-y-1">
+                                    <label
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Date
+                                        of Incorporation / Date of Birth</label>
+                                    <input type="date"
+                                        class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 VAT -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">3</span>
+                            <div class="space-y-2 flex-1 w-full">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Are
+                                    you a VAT registered entity?</label>
+                                <div class="flex gap-5">
+                                    <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                            name="vat_registered" value="yes"
+                                            onchange="document.getElementById('vatSection').classList.remove('hidden')" />
+                                        Yes</label>
+                                    <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                            name="vat_registered" value="no"
+                                            onchange="document.getElementById('vatSection').classList.add('hidden')" />
+                                        No</label>
+                                </div>
+                                <div id="vatSection" class="hidden grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+                                    <div class="space-y-1">
+                                        <label
+                                            class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Please
+                                            state your VAT Registration Number:</label>
+                                        <input type="text" placeholder="VAT Registration Number"
+                                            class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 font-mono" />
+                                    </div>
+                                    <div class="space-y-1">
+                                        <label
+                                            class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Upload
+                                            VAT Registration Certificate</label>
+                                        <div class="border-2 border-dashed border-gray-200 rounded-xl h-10 flex flex-col items-center justify-center bg-gray-50 cursor-pointer hover:border-tealCustom-400 hover:bg-tealCustom-50 transition-all"
+                                            onclick="document.getElementById('vatDocUpload').click()">
+                                            <p class="text-xs font-semibold text-gray-500">Click to Upload File</p>
+                                            <input type="file" id="vatDocUpload" accept="image/*,.pdf" class="hidden" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Directors Table -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">4</span>
+                            <div class="space-y-2 flex-1 w-full overflow-hidden">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Details
+                                    of Directors <span class="font-normal normal-case text-gray-400">(For corporate
+                                        clients)</span></label>
+                                <div class="overflow-x-auto w-full pb-2">
+                                    <table class="w-full text-sm border border-gray-200 rounded-lg overflow-hidden"
+                                        id="directorsTable">
+                                        <thead class="bg-navy-50">
+                                            <tr>
+                                                <th
+                                                    class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                    இயக்குநர்களின் முழுப் பெயர்கள்</th>
+                                                <th
+                                                    class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200 w-32">
+                                                    பங்கு</th>
+                                                <th
+                                                    class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                    தேசியம்</th>
+                                                <th
+                                                    class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                    தேசிய அடையாள அட்டை அல்லது கடவுச்சீட்டு எண்</th>
+                                                <th
+                                                    class="px-3 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200 w-12">
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-gray-100" id="directorsBody">
+                                            <tr class="hover:bg-gray-50">
+                                                <td class="px-2 py-1.5"><input type="text" placeholder="Full Name"
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
+                                                </td>
+                                                <td class="px-2 py-1.5">
+                                                    <select
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50">
+                                                        <option value="">Select பங்கு</option>
+                                                        <option>Managing Director</option>
+                                                        <option>Executive Director</option>
+                                                        <option>Non-Executive Director</option>
+                                                        <option>Chairman</option>
+                                                    </select>
+                                                </td>
+                                                <td class="px-2 py-1.5"><input type="text" placeholder="தேசியம்"
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
+                                                </td>
+                                                <td class="px-2 py-1.5"><input type="text" placeholder="NIC / Passport"
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
+                                                </td>
+                                                <td class="px-2 py-1.5 text-center"><button type="button"
+                                                        class="text-red-500 hover:text-red-700 font-bold"
+                                                        onclick="this.closest('tr').remove()">&times;</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <button type="button"
+                                    class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800"
+                                    onclick="addDirectorRow()">+ Add Row</button>
+                            </div>
+                        </div>
+
+                        <!-- 5 காப்புறுதி காலம் -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">5</span>
+                            <div class="space-y-1 flex-1 w-full">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Term
+                                    of Insurance</label>
+                                <div class="flex items-center gap-3 flex-wrap">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-xs text-gray-500 font-semibold uppercase">முதல்</span>
+                                        <input type="date"
+                                            class="border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                                    </div>
+                                    <span class="text-gray-300">→</span>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-xs text-gray-500 font-semibold uppercase">வரை</span>
+                                        <input type="date"
+                                            class="border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6 தனிப்பட்ட முகவரி -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">6</span>
+                            <div class="space-y-1 flex-1 w-full">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Personal
+                                    Address</label>
+                                <textarea rows="2" placeholder="Full residential address"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 resize-none"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- 7 வணிக முகவரி -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">7</span>
+                            <div class="space-y-1 flex-1 w-full">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Business
+                                    Address</label>
+                                <textarea rows="2" placeholder="If different from personal address"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 resize-none"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- 8 Telephone -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">8</span>
+                            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                                <div class="space-y-1">
+                                    <label
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Telephone
+                                        (Home)</label>
+                                    <input type="tel" placeholder="011-1234567"
+                                        class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                                </div>
+                                <div class="space-y-1">
+                                    <label
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Telephone
+                                        (Mobile)</label>
+                                    <input type="tel" placeholder="071-1234567"
+                                        class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 9 Increase Risk -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">9</span>
+                            <div class="space-y-2 flex-1 w-full">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Are
+                                    there any other circumstance which appear to increase the risks?</label>
+                                <div class="flex gap-5">
+                                    <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                            name="risk" value="yes" /> Yes</label>
+                                    <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                            name="risk" value="no" /> No</label>
+                                </div>
+                                <textarea rows="1" placeholder="If Yes, provide details"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 resize-none"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- 10 Email + தொழில் -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">10</span>
+                            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                                <div class="space-y-1">
+                                    <label
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Email
+                                        Address</label>
+                                    <input type="email" placeholder="example@email.com"
+                                        class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                                </div>
+                                <div class="space-y-1">
+                                    <label
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">தொழில்</label>
+                                    <input type="text" placeholder="Current occupation"
+                                        class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">11</span>
+                            <div class="space-y-2 flex-1 w-full">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Of
+                                    what materials are the Walls Constructed?</label>
+                                <div class="flex flex-wrap gap-4 items-center">
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">LKR (Sri Lankan
+                                            Rupee)</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">USD (US
+                                            Dollar)</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">EUR
+                                            (Euro)</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">GBP (British
+                                            Pound)</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4"
+                                            onchange="toggleOtherInput('wallOtherInput',this)" /><span
+                                            class="text-xs">Other</span></label>
+                                </div>
+                                <input type="text" id="wallOtherInput" placeholder="Please specify"
+                                    class="hidden w-full max-w-sm border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                            </div>
+                        </div>
+
+                        <!-- 12 Risk இடம்s -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">12</span>
+                            <div class="space-y-2 flex-1 w-full">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Risk
+                                    இடம்s</label>
+                                <p class="text-xs text-gray-500">Define multiple risk locations here. They will be
+                                    available in the Sums Insured table below.</p>
+                                <div id="locationsContainer" class="space-y-2">
+                                    <div class="location-entry flex gap-2 items-center" data-index="1">
+                                        <span class="font-mono text-xs font-semibold text-navy-700 w-24">இடம்
+                                            01</span>
+                                        <input type="text" placeholder="Full address of இடம் 01"
+                                            class="location-input flex-1 border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50"
+                                            onchange="updateஇடம்Dropdowns()" />
+                                    </div>
+                                </div>
+                                <button type="button"
+                                    class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800"
+                                    onclick="addஇடம்Row()">+ Add Another இடம்</button>
+                            </div>
+                        </div>
+
+                        <!-- 13 அடமானதாரர் விவரங்கள் -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">13</span>
+                            <div class="space-y-2 flex-1 w-full overflow-hidden">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Mortgagee
+                                    Details</label>
+                                <div class="overflow-x-auto w-full pb-2">
+                                    <table class="w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
+                                        <thead class="bg-navy-50">
+                                            <tr>
+                                                <th
+                                                    class="px-2 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                    வங்கியின் பெயர்</th>
+                                                <th
+                                                    class="px-2 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                    கிளை முகவரி</th>
+                                                <th
+                                                    class="px-2 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                    Risk இடம் Address</th>
+                                                <th
+                                                    class="px-2 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                    காப்புறுதித் தொகையின் விவரம்</th>
+                                                <th
+                                                    class="px-2 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
+                                                    காப்புறுதித் தொகை மதிப்பு</th>
+                                                <th class="px-2 py-2.5 w-12 border-b border-gray-200"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-gray-100" id="mortgageeBody">
+                                            <tr class="hover:bg-gray-50">
+                                                <td class="px-2 py-1.5">
+                                                    <select
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50">
+                                                        <option value="">வங்கியைத் தேர்ந்தெடுக்கவும்</option>
+                                                        <option>People's Bank</option>
+                                                        <option>Bank of Ceylon</option>
+                                                        <option>Commercial Bank</option>
+                                                        <option>Hatton National Bank (HNB)</option>
+                                                        <option>Sampath Bank</option>
+                                                        <option>Seylan Bank</option>
+                                                        <option>Other</option>
+                                                    </select>
+                                                </td>
+                                                <td class="px-2 py-1.5"><input type="text" placeholder="கிளை முகவரி"
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
+                                                </td>
+                                                <td class="px-2 py-1.5">
+                                                    <select
+                                                        class="location-dropdown w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50">
+                                                        <option value="">Select இடம்</option>
+                                                    </select>
+                                                </td>
+                                                <td class="px-2 py-1.5"><input type="text" placeholder="Description"
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
+                                                </td>
+                                                <td class="px-2 py-1.5"><input type="text" placeholder="Value"
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
+                                                </td>
+                                                <td class="px-2 py-1.5 text-center"><button type="button"
+                                                        class="text-red-500 hover:text-red-700 font-bold"
+                                                        onclick="this.closest('tr').remove()">&times;</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <button type="button"
+                                    class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800"
+                                    onclick="addMortgageeRow()">+ Add Row</button>
+                            </div>
+                        </div>
+
+                        <!-- 14 PEP -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">14</span>
+                            <div class="space-y-2 flex-1 w-full">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Are
+                                    you a Politically Exposed Person (PEP)?</label>
+                                <div class="flex gap-5">
+                                    <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                            name="pep" value="yes" /> Yes</label>
+                                    <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                            name="pep" value="no" /> No</label>
+                                </div>
+                                <textarea rows="1" placeholder="If Yes, please specify"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 resize-none"></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ════ PROPERTY TO BE INSURED ════ -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                        <h3 class="font-heading text-white text-md font-semibold">காப்புறுதி செய்யப்பட வேண்டிய சொத்து</h3>
+                    </div>
+                    <div
+                        class="px-6 py-2.5 bg-tealCustom-50 border-b border-tealCustom-100 text-xs text-tealCustom-700 italic">
+                        கட்டிடம் காப்புறுதி செய்யப்படாவிட்டாலும், கட்டிடத்தின் விவரம் வழங்கப்பட வேண்டும்.
+                    </div>
+                    <div class="p-6 space-y-5">
+
+                        <!-- 11 Full Address -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">11</span>
+                            <div class="space-y-1 flex-1 w-full">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Full
+                                    Address of Premises to be Insured</label>
+                                <textarea rows="2" placeholder="Complete address of the insured property"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 resize-none"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- 12 Name of Land -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">12</span>
+                            <div class="space-y-1 flex-1 w-full">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Name
+                                    of Land <span class="font-normal normal-case text-gray-400">(if any)</span></label>
+                                <input type="text" placeholder="Land name"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                            </div>
+                        </div>
+
+                        <!-- 13 Walls -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">13</span>
+                            <div class="space-y-2 flex-1 w-full">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Of
+                                    what materials are the Walls Constructed?</label>
+                                <div class="flex flex-wrap gap-4 items-center">
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span
+                                            class="text-xs">Bricks</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">Cement
+                                            blocks</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span
+                                            class="text-xs">கான்கிரீட்</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">Amano
+                                            sheets</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4"
+                                            onchange="toggleOtherInput('wallOtherInput',this)" /><span
+                                            class="text-xs">Other</span></label>
+                                </div>
+                                <input type="text" id="wallOtherInput" placeholder="Please specify"
+                                    class="hidden w-full max-w-sm border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                            </div>
+                        </div>
+
+                        <!-- 14 Roof -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">14</span>
+                            <div class="space-y-2 flex-1 w-full">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Of
+                                    what materials are the Roof Constructed?</label>
+                                <div class="flex flex-wrap gap-4 items-center">
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">Roofing
+                                            Tiles</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">Asbestos
+                                            sheets</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">Amano
+                                            sheets</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">Iron
+                                            Sheets</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4"
+                                            onchange="toggleOtherInput('roofOtherInput',this)" /><span
+                                            class="text-xs">Other</span></label>
+                                </div>
+                                <input type="text" id="roofOtherInput" placeholder="Please specify"
+                                    class="hidden w-full max-w-sm border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                            </div>
+                        </div>
+
+                        <!-- 15 Number of floors -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">15</span>
+                            <div class="space-y-1 flex-1 w-full max-w-xs">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Number
+                                    of floors <span class="font-normal normal-case text-gray-400">(incl. Ground
+                                        Floor)</span></label>
+                                <input type="text" placeholder="e.g. 2"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                            </div>
+                        </div>
+
+                        <!-- 16 Under Construction + 17 Occupant -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">16</span>
+                            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                                <div class="space-y-2">
+                                    <label
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Is
+                                        the Building Under Construction?</label>
+                                    <div class="flex gap-5">
+                                        <label class="flex items-center gap-2 cursor-pointer text-sm"><input
+                                                type="radio" name="construction" value="yes" /> Yes</label>
+                                        <label class="flex items-center gap-2 cursor-pointer text-sm"><input
+                                                type="radio" name="construction" value="no" /> No</label>
+                                    </div>
+                                </div>
+                                <div class="space-y-1">
+                                    <label
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">17
+                                        — If Completed and occupied, state Name of Occupant?</label>
+                                    <input type="text" placeholder="Occupant's full name"
+                                        class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 18 Previous insurance / declined -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">18</span>
+                            <div class="space-y-3 flex-1 w-full">
+                                <div class="space-y-1">
+                                    <label
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Are
+                                        there or have there been any insurance on the same property in force with Sri
+                                        Lanka Insurance Corporation General Ltd. or any other insurer. If so the policy
+                                        No and the Name of Insurer?</label>
+                                    <textarea rows="2" placeholder="Policy number and insurer name"
+                                        class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 resize-none"></textarea>
+                                </div>
+                                <div class="space-y-2">
+                                    <label
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Has
+                                        the risk, or any part thereof, been declined by any insurer or imposed special
+                                        terms or refused renewal?</label>
+                                    <div class="flex gap-5">
+                                        <label class="flex items-center gap-2 cursor-pointer text-sm"><input
+                                                type="radio" name="declined" value="yes" /> Yes</label>
+                                        <label class="flex items-center gap-2 cursor-pointer text-sm"><input
+                                                type="radio" name="declined" value="no" /> No</label>
+                                    </div>
+                                    <textarea rows="1" placeholder="If Yes, provide details"
+                                        class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 resize-none"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 19 Lighted -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">13</span>
+                            <div class="space-y-2 flex-1 w-full">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">How
+                                    is the Building Lighted? </label>
+                                <div class="flex flex-wrap gap-4 items-center">
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span
+                                            class="text-xs">Electricity</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span
+                                            class="text-xs">Generator</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">Solar
+                                            Panels</span></label>
+                                    <label
+                                        class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
+                                            type="checkbox" class="w-4 h-4"
+                                            onchange="toggleOtherInput('wallOtherInput',this)" /><span
+                                            class="text-xs">Other</span></label>
+                                </div>
+                                <input type="text" id="wallOtherInput" placeholder="Please specify"
+                                    class="hidden w-full max-w-sm border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                            </div>
+                        </div>
+
+                        <!-- 20 Nearby buildings -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">20</span>
+                            <div class="space-y-3 flex-1 w-full">
+                                <div class="space-y-2">
+                                    <label
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Are
+                                        there any other buildings within radius of 30ft. of the property to be
+                                        insured?</label>
+                                    <div class="flex gap-5">
+                                        <label class="flex items-center gap-2 cursor-pointer text-sm"><input
+                                                type="radio" name="nearby" value="yes" /> Yes</label>
+                                        <label class="flex items-center gap-2 cursor-pointer text-sm"><input
+                                                type="radio" name="nearby" value="no" /> No</label>
+                                    </div>
+                                </div>
+                                <div class="space-y-1">
+                                    <label
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">If
+                                        Yes — describe construction of walls, roofs and occupation</label>
+                                    <textarea rows="2" placeholder="Wall/roof materials and usage of nearby buildings"
+                                        class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 resize-none"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 21 Fire damage / claims -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">21</span>
+                            <div class="space-y-3 flex-1 w-full">
+                                <div class="space-y-1">
+                                    <label
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Have
+                                        you ever had any property been damaged or loss by fire or by any other peril
+                                        against which cover is required?</label>
+                                    <textarea rows="2" placeholder="If Yes, give details"
+                                        class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 resize-none"></textarea>
+                                </div>
+                                <div class="space-y-1">
+                                    <label
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Have
+                                        you at any time had occasion to make a claim for loss or damaged by fire or by
+                                        any other peril against which cover is required?</label>
+                                    <textarea rows="2" placeholder="If so, give details"
+                                        class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 resize-none"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 22 Reinstatement -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">22</span>
+                            <div class="space-y-2 flex-1 w-full">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Is
+                                    the policy to be on Reinstatement value basis in respect of property excluding
+                                    clothing and building under construction?
+                                    <span class="block text-gray-400 font-normal normal-case text-xs mt-0.5">(The Sum
+                                        insured at all times should be the cost of reinstatement/replacement of the
+                                        property likely to be incurred at least during the next 12 months)</span>
+                                </label>
+                                <div class="flex gap-5">
+                                    <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                            name="reinstatement" value="yes" /> Yes</label>
+                                    <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                            name="reinstatement" value="no" /> No</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 23 Private dwelling only -->
+                        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
+                            <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">23</span>
+                            <div class="space-y-2 flex-1 w-full">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">If
+                                    the building used solely as a private dwelling house?</label>
+                                <div class="flex gap-5">
+                                    <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                            name="dwelling" value="yes" /> Yes</label>
+                                    <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
+                                            name="dwelling" value="no" /> No</label>
+                                </div>
+                                <textarea rows="1" placeholder="If No, please specify"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 resize-none"></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ════ SUMS TO BE INSURED ════ -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                        <h3 class="font-heading text-white text-md font-semibold">காப்புறுதி செய்யப்பட வேண்டிய தொகைகள்</h3>
+                    </div>
+                    <div class="px-6 py-2.5 bg-tealCustom-50 border-b border-tealCustom-100 text-xs text-tealCustom-700 italic">
+                        Please submit an inventory with make/model number, year of manufacture and values separately for marked (*) items.
+                    </div>
+                    <div class="px-6 pt-3 pb-0 flex items-center justify-end">
+                        <button type="button" onclick="addஇடம்Column()"
+                            class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                            Add இடம்
+                        </button>
+                    </div>
+                    <div class="overflow-x-auto w-full mt-3">
+                        <table class="w-full text-sm min-w-[500px]" id="sumsTable">
+                            <thead class="bg-navy-50 border-b border-gray-200">
+                                <tr>
+                                    <th class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 min-w-[260px]">
+                                        காப்புறுதி செய்யப்பட வேண்டிய சொத்து</th>
+                                    <th class="px-4 py-2 loc-header-col min-w-[180px]">
+                                        <div class="flex items-center gap-1">
+                                            <select class="location-dropdown flex-1 border border-gray-200 rounded-lg px-2 py-1.5 text-xs text-navy-700 bg-white">
+                                                <option value="">Select இடம்</option>
+                                            </select>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100" id="sumsBody">
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text"
+                                            value="On the building of private dwelling house including permanent fixtures and fittings"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcவரைtal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On boundary and parapet walls, gates"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcவரைtal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On office furniture and equipment*"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcவரைtal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On office equipment including telephones"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcவரைtal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text"
+                                            value="On stock in trade, Work-in-Progress and finished goods"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcவரைtal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On stocks held in trust"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcவரைtal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On machinery and utensils*"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcவரைtal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On removal of debris"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcவரைtal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On architects and surveyor's fees"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcவரைtal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="On lifts / generators / escalators / elevators"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcவரைtal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text"
+                                            value="On solar power panels / solar power systems and other accessories"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcவரைtal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- TOTAL ROW -->
+                                <tr class="bg-navy-50/50" id="totalRow">
+                                    <td class="px-4 py-3 text-right">
+                                        <span class="text-xs font-bold text-navy-900 uppercase tracking-wide">வரைtal Sum
+                                            Insured</span>
+                                    </td>
+                                    <td class="px-4 py-3 loc-total-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-500 font-mono font-bold">Rs.</span>
+                                            <input type="text" readonly value="0.00"
+                                                class="w-full bg-transparent text-right font-mono text-sm font-bold text-navy-900 border-none p-0 focus:ring-0 total-sum-input" />
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="px-6 py-3 border-t border-gray-200 bg-white flex items-center justify-between">
+                        <button type="button" class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800" onclick="addSumRow()">+ Add Property Row</button>
+                    </div>
+                </div>
+
+                <!-- ════ PERIL COVERS ════ -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                        <h3 class="font-heading text-white text-md font-semibold">Peril Covers</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <p class="text-xs text-gray-500">நீங்கள் காப்புறுதி செய்ய விரும்பும் ஆபத்துகளைத் தேர்ந்தெடுக்கவும். <span class="text-tealCustom-600 font-semibold">தீ மற்றும் மின்னல்</span> is always included.</p>
+                            <button type="button" id="selectAllBtn" onclick="selectAllPerils()"
+                                class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm whitespace-nowrap">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                அனைத்தையும் தேர்ந்தெடுக்கவும்
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3" id="perilCoversGrid">
+                            <label
+                                class="cover-card flex items-start gap-3 border border-tealCustom-500 bg-tealCustom-50 rounded-xl px-3 py-3 cursor-not-allowed transition-all opacity-80">
+                                <input type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" checked disabled
+                                    value="Fire & Lightning" />
+                                <span class="text-sm text-gray-700 font-medium">தீ மற்றும் மின்னல்</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Riot & Strike" />
+                                <span class="text-sm text-gray-700">கலவரம் மற்றும் வேலைநிறுத்தம்</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Malicious Damage" />
+                                <span class="text-sm text-gray-700">தீங்கிழைக்கும் சேதம்</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Terrorism" />
+                                <span class="text-sm text-gray-700">பயங்கரவாதம்</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Explosion" />
+                                <span class="text-sm text-gray-700">வெடிப்பு</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Cyclone / Storm / Tempest" />
+                                <span class="text-sm text-gray-700">சூறாவளி / புயல்</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0" value="Flood" />
+                                <span class="text-sm text-gray-700">வெள்ளம்</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Earthquake (Fire & Shock)" />
+                                <span class="text-sm text-gray-700">நிலநடுக்கம் (தீ மற்றும் அதிர்ச்சி)</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Natural Disasters" />
+                                <span class="text-sm text-gray-700">இயற்கை பேரழிவுகள்</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Impact Damage" />
+                                <span class="text-sm text-gray-700">தாக்க சேதம்</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Aircraft Damage" />
+                                <span class="text-sm text-gray-700">விமான சேதம்</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Bursting and overflowing" />
+                                <span class="text-sm text-gray-700">Bursting and overflowing of water tank
+                                    apparatus or pipes</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="peril-checkbox mt-0.5 w-4 h-4 shrink-0"
+                                    value="Electrical Extra" />
+                                <span class="text-sm text-gray-700">மின்சார கூடுதல்</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" value="Architectural Fees" />
+                                <span class="text-sm text-gray-700">கட்டிடக்கலை கட்டணங்கள்</span>
+                            </label>
+                            <label
+                                class="cover-card flex items-start gap-3 border border-gray-200 rounded-xl px-3 py-3 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all">
+                                <input type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" value="Removal of Debris" />
+                                <span class="text-sm text-gray-700">குப்பைகளை அகற்றுதல்</span>
+                            </label>
+                        </div>
+                         <div class="mt-4 space-y-1">
+                        <label class="text-sm font-semibold text-navy-900">பிற காப்புறுதிகள் (குறிப்பிடவும்)</label>
+                        <input type="text" placeholder="தேவையான வேறு ஏதேனும் காப்புறுதி"
+                            class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                    </div>
+
+                        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Extensions -->
+                            <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 shadow-sm">
+                                <div class="flex items-center gap-3 mb-3">
+
+                                    <h3 class="font-heading text-blue-900 text-base font-bold">
+                                        நீட்டிப்புகள்
+                                    </h3>
+                                </div>
+                                <p class="text-xs text-blue-800 leading-relaxed mb-3 font-bold">
+                                    உங்கள் இறுதி விலைப்புள்ளி அளவுருக்களின் அடிப்படையில் கூடுதல் காப்பீட்டு நீட்டிப்புகள் தானாகவே செயல்படுத்தப்படும்.
+                                </p>
+                                <div
+                                    class="bg-white/60 rounded-lg p-3 text-xs text-blue-900 border border-blue-100 flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-blue-600 shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span><span class="font-semibold">குறிப்பு:</span>குறிப்பிட்ட நீட்டிப்புகள், தேர்ந்தெடுக்கப்பட்ட பிரீமியம் திட்டம் மற்றும் சொத்து வகையைப் பொறுத்து நிர்ணயிக்கப்படுகின்றன. <span class="font-bold">மேற்கோளின்படி</span>.</span>
+                                </div>
+                            </div>
+
+                            <!-- Clauses -->
+                            <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 shadow-sm">
+                                <div class="flex items-center gap-3 mb-3">
+
+                                    <h3 class="font-heading text-blue-900 text-base font-bold">
+                                        பிரிவுகள்
+                                    </h3>
+                                </div>
+                                <p class="text-xs text-blue-800 leading-relaxed mb-3 font-bold">
+                                    நிலையான பாலிசி விதிகள் மற்றும் காப்பீட்டு நிபந்தனைகள், அங்கீகரிக்கப்பட்ட விலைப்புள்ளி விதிமுறைகளின்படி நிர்வகிக்கப்படுகின்றன.
+                                </p>
+                                <div
+                                    class="bg-white/60 rounded-lg p-3 text-xs text-blue-900 border border-blue-100 flex items-start gap-2">
+                                    <svg class="w-4 h-4 text-blue-600 shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span><span class="font-semibold">குறிப்பு:</span> விரிவான மற்றும் சட்டப்பூர்வமாகப் பிணைக்கும் நிபந்தனைகளின் பட்டியலுக்கு, இறுதி விலைப்புள்ளி ஆவணத்தைப் பார்க்கவும்..</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <!-- ════════ SECTION F: Select Premium Plans ════════ -->
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
+                    <div class="bg-tealCustom-500 px-6 py-2 flex items-center gap-3">
+                        <!-- <span class="w-7 h-7 rounded-full bg-gold-400 text-navy-950 text-xs font-mono font-bold flex items-center justify-center">F</span> -->
+                        <h3 class="font-heading text-white text-md font-semibold">
+                            பிரீமியம் திட்டங்களைத் தேர்ந்தெடுக்கவும்
+                        </h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                            <!-- Plan 1 -->
+                            <label
+                                class="relative flex flex-col p-6 border-2 border-gray-200 rounded-2xl cursor-pointer hover:border-tealCustom-300 hover:bg-tealCustom-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl has-[:checked]:border-tealCustom-600 has-[:checked]:bg-tealCustom-50/50 group bg-white">
+                                <input type="radio" name="premium_plan" value="Premium with SRCC & Terrorism"
+                                    class="peer sr-only" />
+                                <div
+                                    class="absolute -top-3 left-1/2 -translate-x-1/2 bg-tealCustom-600 text-white text-[10px] font-bold uppercase tracking-wider py-1 px-3 rounded-full shadow-sm">
+                                    பரிந்துரைக்கப்பட்டது
+                                </div>
+                                <!-- <div class="flex justify-between items-start mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-tealCustom-100 flex items-center justify-center text-tealCustom-600 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-shield-alt text-xl"></i>
+                                </div>
+                                <div
+                                    class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center peer-checked:border-tealCustom-600 peer-checked:bg-tealCustom-600 transition-colors">
+                                    <i class="fas fa-check text-white text-xs opacity-0 peer-checked:opacity-100"></i>
+                                </div>
+                            </div> -->
+                                <!-- <h3 class="font-bold text-navy-900 text-lg mb-1 group-hover:text-tealCustom-700 transition-colors">Comprehensive</h3> -->
+                                <div class="font-semibold text-tealCustom-900 text-sm mb-3 text-xl">SRCC & பயங்கரவாதத்துடன்
+                                </div>
+                                <div class="text-2xl font-bold text-navy-900 mb-3">Rs. 30,000<span
+                                        class="text-xs text-gray-500 font-normal"> /yr</span></div>
+                                <p class="text-xs text-gray-500 leading-relaxed mt-auto">
+                                    வேலைநிறுத்தங்கள், கலவரங்கள், பொது அமைதியின்மை மற்றும் பயங்கரவாதம் உள்ளிட்ட முழுமையான பாதுகாப்பு.
+                                </p>
+                            </label>
+
+                            <!-- Plan 2 -->
+                            <label
+                                class="relative flex flex-col p-6 border-2 border-gray-200 rounded-2xl cursor-pointer hover:border-tealCustom-300 hover:bg-tealCustom-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl has-[:checked]:border-tealCustom-600 has-[:checked]:bg-tealCustom-50/50 group bg-white">
+                                <input type="radio" name="premium_plan" value="Premium with SRCC Only"
+                                    class="peer sr-only" />
+                                <!-- <div class="flex justify-between items-start mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-bolt text-xl"></i>
+                                </div>
+                                <div
+                                    class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center peer-checked:border-tealCustom-600 peer-checked:bg-tealCustom-600 transition-colors">
+                                    <i class="fas fa-check text-white text-xs opacity-0 peer-checked:opacity-100"></i>
+                                </div>
+                            </div> -->
+                                <!-- <h3 class="font-bold text-navy-900 text-lg mb-1 group-hover:text-blue-700 transition-colors">Standard</h3> -->
+                                <div class="font-semibold text-blue-900 text-sm mb-3 text-xl">SRCC உடன்</div>
+                                <div class="text-2xl font-bold text-navy-900 mb-3">Rs. 25,000<span
+                                        class="text-xs text-gray-500 font-normal"> /yr</span></div>
+                                <p class="text-xs text-gray-500 leading-relaxed mt-auto">
+                                    வேலைநிறுத்தங்கள், கலவரங்கள் மற்றும் மக்கள் கொந்தளிப்புகள் ஆகியவை இதில் அடங்கும். பயங்கரவாதம் இதில் அடங்காது.
+                                </p>
+                            </label>
+
+                            <!-- Plan 3 -->
+                            <label
+                                class="relative flex flex-col p-6 border-2 border-gray-200 rounded-2xl cursor-pointer hover:border-tealCustom-300 hover:bg-tealCustom-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl has-[:checked]:border-tealCustom-600 has-[:checked]:bg-tealCustom-50/50 group bg-white">
+                                <input type="radio" name="premium_plan" value="Basic Premium (No SRCC & Terrorism)"
+                                    class="peer sr-only" />
+                                <!-- <div class="flex justify-between items-start mb-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-home text-xl"></i>
+                                </div>
+                                <div
+                                    class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center peer-checked:border-tealCustom-600 peer-checked:bg-tealCustom-600 transition-colors">
+                                    <i class="fas fa-check text-white text-xs opacity-0 peer-checked:opacity-100"></i>
+                                </div>
+                            </div> -->
+                                <!-- <h3 class="font-bold text-navy-900 text-lg mb-1 group-hover:text-gray-700 transition-colors">Basic</h3> -->
+                                <div class="font-semibold text-xl text-gray-700 text-sm mb-3">எஸ்.ஆர்.சி.சி மற்றும் பயங்கரவாதம் இல்லாமல்
+                                </div>
+                                <div class="text-2xl font-bold text-navy-900 mb-3">Rs. 18,000<span
+                                        class="text-xs text-gray-500 font-normal"> /yr</span></div>
+                                <p class="text-xs text-gray-500 leading-relaxed mt-auto">
+                                    பொதுவான தீ விபத்துக் காப்பீடு. SRCC அல்லது பயங்கரவாதப் பாதுகாப்பு இதில் அடங்காது.
+                                </p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ════ GROUND PLAN ════ -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                        <h3 class="font-heading text-white text-md font-semibold">வளாகத்தின் தரைத் திட்டம்</h3>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div
+                            class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-800 leading-relaxed">
+                            <strong>குறிப்பு:</strong> காப்பீடு செய்யப்பட வேண்டிய வளாகத்தின் தரைத் திட்டம் (கட்டிடங்களின் பரிமாணங்களையும் அவற்றுக்கு இடையேயான தூரங்களையும் குறிப்பிடவும்.)
+                        </div>
+                        <div class="border-2 border-dashed border-gray-200 rounded-xl h-48 flex flex-col items-center justify-center gap-3 bg-gray-50 cursor-pointer hover:border-tealCustom-400 hover:bg-tealCustom-50 transition-all"
+                            onclick="document.getElementById('planUpload').click()">
+                            <svg class="w-10 h-10 text-gray-300" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+                            </svg>
+                            <div class="text-center">
+                                <p class="text-sm font-semibold text-gray-500">தரைத் திட்டத்தைப் பதிவேற்றவும்</p>
+                                <p class="text-xs text-gray-400">PNG, JPG, அல்லது PDF ஏற்றுக்கொள்ளப்படும் — அல்லது கையால் வரையப்பட்ட ஓவியத்தை இணைக்கவும்</p>
+                            </div>
+                            <input type="file" id="planUpload" accept="image/*,.pdf" class="hidden" />
+                        </div>
+                        <div
+                            class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-800 leading-relaxed">
+                            <strong>குறிப்பு:</strong> இங்கு வழங்கப்பட்டுள்ள இடம் போதுமானதாக இல்லையென்றால், தனித்தாளில் வரையப்பட்ட தரைத் திட்ட வரைபடத்தை இணைக்கவும்.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ════ DATA PROTECTION ════ -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                        <h3 class="font-heading text-white text-md font-semibold">Personal Data Protection Clause
+                        </h3>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div
+                            class="bg-gray-50 border border-gray-200 rounded-xl p-5 text-xs text-gray-600 leading-relaxed space-y-3">
+                            <p>The undersigned hereby consents to the collection, use and transfer of Personal Data
+                                as
+                                mentioned in this paragraph. The undersigned understands that the Company holds
+                                certain
+                                personal information about him/her including Full Name, Address, Date of Birth,
+                                Gender,
+                                National Identity Card/Passport Details, Job Title, Telephone Number, மின்னஞ்சல் முகவரி,
+                                Educational &amp; Professional Experience, Business Activities, Travel &amp;
+                                Expenses
+                                Information, Financial Details (e.g. Credit/Debit Card &amp; Bank Account Details
+                                etc.),
+                                Identification Checks &amp; Background Vetting, and Other Information including
+                                family
+                                life.</p>
+                            <p>The undersigned further understands that the Company holds special categories of
+                                personal
+                                data concerning health and such other information which may fall within the
+                                definition
+                                of "special categories of personal data", as defined in the Data Protection Act, No.
+                                09
+                                of 2022.</p>
+                            <p>The undersigned further understands that it may be necessary for the purposes of the
+                                relationship with the Company to share data with Reinsurers, Actuaries, and such
+                                other
+                                required parties for the purpose of assessing the risk. The undersigned authorises
+                                the
+                                Company to receive, possess, process and transfer the data for the purpose of the
+                                pre-insurance contract evaluation and for the purpose of servicing insurance
+                                contracts.
+                            </p>
+                        </div>
+                        <label class="flex items-start gap-3 cursor-pointer">
+                            <span class="text-sm text-red-400">I have read and understood the Personal Data
+                                Protection
+                                Clause and hereby provide my consent.</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- ════ INTERMEDIARY DETAILS ════ -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                        <h3 class="font-heading text-white text-md font-semibold">Intermediary Details</h3>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div class="space-y-1">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Name
+                                    of Insurance Intermediary <span class="font-normal normal-case text-gray-400">(block
+                                        letters)</span></label>
+                                <input type="text" placeholder="Full name in block letters"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                            </div>
+                            <div class="space-y-1">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Code
+                                    No.</label>
+                                <input type="text" placeholder="Intermediary code"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 font-mono" />
+                            </div>
+                            <div class="space-y-1">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Branch
+                                    Code</label>
+                                <input type="text" placeholder="Branch Code"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                            </div>
+                            <div class="space-y-1">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">SLI
+                                    Code</label>
+                                <input type="text" placeholder="SLI Code"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                            </div>
+                            <div class="space-y-1 sm:col-span-2">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Telephone
+                                    No.</label>
+                                <input type="tel" placeholder="Contact number"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                            </div>
+                        </div>
+                        <div class="space-y-1">
+                            <label
+                                class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Address
+                                of Insurance Intermediary <span class="font-normal normal-case text-gray-400">(block
+                                    letters)</span></label>
+                            <textarea rows="2" placeholder="Full address in block letters"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 resize-none"></textarea>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-1">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Insurance
+                                    Intermediary's Signature</label>
+                                <div
+                                    class="border-2 border-dashed border-gray-200 rounded-xl h-20 flex items-center justify-center bg-gray-50">
+                                    <span class="text-xs text-gray-400">இங்கே கையொப்பமிடுங்கள்</span>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="flex items-start gap-3 cursor-pointer">
+                            <!-- <input type="checkbox" required class="mt-0.5 w-4 h-4 shrink-0" /> -->
+                            <span class="text-sm text-red-400">I/We certify that the Insurance was canvassed by the
+                                above Insurance Intermediary.</span>
+                        </label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-1">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Signature
+                                    of Proposer</label>
+                                <div
+                                    class="border-2 border-dashed border-gray-200 rounded-xl h-20 flex items-center justify-center bg-gray-50">
+                                    <span class="text-xs text-gray-400">இங்கே கையொப்பமிடுங்கள்</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">தேதி</label>
+                                <input type="date"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ════ SIGNATURES & DECLARATIONS ════ -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                        <h3 class="font-heading text-white text-md font-semibold">Signatures &amp; Declarations</h3>
+                    </div>
+                    <div class="p-6 space-y-5">
+                        <div class="flex gap-3 bg-amber-50 border border-amber-200 rounded-xl px-5 py-4">
+                            <p class="text-xs text-amber-800 leading-relaxed">
+                                <strong>குறிப்பு:</strong> Any misdescription or misrepresentation of material facts known to the proposer in this proposal form is liable to render the policy void from the inception.
+                            </p>
+                        </div>
+
+                        <!-- கூட்டுக் கணக்கு வரைggle -->
+                        <div class="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-xl px-4 py-3">
+                            <label class="flex items-center gap-3 cursor-pointer select-none">
+                                <input type="checkbox" id="jointAccountChk" onchange="toggleJointAccount()" class="w-4 h-4 accent-tealCustom-500" />
+                                <span class="text-sm font-semibold text-navy-900">(Check if there are multiple proposers)</span>
+                                <!-- <span class="text-xs text-gray-500">(Check if there are multiple proposers)</span> -->
+                            </label>
+                            <button type="button" id="addJointSigBtn" onclick="addJointSignature()" style="display:none;"
+                                class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                                Add Signature
+                            </button>
+                        </div>
+
+                        <!-- Primary Proposer Signature -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-1">
+                                <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">முன்மொழிபவரின் கையொப்பம்</label>
+                                <div class="border-2 border-dashed border-gray-200 rounded-xl h-20 flex items-center justify-center bg-gray-50">
+                                    <span class="text-xs text-gray-400">இங்கே கையொப்பமிடுங்கள்</span>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">தேதி</label>
+                                <input type="date" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                            </div>
+                        </div>
+
+                        <!-- Additional Joint Signatures Container -->
+                        <div id="jointSignaturesContainer" class="space-y-4"></div>
+                    </div>
+                </div>
+
+                <!-- ════ FOR OFFICE USE ONLY ════ -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
+                        <h3 class="font-heading text-white text-md font-semibold">அலுவலக பயன்பாட்டிற்கு மட்டும்</h3>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="space-y-1"><label
+                                class="block text-[10px] font-semibold uppercase tracking-wide text-gray-400">Rate
+                                and
+                                Calculated</label><input type="text"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                        </div>
+                        <div class="space-y-1"><label
+                                class="block text-[10px] font-semibold uppercase tracking-wide text-gray-400">சரிபார்க்கப்பட்டது</label><input
+                                type="text"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                        </div>
+                        <div class="space-y-1"><label
+                                class="block text-[10px] font-semibold uppercase tracking-wide text-gray-400">ஏற்றுக்கொள்ளப்பட்டது</label><input
+                                type="text"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                        </div>
+                        <div class="space-y-1"><label
+                                class="block text-[10px] font-semibold uppercase tracking-wide text-gray-400">Proposal
+                                No.</label><input type="text"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 font-mono" />
+                        </div>
+                        <div class="space-y-1"><label
+                                class="block text-[10px] font-semibold uppercase tracking-wide text-gray-400">Policy
+                                No.</label><input type="text"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 font-mono" />
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div><!-- end form-en -->
+
+
+        </div>
+
     </div><!-- end page -->
 
     <script>
@@ -2907,17 +4348,24 @@
             localStorage.setItem('preferredLang', lang);
             const formEn = document.getElementById('form-en');
             const formSi = document.getElementById('form-si');
+            const formTa = document.getElementById('form-ta');
+            const btnTa = document.getElementById('btn-ta');
             const btnEn = document.getElementById('btn-en');
             const btnSi = document.getElementById('btn-si');
             if (lang === 'en') {
                 formEn.style.display = 'block'; formSi.style.display = 'none';
                 btnEn.className = 'bg-tealCustom-500 text-white px-4 py-2 rounded-lg hover:bg-tealCustom-600 font-semibold shadow-sm text-sm';
                 btnSi.className = 'bg-white text-tealCustom-600 border border-tealCustom-300 px-4 py-2 rounded-lg hover:bg-tealCustom-50 font-medium text-sm';
-            } else {
+            } else if (lang === 'si') {
                 formEn.style.display = 'none'; formSi.style.display = 'block';
                 btnSi.className = 'bg-tealCustom-500 text-white px-4 py-2 rounded-lg hover:bg-tealCustom-600 font-semibold shadow-sm text-sm';
                 btnEn.className = 'bg-white text-tealCustom-600 border border-tealCustom-300 px-4 py-2 rounded-lg hover:bg-tealCustom-50 font-medium text-sm';
+            } else {
+                formEn.style.display = 'none'; formTa.style.display = 'block';
+                btnTa.className = 'bg-tealCustom-500 text-white px-4 py-2 rounded-lg hover:bg-tealCustom-600 font-semibold shadow-sm text-sm';
+                btnEn.className = 'bg-white text-tealCustom-600 border border-tealCustom-300 px-4 py-2 rounded-lg hover:bg-tealCustom-50 font-medium text-sm';
             }
+
         }
 
         // ── Helper ───────────────────────────────────────────────────────
@@ -2928,7 +4376,7 @@
             document.getElementById(id).classList.toggle('hidden', !cb.checked);
         }
 
-        // ── EN: Toggle Joint Account ────────────────────────────────────────
+        // ── EN: Toggle Signatures ────────────────────────────────────────
         let jointSigCount = 0;
         function toggleJointAccount() {
             const checked = document.getElementById('jointAccountChk').checked;
@@ -3294,6 +4742,7 @@
             setLanguage(lang);
             initSectionToggles('form-en');
             initSectionToggles('form-si');
+            initSectionToggles('form-ta');
             updateLocationDropdowns();
             updateSiLocationDropdowns();
         });

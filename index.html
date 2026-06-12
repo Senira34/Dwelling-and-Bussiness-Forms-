@@ -304,13 +304,23 @@
             <span class="font-semibold text-gray-800 text-sm">සිංහල</span>
             <span class="text-[10px] text-gray-400 mt-1">සිංහල භාෂා පත්‍රය</span>
           </a>
+
+          <!-- Tamil Option (Optional) -->
+          <a href="javascript:void(0)" id="lang-ta-btn" class="flex flex-col items-center justify-center p-5 bg-white border border-gray-200 rounded-xl hover:border-tealCustom-500 hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all group text-center">
+            <span class="w-12 h-12 rounded-full bg-tealCustom-50 flex items-center justify-center text-tealCustom-600 text-lg font-bold mb-3 group-hover:bg-tealCustom-500 group-hover:text-white transition-colors">
+              த
+            </span>
+            <span class="font-semibold text-gray-800 text-sm">தமிழ்</span>
+            <span class="text-[10px] text-gray-400 mt-1">தமிழ் மொழி படிவம்</span>
+          </a>
+
         </div>
       </div>
       
       <!-- Footer -->
       <div class="px-6 py-4 bg-white border-t border-gray-100 flex justify-end gap-2">
         <button id="cancel-modal-btn" class="px-4 py-2 text-xs font-semibold text-gray-500 hover:text-white rounded-md border border-tealCustom-200 hover:bg-tealCustom-500">
-          Cancel / අවලංගු කරන්න
+          Cancel / අවලංගු කරන්න / ரத்து செய்ய்க
         </button>
       </div>
     </div>
@@ -374,6 +384,7 @@
 
       const langEnBtn = document.getElementById('lang-en-btn');
       const langSiBtn = document.getElementById('lang-si-btn');
+      const langTaBtn = document.getElementById('lang-ta-btn');
 
       function goToDigitalForm(lang) {
         localStorage.setItem('preferredLang', lang);
@@ -382,6 +393,7 @@
 
       if (langEnBtn) langEnBtn.addEventListener('click', () => goToDigitalForm('en'));
       if (langSiBtn) langSiBtn.addEventListener('click', () => goToDigitalForm('si'));
+      if (langTaBtn) langTaBtn.addEventListener('click', () => goToDigitalForm('ta'));
 
       if (viewDigitalFormBtn) {
         viewDigitalFormBtn.addEventListener('click', (e) => {
