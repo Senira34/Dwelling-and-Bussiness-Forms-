@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -2963,6 +2963,10 @@
         <!-- Tamil Form Starts -->
 
         <div id="form-ta" style="display:none;">
+            <div class="mb-6 bg-tealCustom-50 border border-tealCustom-200 text-tealCustom-700 px-4 py-3 rounded-xl text-sm font-medium flex items-center gap-3">
+                <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>This form is directly translated from the English form.</span>
+            </div>
             <form id="proposalForm" class="space-y-8" onsubmit="return false;">
 
                 <!-- ════ PROPOSER DETAILS ════ -->
@@ -4351,23 +4355,33 @@
             const formEn = document.getElementById('form-en');
             const formSi = document.getElementById('form-si');
             const formTa = document.getElementById('form-ta');
-            const btnTa = document.getElementById('btn-t');
+            const btnTa = document.getElementById('btn-ta');
             const btnEn = document.getElementById('btn-en');
             const btnSi = document.getElementById('btn-si');
-            if (lang === 'en') {
-                formEn.style.display = 'block'; formSi.style.display = 'none';
-                btnEn.className = 'bg-tealCustom-500 text-white px-4 py-2 rounded-lg hover:bg-tealCustom-600 font-semibold shadow-sm text-sm';
-                btnSi.className = 'bg-white text-tealCustom-600 border border-tealCustom-300 px-4 py-2 rounded-lg hover:bg-tealCustom-50 font-medium text-sm';
-            } else if (lang === 'si') {
-                formEn.style.display = 'none'; formSi.style.display = 'block';
-                btnSi.className = 'bg-tealCustom-500 text-white px-4 py-2 rounded-lg hover:bg-tealCustom-600 font-semibold shadow-sm text-sm';
-                btnEn.className = 'bg-white text-tealCustom-600 border border-tealCustom-300 px-4 py-2 rounded-lg hover:bg-tealCustom-50 font-medium text-sm';
-            } else {
-                formEn.style.display = 'none'; formTa.style.display = 'block';
-                btnTa.className = 'bg-tealCustom-500 text-white px-4 py-2 rounded-lg hover:bg-tealCustom-600 font-semibold shadow-sm text-sm';
-                btnEn.className = 'bg-white text-tealCustom-600 border border-tealCustom-300 px-4 py-2 rounded-lg hover:bg-tealCustom-50 font-medium text-sm';
-            }
+            
+            // Reset all forms
+            if(formEn) formEn.style.display = 'none';
+            if(formSi) formSi.style.display = 'none';
+            if(formTa) formTa.style.display = 'none';
+            
+            // Reset all buttons
+            const defaultBtnClass = 'bg-white text-tealCustom-600 border border-tealCustom-300 px-4 py-2 rounded-lg hover:bg-tealCustom-50 font-medium text-sm';
+            const activeBtnClass = 'bg-tealCustom-500 text-white px-4 py-2 rounded-lg hover:bg-tealCustom-600 font-semibold shadow-sm text-sm';
+            
+            if(btnEn) btnEn.className = defaultBtnClass;
+            if(btnSi) btnSi.className = defaultBtnClass;
+            if(btnTa) btnTa.className = defaultBtnClass;
 
+            if (lang === 'en') {
+                if(formEn) formEn.style.display = 'block';
+                if(btnEn) btnEn.className = activeBtnClass;
+            } else if (lang === 'si') {
+                if(formSi) formSi.style.display = 'block';
+                if(btnSi) btnSi.className = activeBtnClass;
+            } else {
+                if(formTa) formTa.style.display = 'block';
+                if(btnTa) btnTa.className = activeBtnClass;
+            }
         }
 
         // ── Helper ───────────────────────────────────────────────────────

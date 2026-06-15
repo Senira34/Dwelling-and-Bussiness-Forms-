@@ -138,11 +138,11 @@
         <!-- Language Toggle -->
         <div class="flex gap-3 mb-6 justify-end">
             <button id="tab-en" onclick="setLangBp('en')"
-                class="bg-tealCustom-500 text-white px-4 py-2 rounded-lg border border-tealCustom-300 hover:bg-tealCustom-600 font-semibold shadow-sm text-sm">English</button>
+                class="bg-tealCustom-500 text-white px-4 py-2 rounded-lg hover:bg-tealCustom-600 font-semibold shadow-sm text-sm">English</button>
             <button id="tab-si" onclick="setLangBp('si')"
-                class="bg-white text-tealCustom-600 border border-tealCustom-300 px-4 py-2 rounded-lg hover:bg-tealCustom-600 font-medium text-sm">සිංහල</button>
-            <button id="tab-t" onclick="setLangBp('ta')"
-                class="bg-white text-tealCustom-600 border border-tealCustom-300 px-4 py-2 rounded-lg hover:bg-tealCustom-600 font-medium text-sm">தமிழ்</button>
+                class="bg-white text-tealCustom-600 border border-tealCustom-300 px-4 py-2 rounded-lg hover:bg-tealCustom-50 font-medium text-sm">සිංහල</button>
+            <button id="tab-ta" onclick="setLangBp('ta')"
+                class="bg-white text-tealCustom-600 border border-tealCustom-300 px-4 py-2 rounded-lg hover:bg-tealCustom-50 font-medium text-sm">தமிழ்</button>
         </div>
 
 
@@ -4273,6 +4273,10 @@
 
         <!-- ══════════ TAMIL FORM ══════════ -->
         <div id="bp-form-ta" style="display:none;">
+            <div class="mb-6 bg-tealCustom-50 border border-tealCustom-200 text-tealCustom-700 px-4 py-3 rounded-xl text-sm font-medium flex items-center gap-3">
+                <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>This form is directly translated from the English form.</span>
+            </div>
             <form id="taProposalForm" class="space-y-8" onsubmit="return false;">
                 <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
                     <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
@@ -6039,15 +6043,18 @@
                     const tabs = {
                         en: document.getElementById('tab-en'),
                         si: document.getElementById('tab-si'),
-                        ta: document.getElementById('tab-t')
+                        ta: document.getElementById('tab-ta')
                     };
+
+                    const defaultBtnClass = 'bg-white text-tealCustom-600 border border-tealCustom-300 px-4 py-2 rounded-lg hover:bg-tealCustom-50 font-medium text-sm';
+                    const activeBtnClass = 'bg-tealCustom-500 text-white px-4 py-2 rounded-lg hover:bg-tealCustom-600 font-semibold shadow-sm text-sm';
 
                     for (const key in tabs) {
                         if (tabs[key]) {
                             if (key === lang) {
-                                tabs[key].className = 'px-4 py-2 bg-white text-tealCustom-600 font-bold rounded-lg shadow-sm border border-gray-100 transition-all cursor-pointer';
+                                tabs[key].className = activeBtnClass;
                             } else {
-                                tabs[key].className = 'px-4 py-2 text-gray-500 font-semibold hover:text-navy-900 transition-colors cursor-pointer';
+                                tabs[key].className = defaultBtnClass;
                             }
                         }
                     }
@@ -6224,32 +6231,39 @@
                 }
 
                 // Form Section Toggle Feature (Accordion Style)
-                const sectionHeaders = document.querySelectorAll('#proposalForm .bg-tealCustom-500.px-6');
-                const allSections = [];
+                // ── Section Toggle (accordion) ───────────────────────────────────
+                function initSectionToggles(containerId) {
+                    const sectionHeaders = document.querySelectorAll(`#${containerId} .bg-tealCustom-500.px-6`);
+                    const allSections = [];
 
-                sectionHeaders.forEach((header, index) => {
-                    header.classList.add('cursor-pointer', 'select-none');
+                    sectionHeaders.forEach((header, index) => {
+                        header.classList.add('cursor-pointer', 'select-none');
 
-                    // Add the toggle icon if not present
-                    if (!header.querySelector('.toggle-icon')) {
-                        const iconHTML = `<svg class="w-3 h-3 text-white toggle-icon shrink-0 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>`;
-                        header.insertAdjacentHTML('beforeend', iconHTML);
-                    }
-
-                    const sectionContainer = header.closest('.bg-white.rounded-2xl');
-                    if (sectionContainer) {
-                        allSections.push(sectionContainer);
-
-                        // Collapse all sections except the first one by default
-                        if (index > 0) {
-                            sectionContainer.classList.add('section-collapsed');
+                        // Add the toggle icon if not present
+                        if (!header.querySelector('.toggle-icon')) {
+                            const iconHTML = `<svg class="w-3 h-3 text-white toggle-icon shrink-0 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>`;
+                            header.insertAdjacentHTML('beforeend', iconHTML);
                         }
 
-                        header.addEventListener('click', () => {
-                            sectionContainer.classList.toggle('section-collapsed');
-                        });
-                    }
-                });
+                        const sectionContainer = header.closest('.bg-white.rounded-2xl');
+                        if (sectionContainer) {
+                            allSections.push(sectionContainer);
+
+                            // Collapse all sections except the first one by default
+                            if (index > 0) {
+                                sectionContainer.classList.add('section-collapsed');
+                            }
+
+                            header.addEventListener('click', () => {
+                                sectionContainer.classList.toggle('section-collapsed');
+                            });
+                        }
+                    });
+                }
+
+                initSectionToggles('bp-form-en');
+                initSectionToggles('bp-form-si');
+                initSectionToggles('bp-form-ta');
 
                 // ── EN: Toggle Joint Account ────────────────────────────────────────
                 let jointSigCount = 0;
