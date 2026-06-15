@@ -234,14 +234,11 @@
         </svg>
       </a>
     </button>
-    <button class="mt-6 mr-6">
-      <a href="./Components/proposal-form-business-premises.html"
-        class="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-tealCustom-500 text-white text-sm font-semibold hover:bg-tealCustom-600 transition-colors shadow-sm focus:ring-2 focus:ring-offset-2 focus:ring-tealCustom-500">
+    <button id="viewDigitalFormBpBtn" class="mt-6 mr-6 flex items-center gap-2 px-5 py-2.5 rounded-lg bg-tealCustom-500 text-white text-sm font-semibold hover:bg-tealCustom-600 transition-colors shadow-sm focus:ring-2 focus:ring-offset-2 focus:ring-tealCustom-500">
         <span>View Digital Form Business-Premises</span>
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
         </svg>
-      </a>
     </button>
     </div>
 
@@ -320,6 +317,68 @@
       <!-- Footer -->
       <div class="px-6 py-4 bg-white border-t border-gray-100 flex justify-end gap-2">
         <button id="cancel-modal-btn" class="px-4 py-2 text-xs font-semibold text-gray-500 hover:text-white rounded-md border border-tealCustom-200 hover:bg-tealCustom-500">
+          Cancel / අවලංගු කරන්න / ரத்து செய்ய்க
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Business Premises Language Selection Modal -->
+  <div id="language-modal-bp" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+    <!-- Backdrop -->
+    <div class="absolute inset-0 bg-gray-900/60 backdrop-blur-sm transition-opacity duration-300 opacity-0"></div>
+    
+    <!-- Modal Card -->
+    <div class="relative bg-white rounded-2xl shadow-2xl border max-w-md w-full mx-4 overflow-hidden transform scale-95 opacity-0 transition-all duration-300" id="modal-card-bp">
+      <!-- Header -->
+      <div class="bg-tealCustom-500 px-6 py-5 text-white relative">
+        <button id="close-modal-bp-btn" class="absolute top-4 right-4 text-white/80 hover:text-white transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+        <h3 class="text-xl font-bold font-heading">Select Preferred Language</h3>
+        <p class="text-xs text-white/80 mt-1">කරුණාකර ඔබ කැමති භාෂාව තෝරන්න</p>
+      </div>
+      
+      <!-- Body -->
+      <div class="p-6 space-y-4 bg-gray-50/50">
+        <p class="text-sm text-gray-600 text-center font-medium">Please select the language you wish to view the digital form in:</p>
+        
+        <div class="grid grid-cols-2 gap-4 pt-2">
+          <!-- English Option -->
+          <a href="javascript:void(0)" id="lang-en-btn-bp" class="flex flex-col items-center justify-center p-5 bg-white border border-gray-200 rounded-xl hover:border-tealCustom-500 hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all group text-center">
+            <span class="w-12 h-12 rounded-full bg-tealCustom-50 flex items-center justify-center text-tealCustom-600 text-lg font-bold mb-3 group-hover:bg-tealCustom-500 group-hover:text-white transition-colors">
+              EN
+            </span>
+            <span class="font-semibold text-gray-800 text-sm">English</span>
+            <span class="text-[10px] text-gray-400 mt-1">English Language Form</span>
+          </a>
+          
+          <!-- Sinhala Option -->
+          <a href="javascript:void(0)" id="lang-si-btn-bp" class="flex flex-col items-center justify-center p-5 bg-white border border-gray-200 rounded-xl hover:border-tealCustom-500 hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all group text-center">
+            <span class="w-12 h-12 rounded-full bg-tealCustom-50 flex items-center justify-center text-tealCustom-600 text-lg font-bold mb-3 group-hover:bg-tealCustom-500 group-hover:text-white transition-colors">
+              සිං
+            </span>
+            <span class="font-semibold text-gray-800 text-sm">සිංහල</span>
+            <span class="text-[10px] text-gray-400 mt-1">සිංහල භාෂා පත්‍රය</span>
+          </a>
+
+          <!-- Tamil Option (Optional) -->
+          <a href="javascript:void(0)" id="lang-ta-btn-bp" class="flex flex-col items-center justify-center p-5 bg-white border border-gray-200 rounded-xl hover:border-tealCustom-500 hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all group text-center">
+            <span class="w-12 h-12 rounded-full bg-tealCustom-50 flex items-center justify-center text-tealCustom-600 text-lg font-bold mb-3 group-hover:bg-tealCustom-500 group-hover:text-white transition-colors">
+              த
+            </span>
+            <span class="font-semibold text-gray-800 text-sm">தமிழ்</span>
+            <span class="text-[10px] text-gray-400 mt-1">தமிழ் மொழி படிவம்</span>
+          </a>
+
+        </div>
+      </div>
+      
+      <!-- Footer -->
+      <div class="px-6 py-4 bg-white border-t border-gray-100 flex justify-end gap-2">
+        <button id="cancel-modal-bp-btn" class="px-4 py-2 text-xs font-semibold text-gray-500 hover:text-white rounded-md border border-tealCustom-200 hover:bg-tealCustom-500">
           Cancel / අවලංගු කරන්න / ரத்து செய்ய்க
         </button>
       </div>
@@ -410,6 +469,72 @@
           const backdrop = languageModal.querySelector('.absolute.inset-0');
           if (e.target === backdrop) {
             closeModal();
+          }
+        });
+      }
+
+      // Business Premises Modal Logic
+      const languageModalBp = document.getElementById('language-modal-bp');
+      const modalCardBp = document.getElementById('modal-card-bp');
+      const viewDigitalFormBpBtn = document.getElementById('viewDigitalFormBpBtn');
+      const closeBpBtn = document.getElementById('close-modal-bp-btn');
+      const cancelBpBtn = document.getElementById('cancel-modal-bp-btn');
+
+      function openBpModal() {
+        if (!languageModalBp) return;
+        languageModalBp.classList.remove('hidden');
+        languageModalBp.offsetHeight;
+        
+        const backdrop = languageModalBp.querySelector('.absolute.inset-0');
+        backdrop.classList.remove('opacity-0');
+        backdrop.classList.add('opacity-100');
+        
+        modalCardBp.classList.remove('scale-95', 'opacity-0');
+        modalCardBp.classList.add('scale-100', 'opacity-100');
+      }
+
+      function closeBpModal() {
+        if (!languageModalBp) return;
+        const backdrop = languageModalBp.querySelector('.absolute.inset-0');
+        backdrop.classList.remove('opacity-100');
+        backdrop.classList.add('opacity-0');
+        
+        modalCardBp.classList.remove('scale-100', 'opacity-100');
+        modalCardBp.classList.add('scale-95', 'opacity-0');
+        
+        setTimeout(() => {
+          languageModalBp.classList.add('hidden');
+        }, 300);
+      }
+
+      const langEnBtnBp = document.getElementById('lang-en-btn-bp');
+      const langSiBtnBp = document.getElementById('lang-si-btn-bp');
+      const langTaBtnBp = document.getElementById('lang-ta-btn-bp');
+
+      function goToDigitalFormBp(lang) {
+        localStorage.setItem('bpLang', lang);
+        window.location.href = './Components/proposal-form-business-premises.html?lang=' + lang;
+      }
+
+      if (langEnBtnBp) langEnBtnBp.addEventListener('click', () => goToDigitalFormBp('en'));
+      if (langSiBtnBp) langSiBtnBp.addEventListener('click', () => goToDigitalFormBp('si'));
+      if (langTaBtnBp) langTaBtnBp.addEventListener('click', () => goToDigitalFormBp('ta'));
+
+      if (viewDigitalFormBpBtn) {
+        viewDigitalFormBpBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          openBpModal();
+        });
+      }
+
+      if (closeBpBtn) closeBpBtn.addEventListener('click', closeBpModal);
+      if (cancelBpBtn) cancelBpBtn.addEventListener('click', closeBpModal);
+      
+      if (languageModalBp) {
+        languageModalBp.addEventListener('click', (e) => {
+          const backdrop = languageModalBp.querySelector('.absolute.inset-0');
+          if (e.target === backdrop) {
+            closeBpModal();
           }
         });
       }

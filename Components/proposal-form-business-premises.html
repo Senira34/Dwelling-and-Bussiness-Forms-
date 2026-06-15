@@ -533,6 +533,7 @@
                             <div class="flex items-center gap-4">
                                 <span class="font-mono text-xs font-semibold text-navy-700 w-24">Location 01</span>
                                 <input type="text" placeholder="Address for Location 01"
+                                    oninput="updateLocationDropdownsBp()"
                                     class="flex-1 border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
                             </div>
                         </div>
@@ -1071,15 +1072,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
@@ -1088,15 +1089,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
@@ -1191,15 +1192,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
@@ -1207,16 +1208,40 @@
                                                     Any part of roof hatched?
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
-                                                    <input type="text" placeholder="Yes/No"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                    <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="Yes"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            Yes</label>
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="No"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            No</label>
+                                                    </div>
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
-                                                    <input type="text" placeholder="Yes/No"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                    <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="Yes"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            Yes</label>
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="No"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            No</label>
+                                                    </div>
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
-                                                    <input type="text" placeholder="Yes/No"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                    <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="Yes"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            Yes</label>
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="No"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            No</label>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
@@ -1225,15 +1250,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
@@ -1242,16 +1267,40 @@
                                                     the building?
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
-                                                    <input type="text" placeholder="Yes/No"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                    <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="Yes"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            Yes</label>
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="No"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            No</label>
+                                                    </div>
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
-                                                    <input type="text" placeholder="Yes/No"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                    <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="Yes"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            Yes</label>
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="No"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            No</label>
+                                                    </div>
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
-                                                    <input type="text" placeholder="Yes/No"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                    <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="Yes"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            Yes</label>
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="No"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            No</label>
+                                                    </div>
                                                 </td>
                                             </tr>
 
@@ -1260,17 +1309,41 @@
                                                     Is there an adult occupant after business hours in the
                                                     premises?
                                                 </td>
-                                                <td class="px-3 py-1.5 border-l border-gray-100" text-sm>
-                                                    <input type="text" placeholder="Yes/No"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                <td class="px-3 py-1.5 border-l border-gray-100">
+                                                    <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="Yes"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            Yes</label>
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="No"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            No</label>
+                                                    </div>
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
-                                                    <input type="text" placeholder="Yes/No"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                    <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="Yes"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            Yes</label>
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="No"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            No</label>
+                                                    </div>
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
-                                                    <input type="text" placeholder="Yes/No"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                    <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="Yes"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            Yes</label>
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="No"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            No</label>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -1408,15 +1481,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
@@ -1500,15 +1573,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -1564,15 +1637,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
@@ -1582,15 +1655,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
@@ -1600,15 +1673,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
@@ -1618,15 +1691,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
@@ -1637,15 +1710,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -1704,15 +1777,15 @@
 
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
@@ -1722,15 +1795,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
@@ -1739,15 +1812,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
@@ -1758,15 +1831,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
@@ -1776,15 +1849,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
 
@@ -1795,15 +1868,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
@@ -1813,15 +1886,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
@@ -1831,15 +1904,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
@@ -1854,15 +1927,15 @@
 
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
@@ -1871,15 +1944,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
@@ -1889,15 +1962,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
@@ -1907,15 +1980,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
@@ -1925,15 +1998,15 @@
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -2061,53 +2134,68 @@
                                 <tbody class="divide-y divide-gray-100">
                                     <tr class="hover:bg-gray-50">
                                         <td class="px-3 py-2">
-                                            <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            <input type="text"
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                         </td>
                                         <td class="px-3 py-2 border-l border-gray-100">
-                                            <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            <input type="text"
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                         </td>
                                         <td class="px-3 py-2 border-l border-gray-100">
-                                            <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            <input type="text"
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                         </td>
                                         <td class="px-3 py-2 border-l border-gray-100">
-                                            <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            <input type="text"
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                         </td>
                                         <td class="px-3 py-2 border-l border-gray-100">
-                                            <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            <input type="text"
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                         </td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
                                         <td class="px-3 py-2">
-                                            <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            <input type="text"
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                         </td>
                                         <td class="px-3 py-2 border-l border-gray-100">
-                                            <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            <input type="text"
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                         </td>
                                         <td class="px-3 py-2 border-l border-gray-100">
-                                            <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            <input type="text"
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                         </td>
                                         <td class="px-3 py-2 border-l border-gray-100">
-                                            <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            <input type="text"
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                         </td>
                                         <td class="px-3 py-2 border-l border-gray-100">
-                                            <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            <input type="text"
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                         </td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
                                         <td class="px-3 py-2">
-                                            <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            <input type="text"
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                         </td>
                                         <td class="px-3 py-2 border-l border-gray-100">
-                                            <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            <input type="text"
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                         </td>
                                         <td class="px-3 py-2 border-l border-gray-100">
-                                            <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            <input type="text"
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                         </td>
                                         <td class="px-3 py-2 border-l border-gray-100">
-                                            <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            <input type="text"
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                         </td>
                                         <td class="px-3 py-2 border-l border-gray-100">
-                                            <input type="text" class="w-full text-sm border-0 bg-transparent p-0" />
+                                            <input type="text"
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                         </td>
                                     </tr>
                                 </tbody>
@@ -3283,21 +3371,27 @@
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">බාහිර කුළුණු
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">බිත්තිවල ආවරණ
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">පියස්ස</td>
@@ -3387,63 +3481,148 @@
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">පියස්සේ රාමුව
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">පියස්සේ
                                                     කිසිදු
                                                     කොටසක් පොල් අතු ආදියෙන් සෙවිලි කර තිබේද?</td>
-                                                <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        placeholder="ඔව්/නැත"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
-                                                <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        placeholder="ඔව්/නැත"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
-                                                <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        placeholder="ඔව්/නැත"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
-                                            </tr>
+                                                <td class="px-3 py-1.5 border-l border-gray-100">
+                                                    <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="Yes"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            ඔව්</label>
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="No"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            නැත</label>
+                                                    </div>
+                                                </td>
+                                                <td class="px-3 py-1.5 border-l border-gray-100">
+                                                    <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="Yes"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            ඔව්</label>
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="No"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            නැත</label>
+                                                    </div>
+                                                </td>
+                                                <td class="px-3 py-1.5 border-l border-gray-100">
+                                                    <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="Yes"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            ඔව්</label>
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="No"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            නැත</label>
+                                                    </div>
+                                                </td>
                                             <tr class="hover:bg-gray-50">
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">බිම් මහලද
                                                     ඇතුළුව
                                                     තට්ටු කීයක් තිබේද?</td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">ගොඩනැගිල්ලේ
                                                     කොතැනක හෝ "Prepex" හෝ ඊට සමාන ද්‍රව්‍යයක් භාවිතා කර තිබේද?</td>
-                                                <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        placeholder="ඔව්/නැත"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
-                                                <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        placeholder="ඔව්/නැත"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
-                                                <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        placeholder="ඔව්/නැත"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                <td class="px-3 py-1.5 border-l border-gray-100">
+                                                    <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="Yes"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            ඔව්</label>
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="No"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            නැත</label>
+                                                    </div>
+                                                </td>
+                                                <td class="px-3 py-1.5 border-l border-gray-100">
+                                                    <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="Yes"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            ඔව්</label>
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="No"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            නැත</label>
+                                                    </div>
+                                                </td>
+                                                <td class="px-3 py-1.5 border-l border-gray-100">
+                                                    <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="Yes"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            ඔව්</label>
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="No"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            නැත</label>
+                                                    </div>
+                                                </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">ව්‍යාපාරික
                                                     වේලාවෙන් පසු පරිශ්‍රයේ වැඩිහිටි පදිංචිකරුවෙකු සිටීද?</td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
-                                                    <input type="text" placeholder="ඔව්/නැත"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                    <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="Yes"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            ඔව්</label>
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="No"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            නැත</label>
+                                                    </div>
                                                 </td>
-                                                <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        placeholder="ඔව්/නැත"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
-                                                <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        placeholder="ඔව්/නැත"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                <td class="px-3 py-1.5 border-l border-gray-100">
+                                                    <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="Yes"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            ඔව්</label>
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="No"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            නැත</label>
+                                                    </div>
+                                                </td>
+                                                <td class="px-3 py-1.5 border-l border-gray-100">
+                                                    <div class="flex flex-col gap-1 text-xs text-gray-700 py-1">
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="Yes"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            ඔව්</label>
+                                                        <label class="flex items-center gap-1.5 cursor-pointer"><input
+                                                                type="checkbox" value="No"
+                                                                class="rounded border-gray-300 w-3 h-3 text-tealCustom-600 focus:ring-tealCustom-500">
+                                                            නැත</label>
+                                                    </div>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -3570,11 +3749,14 @@
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">ගොඩනැගිල්ල
                                                     ආලෝකවත් කරන්නේ කෙසේද?</td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">පරිශ්‍රයේ
@@ -3656,22 +3838,28 @@
                                                     යාවත්කාලීන
                                                     ඉන්වෙන්ටරියක් තබා තිබේද?</td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">අවදානම වැඩි
                                                     කරන
                                                     බව පෙනෙන වෙනත් යම් තත්වයන් තිබේද?</td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -3779,39 +3967,54 @@
                                 <tbody class="divide-y divide-gray-100" id="siHazBody">
                                     <tr class="hover:bg-gray-50">
                                         <td class="px-3 py-2"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
                                         <td class="px-3 py-2"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
                                         <td class="px-3 py-2"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -4963,21 +5166,27 @@
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">வெளிப்புற
                                                     தூண்கள்</td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">சுவர்களின்
                                                     புறணி</td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">கூரை</td>
@@ -5067,34 +5276,43 @@
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">கூரையின்
                                                     கட்டமைப்பு</td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">கூரையினுடைய
                                                     ஏதேனும் பகுதி ஓலை வேயப்பட்டதா?</td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
                                                         placeholder="ஆம்/இல்லை"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
                                                         placeholder="ஆம்/இல்லை"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
                                                         placeholder="ஆம்/இல்லை"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">தரைத்தளம்
                                                     உட்பட எத்தனை தளங்கள் உள்ளன?</td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">கட்டிடத்தில்
@@ -5102,13 +5320,16 @@
                                                     பயன்படுத்தப்பட்டுள்ளதா?</td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
                                                         placeholder="ஆம்/இல்லை"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
                                                         placeholder="ஆம்/இல்லை"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
                                                         placeholder="ஆம்/இல்லை"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">வணிக
@@ -5116,14 +5337,16 @@
                                                     இருக்கிறார்களா?</td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100">
                                                     <input type="text" placeholder="ஆம்/இல்லை"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" />
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
                                                 </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
                                                         placeholder="ஆம்/இல்லை"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
                                                         placeholder="ஆம்/இல்லை"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -5249,11 +5472,14 @@
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">கட்டிடம்
                                                     எவ்வாறு ஒளிர்கிறது?</td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">வளாகத்தில்
@@ -5333,21 +5559,27 @@
                                                     இயந்திரங்களுக்கானதாக இருந்தால், இயந்திரத்தின் சரியான மற்றும்
                                                     புதுப்பித்த சரக்குப்பட்டியலை வைத்திருக்கிறீர்களா?</td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                             </tr>
                                             <tr class="hover:bg-gray-50">
                                                 <td class="px-3 py-2 text-gray-600 font-medium bg-gray-50">இடரை
                                                     அதிகரிக்கும் எனத் தோன்றும் வேறு ஏதேனும் சூழ்நிலைகள் உள்ளனவா?</td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                                 <td class="px-3 py-1.5 border-l border-gray-100"><input type="text"
-                                                        class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                        class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -5446,39 +5678,54 @@
                                 <tbody class="divide-y divide-gray-100" id="taHazBody">
                                     <tr class="hover:bg-gray-50">
                                         <td class="px-3 py-2"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
                                         <td class="px-3 py-2"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
                                         <td class="px-3 py-2"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                         <td class="px-3 py-2 border-l border-gray-100"><input type="text"
-                                                class="w-full text-sm border-0 bg-transparent p-0" /></td>
+                                                class="w-full text-xs border border-gray-200 rounded px-2 py-1.5 bg-white text-gray-700 focus:ring-1 focus:ring-tealCustom-500" />
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -5754,82 +6001,6 @@
             </div>
 
 
-            <!-- Language Selection Modal -->
-            <div id="langModalBp" class="fixed inset-0 z-50 flex items-center justify-center hidden">
-                <div class="absolute inset-0 bg-gray-900/60 backdrop-blur-sm transition-opacity duration-300 opacity-0">
-                </div>
-
-                <!-- Modal Card -->
-                <div class="relative bg-white rounded-2xl shadow-2xl border max-w-md w-full mx-4 overflow-hidden transform scale-95 opacity-0 transition-all duration-300"
-                    id="modal-card">
-                    <!-- Header -->
-                    <div class="bg-tealCustom-500 px-6 py-5 text-white relative">
-                        <button id="close-modal-btn"
-                            class="absolute top-4 right-4 text-white/80 hover:text-white transition-colors">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12"></path>
-                            </svg>
-                        </button>
-                        <h3 class="text-xl font-bold font-heading">Select Preferred Language</h3>
-                        <p class="text-xs text-white/80 mt-1">කරුණාකර ඔබ කැමති භාෂාව තෝරන්න</p>
-                    </div>
-
-                    <!-- Body -->
-                    <div class="p-6 space-y-4 bg-gray-50/50">
-                        <p class="text-sm text-gray-600 text-center font-medium">Please select the language you wish to
-                            view
-                            the digital form in:</p>
-
-                        <div class="grid grid-cols-2 gap-4 pt-2">
-                            <!-- English Option -->
-                            <a href="javascript:void(0)" id="lang-en-btn"
-                                class="flex flex-col items-center justify-center p-5 bg-white border border-gray-200 rounded-xl hover:border-tealCustom-500 hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all group text-center">
-                                <span
-                                    class="w-12 h-12 rounded-full bg-tealCustom-50 flex items-center justify-center text-tealCustom-600 text-lg font-bold mb-3 group-hover:bg-tealCustom-500 group-hover:text-white transition-colors">
-                                    EN
-                                </span>
-                                <span class="font-semibold text-gray-800 text-sm">English</span>
-                                <span class="text-[10px] text-gray-400 mt-1">English Language Form</span>
-                            </a>
-
-                            <!-- Sinhala Option -->
-                            <a href="javascript:void(0)" id="lang-si-btn"
-                                class="flex flex-col items-center justify-center p-5 bg-white border border-gray-200 rounded-xl hover:border-tealCustom-500 hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all group text-center">
-                                <span
-                                    class="w-12 h-12 rounded-full bg-tealCustom-50 flex items-center justify-center text-tealCustom-600 text-lg font-bold mb-3 group-hover:bg-tealCustom-500 group-hover:text-white transition-colors">
-                                    සිං
-                                </span>
-                                <span class="font-semibold text-gray-800 text-sm">සිංහල</span>
-                                <span class="text-[10px] text-gray-400 mt-1">සිංහල භාෂා පත්‍රය</span>
-                            </a>
-
-                            <!-- Tamil Option (Optional) -->
-                            <a href="javascript:void(0)" id="lang-ta-btn"
-                                class="flex flex-col items-center justify-center p-5 bg-white border border-gray-200 rounded-xl hover:border-tealCustom-500 hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all group text-center">
-                                <span
-                                    class="w-12 h-12 rounded-full bg-tealCustom-50 flex items-center justify-center text-tealCustom-600 text-lg font-bold mb-3 group-hover:bg-tealCustom-500 group-hover:text-white transition-colors">
-                                    த
-                                </span>
-                                <span class="font-semibold text-gray-800 text-sm">தமிழ்</span>
-                                <span class="text-[10px] text-gray-400 mt-1">தமிழ் மொழி படிவம்</span>
-                            </a>
-
-                        </div>
-                    </div>
-
-                    <!-- Footer -->
-                    <div class="px-6 py-4 bg-white border-t border-gray-100 flex justify-end gap-2">
-                        <button id="cancel-modal-btn"
-                            class="px-4 py-2 text-xs font-semibold text-gray-500 hover:text-white rounded-md border border-tealCustom-200 hover:bg-tealCustom-500">
-                            Cancel / අවලංගු කරන්න / ரத்து செய்ய்க
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-
-
             <script>
 
                 // Language state and functions
@@ -5838,24 +6009,26 @@
                 let currentLocCountBpTa = 1;
 
                 document.addEventListener('DOMContentLoaded', () => {
-                    const savedLang = localStorage.getItem('bpLang');
-                    if (savedLang) {
-                        document.getElementById('langModalBp').style.display = 'none';
-                        setLangBp(savedLang, false);
-                    } else {
-                        document.getElementById('langModalBp').style.display = 'flex';
-                        // Hide all initially until selected
-                        document.getElementById('bp-form-en').style.display = 'none';
-                        document.getElementById('bp-form-si').style.display = 'none';
-                        document.getElementById('bp-form-ta').style.display = 'none';
-                    }
+                    const urlParams = new URLSearchParams(window.location.search);
+                    let savedLang = urlParams.get('lang') || localStorage.getItem('bpLang') || 'en';
+
+                    const langModal = document.getElementById('langModalBp');
+                    if (langModal) langModal.style.display = 'none';
+
+                    setLangBp(savedLang, false);
+
+                    // Initialize location dropdowns
+                    updateLocationDropdownsBp();
+                    updateSiLocationDropdownsBp();
+                    updateTaLocationDropdownsBp();
                 });
 
                 function setLangBp(lang, updateStorage = true) {
                     if (updateStorage) localStorage.setItem('bpLang', lang);
 
                     // Hide modal if open
-                    document.getElementById('langModalBp').style.display = 'none';
+                    const langModal = document.getElementById('langModalBp');
+                    if (langModal) langModal.style.display = 'none';
 
                     // Toggle forms
                     document.getElementById('bp-form-en').style.display = lang === 'en' ? 'block' : 'none';
@@ -5866,7 +6039,7 @@
                     const tabs = {
                         en: document.getElementById('tab-en'),
                         si: document.getElementById('tab-si'),
-                        ta: document.getElementById('tab-ta')
+                        ta: document.getElementById('tab-t')
                     };
 
                     for (const key in tabs) {
@@ -5952,7 +6125,7 @@
                     div.className = 'flex items-center gap-4';
                     div.innerHTML = `
                 <span class="font-mono text-xs font-semibold text-navy-700 w-24">Location 0${index}</span>
-                <input type="text" placeholder="Address for Location 0${index}" class="flex-1 border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                <input type="text" placeholder="Address for Location 0${index}" oninput="updateLocationDropdownsBp()" class="flex-1 border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
             `;
                     container.appendChild(div);
                 }
@@ -6123,17 +6296,443 @@
                 }
 
 
-                document.addEventListener('DOMContentLoaded', () => {
-                    const lang = localStorage.getItem('preferredLang') || 'en';
-                    setLanguage(lang);
-                    initSectionToggles('form-en');
-                    initSectionToggles('form-si');
-                    initSectionToggles('form-ta');
-                    updateLocationDropdowns();
-                    updateSiLocationDropdowns();
-                    updateTaLocationDropdowns();
-                });
+                function addSiDirectorRowBp() {
+                    const tbody = document.getElementById('siDirectorsBody');
+                    const row = document.createElement('tr');
+                    row.className = 'hover:bg-gray-50';
+                    row.innerHTML = `
+                <td class="px-2 py-1.5"><input type="text" placeholder="සම්පූර්ණ නම" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5">
+                    <select class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50">
+                        <option value="">තෝරන්න</option>
+                        <option value="Director">අධ්‍යක්ෂක</option>
+                        <option value="Chairman">සභාපති</option>
+                        <option value="Managing Director">කළමනාකාර අධ්‍යක්ෂක</option>
+                        <option value="Other">වෙනත්</option>
+                    </select>
+                </td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="ජාතිකත්වය" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="ජා.හැ.අ / විදෙස් ගමන් බලපත්‍රය" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5 text-center"><button type="button" class="text-red-500 hover:text-red-700 font-bold" onclick="this.closest('tr').remove()">&times;</button></td>
+            `;
+                    tbody.appendChild(row);
+                }
 
+                function addSiMortgageeRowBp() {
+                    const tbody = document.getElementById('siMortgageeBody');
+                    const row = document.createElement('tr');
+                    row.className = 'hover:bg-gray-50';
+                    row.innerHTML = `
+                <td class="px-2 py-1.5"><input type="text" placeholder="බැංකුවේ නම" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="ශාඛාවේ ලිපිනය" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="අවදානම් ස්ථානය" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="විස්තරය" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="රක්ෂිත මුදල" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5 text-center"><button type="button" class="text-red-500 hover:text-red-700 font-bold" onclick="this.closest('tr').remove()">&times;</button></td>
+            `;
+                    tbody.appendChild(row);
+                }
+
+                function addSiLocationRowBp() {
+                    const container = document.getElementById('siLocationsContainer');
+                    const index = container.children.length + 1;
+                    const div = document.createElement('div');
+                    div.className = 'flex items-center gap-4';
+                    div.innerHTML = `
+                <span class="font-mono text-xs font-semibold text-navy-700 w-24">ස්ථානය 0${index}</span>
+                <input type="text" placeholder="ස්ථානය 0${index} සඳහා ලිපිනය" oninput="updateSiLocationDropdownsBp()" class="flex-1 border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+            `;
+                    container.appendChild(div);
+                }
+
+                function addSiLocationColumnBp() {
+                    const table = document.getElementById('siSumsTable');
+                    const headerRow = table.querySelector('thead tr');
+                    const numCols = headerRow.querySelectorAll('.loc-header-col').length + 1;
+
+                    const th = document.createElement('th');
+                    th.className = 'px-4 py-2 loc-header-col min-w-[180px]';
+                    th.innerHTML = `
+                <div class="flex items-center gap-1">
+                    <select class="location-dropdown flex-1 border border-gray-200 rounded-lg px-2 py-1.5 text-xs text-navy-700 bg-white">
+                        <option value="">ස්ථානය ${numCols} තෝරන්න</option>
+                    </select>
+                </div>`;
+                    headerRow.appendChild(th);
+
+                    const rows = table.querySelectorAll('tbody .sum-row');
+                    rows.forEach(row => {
+                        const td = document.createElement('td');
+                        td.className = 'px-4 py-2 loc-cell';
+                        td.innerHTML = `
+                    <div class="flex items-center justify-end gap-1">
+                        <span class="text-[11px] text-gray-400 font-mono">රු.</span><input
+                            type="text" placeholder="0.00" oninput="calcSiTotalBp()"
+                            class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                    </div>`;
+                        row.appendChild(td);
+                    });
+
+                    const totalRow = document.getElementById('siTotalRow');
+                    if (totalRow) {
+                        const tdTotal = document.createElement('td');
+                        tdTotal.className = 'px-4 py-3 loc-total-cell';
+                        tdTotal.innerHTML = `
+                    <div class="flex items-center justify-end gap-1">
+                        <span class="text-[11px] text-gray-500 font-mono font-bold">රු.</span>
+                        <input type="text" readonly value="0.00"
+                            class="w-full bg-transparent text-right font-mono text-sm font-bold text-navy-900 border-none p-0 focus:ring-0 total-sum-input" />
+                    </div>`;
+                        totalRow.appendChild(tdTotal);
+                    }
+                }
+
+                function addSiSumRowBp() {
+                    const tbody = document.getElementById('siSumsBody');
+                    const headerRow = document.querySelector('#siSumsTable thead tr');
+                    const numCols = headerRow.querySelectorAll('.loc-header-col').length;
+
+                    const tr = document.createElement('tr');
+                    tr.className = 'hover:bg-gray-50 sum-row';
+
+                    let cellsHTML = `
+                <td class="px-4 py-3 text-gray-700 text-sm">
+                    <input type="text" placeholder="දේපල විස්තරය"
+                        class="w-full text-sm border border-gray-200 rounded px-2 py-1 focus:ring-0 text-gray-700" />
+                </td>
+            `;
+
+                    for (let i = 0; i < numCols; i++) {
+                        cellsHTML += `
+                <td class="px-4 py-2 loc-cell">
+                    <div class="flex items-center justify-end gap-1">
+                        <span class="text-[11px] text-gray-400 font-mono">රු.</span><input
+                            type="text" placeholder="0.00" oninput="calcSiTotalBp()"
+                            class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                    </div>
+                </td>`;
+                    }
+                    tr.innerHTML = cellsHTML;
+
+                    const totalRow = document.getElementById('siTotalRow');
+                    if (totalRow) {
+                        tbody.insertBefore(tr, totalRow);
+                    } else {
+                        tbody.appendChild(tr);
+                    }
+                }
+
+                function calcSiTotalBp() {
+                    const rows = document.querySelectorAll("#siSumsBody .sum-row");
+                    const totals = [];
+                    rows.forEach((row) => {
+                        const inputs = row.querySelectorAll('.loc-cell input[type="text"]');
+                        inputs.forEach((inp, i) => {
+                            totals[i] = (totals[i] || 0) + parseNum(inp.value);
+                        });
+                    });
+
+                    const totalInputs = document.querySelectorAll('#siTotalRow .total-sum-input');
+                    totalInputs.forEach((inp, i) => {
+                        inp.value = fmt(totals[i] || 0);
+                    });
+                }
+
+                let siJointSigCountBp = 0;
+                function toggleSiJointAccountBp() {
+                    const checked = document.getElementById('siJointAccountChk').checked;
+                    const btn = document.getElementById('siAddJointSigBtn');
+                    if (btn) btn.style.display = checked ? 'inline-flex' : 'none';
+                    if (!checked) {
+                        document.getElementById('siJointSignaturesContainer').innerHTML = '';
+                        siJointSigCountBp = 0;
+                    }
+                }
+
+                function addSiJointSignatureBp() {
+                    siJointSigCountBp++;
+                    const container = document.getElementById('siJointSignaturesContainer');
+                    const div = document.createElement('div');
+                    div.className = 'border border-gray-200 rounded-xl p-4 space-y-3 bg-gray-50 relative';
+                    div.id = `siJointSig_${siJointSigCountBp}`;
+                    div.innerHTML = `
+                <div class="flex items-center justify-between mb-1">
+                    <span class="text-xs font-bold uppercase tracking-wide text-navy-700">වෙනත් යෝජකයා ${siJointSigCountBp}</span>
+                    <button type="button" onclick="document.getElementById('siJointSig_${siJointSigCountBp}').remove()" class="text-red-400 hover:text-red-600 font-bold text-base leading-none">&times; ඉවත් කරන්න</button>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="space-y-1">
+                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-navy-900">සම්පූර්ණ නම</label>
+                        <input type="text" placeholder="සම්පූර්ණ නම" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-white" />
+                    </div>
+                    <div class="space-y-1">
+                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-navy-900">ජා.හැ.අ / විදෙස් ගමන් බලපත්‍රය</label>
+                        <input type="text" placeholder="අංකය" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-white" />
+                    </div>
+                </div>
+                <div class="grid gap-4 items-center">
+                    <div class="space-y-1">
+                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-navy-900">අත්සන</label>
+                        <div class="border-2 border-dashed border-gray-200 rounded-xl h-16 flex items-center justify-center bg-white">
+                            <span class="text-xs text-gray-400">අත්සන මෙහි</span>
+                        </div>
+                    </div>
+                </div>`;
+                    container.appendChild(div);
+                }
+
+                // TA Functions
+                function addTaDirectorRowBp() {
+                    const tbody = document.getElementById('taDirectorsBody');
+                    const row = document.createElement('tr');
+                    row.className = 'hover:bg-gray-50';
+                    row.innerHTML = `
+                <td class="px-2 py-1.5"><input type="text" placeholder="முழு பெயர்" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5">
+                    <select class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50">
+                        <option value="">தேர்ந்தெடு</option>
+                        <option value="Director">இயக்குனர்</option>
+                        <option value="Chairman">தலைவர்</option>
+                        <option value="Managing Director">நிர்வாக இயக்குனர்</option>
+                        <option value="Other">மற்றவை</option>
+                    </select>
+                </td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="தேசியம்" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="அடையாள அட்டை / கடவுச்சீட்டு" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5 text-center"><button type="button" class="text-red-500 hover:text-red-700 font-bold" onclick="this.closest('tr').remove()">&times;</button></td>
+            `;
+                    tbody.appendChild(row);
+                }
+
+                function addTaMortgageeRowBp() {
+                    const tbody = document.getElementById('taMortgageeBody');
+                    const row = document.createElement('tr');
+                    row.className = 'hover:bg-gray-50';
+                    row.innerHTML = `
+                <td class="px-2 py-1.5"><input type="text" placeholder="வங்கியின் பெயர்" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="கிளை முகவரி" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="அபாய இடம்" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="விளக்கம்" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="காப்பீடு செய்த தொகை" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5 text-center"><button type="button" class="text-red-500 hover:text-red-700 font-bold" onclick="this.closest('tr').remove()">&times;</button></td>
+            `;
+                    tbody.appendChild(row);
+                }
+
+                function addTaLocationRowBp() {
+                    const container = document.getElementById('taLocationsContainer');
+                    const index = container.children.length + 1;
+                    const div = document.createElement('div');
+                    div.className = 'flex items-center gap-4';
+                    div.innerHTML = `
+                <span class="font-mono text-xs font-semibold text-navy-700 w-24">இடம் 0${index}</span>
+                <input type="text" placeholder="இடம் 0${index} முகவரி" oninput="updateTaLocationDropdownsBp()" class="flex-1 border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+            `;
+                    container.appendChild(div);
+                }
+
+                function addTaLocationColumnBp() {
+                    const table = document.getElementById('taSumsTable');
+                    const headerRow = table.querySelector('thead tr');
+                    const numCols = headerRow.querySelectorAll('.loc-header-col').length + 1;
+
+                    const th = document.createElement('th');
+                    th.className = 'px-4 py-2 loc-header-col min-w-[180px]';
+                    th.innerHTML = `
+                <div class="flex items-center gap-1">
+                    <select class="location-dropdown flex-1 border border-gray-200 rounded-lg px-2 py-1.5 text-xs text-navy-700 bg-white">
+                        <option value="">இடம் ${numCols}</option>
+                    </select>
+                </div>`;
+                    headerRow.appendChild(th);
+
+                    const rows = table.querySelectorAll('tbody .sum-row');
+                    rows.forEach(row => {
+                        const td = document.createElement('td');
+                        td.className = 'px-4 py-2 loc-cell';
+                        td.innerHTML = `
+                    <div class="flex items-center justify-end gap-1">
+                        <span class="text-[11px] text-gray-400 font-mono">ரூ.</span><input
+                            type="text" placeholder="0.00" oninput="calcTaTotalBp()"
+                            class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                    </div>`;
+                        row.appendChild(td);
+                    });
+
+                    const totalRow = document.getElementById('taTotalRow');
+                    if (totalRow) {
+                        const tdTotal = document.createElement('td');
+                        tdTotal.className = 'px-4 py-3 loc-total-cell';
+                        tdTotal.innerHTML = `
+                    <div class="flex items-center justify-end gap-1">
+                        <span class="text-[11px] text-gray-500 font-mono font-bold">ரூ.</span>
+                        <input type="text" readonly value="0.00"
+                            class="w-full bg-transparent text-right font-mono text-sm font-bold text-navy-900 border-none p-0 focus:ring-0 total-sum-input" />
+                    </div>`;
+                        totalRow.appendChild(tdTotal);
+                    }
+                }
+
+                function addTaSumRowBp() {
+                    const tbody = document.getElementById('taSumsBody');
+                    const headerRow = document.querySelector('#taSumsTable thead tr');
+                    const numCols = headerRow.querySelectorAll('.loc-header-col').length;
+
+                    const tr = document.createElement('tr');
+                    tr.className = 'hover:bg-gray-50 sum-row';
+
+                    let cellsHTML = `
+                <td class="px-4 py-3 text-gray-700 text-sm">
+                    <input type="text" placeholder="சொத்து விளக்கம்"
+                        class="w-full text-sm border border-gray-200 rounded px-2 py-1 focus:ring-0 text-gray-700" />
+                </td>
+            `;
+
+                    for (let i = 0; i < numCols; i++) {
+                        cellsHTML += `
+                <td class="px-4 py-2 loc-cell">
+                    <div class="flex items-center justify-end gap-1">
+                        <span class="text-[11px] text-gray-400 font-mono">ரூ.</span><input
+                            type="text" placeholder="0.00" oninput="calcTaTotalBp()"
+                            class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                    </div>
+                </td>`;
+                    }
+                    tr.innerHTML = cellsHTML;
+
+                    const totalRow = document.getElementById('taTotalRow');
+                    if (totalRow) {
+                        tbody.insertBefore(tr, totalRow);
+                    } else {
+                        tbody.appendChild(tr);
+                    }
+                }
+
+                function calcTaTotalBp() {
+                    const rows = document.querySelectorAll("#taSumsBody .sum-row");
+                    const totals = [];
+                    rows.forEach((row) => {
+                        const inputs = row.querySelectorAll('.loc-cell input[type="text"]');
+                        inputs.forEach((inp, i) => {
+                            totals[i] = (totals[i] || 0) + parseNum(inp.value);
+                        });
+                    });
+
+                    const totalInputs = document.querySelectorAll('#taTotalRow .total-sum-input');
+                    totalInputs.forEach((inp, i) => {
+                        inp.value = fmt(totals[i] || 0);
+                    });
+                }
+
+                let taJointSigCountBp = 0;
+                function toggleTaJointAccountBp() {
+                    const checked = document.getElementById('taJointAccountChk').checked;
+                    const btn = document.getElementById('taAddJointSigBtn');
+                    if (btn) btn.style.display = checked ? 'inline-flex' : 'none';
+                    if (!checked) {
+                        document.getElementById('taJointSignaturesContainer').innerHTML = '';
+                        taJointSigCountBp = 0;
+                    }
+                }
+
+                function addTaJointSignatureBp() {
+                    taJointSigCountBp++;
+                    const container = document.getElementById('taJointSignaturesContainer');
+                    const div = document.createElement('div');
+                    div.className = 'border border-gray-200 rounded-xl p-4 space-y-3 bg-gray-50 relative';
+                    div.id = `taJointSig_${taJointSigCountBp}`;
+                    div.innerHTML = `
+                <div class="flex items-center justify-between mb-1">
+                    <span class="text-xs font-bold uppercase tracking-wide text-navy-700">மற்ற முன்மொழிபவர் ${taJointSigCountBp}</span>
+                    <button type="button" onclick="document.getElementById('taJointSig_${taJointSigCountBp}').remove()" class="text-red-400 hover:text-red-600 font-bold text-base leading-none">&times; அகற்று</button>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="space-y-1">
+                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-navy-900">முழு பெயர்</label>
+                        <input type="text" placeholder="முழு பெயர்" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-white" />
+                    </div>
+                    <div class="space-y-1">
+                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-navy-900">அடையாள அட்டை / கடவுச்சீட்டு</label>
+                        <input type="text" placeholder="எண்" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-white" />
+                    </div>
+                </div>
+                <div class="grid gap-4 items-center">
+                    <div class="space-y-1">
+                        <label class="block text-[10px] font-semibold uppercase tracking-wide text-navy-900">கையொப்பம்</label>
+                        <div class="border-2 border-dashed border-gray-200 rounded-xl h-16 flex items-center justify-center bg-white">
+                            <span class="text-xs text-gray-400">இங்கே கையொப்பமிடுங்கள்</span>
+                        </div>
+                    </div>
+                </div>`;
+                    container.appendChild(div);
+                }
+
+                // Update Location Dropdowns
+                function updateLocationDropdownsBp() {
+                    const locs = Array.from(document.querySelectorAll('#locationsContainer > div')).map((e) => {
+                        const span = e.querySelector('span');
+                        const input = e.querySelector('input');
+                        if (!span || !input) return null;
+                        const id = span.innerText.trim();
+                        return { id: id, text: input.value.trim() || id };
+                    }).filter(Boolean);
+
+                    document.querySelectorAll('#sumsTable .location-dropdown').forEach(sel => {
+                        const cur = sel.value;
+                        sel.innerHTML = '<option value="">Select Location</option>';
+                        locs.forEach(l => {
+                            const o = document.createElement('option');
+                            o.value = l.id;
+                            o.textContent = l.text;
+                            if (cur === l.id) o.selected = true;
+                            sel.appendChild(o);
+                        });
+                    });
+                }
+
+                function updateSiLocationDropdownsBp() {
+                    const locs = Array.from(document.querySelectorAll('#siLocationsContainer > div')).map((e) => {
+                        const span = e.querySelector('span');
+                        const input = e.querySelector('input');
+                        if (!span || !input) return null;
+                        const id = span.innerText.trim();
+                        return { id: id, text: input.value.trim() || id };
+                    }).filter(Boolean);
+
+                    document.querySelectorAll('#siSumsTable .location-dropdown').forEach(sel => {
+                        const cur = sel.value;
+                        sel.innerHTML = '<option value="">ස්ථානය තෝරන්න</option>';
+                        locs.forEach(l => {
+                            const o = document.createElement('option');
+                            o.value = l.id;
+                            o.textContent = l.text;
+                            if (cur === l.id) o.selected = true;
+                            sel.appendChild(o);
+                        });
+                    });
+                }
+
+                function updateTaLocationDropdownsBp() {
+                    const locs = Array.from(document.querySelectorAll('#taLocationsContainer > div')).map((e) => {
+                        const span = e.querySelector('span');
+                        const input = e.querySelector('input');
+                        if (!span || !input) return null;
+                        const id = span.innerText.trim();
+                        return { id: id, text: input.value.trim() || id };
+                    }).filter(Boolean);
+
+                    document.querySelectorAll('#taSumsTable .location-dropdown').forEach(sel => {
+                        const cur = sel.value;
+                        sel.innerHTML = '<option value="">இடத்தை தேர்ந்தெடுக்கவும்</option>';
+                        locs.forEach(l => {
+                            const o = document.createElement('option');
+                            o.value = l.id;
+                            o.textContent = l.text;
+                            if (cur === l.id) o.selected = true;
+                            sel.appendChild(o);
+                        });
+                    });
+                }
 
             </script>
 </body>
