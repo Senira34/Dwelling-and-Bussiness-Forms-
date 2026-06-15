@@ -129,7 +129,7 @@
                 class="bg-tealCustom-500 text-white px-4 py-2 rounded-lg hover:bg-tealCustom-600 font-semibold shadow-sm text-sm">English</button>
             <button id="btn-si" onclick="setLanguage('si')"
                 class="bg-white text-tealCustom-600 border border-tealCustom-300 px-4 py-2 rounded-lg hover:bg-tealCustom-50 font-medium text-sm">සිංහල</button>
-                <button id="btn-t" onclick="setLanguage('ta')"
+            <button id="btn-t" onclick="setLanguage('ta')"
                 class="bg-white text-tealCustom-600 border border-tealCustom-300 px-4 py-2 rounded-lg hover:bg-tealCustom-50 font-medium text-sm">தமிழ்</button>
         </div>
 
@@ -879,13 +879,18 @@
                     <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
                         <h3 class="font-heading text-white text-md font-semibold">Sums to be Insured</h3>
                     </div>
-                    <div class="px-6 py-2.5 bg-tealCustom-50 border-b border-tealCustom-100 text-xs text-tealCustom-700 italic">
-                        Please submit an inventory with make/model number, year of manufacture and values separately for marked (*) items.
+                    <div
+                        class="px-6 py-2.5 bg-tealCustom-50 border-b border-tealCustom-100 text-xs text-tealCustom-700 italic">
+                        Please submit an inventory with make/model number, year of manufacture and values separately for
+                        marked (*) items.
                     </div>
                     <div class="px-6 pt-3 pb-0 flex items-center justify-end">
                         <button type="button" onclick="addLocationColumn()"
                             class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm">
-                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 4v16m8-8H4" />
+                            </svg>
                             Add Location
                         </button>
                     </div>
@@ -893,11 +898,13 @@
                         <table class="w-full text-sm min-w-[500px]" id="sumsTable">
                             <thead class="bg-navy-50 border-b border-gray-200">
                                 <tr>
-                                    <th class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 min-w-[260px]">
+                                    <th
+                                        class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 min-w-[260px]">
                                         Property to be Insured</th>
                                     <th class="px-4 py-2 loc-header-col min-w-[180px]">
                                         <div class="flex items-center gap-1">
-                                            <select class="location-dropdown flex-1 border border-gray-200 rounded-lg px-2 py-1.5 text-xs text-navy-700 bg-white">
+                                            <select
+                                                class="location-dropdown flex-1 border border-gray-200 rounded-lg px-2 py-1.5 text-xs text-navy-700 bg-white">
                                                 <option value="">Select Location</option>
                                             </select>
                                         </div>
@@ -1069,7 +1076,9 @@
                         </table>
                     </div>
                     <div class="px-6 py-3 border-t border-gray-200 bg-white flex items-center justify-between">
-                        <button type="button" class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800" onclick="addSumRow()">+ Add Property Row</button>
+                        <button type="button"
+                            class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800"
+                            onclick="addSumRow()">+ Add Property Row</button>
                     </div>
                 </div>
 
@@ -1080,10 +1089,15 @@
                     </div>
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
-                            <p class="text-xs text-gray-500">Select the perils you wish to be covered against. <span class="text-tealCustom-600 font-semibold">Fire &amp; Lightning</span> is always included.</p>
+                            <p class="text-xs text-gray-500">Select the perils you wish to be covered against. <span
+                                    class="text-tealCustom-600 font-semibold">Fire &amp; Lightning</span> is always
+                                included.</p>
                             <button type="button" id="selectAllBtn" onclick="selectAllPerils()"
                                 class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm whitespace-nowrap">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
                                 Select All
                             </button>
                         </div>
@@ -1177,11 +1191,11 @@
                                 <span class="text-sm text-gray-700">Removal of Debris</span>
                             </label>
                         </div>
-                         <div class="mt-4 space-y-1">
-                        <label class="text-sm font-semibold text-navy-900">Other covers (Specify)</label>
-                        <input type="text" placeholder="Any other coverage required"
-                            class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
-                    </div>
+                        <div class="mt-4 space-y-1">
+                            <label class="text-sm font-semibold text-navy-900">Other covers (Specify)</label>
+                            <input type="text" placeholder="Any other coverage required"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                        </div>
 
                         <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
                             <!-- Extensions -->
@@ -1239,7 +1253,7 @@
                 </div>
 
 
-                 <!-- ════════ SECTION F: Select Premium Plans ════════ -->
+                <!-- ════════ SECTION F: Select Premium Plans ════════ -->
                 <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
                     <div class="bg-tealCustom-500 px-6 py-2 flex items-center gap-3">
                         <!-- <span class="w-7 h-7 rounded-full bg-gold-400 text-navy-950 text-xs font-mono font-bold flex items-center justify-center">F</span> -->
@@ -1269,7 +1283,8 @@
                                 </div>
                             </div> -->
                                 <!-- <h3 class="font-bold text-navy-900 text-lg mb-1 group-hover:text-tealCustom-700 transition-colors">Comprehensive</h3> -->
-                                <div class="font-semibold text-tealCustom-900 text-sm mb-3 text-xl"> With SRCC &amp; Terrorism
+                                <div class="font-semibold text-tealCustom-900 text-sm mb-3 text-xl"> With SRCC &amp;
+                                    Terrorism
                                 </div>
                                 <div class="text-2xl font-bold text-navy-900 mb-3">Rs. 30,000<span
                                         class="text-xs text-gray-500 font-normal"> /yr</span></div>
@@ -1509,20 +1524,29 @@
                     <div class="p-6 space-y-5">
                         <div class="flex gap-3 bg-amber-50 border border-amber-200 rounded-xl px-5 py-4">
                             <p class="text-xs text-amber-800 leading-relaxed">
-                                <strong>Note:</strong> Any misdescription or misrepresentation of material facts known to the proposer in this proposal form is liable to render the policy void from the inception.
+                                <strong>Note:</strong> Any misdescription or misrepresentation of material facts known
+                                to the proposer in this proposal form is liable to render the policy void from the
+                                inception.
                             </p>
                         </div>
 
                         <!-- Joint Account Toggle -->
-                        <div class="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-xl px-4 py-3">
+                        <div
+                            class="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-xl px-4 py-3">
                             <label class="flex items-center gap-3 cursor-pointer select-none">
-                                <input type="checkbox" id="jointAccountChk" onchange="toggleJointAccount()" class="w-4 h-4 accent-tealCustom-500" />
-                                <span class="text-sm font-semibold text-navy-900">(Check if there are multiple proposers)</span>
+                                <input type="checkbox" id="jointAccountChk" onchange="toggleJointAccount()"
+                                    class="w-4 h-4 accent-tealCustom-500" />
+                                <span class="text-sm font-semibold text-navy-900">(Check if there are multiple
+                                    proposers)</span>
                                 <!-- <span class="text-xs text-gray-500">(Check if there are multiple proposers)</span> -->
                             </label>
-                            <button type="button" id="addJointSigBtn" onclick="addJointSignature()" style="display:none;"
+                            <button type="button" id="addJointSigBtn" onclick="addJointSignature()"
+                                style="display:none;"
                                 class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 4v16m8-8H4" />
+                                </svg>
                                 Add Signature
                             </button>
                         </div>
@@ -1530,14 +1554,19 @@
                         <!-- Primary Proposer Signature -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div class="space-y-1">
-                                <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Signature of Proposer</label>
-                                <div class="border-2 border-dashed border-gray-200 rounded-xl h-20 flex items-center justify-center bg-gray-50">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Signature
+                                    of Proposer</label>
+                                <div
+                                    class="border-2 border-dashed border-gray-200 rounded-xl h-20 flex items-center justify-center bg-gray-50">
                                     <span class="text-xs text-gray-400">Signature here</span>
                                 </div>
                             </div>
                             <div class="space-y-1">
-                                <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Date</label>
-                                <input type="date" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Date</label>
+                                <input type="date"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
                             </div>
                         </div>
 
@@ -1733,7 +1762,7 @@
                                         </thead>
                                         <tbody class="divide-y divide-gray-100" id="siDirectorsBody">
                                             <tr class="hover:bg-gray-50">
-                                                <td class="px-2 py-1.5"><input type="text" placeholder="Director Name"
+                                                <td class="px-2 py-1.5"><input type="text" placeholder="අධ්‍යක්ෂවරුන්ගේ නම්"
                                                         class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
                                                 </td>
                                                 <td class="px-2 py-1.5">
@@ -1871,14 +1900,17 @@
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">11</span>
                             <div class="space-y-2 flex-1 w-full">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">මුදල් වර්ගය</label>
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">මුදල්
+                                    වර්ගය</label>
                                 <div class="flex flex-wrap gap-4 items-center">
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">ශ්‍රී ලංකා රුපියල්</span></label>
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">ශ්‍රී ලංකා
+                                            රුපියල්</span></label>
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">ඇමරිකානු ඩොලර්</span></label>
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">ඇමරිකානු
+                                            ඩොලර්</span></label>
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
                                             type="checkbox" class="w-4 h-4" /><span class="text-xs">යූරෝ</span></label>
@@ -2172,7 +2204,7 @@
                             </div>
                         </div>
 
-                        
+
 
                         <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 items-start">
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">13</span>
@@ -2187,11 +2219,12 @@
                                             class="text-xs">විදුලිය</span></label>
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                            type="checkbox" class="w-4 h-4" /><span
-                                            class="text-xs">විදුලි ජනක යන්ත්‍රය</span></label>
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">විදුලි ජනක
+                                            යන්ත්‍රය</span></label>
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">සූර්ය පැනල</span></label>
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">සූර්ය
+                                            පැනල</span></label>
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
                                             type="checkbox" class="w-4 h-4"
@@ -2296,32 +2329,39 @@
                     <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
                         <h3 class="font-heading text-white text-md font-semibold">රක්ෂිත මුදල</h3>
                     </div>
-                    <div class="px-6 py-2.5 bg-tealCustom-50 border-b border-tealCustom-100 text-xs text-tealCustom-700 italic">
-                        සලකුණු කර ඇති (*) අයිතම සඳහා වෙළඳ නාමය/මාදිලි අංකය, නිෂ්පාදිත වර්ෂය සහ වටිනාකම් වෙන වෙනම ඇතුළත් කරන්න.
+                    <div
+                        class="px-6 py-2.5 bg-tealCustom-50 border-b border-tealCustom-100 text-xs text-tealCustom-700 italic">
+                        සලකුණු කර ඇති (*) අයිතම සඳහා වෙළඳ නාමය/මාදිලි අංකය, නිෂ්පාදිත වර්ෂය සහ වටිනාකම් වෙන වෙනම ඇතුළත්
+                        කරන්න.
                     </div>
                     <div class="px-6 pt-3 pb-0 flex items-center justify-end">
-                        <button type="button" onclick="addLocationColumn()"
+                        <button type="button" onclick="addSiLocationColumn()"
                             class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm">
-                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 4v16m8-8H4" />
+                            </svg>
                             ස්ථානයක් එක් කරන්න
                         </button>
                     </div>
                     <div class="overflow-x-auto w-full mt-3">
-                        <table class="w-full text-sm min-w-[500px]" id="sumsTable">
+                        <table class="w-full text-sm min-w-[500px]" id="siSumsTable">
                             <thead class="bg-navy-50 border-b border-gray-200">
                                 <tr>
-                                    <th class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 min-w-[260px]">
+                                    <th
+                                        class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 min-w-[260px]">
                                         රක්ෂණය කළ යුතු දේපල</th>
                                     <th class="px-4 py-2 loc-header-col min-w-[180px]">
                                         <div class="flex items-center gap-1">
-                                            <select class="location-dropdown flex-1 border border-gray-200 rounded-lg px-2 py-1.5 text-xs text-navy-700 bg-white">
+                                            <select
+                                                class="location-dropdown flex-1 border border-gray-200 rounded-lg px-2 py-1.5 text-xs text-navy-700 bg-white">
                                                 <option value="">රක්ෂිත ස්ථානය </option>
                                             </select>
                                         </div>
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y divide-gray-100" id="sumsBody">
+                            <tbody class="divide-y divide-gray-100" id="siSumsBody">
                                 <tr class="hover:bg-gray-50 sum-row">
                                     <td class="px-4 py-3 text-gray-700 text-sm">
                                         <input type="text"
@@ -2469,10 +2509,9 @@
                                     </td>
                                 </tr>
                                 <!-- TOTAL ROW -->
-                                <tr class="bg-navy-50/50" id="totalRow">
+                                <tr class="bg-navy-50/50" id="siTotalRow">
                                     <td class="px-4 py-3 text-right">
-                                        <span class="text-xs font-bold text-navy-900 uppercase tracking-wide">Total Sum
-                                            Insured</span>
+                                        <span class="text-xs font-bold text-navy-900 uppercase tracking-wide">மொத்த காப்பீட்டுத் தொகை</span>
                                     </td>
                                     <td class="px-4 py-3 loc-total-cell">
                                         <div class="flex items-center justify-end gap-1">
@@ -2485,18 +2524,18 @@
                             </tbody>
                         </table>
                     </div>
-                   <div class="px-6 py-3 border-t border-gray-200 bg-white">
+                    <div class="px-6 py-3 border-t border-gray-200 bg-white">
                         <button type="button"
                             class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800"
                             onclick="addSiSumRow()">+ පේළියක් එක් කරන්න</button>
                     </div>
                 </div>
 
-                
-                
+
+
 
                 <!-- ════ උපද්‍රව ආවරණ ════ -->
-                
+
 
                 <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
                     <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
@@ -2504,14 +2543,19 @@
                     </div>
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
-                            <p class="text-xs text-gray-500">Select the perils you wish to be covered against. <span class="text-tealCustom-600 font-semibold">Fire &amp; Lightning</span> is always included.</p>
-                            <button type="button" id="selectAllBtn" onclick="selectAllPerils()"
+                            <p class="text-xs text-gray-500">Select the perils you wish to be covered against. <span
+                                    class="text-tealCustom-600 font-semibold">Fire &amp; Lightning</span> is always
+                                included.</p>
+                            <button type="button" id="siSelectAllBtn" onclick="selectAllSiPerils()"
                                 class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm whitespace-nowrap">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
                                 Select All
                             </button>
                         </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3" id="perilCoversGrid">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3" id="siPerilCoversGrid">
                             <label
                                 class="cover-card flex items-start gap-3 border border-tealCustom-500 bg-tealCustom-50 rounded-xl px-3 py-3 cursor-not-allowed transition-all opacity-80">
                                 <input type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" checked disabled
@@ -2609,7 +2653,7 @@
                     <div class="bg-tealCustom-500 px-6 py-2 flex items-center gap-3">
                         <!-- <span class="w-7 h-7 rounded-full bg-gold-400 text-navy-950 text-xs font-mono font-bold flex items-center justify-center">F</span> -->
                         <h3 class="font-heading text-white text-md font-semibold">
-                           වාරික සැලසුම් තෝරන්න
+                            වාරික සැලසුම් තෝරන්න
                         </h3>
                     </div>
                     <div class="p-6">
@@ -2634,7 +2678,8 @@
                                 </div>
                             </div> -->
                                 <!-- <h3 class="font-bold text-navy-900 text-lg mb-1 group-hover:text-tealCustom-700 transition-colors">Comprehensive</h3> -->
-                                <div class="font-semibold text-tealCustom-900 text-sm mb-3 text-xl">Wiith SRCC &amp; Terrorism
+                                <div class="font-semibold text-tealCustom-900 text-sm mb-3 text-xl">Wiith SRCC &amp;
+                                    Terrorism
                                 </div>
                                 <div class="text-2xl font-bold text-navy-900 mb-3">Rs. 30,000<span
                                         class="text-xs text-gray-500 font-normal"> /වසරකට</span></div>
@@ -2696,7 +2741,7 @@
                     </div>
                 </div>
 
-               
+
 
                 <!-- ════ බිම් සැලැස්ම ════ -->
                 <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
@@ -2861,20 +2906,28 @@
                                     clip-rule="evenodd" />
                             </svg>
                             <p class="text-xs text-amber-800 leading-relaxed">
-                                <strong>සටහන:</strong> මෙම යෝජනා පත්‍රයෙහි යෝජකයා දන්නා වැදගත් කරුණු කිසිවක් වැරදි ලෙස හෝ අසත්‍ය ලෙස ප්‍රකාශ කිරීම මගින් ආරම්භයේ සිටම ඔප්පුව අවලංගු වීමට හේතු වේ.
+                                <strong>සටහන:</strong> මෙම යෝජනා පත්‍රයෙහි යෝජකයා දන්නා වැදගත් කරුණු කිසිවක් වැරදි ලෙස
+                                හෝ අසත්‍ය ලෙස ප්‍රකාශ කිරීම මගින් ආරම්භයේ සිටම ඔප්පුව අවලංගු වීමට හේතු වේ.
                             </p>
                         </div>
 
                         <!-- ඒකාබද්ධ ගිණුම ටොගල් -->
-                        <div class="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-xl px-4 py-3">
+                        <div
+                            class="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-xl px-4 py-3">
                             <label class="flex items-center gap-3 cursor-pointer select-none">
-                                <input type="checkbox" id="siJointAccountChk" onchange="toggleSiJointAccount()" class="w-4 h-4 accent-tealCustom-500" />
-                                <span class="text-sm font-semibold text-navy-900">(යෝජකයන් කිහිප දෙනෙකු සිටී නම් සලකුණු කරන්න)</span>
-                                
+                                <input type="checkbox" id="siJointAccountChk" onchange="toggleSiJointAccount()"
+                                    class="w-4 h-4 accent-tealCustom-500" />
+                                <span class="text-sm font-semibold text-navy-900">(යෝජකයන් කිහිප දෙනෙකු සිටී නම් සලකුණු
+                                    කරන්න)</span>
+
                             </label>
-                            <button type="button" id="siAddJointSigBtn" onclick="addSiJointSignature()" style="display:none;"
+                            <button type="button" id="siAddJointSigBtn" onclick="addSiJointSignature()"
+                                style="display:none;"
                                 class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 4v16m8-8H4" />
+                                </svg>
                                 අත්සනක් එකතු කරන්න
                             </button>
                         </div>
@@ -2882,14 +2935,19 @@
                         <!-- ප්‍රාථමික යෝජකයාගේ අත්සන -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div class="space-y-1">
-                                <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">යෝජකයාගේ අත්සන</label>
-                                <div class="border-2 border-dashed border-gray-200 rounded-xl h-20 flex items-center justify-center bg-gray-50">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">යෝජකයාගේ
+                                    අත්සන</label>
+                                <div
+                                    class="border-2 border-dashed border-gray-200 rounded-xl h-20 flex items-center justify-center bg-gray-50">
                                     <span class="text-xs text-gray-400">මෙහි අත්සන් කරන්න</span>
                                 </div>
                             </div>
                             <div class="space-y-1">
-                                <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">දිනය</label>
-                                <input type="date" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">දිනය</label>
+                                <input type="date"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
                             </div>
                         </div>
 
@@ -2900,6 +2958,10 @@
 
             </form>
         </div><!-- end form-si -->
+
+
+
+        <!-- Tamil Form Starts -->
 
         <div id="form-ta" style="display:none;">
             <form id="proposalForm" class="space-y-8" onsubmit="return false;">
@@ -2921,12 +2983,12 @@
                                 <div class="flex gap-2">
                                     <select
                                         class="w-24 border border-gray-200 rounded-lg px-2 py-2 text-xs bg-gray-50 text-gray-700">
-                                        <option>Mr.</option>
-                                        <option>Mrs.</option>
-                                        <option>Miss.</option>
-                                        <option>Dr.</option>
+                                        <option>திரு.</option>
+                                        <option>திருமதி.</option>
+                                        <option>மிஸ்.</option>
+                                        <option>டாக்டர்.</option>
                                     </select>
-                                    <input type="text" placeholder="Full name as per NIC"
+                                    <input type="text" placeholder="தேசிய அடையாள அட்டையில் உள்ளபடி முழுப் பெயர்"
                                         class="flex-1 border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 min-w-0" />
                                 </div>
                             </div>
@@ -2938,21 +3000,23 @@
                             <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
                                 <div class="space-y-1">
                                     <label
-                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">தேசிய அடையாள அட்டை எண்</label>
-                                    <input type="text" placeholder="e.g. 123456789V"
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">தேசிய
+                                        அடையாள அட்டை எண்</label>
+                                    <input type="text" placeholder="தேசிய அடையாள அட்டையில் உள்ளபடி எண்"
                                         class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 font-mono" />
                                 </div>
                                 <div class="space-y-1">
                                     <label
-                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">வணிக பதிவு எண்</label>
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">வணிக
+                                        பதிவு எண்</label>
                                     <input type="text" placeholder="பயன்பாட்டு கூட்டம் / தனியார் வர்த்தக සමාගම"
                                         class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 font-mono" />
                                 </div>
                                 <div class="space-y-1">
                                     <label
-                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Passport
-                                        No.</label>
-                                    <input type="text" placeholder="If applicable"
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">கடவுச்சீட்டு
+                                        எண்.</label>
+                                    <input type="text" placeholder="பொருந்தினால்"
                                         class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 font-mono" />
                                 </div>
                             </div>
@@ -2964,19 +3028,18 @@
                             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                                 <div class="space-y-1">
                                     <label
-                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Upload
-                                        Scanned Copies (NIC / BR / Passport)</label>
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">ஸ்கேன்
+                                        செய்யப்பட்ட நகலை (அடையாள அட்டை/மற்றவை/கடவுச்சீட்டு) பதிவேற்றவும்.</label>
                                     <div class="border-2 border-dashed border-gray-200 rounded-xl h-10 flex flex-col items-center justify-center bg-gray-50 cursor-pointer hover:border-tealCustom-400 hover:bg-tealCustom-50 transition-all"
                                         onclick="document.getElementById('docUploadField').click()">
-                                        <p class="text-xs font-semibold text-gray-500">Click to Upload File</p>
+                                        <p class="text-xs font-semibold text-gray-500">கோப்பை பதிவேற்ற கிளிக் செய்யவும்</p>
                                         <input type="file" id="docUploadField" accept="image/*,.pdf" multiple
                                             class="hidden" />
                                     </div>
                                 </div>
                                 <div class="space-y-1">
                                     <label
-                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Date
-                                        of Incorporation / Date of Birth</label>
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">நிறுவனம் தொடங்கப்பட்ட தேதி / பிறந்த தேதி</label>
                                     <input type="date"
                                         class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
                                 </div>
@@ -2988,33 +3051,30 @@
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">3</span>
                             <div class="space-y-2 flex-1 w-full">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Are
-                                    you a VAT registered entity?</label>
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">நீங்கள் மதிப்புக்கூட்டு வரி (VAT) பதிவு பெற்ற நிறுவனமா?</label>
                                 <div class="flex gap-5">
                                     <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
                                             name="vat_registered" value="yes"
                                             onchange="document.getElementById('vatSection').classList.remove('hidden')" />
-                                        Yes</label>
+                                       ஆம்</label>
                                     <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
                                             name="vat_registered" value="no"
                                             onchange="document.getElementById('vatSection').classList.add('hidden')" />
-                                        No</label>
+                                        இல்லை </label>
                                 </div>
                                 <div id="vatSection" class="hidden grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
                                     <div class="space-y-1">
                                         <label
-                                            class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Please
-                                            state your VAT Registration Number:</label>
+                                            class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">உங்கள் VAT பதிவு எண்ணைக் குறிப்பிடவும்:</label>
                                         <input type="text" placeholder="VAT Registration Number"
                                             class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 font-mono" />
                                     </div>
                                     <div class="space-y-1">
                                         <label
-                                            class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Upload
-                                            VAT Registration Certificate</label>
+                                            class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">VAT பதிவுச் சான்றிதழைப் பதிவேற்றவும்</label>
                                         <div class="border-2 border-dashed border-gray-200 rounded-xl h-10 flex flex-col items-center justify-center bg-gray-50 cursor-pointer hover:border-tealCustom-400 hover:bg-tealCustom-50 transition-all"
                                             onclick="document.getElementById('vatDocUpload').click()">
-                                            <p class="text-xs font-semibold text-gray-500">Click to Upload File</p>
+                                            <p class="text-xs font-semibold text-gray-500">கோப்பைப் பதிவேற்ற இங்கே சொடுக்கவும்</p>
                                             <input type="file" id="vatDocUpload" accept="image/*,.pdf" class="hidden" />
                                         </div>
                                     </div>
@@ -3027,12 +3087,10 @@
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">4</span>
                             <div class="space-y-2 flex-1 w-full overflow-hidden">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Details
-                                    of Directors <span class="font-normal normal-case text-gray-400">(For corporate
-                                        clients)</span></label>
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">இயக்குநர்களின் விவரங்கள் <span class="font-normal normal-case text-gray-400">(பெருநிறுவன வாடிக்கையாளர்களுக்கு)</span></label>
                                 <div class="overflow-x-auto w-full pb-2">
                                     <table class="w-full text-sm border border-gray-200 rounded-lg overflow-hidden"
-                                        id="directorsTable">
+                                        id="taDirectorsTable">
                                         <thead class="bg-navy-50">
                                             <tr>
                                                 <th
@@ -3052,25 +3110,25 @@
                                                 </th>
                                             </tr>
                                         </thead>
-                                        <tbody class="divide-y divide-gray-100" id="directorsBody">
+                                        <tbody class="divide-y divide-gray-100" id="taDirectorsBody">
                                             <tr class="hover:bg-gray-50">
-                                                <td class="px-2 py-1.5"><input type="text" placeholder="Full Name"
+                                                <td class="px-2 py-1.5"><input type="text" placeholder="முழு பெயர்"
                                                         class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
                                                 </td>
                                                 <td class="px-2 py-1.5">
                                                     <select
                                                         class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50">
-                                                        <option value="">Select பங்கு</option>
-                                                        <option>Managing Director</option>
-                                                        <option>Executive Director</option>
-                                                        <option>Non-Executive Director</option>
-                                                        <option>Chairman</option>
+                                                        <option value="">தேர்ந்தெடுக்கப்பட்ட இயக்குநர்</option>
+                                                        <option>நிர்வாக இயக்குநர்</option>
+                                                        <option>நிர்வாக இயக்குனர்</option>
+                                                        <option>நிர்வாகம் சாராத இயக்குநர்</option>
+                                                        <option>தலைவர்</option>
                                                     </select>
                                                 </td>
                                                 <td class="px-2 py-1.5"><input type="text" placeholder="தேசியம்"
                                                         class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
                                                 </td>
-                                                <td class="px-2 py-1.5"><input type="text" placeholder="NIC / Passport"
+                                                <td class="px-2 py-1.5"><input type="text" placeholder="தேசிய அடையாள அட்டை / கடவுச்சீட்டு"
                                                         class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
                                                 </td>
                                                 <td class="px-2 py-1.5 text-center"><button type="button"
@@ -3082,7 +3140,7 @@
                                 </div>
                                 <button type="button"
                                     class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800"
-                                    onclick="addDirectorRow()">+ Add Row</button>
+                                    onclick="addTaDirectorRow()">+ வரிசையைச் சேர்க்கவும்</button>
                             </div>
                         </div>
 
@@ -3091,8 +3149,7 @@
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">5</span>
                             <div class="space-y-1 flex-1 w-full">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Term
-                                    of Insurance</label>
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">காப்பீட்டு விதிமுறைகள்</label>
                                 <div class="flex items-center gap-3 flex-wrap">
                                     <div class="flex items-center gap-2">
                                         <span class="text-xs text-gray-500 font-semibold uppercase">முதல்</span>
@@ -3114,9 +3171,8 @@
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">6</span>
                             <div class="space-y-1 flex-1 w-full">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Personal
-                                    Address</label>
-                                <textarea rows="2" placeholder="Full residential address"
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">தனிப்பட்ட முகவரி</label>
+                                <textarea rows="2" placeholder="முழு குடியிருப்பு முகவரி"
                                     class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 resize-none"></textarea>
                             </div>
                         </div>
@@ -3126,9 +3182,8 @@
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">7</span>
                             <div class="space-y-1 flex-1 w-full">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Business
-                                    Address</label>
-                                <textarea rows="2" placeholder="If different from personal address"
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">வணிக முகவரி</label>
+                                <textarea rows="2" placeholder="தனிப்பட்ட முகவரியில் இருந்து வேறுபாடு இருந்தால்"
                                     class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 resize-none"></textarea>
                             </div>
                         </div>
@@ -3139,15 +3194,13 @@
                             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                                 <div class="space-y-1">
                                     <label
-                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Telephone
-                                        (Home)</label>
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">தொலைபேசி (வீடு)</label>
                                     <input type="tel" placeholder="011-1234567"
                                         class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
                                 </div>
                                 <div class="space-y-1">
                                     <label
-                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Telephone
-                                        (Mobile)</label>
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">தொலைபேசி (மொபைல்)</label>
                                     <input type="tel" placeholder="071-1234567"
                                         class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
                                 </div>
@@ -3159,15 +3212,14 @@
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">9</span>
                             <div class="space-y-2 flex-1 w-full">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Are
-                                    there any other circumstance which appear to increase the risks?</label>
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">அபாயங்களைக் குறைப்பதற்குப் பரிசீலிக்கக்கூடிய வேறு ஏதேனும் சூழ்நிலைகள் உள்ளனவா?</label>
                                 <div class="flex gap-5">
                                     <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
-                                            name="risk" value="yes" /> Yes</label>
+                                            name="risk" value="yes" />ஆம்</label>
                                     <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
-                                            name="risk" value="no" /> No</label>
+                                            name="risk" value="no" /> இல்லை</label>
                                 </div>
-                                <textarea rows="1" placeholder="If Yes, provide details"
+                                <textarea rows="1" placeholder="ஆம் எனில், விவரங்களை வழங்கவும்"
                                     class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 resize-none"></textarea>
                             </div>
                         </div>
@@ -3178,15 +3230,14 @@
                             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                                 <div class="space-y-1">
                                     <label
-                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Email
-                                        Address</label>
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">மின்னஞ்சல் முகவரி</label>
                                     <input type="email" placeholder="example@email.com"
                                         class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
                                 </div>
                                 <div class="space-y-1">
                                     <label
                                         class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">தொழில்</label>
-                                    <input type="text" placeholder="Current occupation"
+                                    <input type="text" placeholder="தற்போதைய தொழில் வல்லுநர்"
                                         class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
                                 </div>
                             </div>
@@ -3197,30 +3248,25 @@
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">11</span>
                             <div class="space-y-2 flex-1 w-full">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Of
-                                    what materials are the Walls Constructed?</label>
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">சுவர்கள் என்னென்ன பொருட்களால் கட்டப்பட்டுள்ளன?</label>
                                 <div class="flex flex-wrap gap-4 items-center">
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">LKR (Sri Lankan
-                                            Rupee)</span></label>
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">LKR (இலங்கை ரூபாய்)</span></label>
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">USD (US
-                                            Dollar)</span></label>
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">அமெரிக்க டாலர்</span></label>
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">EUR
-                                            (Euro)</span></label>
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">EUR (யூரோ)</span></label>
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">GBP (British
-                                            Pound)</span></label>
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">ஜிபிபி (பிரிட்டிஷ் பவுண்ட்)</span></label>
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
                                             type="checkbox" class="w-4 h-4"
                                             onchange="toggleOtherInput('wallOtherInput',this)" /><span
-                                            class="text-xs">Other</span></label>
+                                            class="text-xs">மற்றது</span></label>
                                 </div>
                                 <input type="text" id="wallOtherInput" placeholder="Please specify"
                                     class="hidden w-full max-w-sm border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
@@ -3232,22 +3278,19 @@
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">12</span>
                             <div class="space-y-2 flex-1 w-full">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Risk
-                                    இடம்s</label>
-                                <p class="text-xs text-gray-500">Define multiple risk locations here. They will be
-                                    available in the Sums Insured table below.</p>
-                                <div id="locationsContainer" class="space-y-2">
-                                    <div class="location-entry flex gap-2 items-center" data-index="1">
-                                        <span class="font-mono text-xs font-semibold text-navy-700 w-24">இடம்
-                                            01</span>
-                                        <input type="text" placeholder="Full address of இடம் 01"
-                                            class="location-input flex-1 border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50"
-                                            onchange="updateஇடம்Dropdowns()" />
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">ஆபத்து இடங்கள்  </label>
+                                <p class="text-xs text-gray-500">பல்வேறு இடர் இடங்களை இங்கே வரையறுக்கவும். அவை கீழே உள்ள காப்பீட்டுத் தொகை அட்டவணையில் கிடைக்கும்.</p>
+                                <div id="taLocationsContainer" class="space-y-2">
+                                    <div class="location-entry-ta flex gap-2 items-center" data-index="1">
+                                        <span class="font-mono text-xs font-semibold text-navy-700 w-24">இருப்பிடம் 01</span>
+                                        <input type="text" placeholder="இருப்பிடம் 1 இன் முழு முகவரி"
+                                            class="ta-location-input flex-1 border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50"
+                                            onchange="updateTaLocationDropdowns()" />
                                     </div>
                                 </div>
                                 <button type="button"
                                     class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800"
-                                    onclick="addஇடம்Row()">+ Add Another இடம்</button>
+                                    onclick="addTaLocationRow()">+ மற்றொரு இருப்பிடத்தைச் சேர்க்கவும்</button>
                             </div>
                         </div>
 
@@ -3256,8 +3299,7 @@
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">13</span>
                             <div class="space-y-2 flex-1 w-full overflow-hidden">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Mortgagee
-                                    Details</label>
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">அடமானதாரர் விவரங்கள்</label>
                                 <div class="overflow-x-auto w-full pb-2">
                                     <table class="w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
                                         <thead class="bg-navy-50">
@@ -3270,7 +3312,7 @@
                                                     கிளை முகவரி</th>
                                                 <th
                                                     class="px-2 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
-                                                    Risk இடம் Address</th>
+                                                    ஆபத்து இருப்பிட முகவரி</th>
                                                 <th
                                                     class="px-2 py-2.5 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 border-b border-gray-200">
                                                     காப்புறுதித் தொகையின் விவரம்</th>
@@ -3280,19 +3322,19 @@
                                                 <th class="px-2 py-2.5 w-12 border-b border-gray-200"></th>
                                             </tr>
                                         </thead>
-                                        <tbody class="divide-y divide-gray-100" id="mortgageeBody">
+                                        <tbody class="divide-y divide-gray-100" id="taMortgageeBody">
                                             <tr class="hover:bg-gray-50">
                                                 <td class="px-2 py-1.5">
                                                     <select
                                                         class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50">
                                                         <option value="">வங்கியைத் தேர்ந்தெடுக்கவும்</option>
-                                                        <option>People's Bank</option>
-                                                        <option>Bank of Ceylon</option>
-                                                        <option>Commercial Bank</option>
-                                                        <option>Hatton National Bank (HNB)</option>
-                                                        <option>Sampath Bank</option>
-                                                        <option>Seylan Bank</option>
-                                                        <option>Other</option>
+                                                        <option>மக்கள் வங்கி</option>
+                                                        <option>இலங்கை வங்கி</option>
+                                                        <option>வணிக வங்கி</option>
+                                                        <option>ஹாட்டன் நேஷனல் வங்கி (HNB)</option>
+                                                        <option>சம்பத் வங்கி</option>
+                                                        <option>செய்லான் வங்கி</option>
+                                                        <option>மற்றவை</option>
                                                     </select>
                                                 </td>
                                                 <td class="px-2 py-1.5"><input type="text" placeholder="கிளை முகவரி"
@@ -3300,14 +3342,14 @@
                                                 </td>
                                                 <td class="px-2 py-1.5">
                                                     <select
-                                                        class="location-dropdown w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50">
-                                                        <option value="">Select இடம்</option>
+                                                        class="ta-location-dropdown w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50">
+                                                        <option value="">இருப்பிடத்தைத் தேர்ந்தெடுக்கவும்</option>
                                                     </select>
                                                 </td>
-                                                <td class="px-2 py-1.5"><input type="text" placeholder="Description"
+                                                <td class="px-2 py-1.5"><input type="text" placeholder="விளக்கம்"
                                                         class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
                                                 </td>
-                                                <td class="px-2 py-1.5"><input type="text" placeholder="Value"
+                                                <td class="px-2 py-1.5"><input type="text" placeholder="மதிப்பு"
                                                         class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" />
                                                 </td>
                                                 <td class="px-2 py-1.5 text-center"><button type="button"
@@ -3319,7 +3361,7 @@
                                 </div>
                                 <button type="button"
                                     class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800"
-                                    onclick="addMortgageeRow()">+ Add Row</button>
+                                    onclick="addTaMortgageeRow()">+ வரிசையைச் சேர்க்கவும்</button>
                             </div>
                         </div>
 
@@ -3328,15 +3370,14 @@
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">14</span>
                             <div class="space-y-2 flex-1 w-full">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Are
-                                    you a Politically Exposed Person (PEP)?</label>
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">நீங்கள் அரசியல் ஈடுபாடுள்ள நபரா (PEP)?</label>
                                 <div class="flex gap-5">
                                     <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
-                                            name="pep" value="yes" /> Yes</label>
+                                            name="pep" value="yes" /> ஆம்</label>
                                     <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
-                                            name="pep" value="no" /> No</label>
+                                            name="pep" value="no" /> இல்லை</label>
                                 </div>
-                                <textarea rows="1" placeholder="If Yes, please specify"
+                                <textarea rows="1" placeholder="ஆம் எனில், தயவுசெய்து குறிப்பிடவும்"
                                     class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 resize-none"></textarea>
                             </div>
                         </div>
@@ -3347,7 +3388,8 @@
                 <!-- ════ PROPERTY TO BE INSURED ════ -->
                 <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
                     <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
-                        <h3 class="font-heading text-white text-md font-semibold">காப்புறுதி செய்யப்பட வேண்டிய சொத்து</h3>
+                        <h3 class="font-heading text-white text-md font-semibold">காப்புறுதி செய்யப்பட வேண்டிய சொத்து
+                        </h3>
                     </div>
                     <div
                         class="px-6 py-2.5 bg-tealCustom-50 border-b border-tealCustom-100 text-xs text-tealCustom-700 italic">
@@ -3360,9 +3402,8 @@
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">11</span>
                             <div class="space-y-1 flex-1 w-full">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Full
-                                    Address of Premises to be Insured</label>
-                                <textarea rows="2" placeholder="Complete address of the insured property"
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">காப்பீடு செய்யப்பட வேண்டிய வளாகத்தின் முழு முகவரி</label>
+                                <textarea rows="2" placeholder="காப்பீடு செய்யப்பட்ட சொத்தின் முழுமையான முகவரி"
                                     class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 resize-none"></textarea>
                             </div>
                         </div>
@@ -3372,9 +3413,8 @@
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">12</span>
                             <div class="space-y-1 flex-1 w-full">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Name
-                                    of Land <span class="font-normal normal-case text-gray-400">(if any)</span></label>
-                                <input type="text" placeholder="Land name"
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">நிலத்தின் பெயர் <span class="font-normal normal-case text-gray-400">(if any)</span></label>
+                                <input type="text" placeholder="நிலத்தின் பெயர்"
                                     class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
                             </div>
                         </div>
@@ -3384,30 +3424,27 @@
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">13</span>
                             <div class="space-y-2 flex-1 w-full">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Of
-                                    what materials are the Walls Constructed?</label>
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">சுவர்கள் என்னென்ன பொருட்களால் கட்டப்பட்டுள்ளன?</label>
                                 <div class="flex flex-wrap gap-4 items-center">
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
                                             type="checkbox" class="w-4 h-4" /><span
-                                            class="text-xs">Bricks</span></label>
+                                            class="text-xs">செங்கற்கள்</span></label>
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">Cement
-                                            blocks</span></label>
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">சிமென்ட் கட்டிகள்</span></label>
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
                                             type="checkbox" class="w-4 h-4" /><span
                                             class="text-xs">கான்கிரீட்</span></label>
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">Amano
-                                            sheets</span></label>
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">அமனோ தாள்கள்</span></label>
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
                                             type="checkbox" class="w-4 h-4"
                                             onchange="toggleOtherInput('wallOtherInput',this)" /><span
-                                            class="text-xs">Other</span></label>
+                                            class="text-xs">மற்றவை</span></label>
                                 </div>
                                 <input type="text" id="wallOtherInput" placeholder="Please specify"
                                     class="hidden w-full max-w-sm border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
@@ -3419,30 +3456,25 @@
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">14</span>
                             <div class="space-y-2 flex-1 w-full">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Of
-                                    what materials are the Roof Constructed?</label>
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">கூரை என்னென்ன பொருட்களால் கட்டப்பட்டுள்ளது?</label>
                                 <div class="flex flex-wrap gap-4 items-center">
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">Roofing
-                                            Tiles</span></label>
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">கூரை ஓடுகள்</span></label>
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">Asbestos
-                                            sheets</span></label>
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">கல்நார் தாள்கள்</span></label>
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">Amano
-                                            sheets</span></label>
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">அமனோ தாள்கள்</span></label>
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">Iron
-                                            Sheets</span></label>
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">இரும்புத் தகடுகள்</span></label>
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
                                             type="checkbox" class="w-4 h-4"
                                             onchange="toggleOtherInput('roofOtherInput',this)" /><span
-                                            class="text-xs">Other</span></label>
+                                            class="text-xs">மற்றவை</span></label>
                                 </div>
                                 <input type="text" id="roofOtherInput" placeholder="Please specify"
                                     class="hidden w-full max-w-sm border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
@@ -3454,9 +3486,7 @@
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">15</span>
                             <div class="space-y-1 flex-1 w-full max-w-xs">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Number
-                                    of floors <span class="font-normal normal-case text-gray-400">(incl. Ground
-                                        Floor)</span></label>
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">தளங்களின் எண்ணிக்கை <span class="font-normal normal-case text-gray-400">(தரைத்தளம் உட்பட)</span></label>
                                 <input type="text" placeholder="e.g. 2"
                                     class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
                             </div>
@@ -3468,20 +3498,19 @@
                             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                                 <div class="space-y-2">
                                     <label
-                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Is
-                                        the Building Under Construction?</label>
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">கட்டிடம் கட்டுமானத்தில் உள்ளதா?</label>
                                     <div class="flex gap-5">
                                         <label class="flex items-center gap-2 cursor-pointer text-sm"><input
-                                                type="radio" name="construction" value="yes" /> Yes</label>
+                                                type="radio" name="construction" value="yes" /> ஆம்</label>
                                         <label class="flex items-center gap-2 cursor-pointer text-sm"><input
-                                                type="radio" name="construction" value="no" /> No</label>
+                                                type="radio" name="construction" value="no" /> இல்லை</label>
                                     </div>
                                 </div>
                                 <div class="space-y-1">
                                     <label
                                         class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">17
-                                        — If Completed and occupied, state Name of Occupant?</label>
-                                    <input type="text" placeholder="Occupant's full name"
+                                        — கட்டிடம் கட்டி முடிக்கப்பட்டு, குடியிருந்தால், குடியிருப்பாளரின் பெயரைத் தெரிவிக்கவும்.</label>
+                                    <input type="text" placeholder="குடியிருப்பாளரின் முழுப் பெயர்"
                                         class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
                                 </div>
                             </div>
@@ -3493,25 +3522,20 @@
                             <div class="space-y-3 flex-1 w-full">
                                 <div class="space-y-1">
                                     <label
-                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Are
-                                        there or have there been any insurance on the same property in force with Sri
-                                        Lanka Insurance Corporation General Ltd. or any other insurer. If so the policy
-                                        No and the Name of Insurer?</label>
-                                    <textarea rows="2" placeholder="Policy number and insurer name"
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">அதே சொத்தின் மீது இலங்கை காப்பீட்டு கூட்டுத்தாபனம் லிதுவேனிலோ அல்லது வேறு ஏதேனும் காப்பீட்டு நிறுவனத்திடமோ ஏதேனும் காப்பீடு நடைமுறையில் உள்ளதா அல்லது இருந்ததா? ஆம் எனில், காப்பீட்டுப் பத்திர எண் மற்றும் காப்பீட்டு நிறுவனத்தின் பெயர் என்ன?</label>
+                                    <textarea rows="2" placeholder="பாலிசி எண் மற்றும் காப்பீட்டாளரின் பெயர்"
                                         class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 resize-none"></textarea>
                                 </div>
                                 <div class="space-y-2">
                                     <label
-                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Has
-                                        the risk, or any part thereof, been declined by any insurer or imposed special
-                                        terms or refused renewal?</label>
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">அந்த விக்கியம் அல்லது அதன் எந்த பகுதியும் எந்தவொரு காப்பீட்டு நிறுவனத்தால் நிராகரிக்கப்பட்டதா? அல்லது செயல்முறையில் உள்ளதா? ஆம் எனில், விவரங்களைக் கூறவும்.</label>
                                     <div class="flex gap-5">
                                         <label class="flex items-center gap-2 cursor-pointer text-sm"><input
-                                                type="radio" name="declined" value="yes" /> Yes</label>
+                                                type="radio" name="declined" value="yes" /> ஆம்</label>
                                         <label class="flex items-center gap-2 cursor-pointer text-sm"><input
-                                                type="radio" name="declined" value="no" /> No</label>
+                                                type="radio" name="declined" value="no" /> இல்லை</label>
                                     </div>
-                                    <textarea rows="1" placeholder="If Yes, provide details"
+                                    <textarea rows="1" placeholder="ஆம் எனில், விவரங்களைக் கூறவும்"
                                         class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 resize-none"></textarea>
                                 </div>
                             </div>
@@ -3522,26 +3546,24 @@
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">13</span>
                             <div class="space-y-2 flex-1 w-full">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">How
-                                    is the Building Lighted? </label>
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">கட்டிடத்திற்கு எவ்வாறு ஒளியூட்டப்படுகிறது? </label>
                                 <div class="flex flex-wrap gap-4 items-center">
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
                                             type="checkbox" class="w-4 h-4" /><span
-                                            class="text-xs">Electricity</span></label>
+                                            class="text-xs">மின்சாரம்</span></label>
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
                                             type="checkbox" class="w-4 h-4" /><span
-                                            class="text-xs">Generator</span></label>
+                                            class="text-xs">ஜெனரேட்டர்</span></label>
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
-                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">Solar
-                                            Panels</span></label>
+                                            type="checkbox" class="w-4 h-4" /><span class="text-xs">சூரிய பேனல்கள்</span></label>
                                     <label
                                         class="cover-card flex items-center gap-2 border border-gray-200 rounded-xl px-3 py-2 cursor-pointer hover:border-tealCustom-500 hover:bg-tealCustom-50 transition-all"><input
                                             type="checkbox" class="w-4 h-4"
                                             onchange="toggleOtherInput('wallOtherInput',this)" /><span
-                                            class="text-xs">Other</span></label>
+                                            class="text-xs">மற்றவை</span></label>
                                 </div>
                                 <input type="text" id="wallOtherInput" placeholder="Please specify"
                                     class="hidden w-full max-w-sm border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
@@ -3554,21 +3576,18 @@
                             <div class="space-y-3 flex-1 w-full">
                                 <div class="space-y-2">
                                     <label
-                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Are
-                                        there any other buildings within radius of 30ft. of the property to be
-                                        insured?</label>
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">காப்பீடு செய்யப்பட வேண்டிய சொத்திலிருந்து 30 அடி சுற்றளவிற்குள் வேறு ஏதேனும் கட்டிடங்கள் உள்ளனவா?</label>
                                     <div class="flex gap-5">
                                         <label class="flex items-center gap-2 cursor-pointer text-sm"><input
-                                                type="radio" name="nearby" value="yes" /> Yes</label>
+                                                type="radio" name="nearby" value="yes" /> ஆம்</label>
                                         <label class="flex items-center gap-2 cursor-pointer text-sm"><input
-                                                type="radio" name="nearby" value="no" /> No</label>
+                                                type="radio" name="nearby" value="no" /> இல்லை</label>
                                     </div>
                                 </div>
                                 <div class="space-y-1">
                                     <label
-                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">If
-                                        Yes — describe construction of walls, roofs and occupation</label>
-                                    <textarea rows="2" placeholder="Wall/roof materials and usage of nearby buildings"
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">ஆம் எனில் — சுவர்கள், கூரைகளின் கட்டுமானம் மற்றும் குடியிருப்பு பற்றி விவரிக்கவும்.</label>
+                                    <textarea rows="2" placeholder="சுவர்/கூரைக்கான பொருட்கள் மற்றும் அருகிலுள்ள கட்டிடங்களின் பயன்பாடு"
                                         class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 resize-none"></textarea>
                                 </div>
                             </div>
@@ -3580,18 +3599,14 @@
                             <div class="space-y-3 flex-1 w-full">
                                 <div class="space-y-1">
                                     <label
-                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Have
-                                        you ever had any property been damaged or loss by fire or by any other peril
-                                        against which cover is required?</label>
-                                    <textarea rows="2" placeholder="If Yes, give details"
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">தீ விபத்து அல்லது காப்பீடு தேவைப்படும் வேறு ஏதேனும் ஆபத்தினால் உங்கள் சொத்து எப்போதாவது சேதமடைந்துள்ளதா அல்லது இழப்பு ஏற்பட்டுள்ளதா?</label>
+                                    <textarea rows="2" placeholder="ஆம் எனில், விவரங்களைக் கூறவும்"
                                         class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 resize-none"></textarea>
                                 </div>
                                 <div class="space-y-1">
                                     <label
-                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Have
-                                        you at any time had occasion to make a claim for loss or damaged by fire or by
-                                        any other peril against which cover is required?</label>
-                                    <textarea rows="2" placeholder="If so, give details"
+                                        class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">தீயினால் அல்லது காப்பீடு தேவைப்படும் வேறு ஏதேனும் ஆபத்தினால் ஏற்பட்ட இழப்பு அல்லது சேதத்திற்காக, நீங்கள் எப்போதாவது இழப்பீடு கோர வேண்டிய சூழல் ஏற்பட்டிருக்கிறதா?</label>
+                                    <textarea rows="2" placeholder="ஆம் எனில், விவரங்களைக் கூறவும்"
                                         class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 resize-none"></textarea>
                                 </div>
                             </div>
@@ -3602,18 +3617,14 @@
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">22</span>
                             <div class="space-y-2 flex-1 w-full">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Is
-                                    the policy to be on Reinstatement value basis in respect of property excluding
-                                    clothing and building under construction?
-                                    <span class="block text-gray-400 font-normal normal-case text-xs mt-0.5">(The Sum
-                                        insured at all times should be the cost of reinstatement/replacement of the
-                                        property likely to be incurred at least during the next 12 months)</span>
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">ஆடைகள் மற்றும் கட்டுமானத்தில் உள்ள கட்டிடம் தவிர்த்து, மற்ற சொத்துக்களுக்கு மறுசீரமைப்பு மதிப்பு அடிப்படையில் காப்பீட்டுக் கொள்கை பின்பற்றப்பட வேண்டுமா?
+                                    <span class="block text-gray-400 font-normal normal-case text-xs mt-0.5">(காப்பீட்டுத் தொகையானது, எல்லா நேரங்களிலும், குறைந்தபட்சம் அடுத்த 12 மாத காலத்திற்குள் சொத்தைப் புனரமைப்பதற்கோ அல்லது மாற்றுவதற்கோ ஏற்படக்கூடிய செலவாக இருக்க வேண்டும்)</span>
                                 </label>
                                 <div class="flex gap-5">
                                     <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
-                                            name="reinstatement" value="yes" /> Yes</label>
+                                            name="reinstatement" value="yes" /> ஆம்</label>
                                     <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
-                                            name="reinstatement" value="no" /> No</label>
+                                            name="reinstatement" value="no" /> இல்லை</label>
                                 </div>
                             </div>
                         </div>
@@ -3623,13 +3634,12 @@
                             <span class="font-mono text-xs font-semibold text-navy-700 sm:pt-7 w-6 shrink-0">23</span>
                             <div class="space-y-2 flex-1 w-full">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">If
-                                    the building used solely as a private dwelling house?</label>
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">அந்தக் கட்டிடம் முழுக்க முழுக்க ஒரு தனிப்பட்ட குடியிருப்பாகப் பயன்படுத்தப்பட்டால்?</label>
                                 <div class="flex gap-5">
                                     <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
-                                            name="dwelling" value="yes" /> Yes</label>
+                                            name="dwelling" value="yes" /> ஆம்</label>
                                     <label class="flex items-center gap-2 cursor-pointer text-sm"><input type="radio"
-                                            name="dwelling" value="no" /> No</label>
+                                            name="dwelling" value="no" /> இல்லை</label>
                                 </div>
                                 <textarea rows="1" placeholder="If No, please specify"
                                     class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50 resize-none"></textarea>
@@ -3642,162 +3652,90 @@
                 <!-- ════ SUMS TO BE INSURED ════ -->
                 <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
                     <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
-                        <h3 class="font-heading text-white text-md font-semibold">காப்புறுதி செய்யப்பட வேண்டிய தொகைகள்</h3>
+                        <h3 class="font-heading text-white text-md font-semibold">காப்புறுதி செய்யப்பட வேண்டிய தொகைகள்
+                        </h3>
                     </div>
-                    <div class="px-6 py-2.5 bg-tealCustom-50 border-b border-tealCustom-100 text-xs text-tealCustom-700 italic">
-                        Please submit an inventory with make/model number, year of manufacture and values separately for marked (*) items.
+                    <div
+                        class="px-6 py-2.5 bg-tealCustom-50 border-b border-tealCustom-100 text-xs text-tealCustom-700 italic">
+                        (*) எனக் குறியிடப்பட்ட பொருட்களுக்கு, தயாரிப்பு/மாடல் எண், உற்பத்தி ஆண்டு மற்றும் மதிப்புகள் அடங்கிய சரக்குப் பட்டியலைத் தனித்தனியாகச் சமர்ப்பிக்கவும்.
                     </div>
                     <div class="px-6 pt-3 pb-0 flex items-center justify-end">
-                        <button type="button" onclick="addஇடம்Column()"
+                        <button type="button" onclick="addTaLocationColumn()"
                             class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm">
-                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-                            Add இடம்
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 4v16m8-8H4" />
+                            </svg>
+                           இருப்பிடத்தைச் சேர்க்கவும்
                         </button>
                     </div>
                     <div class="overflow-x-auto w-full mt-3">
-                        <table class="w-full text-sm min-w-[500px]" id="sumsTable">
+                        <table class="w-full text-sm min-w-[500px]" id="taSumsTable">
                             <thead class="bg-navy-50 border-b border-gray-200">
                                 <tr>
-                                    <th class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 min-w-[260px]">
+                                    <th
+                                        class="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-wide text-navy-700 min-w-[260px]">
                                         காப்புறுதி செய்யப்பட வேண்டிய சொத்து</th>
                                     <th class="px-4 py-2 loc-header-col min-w-[180px]">
                                         <div class="flex items-center gap-1">
-                                            <select class="location-dropdown flex-1 border border-gray-200 rounded-lg px-2 py-1.5 text-xs text-navy-700 bg-white">
-                                                <option value="">Select இடம்</option>
+                                            <select
+                                                class="location-dropdown flex-1 border border-gray-200 rounded-lg px-2 py-1.5 text-xs text-navy-700 bg-white">
+                                                <option value="">தலைப்பு தேர்ந்தெடுக்கவும்</option>
                                             </select>
                                         </div>
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y divide-gray-100" id="sumsBody">
+                            <tbody class="divide-y divide-gray-100" id="taSumsBody">
                                 <tr class="hover:bg-gray-50 sum-row">
                                     <td class="px-4 py-3 text-gray-700 text-sm">
                                         <input type="text"
-                                            value="On the building of private dwelling house including permanent fixtures and fittings"
+                                            value="நிரந்தரப் பொருள்கள் மற்றும் பொருத்துதல்கள் உட்பட தனியார் குடியிருப்பு வீடு கட்டுதல்"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
                                     <td class="px-4 py-2 loc-cell">
                                         <div class="flex items-center justify-end gap-1">
                                             <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
-                                                type="text" placeholder="0.00" oninput="calcவரைtal()"
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
                                                 class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
                                 </tr>
                                 <tr class="hover:bg-gray-50 sum-row">
                                     <td class="px-4 py-3 text-gray-700 text-sm">
-                                        <input type="text" value="On boundary and parapet walls, gates"
+                                        <input type="text" value="எல்லை மற்றும் தடுப்புச் சுவர்களில், வாயில்கள்"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
                                     <td class="px-4 py-2 loc-cell">
                                         <div class="flex items-center justify-end gap-1">
                                             <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
-                                                type="text" placeholder="0.00" oninput="calcவரைtal()"
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
                                                 class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
                                 </tr>
                                 <tr class="hover:bg-gray-50 sum-row">
                                     <td class="px-4 py-3 text-gray-700 text-sm">
-                                        <input type="text" value="On office furniture and equipment*"
+                                        <input type="text" value="அலுவலக தளபாடங்கள் மற்றும் உபகரணங்கள் மீது*"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
                                     <td class="px-4 py-2 loc-cell">
                                         <div class="flex items-center justify-end gap-1">
                                             <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
-                                                type="text" placeholder="0.00" oninput="calcவரைtal()"
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
                                                 class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
                                 </tr>
                                 <tr class="hover:bg-gray-50 sum-row">
                                     <td class="px-4 py-3 text-gray-700 text-sm">
-                                        <input type="text" value="On office equipment including telephones"
+                                        <input type="text" value="தொலைபேசிகள் உள்ளிட்ட அலுவலக உபகரணங்களில்"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
                                     <td class="px-4 py-2 loc-cell">
                                         <div class="flex items-center justify-end gap-1">
                                             <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
-                                                type="text" placeholder="0.00" oninput="calcவரைtal()"
-                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="hover:bg-gray-50 sum-row">
-                                    <td class="px-4 py-3 text-gray-700 text-sm">
-                                        <input type="text"
-                                            value="On stock in trade, Work-in-Progress and finished goods"
-                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                    </td>
-                                    <td class="px-4 py-2 loc-cell">
-                                        <div class="flex items-center justify-end gap-1">
-                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
-                                                type="text" placeholder="0.00" oninput="calcவரைtal()"
-                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="hover:bg-gray-50 sum-row">
-                                    <td class="px-4 py-3 text-gray-700 text-sm">
-                                        <input type="text" value="On stocks held in trust"
-                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                    </td>
-                                    <td class="px-4 py-2 loc-cell">
-                                        <div class="flex items-center justify-end gap-1">
-                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
-                                                type="text" placeholder="0.00" oninput="calcவரைtal()"
-                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="hover:bg-gray-50 sum-row">
-                                    <td class="px-4 py-3 text-gray-700 text-sm">
-                                        <input type="text" value="On machinery and utensils*"
-                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                    </td>
-                                    <td class="px-4 py-2 loc-cell">
-                                        <div class="flex items-center justify-end gap-1">
-                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
-                                                type="text" placeholder="0.00" oninput="calcவரைtal()"
-                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="hover:bg-gray-50 sum-row">
-                                    <td class="px-4 py-3 text-gray-700 text-sm">
-                                        <input type="text" value="On removal of debris"
-                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                    </td>
-                                    <td class="px-4 py-2 loc-cell">
-                                        <div class="flex items-center justify-end gap-1">
-                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
-                                                type="text" placeholder="0.00" oninput="calcவரைtal()"
-                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="hover:bg-gray-50 sum-row">
-                                    <td class="px-4 py-3 text-gray-700 text-sm">
-                                        <input type="text" value="On architects and surveyor's fees"
-                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                    </td>
-                                    <td class="px-4 py-2 loc-cell">
-                                        <div class="flex items-center justify-end gap-1">
-                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
-                                                type="text" placeholder="0.00" oninput="calcவரைtal()"
-                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="hover:bg-gray-50 sum-row">
-                                    <td class="px-4 py-3 text-gray-700 text-sm">
-                                        <input type="text" value="On lifts / generators / escalators / elevators"
-                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
-                                    </td>
-                                    <td class="px-4 py-2 loc-cell">
-                                        <div class="flex items-center justify-end gap-1">
-                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
-                                                type="text" placeholder="0.00" oninput="calcவரைtal()"
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
                                                 class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
                                         </div>
                                     </td>
@@ -3805,7 +3743,86 @@
                                 <tr class="hover:bg-gray-50 sum-row">
                                     <td class="px-4 py-3 text-gray-700 text-sm">
                                         <input type="text"
-                                            value="On solar power panels / solar power systems and other accessories"
+                                            value="கையிருப்புப் பொருட்கள், செயலாக்கத்தில் உள்ள பொருட்கள் மற்றும் முடிக்கப்பட்ட பொருட்கள் மீது"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="நம்பிக்கைப் பொறுப்பில் உள்ள பங்குகள் மீது"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="மெக்கனிக்கல் மற்றும் உபகரணங்களில்"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="குப்பைகளை அகற்றும் போது"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="கட்டிடக்கலைஞர்கள் மற்றும் நில அளவையாளர்களின் கட்டணங்கள் குறித்து"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text" value="லிஃப்ட் / ஜெனரேட்டர்கள் / நகரும் படிக்கட்டுகள் / மின்தூக்கிகள் மீது"
+                                            class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+                                    </td>
+                                    <td class="px-4 py-2 loc-cell">
+                                        <div class="flex items-center justify-end gap-1">
+                                            <span class="text-[11px] text-gray-400 font-mono">Rs.</span><input
+                                                type="text" placeholder="0.00" oninput="calcTotal()"
+                                                class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right shadow-sm" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 sum-row">
+                                    <td class="px-4 py-3 text-gray-700 text-sm">
+                                        <input type="text"
+                                            value="சூரிய சக்தி பேனல்கள் / சூரிய சக்தி அமைப்புகள் மற்றும் பிற துணைக்கருவிகள் மீது"
                                             class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
                                     </td>
                                     <td class="px-4 py-2 loc-cell">
@@ -3817,10 +3834,9 @@
                                     </td>
                                 </tr>
                                 <!-- TOTAL ROW -->
-                                <tr class="bg-navy-50/50" id="totalRow">
+                                <tr class="bg-navy-50/50" id="taTotalRow">
                                     <td class="px-4 py-3 text-right">
-                                        <span class="text-xs font-bold text-navy-900 uppercase tracking-wide">வரைtal Sum
-                                            Insured</span>
+                                        <span class="text-xs font-bold text-navy-900 uppercase tracking-wide">மொத்த காப்பீட்டுத் தொகை</span>
                                     </td>
                                     <td class="px-4 py-3 loc-total-cell">
                                         <div class="flex items-center justify-end gap-1">
@@ -3834,25 +3850,32 @@
                         </table>
                     </div>
                     <div class="px-6 py-3 border-t border-gray-200 bg-white flex items-center justify-between">
-                        <button type="button" class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800" onclick="addSumRow()">+ Add Property Row</button>
+                        <button type="button"
+                            class="text-xs text-tealCustom-600 font-semibold hover:text-tealCustom-800"
+                            onclick="addTaSumRow()">+ சொத்து வரிசையைச் சேர்க்கவும்</button>
                     </div>
                 </div>
 
                 <!-- ════ PERIL COVERS ════ -->
                 <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
                     <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
-                        <h3 class="font-heading text-white text-md font-semibold">Peril Covers</h3>
+                        <h3 class="font-heading text-white text-md font-semibold">ஆபத்து காப்பீடுகள்</h3>
                     </div>
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
-                            <p class="text-xs text-gray-500">நீங்கள் காப்புறுதி செய்ய விரும்பும் ஆபத்துகளைத் தேர்ந்தெடுக்கவும். <span class="text-tealCustom-600 font-semibold">தீ மற்றும் மின்னல்</span> is always included.</p>
-                            <button type="button" id="selectAllBtn" onclick="selectAllPerils()"
+                            <p class="text-xs text-gray-500">நீங்கள் காப்புறுதி செய்ய விரும்பும் ஆபத்துகளைத்
+                                தேர்ந்தெடுக்கவும். <span class="text-tealCustom-600 font-semibold">தீ மற்றும்
+                                    மின்னல்</span> எப்போதும் சேர்க்கப்பட்டுள்ளது.</p>
+                            <button type="button" id="taSelectAllBtn" onclick="selectAllTaPerils()"
                                 class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm whitespace-nowrap">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
                                 அனைத்தையும் தேர்ந்தெடுக்கவும்
                             </button>
                         </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3" id="perilCoversGrid">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3" id="taPerilCoversGrid">
                             <label
                                 class="cover-card flex items-start gap-3 border border-tealCustom-500 bg-tealCustom-50 rounded-xl px-3 py-3 cursor-not-allowed transition-all opacity-80">
                                 <input type="checkbox" class="mt-0.5 w-4 h-4 shrink-0" checked disabled
@@ -3942,11 +3965,11 @@
                                 <span class="text-sm text-gray-700">குப்பைகளை அகற்றுதல்</span>
                             </label>
                         </div>
-                         <div class="mt-4 space-y-1">
-                        <label class="text-sm font-semibold text-navy-900">பிற காப்புறுதிகள் (குறிப்பிடவும்)</label>
-                        <input type="text" placeholder="தேவையான வேறு ஏதேனும் காப்புறுதி"
-                            class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
-                    </div>
+                        <div class="mt-4 space-y-1">
+                            <label class="text-sm font-semibold text-navy-900">பிற காப்புறுதிகள் (குறிப்பிடவும்)</label>
+                            <input type="text" placeholder="தேவையான வேறு ஏதேனும் காப்புறுதி"
+                                class="w-full border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" />
+                        </div>
 
                         <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
                             <!-- Extensions -->
@@ -3958,7 +3981,8 @@
                                     </h3>
                                 </div>
                                 <p class="text-xs text-blue-800 leading-relaxed mb-3 font-bold">
-                                    உங்கள் இறுதி விலைப்புள்ளி அளவுருக்களின் அடிப்படையில் கூடுதல் காப்பீட்டு நீட்டிப்புகள் தானாகவே செயல்படுத்தப்படும்.
+                                    உங்கள் இறுதி விலைப்புள்ளி அளவுருக்களின் அடிப்படையில் கூடுதல் காப்பீட்டு
+                                    நீட்டிப்புகள் தானாகவே செயல்படுத்தப்படும்.
                                 </p>
                                 <div
                                     class="bg-white/60 rounded-lg p-3 text-xs text-blue-900 border border-blue-100 flex items-start gap-2">
@@ -3967,7 +3991,9 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                     </svg>
-                                    <span><span class="font-semibold">குறிப்பு:</span>குறிப்பிட்ட நீட்டிப்புகள், தேர்ந்தெடுக்கப்பட்ட பிரீமியம் திட்டம் மற்றும் சொத்து வகையைப் பொறுத்து நிர்ணயிக்கப்படுகின்றன. <span class="font-bold">மேற்கோளின்படி</span>.</span>
+                                    <span><span class="font-semibold">குறிப்பு:</span>குறிப்பிட்ட நீட்டிப்புகள்,
+                                        தேர்ந்தெடுக்கப்பட்ட பிரீமியம் திட்டம் மற்றும் சொத்து வகையைப் பொறுத்து
+                                        நிர்ணயிக்கப்படுகின்றன. <span class="font-bold">மேற்கோளின்படி</span>.</span>
                                 </div>
                             </div>
 
@@ -3980,7 +4006,8 @@
                                     </h3>
                                 </div>
                                 <p class="text-xs text-blue-800 leading-relaxed mb-3 font-bold">
-                                    நிலையான பாலிசி விதிகள் மற்றும் காப்பீட்டு நிபந்தனைகள், அங்கீகரிக்கப்பட்ட விலைப்புள்ளி விதிமுறைகளின்படி நிர்வகிக்கப்படுகின்றன.
+                                    நிலையான பாலிசி விதிகள் மற்றும் காப்பீட்டு நிபந்தனைகள், அங்கீகரிக்கப்பட்ட
+                                    விலைப்புள்ளி விதிமுறைகளின்படி நிர்வகிக்கப்படுகின்றன.
                                 </p>
                                 <div
                                     class="bg-white/60 rounded-lg p-3 text-xs text-blue-900 border border-blue-100 flex items-start gap-2">
@@ -3989,7 +4016,9 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                     </svg>
-                                    <span><span class="font-semibold">குறிப்பு:</span> விரிவான மற்றும் சட்டப்பூர்வமாகப் பிணைக்கும் நிபந்தனைகளின் பட்டியலுக்கு, இறுதி விலைப்புள்ளி ஆவணத்தைப் பார்க்கவும்..</span>
+                                    <span><span class="font-semibold">குறிப்பு:</span> விரிவான மற்றும் சட்டப்பூர்வமாகப்
+                                        பிணைக்கும் நிபந்தனைகளின் பட்டியலுக்கு, இறுதி விலைப்புள்ளி ஆவணத்தைப்
+                                        பார்க்கவும்..</span>
                                 </div>
                             </div>
                         </div>
@@ -3997,7 +4026,7 @@
                 </div>
 
 
-                 <!-- ════════ SECTION F: Select Premium Plans ════════ -->
+                <!-- ════════ SECTION F: Select Premium Plans ════════ -->
                 <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
                     <div class="bg-tealCustom-500 px-6 py-2 flex items-center gap-3">
                         <!-- <span class="w-7 h-7 rounded-full bg-gold-400 text-navy-950 text-xs font-mono font-bold flex items-center justify-center">F</span> -->
@@ -4027,12 +4056,14 @@
                                 </div>
                             </div> -->
                                 <!-- <h3 class="font-bold text-navy-900 text-lg mb-1 group-hover:text-tealCustom-700 transition-colors">Comprehensive</h3> -->
-                                <div class="font-semibold text-tealCustom-900 text-sm mb-3 text-xl">SRCC & பயங்கரவாதத்துடன்
+                                <div class="font-semibold text-tealCustom-900 text-sm mb-3 text-xl">SRCC &
+                                    பயங்கரவாதத்துடன்
                                 </div>
                                 <div class="text-2xl font-bold text-navy-900 mb-3">Rs. 30,000<span
                                         class="text-xs text-gray-500 font-normal"> /yr</span></div>
                                 <p class="text-xs text-gray-500 leading-relaxed mt-auto">
-                                    வேலைநிறுத்தங்கள், கலவரங்கள், பொது அமைதியின்மை மற்றும் பயங்கரவாதம் உள்ளிட்ட முழுமையான பாதுகாப்பு.
+                                    வேலைநிறுத்தங்கள், கலவரங்கள், பொது அமைதியின்மை மற்றும் பயங்கரவாதம் உள்ளிட்ட முழுமையான
+                                    பாதுகாப்பு.
                                 </p>
                             </label>
 
@@ -4056,7 +4087,8 @@
                                 <div class="text-2xl font-bold text-navy-900 mb-3">Rs. 25,000<span
                                         class="text-xs text-gray-500 font-normal"> /yr</span></div>
                                 <p class="text-xs text-gray-500 leading-relaxed mt-auto">
-                                    வேலைநிறுத்தங்கள், கலவரங்கள் மற்றும் மக்கள் கொந்தளிப்புகள் ஆகியவை இதில் அடங்கும். பயங்கரவாதம் இதில் அடங்காது.
+                                    வேலைநிறுத்தங்கள், கலவரங்கள் மற்றும் மக்கள் கொந்தளிப்புகள் ஆகியவை இதில் அடங்கும்.
+                                    பயங்கரவாதம் இதில் அடங்காது.
                                 </p>
                             </label>
 
@@ -4076,7 +4108,8 @@
                                 </div>
                             </div> -->
                                 <!-- <h3 class="font-bold text-navy-900 text-lg mb-1 group-hover:text-gray-700 transition-colors">Basic</h3> -->
-                                <div class="font-semibold text-xl text-gray-700 text-sm mb-3">எஸ்.ஆர்.சி.சி மற்றும் பயங்கரவாதம் இல்லாமல்
+                                <div class="font-semibold text-xl text-gray-700 text-sm mb-3">எஸ்.ஆர்.சி.சி மற்றும்
+                                    பயங்கரவாதம் இல்லாமல்
                                 </div>
                                 <div class="text-2xl font-bold text-navy-900 mb-3">Rs. 18,000<span
                                         class="text-xs text-gray-500 font-normal"> /yr</span></div>
@@ -4096,7 +4129,8 @@
                     <div class="p-6 space-y-4">
                         <div
                             class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-800 leading-relaxed">
-                            <strong>குறிப்பு:</strong> காப்பீடு செய்யப்பட வேண்டிய வளாகத்தின் தரைத் திட்டம் (கட்டிடங்களின் பரிமாணங்களையும் அவற்றுக்கு இடையேயான தூரங்களையும் குறிப்பிடவும்.)
+                            <strong>குறிப்பு:</strong> காப்பீடு செய்யப்பட வேண்டிய வளாகத்தின் தரைத் திட்டம்
+                            (கட்டிடங்களின் பரிமாணங்களையும் அவற்றுக்கு இடையேயான தூரங்களையும் குறிப்பிடவும்.)
                         </div>
                         <div class="border-2 border-dashed border-gray-200 rounded-xl h-48 flex flex-col items-center justify-center gap-3 bg-gray-50 cursor-pointer hover:border-tealCustom-400 hover:bg-tealCustom-50 transition-all"
                             onclick="document.getElementById('planUpload').click()">
@@ -4107,13 +4141,15 @@
                             </svg>
                             <div class="text-center">
                                 <p class="text-sm font-semibold text-gray-500">தரைத் திட்டத்தைப் பதிவேற்றவும்</p>
-                                <p class="text-xs text-gray-400">PNG, JPG, அல்லது PDF ஏற்றுக்கொள்ளப்படும் — அல்லது கையால் வரையப்பட்ட ஓவியத்தை இணைக்கவும்</p>
+                                <p class="text-xs text-gray-400">PNG, JPG, அல்லது PDF ஏற்றுக்கொள்ளப்படும் — அல்லது
+                                    கையால் வரையப்பட்ட ஓவியத்தை இணைக்கவும்</p>
                             </div>
                             <input type="file" id="planUpload" accept="image/*,.pdf" class="hidden" />
                         </div>
                         <div
                             class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-800 leading-relaxed">
-                            <strong>குறிப்பு:</strong> இங்கு வழங்கப்பட்டுள்ள இடம் போதுமானதாக இல்லையென்றால், தனித்தாளில் வரையப்பட்ட தரைத் திட்ட வரைபடத்தை இணைக்கவும்.
+                            <strong>குறிப்பு:</strong> இங்கு வழங்கப்பட்டுள்ள இடம் போதுமானதாக இல்லையென்றால், தனித்தாளில்
+                            வரையப்பட்ட தரைத் திட்ட வரைபடத்தை இணைக்கவும்.
                         </div>
                     </div>
                 </div>
@@ -4121,47 +4157,19 @@
                 <!-- ════ DATA PROTECTION ════ -->
                 <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
                     <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
-                        <h3 class="font-heading text-white text-md font-semibold">Personal Data Protection Clause
+                        <h3 class="font-heading text-white text-md font-semibold">தனிப்பட்ட தரவு பாதுகாப்பு விதி
                         </h3>
                     </div>
                     <div class="p-6 space-y-4">
                         <div
                             class="bg-gray-50 border border-gray-200 rounded-xl p-5 text-xs text-gray-600 leading-relaxed space-y-3">
-                            <p>The undersigned hereby consents to the collection, use and transfer of Personal Data
-                                as
-                                mentioned in this paragraph. The undersigned understands that the Company holds
-                                certain
-                                personal information about him/her including Full Name, Address, Date of Birth,
-                                Gender,
-                                National Identity Card/Passport Details, Job Title, Telephone Number, மின்னஞ்சல் முகவரி,
-                                Educational &amp; Professional Experience, Business Activities, Travel &amp;
-                                Expenses
-                                Information, Financial Details (e.g. Credit/Debit Card &amp; Bank Account Details
-                                etc.),
-                                Identification Checks &amp; Background Vetting, and Other Information including
-                                family
-                                life.</p>
-                            <p>The undersigned further understands that the Company holds special categories of
-                                personal
-                                data concerning health and such other information which may fall within the
-                                definition
-                                of "special categories of personal data", as defined in the Data Protection Act, No.
-                                09
-                                of 2022.</p>
-                            <p>The undersigned further understands that it may be necessary for the purposes of the
-                                relationship with the Company to share data with Reinsurers, Actuaries, and such
-                                other
-                                required parties for the purpose of assessing the risk. The undersigned authorises
-                                the
-                                Company to receive, possess, process and transfer the data for the purpose of the
-                                pre-insurance contract evaluation and for the purpose of servicing insurance
-                                contracts.
+                            <p>இந்தப் பத்தியில் குறிப்பிடப்பட்டுள்ள தனிப்பட்ட தரவுகளைச் சேகரிப்பதற்கும், பயன்படுத்துவதற்கும், மாற்றுவதற்கும் கீழ்க்கையொப்பமிட்டவர் இதன்மூலம் தனது சம்மதத்தைத் தெரிவிக்கிறார். முழுப் பெயர், முகவரி, பிறந்த தேதி, பாலினம், தேசிய அடையாள அட்டை/கடவுச்சீட்டு விவரங்கள், பதவி, தொலைபேசி எண், பொறுப்புகள், கல்வி மற்றும் தொழில்முறை அனுபவம், வணிகச் செயல்பாடுகள், பயணம் மற்றும் செலவுகள் குறித்த தகவல்கள், நிதி விவரங்கள் (எ.கா. கடன்/பற்று அட்டை மற்றும் வங்கிக் கணக்கு விவரங்கள் போன்றவை), அடையாளச் சரிபார்ப்புகள் மற்றும் பின்னணி ஆய்வு, மற்றும் குடும்ப வாழ்க்கை உள்ளிட்ட பிற தகவல்கள் போன்ற தன்னைப் பற்றிய சில தனிப்பட்ட தகவல்களை நிறுவனம் வைத்திருக்கிறது என்பதை கீழ்க்கையொப்பமிட்டவர் புரிந்துகொள்கிறார்..</p>
+                            <p>2022-ஆம் ஆண்டின் தரவுப் பாதுகாப்புச் சட்டம், எண் 09-இல் வரையறுக்கப்பட்டுள்ளபடி, "தனிப்பட்ட தரவுகளின் சிறப்பு வகைகள்" என்ற வரையறைக்குள் வரக்கூடிய உடல்நலம் தொடர்பான சிறப்பு வகைத் தனிப்பட்ட தரவுகளையும் மற்றும் அதுபோன்ற பிற தகவல்களையும் நிறுவனம் கொண்டுள்ளது என்பதை கீழ்க்கையொப்பமிட்டுள்ளவர் மேலும் புரிந்துகொள்கிறார்.</p>
+                            <p>நிறுவனத்துடனான உறவின் நோக்கங்களுக்காக, இடர் மதிப்பீட்டிற்காக மறு காப்பீட்டாளர்கள், காப்பீட்டு கணிப்பாளர்கள் மற்றும் அதுபோன்ற பிற தேவையான தரப்பினருடன் தரவைப் பகிர வேண்டியிருக்கலாம் என்பதை கீழ்க்கையொப்பமிட்டவர் மேலும் புரிந்துகொள்கிறார். முன்-காப்பீட்டு ஒப்பந்த மதிப்பீடு மற்றும் காப்பீட்டு ஒப்பந்தங்களுக்குச் சேவை செய்தல் ஆகிய நோக்கங்களுக்காக, தரவைப் பெறவும், வைத்திருக்கவும், செயலாக்கவும் மற்றும் மாற்றவும் நிறுவனத்திற்கு கீழ்க்கையொப்பமிட்டவர் அங்கீகாரம் அளிக்கிறார்.
                             </p>
                         </div>
                         <label class="flex items-start gap-3 cursor-pointer">
-                            <span class="text-sm text-red-400">I have read and understood the Personal Data
-                                Protection
-                                Clause and hereby provide my consent.</span>
+                            <span class="text-sm text-red-400">தனிப்பட்ட தரவுப் பாதுகாப்புப் பிரிவைப் படித்துப் புரிந்துகொண்டேன், இதன் மூலம் எனது ஒப்புதலை வழங்குகிறேன்.</span>
                         </label>
                     </div>
                 </div>
@@ -4169,60 +4177,51 @@
                 <!-- ════ INTERMEDIARY DETAILS ════ -->
                 <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
                     <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
-                        <h3 class="font-heading text-white text-md font-semibold">Intermediary Details</h3>
+                        <h3 class="font-heading text-white text-md font-semibold">இடைத்தரகர் விவரங்கள்</h3>
                     </div>
                     <div class="p-6 space-y-4">
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                             <div class="space-y-1">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Name
-                                    of Insurance Intermediary <span class="font-normal normal-case text-gray-400">(block
-                                        letters)</span></label>
-                                <input type="text" placeholder="Full name in block letters"
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">காப்பீட்டு இடைத்தரகரின் பெயர் <span class="font-normal normal-case text-gray-400">(பெரிய எழுத்துக்கள்)</span></label>
+                                <input type="text" placeholder="முழுப்பெயர் பெரிய எழுத்துக்களில்"
                                     class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
                             </div>
                             <div class="space-y-1">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Code
-                                    No.</label>
-                                <input type="text" placeholder="Intermediary code"
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">குறியீட்டு எண்.</label>
+                                <input type="text" placeholder="இடைநிலை குறியீடு"
                                     class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 font-mono" />
                             </div>
                             <div class="space-y-1">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Branch
-                                    Code</label>
-                                <input type="text" placeholder="Branch Code"
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">கிளை குறியீடு</label>
+                                <input type="text" placeholder="கிளை குறியீடு"
                                     class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
                             </div>
                             <div class="space-y-1">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">SLI
-                                    Code</label>
-                                <input type="text" placeholder="SLI Code"
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">SLI குறியீடு</label>
+                                <input type="text" placeholder="SLI குறியீடு"
                                     class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
                             </div>
                             <div class="space-y-1 sm:col-span-2">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Telephone
-                                    No.</label>
-                                <input type="tel" placeholder="Contact number"
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">தொலைபேசி எண்.</label>
+                                <input type="tel" placeholder="தொடர்பு எண்"
                                     class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
                             </div>
                         </div>
                         <div class="space-y-1">
                             <label
-                                class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Address
-                                of Insurance Intermediary <span class="font-normal normal-case text-gray-400">(block
-                                    letters)</span></label>
-                            <textarea rows="2" placeholder="Full address in block letters"
+                                class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">காப்பீட்டு இடைத்தரகரின் முகவரி <span class="font-normal normal-case text-gray-400">(பெரிய எழுத்துக்கள்)</span></label>
+                            <textarea rows="2" placeholder="முழு முகவரி பெரிய எழுத்துக்களில்"
                                 class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 resize-none"></textarea>
                         </div>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div class="space-y-1">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Insurance
-                                    Intermediary's Signature</label>
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">காப்பீட்டு இடைத்தரகரின் கையொப்பம்</label>
                                 <div
                                     class="border-2 border-dashed border-gray-200 rounded-xl h-20 flex items-center justify-center bg-gray-50">
                                     <span class="text-xs text-gray-400">இங்கே கையொப்பமிடுங்கள்</span>
@@ -4231,14 +4230,12 @@
                         </div>
                         <label class="flex items-start gap-3 cursor-pointer">
                             <!-- <input type="checkbox" required class="mt-0.5 w-4 h-4 shrink-0" /> -->
-                            <span class="text-sm text-red-400">I/We certify that the Insurance was canvassed by the
-                                above Insurance Intermediary.</span>
+                            <span class="text-sm text-red-400">மேற்கண்ட காப்பீட்டு இடைத்தரகரால் காப்பீடு பெற்றுத் தரப்பட்டது என்று நான்/நாங்கள் சான்றளிக்கிறேன்.</span>
                         </label>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div class="space-y-1">
                                 <label
-                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">Signature
-                                    of Proposer</label>
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">முன்மொழிபவரின் கையொப்பம்</label>
                                 <div
                                     class="border-2 border-dashed border-gray-200 rounded-xl h-20 flex items-center justify-center bg-gray-50">
                                     <span class="text-xs text-gray-400">இங்கே கையொப்பமிடுங்கள்</span>
@@ -4257,40 +4254,50 @@
                 <!-- ════ SIGNATURES & DECLARATIONS ════ -->
                 <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
                     <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
-                        <h3 class="font-heading text-white text-md font-semibold">Signatures &amp; Declarations</h3>
+                        <h3 class="font-heading text-white text-md font-semibold">கையொப்பங்கள் மற்றும் பிரகடனங்கள்</h3>
                     </div>
                     <div class="p-6 space-y-5">
                         <div class="flex gap-3 bg-amber-50 border border-amber-200 rounded-xl px-5 py-4">
                             <p class="text-xs text-amber-800 leading-relaxed">
-                                <strong>குறிப்பு:</strong> Any misdescription or misrepresentation of material facts known to the proposer in this proposal form is liable to render the policy void from the inception.
+                                <strong>குறிப்பு:</strong> இந்த பரிந்துரை வடிவத்தில் பரிந்துரையாளருக்கு அறியப்பட்ட மூலப் பண்டங்களை தவறாகச் சொல்லுவது அல்லது தவறாகச் செயல்படுத்துவது கீழ் உள்ளதன் மூலம் கொண்டாடப்படும்.
                             </p>
                         </div>
 
-                        <!-- கூட்டுக் கணக்கு வரைggle -->
-                        <div class="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-xl px-4 py-3">
+                        <!-- Joint Account Toggle -->
+                        <div
+                            class="flex items-center justify-between bg-gray-50 border border-gray-200 rounded-xl px-4 py-3">
                             <label class="flex items-center gap-3 cursor-pointer select-none">
-                                <input type="checkbox" id="jointAccountChk" onchange="toggleJointAccount()" class="w-4 h-4 accent-tealCustom-500" />
-                                <span class="text-sm font-semibold text-navy-900">(Check if there are multiple proposers)</span>
+                                <input type="checkbox" id="jointAccountChk" onchange="toggleJointAccount()"
+                                    class="w-4 h-4 accent-tealCustom-500" />
+                                <span class="text-sm font-semibold text-navy-900">(ஒன்றுக்கு மேற்பட்ட முன்மொழிபவர்கள் உள்ளனரா எனச் சரிபார்க்கவும்)</span>
                                 <!-- <span class="text-xs text-gray-500">(Check if there are multiple proposers)</span> -->
                             </label>
-                            <button type="button" id="addJointSigBtn" onclick="addJointSignature()" style="display:none;"
+                            <button type="button" id="addJointSigBtn" onclick="addJointSignature()"
+                                style="display:none;"
                                 class="inline-flex items-center gap-1.5 bg-tealCustom-500 text-white px-3 py-1.5 text-xs font-semibold rounded-lg hover:bg-tealCustom-600 transition-colors shadow-sm">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-                                Add Signature
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 4v16m8-8H4" />
+                                </svg>
+                                கையொப்பம் சேர்க்கவும்
                             </button>
                         </div>
 
                         <!-- Primary Proposer Signature -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div class="space-y-1">
-                                <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">முன்மொழிபவரின் கையொப்பம்</label>
-                                <div class="border-2 border-dashed border-gray-200 rounded-xl h-20 flex items-center justify-center bg-gray-50">
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">முன்மொழிபவரின் கையொப்பம்</label>
+                                <div
+                                    class="border-2 border-dashed border-gray-200 rounded-xl h-20 flex items-center justify-center bg-gray-50">
                                     <span class="text-xs text-gray-400">இங்கே கையொப்பமிடுங்கள்</span>
                                 </div>
                             </div>
                             <div class="space-y-1">
-                                <label class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">தேதி</label>
-                                <input type="date" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
+                                <label
+                                    class="block text-[10.5px] font-semibold uppercase tracking-wide text-navy-900">தேதி</label>
+                                <input type="date"
+                                    class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
                             </div>
                         </div>
 
@@ -4306,9 +4313,7 @@
                     </div>
                     <div class="p-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="space-y-1"><label
-                                class="block text-[10px] font-semibold uppercase tracking-wide text-gray-400">Rate
-                                and
-                                Calculated</label><input type="text"
+                                class="block text-[10px] font-semibold uppercase tracking-wide text-gray-400">விகிதம் மற்றும் கணக்கிடப்பட்டது</label><input type="text"
                                 class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
                         </div>
                         <div class="space-y-1"><label
@@ -4322,13 +4327,11 @@
                                 class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50" />
                         </div>
                         <div class="space-y-1"><label
-                                class="block text-[10px] font-semibold uppercase tracking-wide text-gray-400">Proposal
-                                No.</label><input type="text"
+                                class="block text-[10px] font-semibold uppercase tracking-wide text-gray-400">முன்மொழிவு எண்.</label><input type="text"
                                 class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 font-mono" />
                         </div>
                         <div class="space-y-1"><label
-                                class="block text-[10px] font-semibold uppercase tracking-wide text-gray-400">Policy
-                                No.</label><input type="text"
+                                class="block text-[10px] font-semibold uppercase tracking-wide text-gray-400">கொள்கை எண்.</label><input type="text"
                                 class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-gray-50 font-mono" />
                         </div>
                     </div>
@@ -4338,7 +4341,7 @@
         </div><!-- end form-en -->
 
 
-        </div>
+    </div>
 
     </div><!-- end page -->
 
@@ -4349,7 +4352,7 @@
             const formEn = document.getElementById('form-en');
             const formSi = document.getElementById('form-si');
             const formTa = document.getElementById('form-ta');
-            const btnTa = document.getElementById('btn-ta');
+            const btnTa = document.getElementById('btn-t');
             const btnEn = document.getElementById('btn-en');
             const btnSi = document.getElementById('btn-si');
             if (lang === 'en') {
@@ -4647,12 +4650,25 @@
             const tr = document.createElement('tr');
             tr.className = 'hover:bg-gray-50';
             tr.innerHTML = `
-                <td class="px-2 py-1.5"><input type="text" placeholder="Director Name" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="සම්පූර්ණ නම" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
                 <td class="px-2 py-1.5"><select class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50"><option value="">තනතුර තෝරන්න</option><option>කළමනාකාර අධ්‍යක්ෂ</option><option>විධායක අධ්‍යක්ෂ</option><option>විධායක නොවන අධ්‍යක්ෂ</option><option>සභාපති</option></select></td>
                 <td class="px-2 py-1.5"><input type="text" placeholder="ජාතිකත්වය" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
                 <td class="px-2 py-1.5"><input type="text" placeholder="ජා.හැ.පත/ගමන් බලපත්‍රය" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
                 <td class="px-2 py-1.5 text-center"><button type="button" class="text-red-500 hover:text-red-700 font-bold" onclick="this.closest('tr').remove()">&times;</button></td>`;
             tbody.appendChild(tr);
+        }
+
+        // ── SI: Select All Perils ────────────────────────────────────────
+        function selectAllSiPerils() {
+            const checkboxes = document.querySelectorAll('#siPerilCoversGrid .peril-checkbox');
+            const allChecked = Array.from(checkboxes).every(c => c.checked);
+            checkboxes.forEach(c => { c.checked = !allChecked; });
+            const btn = document.getElementById('siSelectAllBtn');
+            if (btn) {
+                btn.innerHTML = allChecked
+                    ? `<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Select All`
+                    : `<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> Deselect All`;
+            }
         }
 
         let siLocationCount = 1;
@@ -4698,28 +4714,264 @@
             updateSiLocationDropdowns();
         }
 
-        function calcSiTotal() {
-            const rows = document.querySelectorAll('#siSumsBody tr:not(:last-child)');
-            let total = 0;
-            rows.forEach(r => r.querySelectorAll('input[type="text"]').forEach((inp, i) => { if (i > 0) total += parseNum(inp.value); }));
-            document.getElementById('siTotalSum').value = fmt(total);
+        // ── TA equivalents ───────────────────────────────────────────────
+        function addTaDirectorRow() {
+            const tbody = document.getElementById('taDirectorsBody');
+            const tr = document.createElement('tr');
+            tr.className = 'hover:bg-gray-50';
+            tr.innerHTML = `
+                <td class="px-2 py-1.5"><input type="text" placeholder="முழுப் பெயர்" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5"><select class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50"><option value="">தேர்ந்தெடுக்கப்பட்ட இயக்குநர்</option><option>நிர்வாக இயக்குநர்</option><option>நிர்வாக இயக்குனர்</option><option>நிர்வாகம் சாராத இயக்குநர்</option><option>தலைவர்</option></select></td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="தேசியம்" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="தேசிய அடையாள அட்டை / கடவுச்சீட்டு" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5 text-center"><button type="button" class="text-red-500 hover:text-red-700 font-bold" onclick="this.closest('tr').remove()">&times;</button></td>`;
+            tbody.appendChild(tr);
         }
 
-        let siSumRowCount = 9;
+        function addTaMortgageeRow() {
+            const tbody = document.getElementById('taMortgageeBody');
+            const tr = document.createElement('tr');
+            tr.className = 'hover:bg-gray-50';
+            tr.innerHTML = `
+                <td class="px-2 py-1.5"><select class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50"><option value="">வங்கியைத் தேர்ந்தெடுக்கவும்</option><option>மக்கள் வங்கி</option><option>இலங்கை வங்கி</option><option>வணிக வங்கி</option><option>ஹாட்டன் நேஷனல் வங்கி (HNB)</option><option>சம்பத் வங்கி</option><option>செய்லான் வங்கி</option><option>மற்றவை</option></select></td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="கிளை முகவரி" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5"><select class="ta-location-dropdown w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50"><option value="">இருப்பிடத்தைத் தேர்ந்தெடுக்கவும்</option></select></td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="விளக்கம்" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5"><input type="text" placeholder="மதிப்பு" class="w-full text-xs border border-gray-200 rounded px-2 py-1 bg-gray-50" /></td>
+                <td class="px-2 py-1.5 text-center"><button type="button" class="text-red-500 hover:text-red-700 font-bold" onclick="this.closest('tr').remove()">&times;</button></td>`;
+            tbody.appendChild(tr);
+            updateTaLocationDropdowns();
+        }
+
+        // ── TA: Select All Perils ────────────────────────────────────────
+        function selectAllTaPerils() {
+            const checkboxes = document.querySelectorAll('#taPerilCoversGrid .peril-checkbox');
+            const allChecked = Array.from(checkboxes).every(c => c.checked);
+            checkboxes.forEach(c => { c.checked = !allChecked; });
+            const btn = document.getElementById('taSelectAllBtn');
+            if (btn) {
+                btn.innerHTML = allChecked
+                    ? `<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> அனைத்தையும் தேர்ந்தெடுக்கவும்`
+                    : `<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> அனைத்தையும் நீக்கவும்`;
+            }
+        }
+
+        // ── SI: Total calculation ─────────────────────────────────────────
+        function calcSiTotal() {
+            const sumRows = document.querySelectorAll('#siSumsBody tr.sum-row');
+            const totalCells = document.querySelectorAll('#siTotalRow td.si-loc-total-cell');
+            totalCells.forEach((tc, colIdx) => {
+                let colTotal = 0;
+                sumRows.forEach(row => {
+                    const locCells = row.querySelectorAll('td.si-loc-cell');
+                    if (locCells[colIdx]) {
+                        const inp = locCells[colIdx].querySelector('input[type="text"]');
+                        if (inp) colTotal += parseNum(inp.value);
+                    }
+                });
+                const display = tc.querySelector('.total-sum-input');
+                if (display) display.value = colTotal > 0 ? fmt(colTotal) : '0.00';
+            });
+        }
+
+        // ── SI: Add Location Column ───────────────────────────────────────
+        function addSiLocationColumn() {
+            const theadTr = document.querySelector('#siSumsTable thead tr');
+            const th = document.createElement('th');
+            th.className = 'px-4 py-2 si-loc-header-col min-w-[180px]';
+            th.innerHTML = `
+                <div class="flex items-center gap-1">
+                    <select class="si-location-dropdown flex-1 border border-gray-200 rounded-lg px-2 py-1.5 text-xs text-navy-700 bg-white">
+                        <option value="">ස්ථානය තෝරන්න</option>
+                    </select>
+                    <button type="button" title="Remove column" onclick="removeSiLocationColumn(this)" class="text-red-400 hover:text-red-600 font-bold text-base leading-none px-0.5">&times;</button>
+                </div>`;
+            theadTr.appendChild(th);
+
+            document.querySelectorAll('#siSumsBody tr.sum-row').forEach(row => {
+                const td = document.createElement('td');
+                td.className = 'px-4 py-2 si-loc-cell';
+                td.innerHTML = `
+                    <div class="flex items-center justify-end gap-1">
+                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span>
+                        <input type="text" placeholder="0.00" oninput="calcSiTotal()" class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right" />
+                    </div>`;
+                row.appendChild(td);
+            });
+
+            const totalTd = document.createElement('td');
+            totalTd.className = 'px-4 py-3 si-loc-total-cell';
+            totalTd.innerHTML = `
+                <div class="flex items-center justify-end gap-1">
+                    <span class="text-[11px] text-gray-500 font-mono font-bold">Rs.</span>
+                    <input type="text" readonly value="0.00" class="w-full bg-transparent text-right font-mono text-sm font-bold text-navy-900 border-none p-0 focus:ring-0 total-sum-input" />
+                </div>`;
+            document.getElementById('siTotalRow').appendChild(totalTd);
+
+            updateSiLocationDropdowns();
+            calcSiTotal();
+        }
+
+        function removeSiLocationColumn(btn) {
+            const th = btn.closest('th');
+            const locHeaders = th.parentNode.querySelectorAll('th.si-loc-header-col');
+            const locIdx = Array.from(locHeaders).indexOf(th);
+            th.remove();
+            document.querySelectorAll('#siSumsBody tr.sum-row').forEach(row => {
+                const locCells = row.querySelectorAll('td.si-loc-cell');
+                if (locCells[locIdx]) locCells[locIdx].remove();
+            });
+            const totalCells = document.getElementById('siTotalRow').querySelectorAll('td.si-loc-total-cell');
+            if (totalCells[locIdx]) totalCells[locIdx].remove();
+            calcSiTotal();
+        }
+
+        let siSumRowCount = 11;
         function addSiSumRow() {
             siSumRowCount++;
             const tbody = document.getElementById('siSumsBody');
-            const lastRow = tbody.querySelector('tr:last-child');
+            const totalRow = document.getElementById('siTotalRow');
             const tr = document.createElement('tr');
-            tr.className = 'hover:bg-gray-50';
-            const lbl = roman[siSumRowCount - 1] ? `(${roman[siSumRowCount - 1]})` : `(${siSumRowCount})`;
-            tr.innerHTML = `
-                <td class="px-4 py-3 font-mono text-xs font-semibold text-tealCustom-500">${lbl}</td>
-                <td class="px-4 py-2"><select class="si-location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs bg-gray-50"><option value="">තෝරන්න</option></select></td>
-                <td class="px-4 py-3"><input type="text" placeholder="දේපලේ විස්තරය" class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" /></td>
-                <td class="px-4 py-2"><div class="flex items-center justify-end gap-1"><span class="text-[11px] text-gray-400 font-mono">LKR.</span><input type="text" placeholder="0.00" oninput="calcSiTotal()" class="w-28 border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-gray-50 text-right" /></div></td>`;
-            tbody.insertBefore(tr, lastRow);
-            updateSiLocationDropdowns();
+            tr.className = 'hover:bg-gray-50 sum-row';
+            const locColCount = document.querySelectorAll('#siSumsTable thead th.si-loc-header-col').length;
+            let cells = `<td class="px-4 py-3 text-gray-700 text-sm">
+                <input type="text" placeholder="දේපලේ විස්තරය" class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+            </td>`;
+            for (let i = 0; i < locColCount; i++) {
+                cells += `<td class="px-4 py-2 si-loc-cell">
+                    <div class="flex items-center justify-end gap-1">
+                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span>
+                        <input type="text" placeholder="0.00" oninput="calcSiTotal()" class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right" />
+                    </div>
+                </td>`;
+            }
+            tr.innerHTML = cells;
+            tbody.insertBefore(tr, totalRow);
+        }
+
+        // ── TA: Total calculation ────────────────────────────────────────
+        function calcTaTotal() {
+            const sumRows = document.querySelectorAll('#taSumsBody tr.sum-row');
+            const totalCells = document.querySelectorAll('#taTotalRow td.ta-loc-total-cell');
+            totalCells.forEach((tc, colIdx) => {
+                let colTotal = 0;
+                sumRows.forEach(row => {
+                    const locCells = row.querySelectorAll('td.ta-loc-cell');
+                    if (locCells[colIdx]) {
+                        const inp = locCells[colIdx].querySelector('input[type="text"]');
+                        if (inp) colTotal += parseNum(inp.value);
+                    }
+                });
+                const display = tc.querySelector('.total-sum-input');
+                if (display) display.value = colTotal > 0 ? fmt(colTotal) : '0.00';
+            });
+        }
+
+        // ── TA: Add Location Column ───────────────────────────────────────
+        function addTaLocationColumn() {
+            const theadTr = document.querySelector('#taSumsTable thead tr');
+            const th = document.createElement('th');
+            th.className = 'px-4 py-2 ta-loc-header-col min-w-[180px]';
+            th.innerHTML = `
+                <div class="flex items-center gap-1">
+                    <select class="ta-location-dropdown flex-1 border border-gray-200 rounded-lg px-2 py-1.5 text-xs text-navy-700 bg-white">
+                        <option value="">இருப்பிடத்தைத் தேர்ந்தெடுக்கவும்</option>
+                    </select>
+                    <button type="button" title="Remove column" onclick="removeTaLocationColumn(this)" class="text-red-400 hover:text-red-600 font-bold text-base leading-none px-0.5">&times;</button>
+                </div>`;
+            theadTr.appendChild(th);
+
+            document.querySelectorAll('#taSumsBody tr.sum-row').forEach(row => {
+                const td = document.createElement('td');
+                td.className = 'px-4 py-2 ta-loc-cell';
+                td.innerHTML = `
+                    <div class="flex items-center justify-end gap-1">
+                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span>
+                        <input type="text" placeholder="0.00" oninput="calcTaTotal()" class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right" />
+                    </div>`;
+                row.appendChild(td);
+            });
+
+            const totalTd = document.createElement('td');
+            totalTd.className = 'px-4 py-3 ta-loc-total-cell';
+            totalTd.innerHTML = `
+                <div class="flex items-center justify-end gap-1">
+                    <span class="text-[11px] text-gray-500 font-mono font-bold">Rs.</span>
+                    <input type="text" readonly value="0.00" class="w-full bg-transparent text-right font-mono text-sm font-bold text-navy-900 border-none p-0 focus:ring-0 total-sum-input" />
+                </div>`;
+            document.getElementById('taTotalRow').appendChild(totalTd);
+
+            updateTaLocationDropdowns();
+            calcTaTotal();
+        }
+
+        function removeTaLocationColumn(btn) {
+            const th = btn.closest('th');
+            const locHeaders = th.parentNode.querySelectorAll('th.ta-loc-header-col');
+            const locIdx = Array.from(locHeaders).indexOf(th);
+            th.remove();
+            document.querySelectorAll('#taSumsBody tr.sum-row').forEach(row => {
+                const locCells = row.querySelectorAll('td.ta-loc-cell');
+                if (locCells[locIdx]) locCells[locIdx].remove();
+            });
+            const totalCells = document.getElementById('taTotalRow').querySelectorAll('td.ta-loc-total-cell');
+            if (totalCells[locIdx]) totalCells[locIdx].remove();
+            calcTaTotal();
+        }
+
+        let taSumRowCount = 11;
+        function addTaSumRow() {
+            taSumRowCount++;
+            const tbody = document.getElementById('taSumsBody');
+            const totalRow = document.getElementById('taTotalRow');
+            const tr = document.createElement('tr');
+            tr.className = 'hover:bg-gray-50 sum-row';
+            const locColCount = document.querySelectorAll('#taSumsTable thead th.ta-loc-header-col').length;
+            let cells = `<td class="px-4 py-3 text-gray-700 text-sm">
+                <input type="text" placeholder="சொத்தின் விவரம்" class="w-full text-sm border-0 bg-transparent p-0 focus:ring-0 text-gray-700" />
+            </td>`;
+            for (let i = 0; i < locColCount; i++) {
+                cells += `<td class="px-4 py-2 ta-loc-cell">
+                    <div class="flex items-center justify-end gap-1">
+                        <span class="text-[11px] text-gray-400 font-mono">Rs.</span>
+                        <input type="text" placeholder="0.00" oninput="calcTaTotal()" class="w-full border border-gray-200 rounded-lg px-2 py-1.5 text-xs font-mono bg-white text-right" />
+                    </div>
+                </td>`;
+            }
+            tr.innerHTML = cells;
+            tbody.insertBefore(tr, totalRow);
+        }
+
+        // ── TA: Locations ───────────────────────────────────────────────
+        let taLocationCount = 1;
+        function addTaLocationRow() {
+            taLocationCount++;
+            const container = document.getElementById('taLocationsContainer');
+            if (!container) return;
+            const div = document.createElement('div');
+            div.className = 'location-entry-ta flex gap-2 items-center';
+            div.setAttribute('data-index', taLocationCount);
+            const label = 'இருப்பிடம் ' + String(taLocationCount).padStart(2, '0');
+            div.innerHTML = `
+                <span class="font-mono text-xs font-semibold text-navy-700 w-24">${label}</span>
+                <input type="text" placeholder="${label} இன் முழு முகவரி" class="ta-location-input flex-1 border border-gray-200 rounded-lg px-3 py-2 text-xs bg-gray-50" onchange="updateTaLocationDropdowns()" />
+                <button type="button" class="text-red-500 hover:text-red-700 font-bold" onclick="this.closest('.location-entry-ta').remove();updateTaLocationDropdowns()">&times;</button>`;
+            container.appendChild(div);
+            updateTaLocationDropdowns();
+        }
+
+        function updateTaLocationDropdowns() {
+            const container = document.getElementById('taLocationsContainer');
+            if (!container) return;
+            const locs = Array.from(container.querySelectorAll('.location-entry-ta')).map(e => ({
+                id: e.querySelector('span').innerText.trim(),
+                text: e.querySelector('.ta-location-input').value.trim() || e.querySelector('span').innerText.trim()
+            }));
+            document.querySelectorAll('.ta-location-dropdown').forEach(sel => {
+                const cur = sel.value;
+                sel.innerHTML = '<option value="">இருப்பிடத்தைத் தேர்ந்தெடுக்கவும்</option>';
+                locs.forEach(l => { const o = document.createElement('option'); o.value = l.id; o.textContent = l.text; if (cur === l.id) o.selected = true; sel.appendChild(o); });
+            });
         }
 
         // ── Section Toggle (accordion) ───────────────────────────────────
@@ -4745,6 +4997,7 @@
             initSectionToggles('form-ta');
             updateLocationDropdowns();
             updateSiLocationDropdowns();
+            updateTaLocationDropdowns();
         });
     </script>
 </body>
