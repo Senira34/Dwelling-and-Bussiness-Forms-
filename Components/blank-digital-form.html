@@ -30,24 +30,8 @@
                             900: "#1b2087",
                             950: "#10134f",
                         },
-                        gold: {
-                            400: "#f6c944",
-                            500: "#e5b320",
-                            600: "#c98f0a",
-                        },
-                        tealCustom: {
-                            50: "#e6f7f8",
-                            100: "#cceff1",
-                            200: "#99dfe3",
-                            300: "#66cfd5",
-                            400: "#33bfc7",
-                            500: "#0d7f8a",
-                            600: "#0b6e78",
-                            700: "#095d66",
-                            800: "#074c54",
-                            900: "#053b42",
-                            950: "#022126",
-                        },
+                       
+                       
                     },
                 },
             },
@@ -75,76 +59,43 @@
 
 <body class="min-h-screen font-body text-gray-800">
     <div id="digital-form-page" class="max-w-4xl mx-auto px-2 py-12">
-        <!-- HEADER -->
-        <div class="bg-tealCustom-500 rounded-2xl overflow-hidden mb-8 print-shadow shadow-xl">
-            <div class="flex items-center justify-center px-8 py-1 border-b border-white/20">
-                <div class="text-center align-items-center">
-                    <h1 class="font-heading text-white text-2xl font-bold tracking-tight mb-2">
-                        Proposal Form Private-Dwelling-Houses
-                    </h1>
-                </div>
-            </div>
-        </div>
-
-        <div
-            class="bg-amber-50 border border-amber-200 rounded-xl p-2 text-xs text-amber-800 leading-relaxed mb-6 text-center">
-            <strong>Note:</strong> Any misdescription or misrepresentation made in this proposal form is
-            liable to render the policy void.
-        </div>
 
         <!-- FORM -->
         <form id="proposalForm" class="space-y-8" onsubmit="return false;">
             <!-- SECTION A: PROPOSER DETAILS -->
             <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
-                <div class="bg-tealCustom-500 px-6 py-3 flex items-center gap-3">
-                    <!-- <span class="w-7 h-7 rounded-full bg-gold-400 text-navy-950 text-xs font-mono font-bold flex items-center justify-center">A</span> -->
-                    <h3 class="font-heading text-white text-md font-semibold">
-                        Proposer Details
-                    </h3>
-                </div>
                 <div class="p-6 space-y-5">
+                    <h3 class="font-heading text-grey text-mdX font-semibold">
+                        Property to be Insured
+                    </h3>
                     <!-- Row 1 -->
                     <div class="grid grid-cols-12 gap-4 items-end">
-                        <div class="col-span-1">
-                            <label
-                                class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">No.</label>
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">1</span>
-                            </div>
-                        </div>
-                        <div class="col-span-10">
+                        <div class="col-span-12">
                             <label
                                 class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Proposer's
                                 Full
                                 Name</label>
-                            <div class="flex gap-3">
-                                <select
-                                    class="w-28 border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 text-gray-700 font-body">
-                                    <option>Mr.</option>
-                                    <option>Mrs.</option>
-                                    <option>Miss.</option>
-                                    <option>Dr.</option>
-                                </select>
+                            <div class="flex gap-5">
+                               <label
+                                class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Mr / Mrs / Ms / Dr / Prof / Other</label>
+                            </label>
+                                    
+                            
                                 <input type="text"
-                                    class="flex-1 border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                    class="flex-1 border border-gray-200 rounded-sm px-3 py-1 text-xs font-body" />
                             </div>
                         </div>
                     </div>
 
                     <!-- Row 2 -->
                     <div class="grid grid-cols-12 gap-4 items-end">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">2</span>
-                            </div>
-                        </div>
                         <div class="col-span-3">
                             <label
                                 class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">National
                                 Identity
                                 Card No.</label>
                             <input type="text"
-                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-mono" />
+                                class="w-full border border-gray-200 rounded-sm px-3 py-1 text-xs  font-mono" />
                         </div>
                         <div class="col-span-3">
                             <label
@@ -152,97 +103,78 @@
                                 Registration
                                 No.</label>
                             <input type="text"
-                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                class="w-full border border-gray-200 rounded-sm px-3 py-1 text-xs  font-body" />
                         </div>
                         <div class="col-span-4">
                             <label
                                 class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Passport
                                 No.</label>
                             <input type="text"
-                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                class="w-full border border-gray-200 rounded-sm px-3 py-1 text-xs  font-body" />
                         </div>
                     </div>
 
                     <!-- Document Upload -->
                     <div class="grid grid-cols-12 gap-4 items-start mt-2">
-                        <div class="col-span-1"></div>
                         <div class="col-span-10">
-                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Upload
-                                Scanned Copies (NIC / BR / Passport)</label>
-                            <input type="file" multiple
-                                class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs font-mono bg-gray-50" />
+                            <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">
+                                Attach Scanned Copies Using Steplers (NIC / BR / Passport)</label>
                         </div>
                     </div>
 
                     <!-- Row 3 -->
                     <div class="grid grid-cols-12 gap-4 items-end">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">3</span>
-                            </div>
-                        </div>
                         <div class="col-span-4">
                             <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Date
                                 Of Incorporation / Date Of Birth</label>
-                            <input type="date"
-                                class="border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body w-full" />
+                            <input type="text"
+                                class="border border-gray-200 px-3 py-1 text-xs font-body w-full" />
                         </div>
                     </div>
 
                     <!-- Row 4 (VAT) -->
                     <div class="grid grid-cols-12 gap-4 items-start">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">4</span>
-                            </div>
-                        </div>
-                        <div class="col-span-10 space-y-3">
+                        <div class="col-span-10  space-y-3">
                             <div>
                                 <label
                                     class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Are
                                     you a VAT registered entity?</label>
                                 <div class="flex gap-4 mb-2">
-                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio"
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
                                             name="vat_registered" value="yes" class="accent-navy-900" /><span
                                             class="text-sm">Yes</span></label>
-                                    <label class="flex items-center gap-2 cursor-pointer"><input type="radio"
-                                            name="vat_registered" value="no" class="accent-navy-900" checked /><span
+                                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox"
+                                            name="vat_registered" value="no" class="accent-navy-900"/><span
                                             class="text-sm">No</span></label>
                                 </div>
-                            </div>
-                            <div id="vatDetailsSection" class="hidden grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <label
                                         class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Please
                                         state your VAT Registration Number:</label>
                                     <input type="text"
-                                        class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        class="w-full border border-gray-200 rounded-sm px-3 py-1 text-xs font-body" />
                                 </div>
                                 <div>
                                     <label
-                                        class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Upload
-                                        VAT Registration Certificate:</label>
-                                    <input type="file"
-                                        class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-mono" />
+                                        class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Attach Scanned Copy of Your
+                                        VAT Registration Certificate Using Steplers</label>
+                                   
                                 </div>
                             </div>
+                          
                         </div>
                     </div>
 
                     <!-- Details of Directors (New Table) -->
                     <div class="grid grid-cols-12 gap-4 items-start mt-4">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">5</span>
-                            </div>
-                        </div>
+                        
                         <div class="col-span-10">
                             <label
                                 class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Details
                                 of Directors <span class="text-gray-400 normal-case font-normal">(For corporate
                                     clients)</span></label>
-                            <table class="w-full border-collapse rounded-lg overflow-hidden">
-                                <thead class="bg-navy-100">
+                            <table class="w-full border-collapse rounded-sm overflow-hidden">
+                                <thead class="">
                                     <tr>
                                         <th
                                             class="border border-gray-200 px-3 py-2 text-center text-xs font-semibold text-navy-950">
@@ -261,59 +193,47 @@
                                 </thead>
                                 <tbody id="directorsTableBody">
                                     <tr>
-                                        <td class="border border-gray-200 px-3 py-2 text-xs">
-                                            <input type="text"
-                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        <td class="border border-gray-200 px-5 py-5 text-xs">
+                                        
                                         </td>
-                                        <td class="border border-gray-200 px-3 py-2 text-xs">
-                                            <input type="text"
-                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        <td class="border border-gray-200 px-5 py-5 text-xs">
+                                            
                                         </td>
-                                        <td class="border border-gray-200 px-3 py-2 text-xs">
-                                            <input type="text"
-                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        <td class="border border-gray-200 px-5 py-5 text-xs">
+                                            
                                         </td>
-                                        <td class="border border-gray-200 px-3 py-2 text-xs">
-                                            <input type="text"
-                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        <td class="border border-gray-200 px-5 py-5 text-xs">
+                                           
+                                        </td>
+
+                                    </tr>
+                                     <tr>
+                                        <td class="border border-gray-200 px-5 py-5 text-xs">
+                                        
+                                        </td>
+                                        <td class="border border-gray-200 px-5 py-5 text-xs">
+                                            
+                                        </td>
+                                        <td class="border border-gray-200 px-5 py-5 text-xs">
+                                            
+                                        </td>
+                                        <td class="border border-gray-200 px-5 py-5 text-xs">
+                                           
                                         </td>
 
                                     </tr>
                                     <tr>
-                                        <td class="border border-gray-200 px-3 py-2 text-xs">
-                                            <input type="text"
-                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        <td class="border border-gray-200 px-5 py-5 text-xs">
+                                        
                                         </td>
-                                        <td class="border border-gray-200 px-3 py-2 text-xs">
-                                            <input type="text"
-                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        <td class="border border-gray-200 px-5 py-5 text-xs">
+                                            
                                         </td>
-                                        <td class="border border-gray-200 px-3 py-2 text-xs">
-                                            <input type="text"
-                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        <td class="border border-gray-200 px-5 py-5 text-xs">
+                                            
                                         </td>
-                                        <td class="border border-gray-200 px-3 py-2 text-xs">
-                                            <input type="text"
-                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
-                                        </td>
-
-                                    </tr>
-                                    <tr>
-                                        <td class="border border-gray-200 px-3 py-2 text-xs">
-                                            <input type="text"
-                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
-                                        </td>
-                                        <td class="border border-gray-200 px-3 py-2 text-xs">
-                                            <input type="text"
-                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
-                                        </td>
-                                        <td class="border border-gray-200 px-3 py-2 text-xs">
-                                            <input type="text"
-                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
-                                        </td>
-                                        <td class="border border-gray-200 px-3 py-2 text-xs">
-                                            <input type="text"
-                                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        <td class="border border-gray-200 px-5 py-5 text-xs">
+                                           
                                         </td>
 
                                     </tr>
@@ -325,11 +245,6 @@
 
                     <!-- Row 6 -->
                     <div class="grid grid-cols-12 gap-4 items-end">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">6</span>
-                            </div>
-                        </div>
                         <div class="col-span-10">
                             <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Term
                                 of
@@ -337,131 +252,104 @@
                             <div class="flex items-center gap-3 flex-wrap">
                                 <div class="flex items-center gap-2">
                                     <span class="text-xs text-gray-500 font-semibold uppercase">From</span>
-                                    <input type="date"
-                                        class="border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                    <input type="text"
+                                        class="border border-gray-200 rounded-sm px-3 py-1 text-xs font-body" />
                                 </div>
 
                                 <div class="flex items-center gap-2">
                                     <span class="text-xs text-gray-500 font-semibold uppercase">To</span>
-                                    <input type="date"
-                                        class="border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                    <input type="text"
+                                        class="border border-gray-200 rounded-sm px-3 py-1 text-xs font-body" />
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Row 7 -->
-                    <div class="grid grid-cols-12 gap-4 items-start">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">7</span>
-                            </div>
-                        </div>
+                    <div class="grid grid-cols-2 gap-4 items-start">
                         <div class="col-span-10">
                             <label
                                 class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Personal
                                 Address</label>
                             <textarea rows="2"
-                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body resize-none "></textarea>
+                                class="w-full border border-gray-200 rounded-sm px-3 py-1 text-xs  font-body resize-none "></textarea>
                         </div>
                     </div>
 
                     <!-- Row 8 -->
                     <div class="grid grid-cols-12 gap-4 items-start">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">8</span>
-                            </div>
-                        </div>
                         <div class="col-span-10">
                             <label
                                 class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Business
                                 Address</label>
                             <textarea rows="2"
-                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body resize-none"></textarea>
+                                class="w-full border border-gray-200 rounded-sm px-3 py-1 text-xs  font-body resize-none"></textarea>
                         </div>
                     </div>
 
                     <!-- Row 9 -->
                     <div class="grid grid-cols-12 gap-4 items-end">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">9</span>
-                            </div>
-                        </div>
                         <div class="col-span-5">
                             <label
                                 class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Telephone
                                 (Home)</label>
                             <input type="tel"
-                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                class="w-full border border-gray-200 rounded-sm px-3 py-1 text-xs font-body" />
                         </div>
                         <div class="col-span-5">
                             <label
                                 class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Telephone
                                 (Mobile)</label>
                             <input type="tel"
-                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                class="w-full border border-gray-200 rounded-sm px-3 py-1 text-xs  font-body" />
                         </div>
                     </div>
 
                     <!-- Row 10 (Moved from Q24) -->
                     <div class="grid grid-cols-12 gap-4 items-start">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">10</span>
-                            </div>
-                        </div>
+                       
                         <div class="col-span-10">
                             <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Are
                                 there any other
                                 circumstance which appear to increase the
                                 risks ?</label>
                             <div class="flex gap-4 mb-2">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="risk"
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="risk"
                                         value="yes" class="accent-navy-900" /><span class="text-sm">Yes</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="risk"
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="risk"
                                         value="no" class="accent-navy-900" /><span class="text-sm">No</span></label>
                             </div>
                             <textarea rows="1"
-                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body resize-none"></textarea>
+                                class="w-full border border-gray-200 rounded-sm px-3 py-1 text-xs font-body resize-none"></textarea>
                         </div>
                     </div>
 
                     <!-- Row 11 -->
                     <div class="grid grid-cols-12 gap-4 items-end">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">11</span>
-                            </div>
-                        </div>
+                       
                         <div class="col-span-5">
                             <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Email
                                 Address</label>
                             <input type="email"
-                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                class="w-full border border-gray-200 rounded-sm px-3 py-1 text-xs font-body" />
                         </div>
                         <div class="col-span-5">
                             <label
                                 class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Occupation</label>
                             <input type="text"
-                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                class="w-full border border-gray-200 rounded-sm px-3 py-1 text-xs font-body" />
                         </div>
                     </div>
 
                     <!-- Row 12 (Currency Type) -->
                     <div class="grid grid-cols-12 gap-4 items-end">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">12</span>
-                            </div>
-                        </div>
+                       
                         <div class="col-span-5">
                             <label
                                 class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Currency
-                                Type</label>
+                                Type (LKR, USD, EUR)</label>
                             <input type="text"
-                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                class="w-full border border-gray-200 rounded-sm px-3 py-1 text-xsfont-body" />
                         </div>
                     </div>
 
@@ -469,11 +357,6 @@
 
                     <!-- Row 13 (Multiple Locations) -->
                     <div class="grid grid-cols-12 gap-4 items-start mt-4">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">13</span>
-                            </div>
-                        </div>
                         <div class="col-span-10">
                             <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Risk
                                 Locations</label>
@@ -481,19 +364,19 @@
                                 available in the Sums Insured table below.</p>
                             <div id="locationsContainer" class="space-y-3">
                                 <div class="location-entry flex gap-2 items-center" data-index="1">
-                                    <span class="text-xs font-semibold text-navy-800 w-20">Location 01</span>
+                                    <span class="text-xs font-semibold text-grey-800 w-20">Location 01</span>
                                     <input type="text"
-                                        class="location-input flex-1 border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        class="location-input flex-1 border border-gray-200 rounded-sm px-3 py-1 text-xs font-body" />
                                 </div>
                                 <div class="location-entry flex gap-2 items-center" data-index="2">
-                                    <span class="text-xs font-semibold text-navy-800 w-20">Location 02</span>
+                                    <span class="text-xs font-semibold text-grey-800 w-20">Location 02</span>
                                     <input type="text"
-                                        class="location-input flex-1 border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        class="location-input flex-1 border border-gray-200 rounded-sm px-3 py-1 text-xs font-body" />
                                 </div>
                                 <div class="location-entry flex gap-2 items-center" data-index="3">
-                                    <span class="text-xs font-semibold text-navy-800 w-20">Location 03</span>
+                                    <span class="text-xs font-semibold text-grey-800 w-20">Location 03</span>
                                     <input type="text"
-                                        class="location-input flex-1 border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                        class="location-input flex-1 border border-gray-200 rounded-sm px-3 py-1 text-xs font-body" />
                                 </div>
                             </div>
 
@@ -502,18 +385,13 @@
 
                     <!-- Row 14 (Mortgagee Details) -->
                     <div class="grid grid-cols-12 gap-4 items-start">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">14</span>
-                            </div>
-                        </div>
                         <div class="col-span-11">
                             <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-4">
                                 Mortgagee Details
                             </label>
                             <div class="overflow-x-auto">
-                                <table class="w-full border-collapse rounded-lg overflow-hidden min-w-[700px]">
-                                    <thead class="bg-navy-100 ">
+                                <table class="w-full border-collapse rounded-sm overflow-hidden min-w-[700px]">
+                                    <thead class="">
                                         <tr>
                                             <th
                                                 class="border border-gray-200 px-3 py-2 text-center text-xs font-semibold text-navy-950">
@@ -535,104 +413,62 @@
                                     </thead>
                                     <tbody id="mortgageeTableBody">
                                         <tr>
-                                            <td class="border border-gray-200 px-3 py-2 text-xs">
-                                                <select
-                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body">
-                                                    <option value="" disabled selected>Select Bank</option>
-                                                    <option>People's Bank</option>
-                                                    <option>Bank of Ceylon</option>
-                                                    <option>Commercial Bank</option>
-                                                    <option>Hatton National Bank (HNB)</option>
-                                                    <option>Sampath Bank</option>
-                                                    <option>Seylan Bank</option>
-                                                    <option>Other</option>
-                                                </select>
+                                            <td class="border border-gray-200 px-5 py-5 text-xs">
+                                                
+                                                
                                             </td>
-                                            <td class="border border-gray-200 px-3 py-2 text-xs">
-                                                <input type="text"
-                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body" />
+                                            <td class="border border-gray-200 px-5 py-5 text-xs">
+                                                
                                             </td>
-                                            <td class="border border-gray-200 px-3 py-2 text-xs">
-                                                <select
-                                                    class="location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body">
-                                                    <option value="">Select Location</option>
-                                                </select>
+                                            <td class="border border-gray-200 px-5 py-5 text-xs">
+                                                    
+                                                
                                             </td>
-                                            <td class="border border-gray-200 px-3 py-2 text-xs">
-                                                <input type="text"
-                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body" />
+                                            <td class="border border-gray-200 px-5 py-5 text-xs">
+                                                
                                             </td>
-                                            <td class="border border-gray-200 px-3 py-2 text-xs">
-                                                <input type="text"
-                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body" />
+                                            <td class="border border-gray-200 px-5 py-5 text-xs">
+                                            
                                             </td>
 
                                         </tr>
                                         <tr>
-                                            <td class="border border-gray-200 px-3 py-2 text-xs">
-                                                <select
-                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body">
-                                                    <option value="" disabled selected>Select Bank</option>
-                                                    <option>People's Bank</option>
-                                                    <option>Bank of Ceylon</option>
-                                                    <option>Commercial Bank</option>
-                                                    <option>Hatton National Bank (HNB)</option>
-                                                    <option>Sampath Bank</option>
-                                                    <option>Seylan Bank</option>
-                                                    <option>Other</option>
-                                                </select>
+                                            <td class="border border-gray-200 px-5 py-5 text-xs">
+                                                
+                                                
                                             </td>
-                                            <td class="border border-gray-200 px-3 py-2 text-xs">
-                                                <input type="text"
-                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body" />
+                                            <td class="border border-gray-200 px-5 py-5 text-xs">
+                                                
                                             </td>
-                                            <td class="border border-gray-200 px-3 py-2 text-xs">
-                                                <select
-                                                    class="location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body">
-                                                    <option value="">Select Location</option>
-                                                </select>
+                                            <td class="border border-gray-200 px-5 py-5 text-xs">
+                                                    
+                                                
                                             </td>
-                                            <td class="border border-gray-200 px-3 py-2 text-xs">
-                                                <input type="text"
-                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body" />
+                                            <td class="border border-gray-200 px-5 py-5 text-xs">
+                                                
                                             </td>
-                                            <td class="border border-gray-200 px-3 py-2 text-xs">
-                                                <input type="text"
-                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body" />
+                                            <td class="border border-gray-200 px-5 py-5 text-xs">
+                                            
                                             </td>
 
                                         </tr>
-                                        <tr>
-                                            <td class="border border-gray-200 px-3 py-2 text-xs">
-                                                <select
-                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body">
-                                                    <option value="" disabled selected>Select Bank</option>
-                                                    <option>People's Bank</option>
-                                                    <option>Bank of Ceylon</option>
-                                                    <option>Commercial Bank</option>
-                                                    <option>Hatton National Bank (HNB)</option>
-                                                    <option>Sampath Bank</option>
-                                                    <option>Seylan Bank</option>
-                                                    <option>Other</option>
-                                                </select>
+                                       <tr>
+                                            <td class="border border-gray-200 px-5 py-5 text-xs">
+                                                
+                                                
                                             </td>
-                                            <td class="border border-gray-200 px-3 py-2 text-xs">
-                                                <input type="text"
-                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body" />
+                                            <td class="border border-gray-200 px-5 py-5 text-xs">
+                                                
                                             </td>
-                                            <td class="border border-gray-200 px-3 py-2 text-xs">
-                                                <select
-                                                    class="location-dropdown w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body">
-                                                    <option value="">Select Location</option>
-                                                </select>
+                                            <td class="border border-gray-200 px-5 py-5 text-xs">
+                                                    
+                                                
                                             </td>
-                                            <td class="border border-gray-200 px-3 py-2 text-xs">
-                                                <input type="text"
-                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body" />
+                                            <td class="border border-gray-200 px-5 py-5 text-xs">
+                                                
                                             </td>
-                                            <td class="border border-gray-200 px-3 py-2 text-xs">
-                                                <input type="text"
-                                                    class="w-full border border-gray-200 rounded-lg px-2 py-1 text-xs bg-gray-50 font-body" />
+                                            <td class="border border-gray-200 px-5 py-5 text-xs">
+                                            
                                             </td>
 
                                         </tr>
@@ -645,82 +481,52 @@
 
                     <!-- Row 15 -->
                     <div class="grid grid-cols-12 gap-4 items-start mt-4">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">15</span>
-                            </div>
-                        </div>
+                    
                         <div class="col-span-10">
                             <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Are
                                 you a
                                 Politically Exposed Person (PEP)?</label>
                             <div class="flex gap-4 mb-2">
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="pep"
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="pep"
                                         value="yes" class="accent-navy-900" /><span class="text-sm">Yes</span></label>
-                                <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="pep"
+                                <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="pep"
                                         value="no" class="accent-navy-900" /><span class="text-sm">No</span></label>
                             </div>
                             <textarea rows="1"
-                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body resize-none"></textarea>
+                                class="w-full border border-gray-200 rounded-sm px-3 py-1 text-xs  font-body resize-none"></textarea>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- SECTION B: PROPERTY DETAILS -->
-            <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
-                <div class="bg-tealCustom-500 px-6 py-2 flex items-center gap-3">
-                    <!-- <span class="w-7 h-7 rounded-full bg-gold-400 text-navy-950 text-xs font-mono font-bold flex items-center justify-center">B</span> -->
-                    <h3 class="font-heading text-white text-mdX font-semibold">
+                <div class="p-6 space-y-5">
+                    <h3 class="font-heading text-grey text-mdX font-semibold">
                         Property to be Insured
                     </h3>
-                </div>
-                <div class="px-6 py-3 bg-navy-50 border-b border-navy-100">
-                    <p class="text-xs text-navy-700 italic">
-                        The description of the building must be given even if the building
-                        is not to be insured.
-                    </p>
-                </div>
-                <div class="p-6 space-y-5">
                     <!-- Row 11 -->
                     <div class="grid grid-cols-12 gap-4 items-start">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">11</span>
-                            </div>
-                        </div>
+                        
                         <div class="col-span-10">
                             <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Full
                                 Address of
                                 Premises to be Insured</label>
                             <textarea rows="2"
-                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body resize-none"></textarea>
+                                class="w-full border border-gray-200 rounded-sm px-3 py-1 text-xs font-body resize-none"></textarea>
                         </div>
                     </div>
 
                     <!-- Row 12 -->
                     <div class="grid grid-cols-12 gap-4 items-end">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">12</span>
-                            </div>
-                        </div>
                         <div class="col-span-10">
                             <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Name
                                 of Land
                                 <span class="text-gray-400 font-normal normal-case">(if any)</span></label>
                             <input type="text"
-                                class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body" />
+                                class="w-full border border-gray-200 rounded-sm px-3 py-1 text-xs bg-gray-50 font-body" />
                         </div>
                     </div>
 
                     <!-- Row 13 -->
                     <div class="grid grid-cols-12 gap-4 items-start">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">13</span>
-                            </div>
-                        </div>
                         <div class="col-span-10">
                             <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Of
                                 what materials
@@ -744,11 +550,6 @@
 
                     <!-- Row 14 -->
                     <div class="grid grid-cols-12 gap-4 items-start">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">14</span>
-                            </div>
-                        </div>
                         <div class="col-span-10">
                             <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Of
                                 what materials
@@ -771,12 +572,7 @@
                     </div>
 
                     <!-- Row 15 -->
-                    <div class="grid grid-cols-12 gap-4 items-end">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">15</span>
-                            </div>
-                        </div>
+                    <div class="grid grid-cols-12 gap-4 items-end"> 
                         <div class="col-span-4">
                             <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">Number
                                 of floors
@@ -788,11 +584,6 @@
 
                     <!-- Row 16-17 -->
                     <div class="grid grid-cols-12 gap-4 items-start">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">16</span>
-                            </div>
-                        </div>
                         <div class="col-span-4">
                             <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">Is the
                                 Building
@@ -806,11 +597,6 @@
                                         class="text-sm">No</span></label>
                             </div>
                         </div>
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">17</span>
-                            </div>
-                        </div>
                         <div class="col-span-4">
                             <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">
                                 If Completed and occupied, state Name of Occupant?</label>
@@ -821,11 +607,6 @@
 
                     <!-- Row 18 -->
                     <div class="grid grid-cols-12 gap-4 items-start">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">18</span>
-                            </div>
-                        </div>
                         <div class="col-span-10 space-y-3">
                             <div>
                                 <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">
@@ -860,11 +641,6 @@
 
                     <!-- Row 19 -->
                     <div class="grid grid-cols-12 gap-4 items-end">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">19</span>
-                            </div>
-                        </div>
                         <div class="col-span-10">
                             <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-1">How is
                                 the Building
@@ -876,11 +652,6 @@
 
                     <!-- Row 20 -->
                     <div class="grid grid-cols-12 gap-4 items-start">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">20</span>
-                            </div>
-                        </div>
                         <div class="col-span-10 space-y-3">
                             <div>
                                 <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">
@@ -908,11 +679,7 @@
 
                     <!-- Row 21 -->
                     <div class="grid grid-cols-12 gap-4 items-start">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">21</span>
-                            </div>
-                        </div>
+                        
                         <div class="col-span-10 space-y-3">
                             <div>
                                 <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">
@@ -936,11 +703,6 @@
 
                     <!-- Row 22 -->
                     <div class="grid grid-cols-12 gap-4 items-start">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">22</span>
-                            </div>
-                        </div>
                         <div class="col-span-10">
                             <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">
                                 Is the policy to be on Reinstatement value basis in respect of
@@ -964,11 +726,6 @@
 
                     <!-- Row 23 -->
                     <div class="grid grid-cols-12 gap-4 items-start">
-                        <div class="col-span-1">
-                            <div class="h-10 flex items-center">
-                                <span class="text-sm font-mono text-navy-700 font-semibold">23 </span>
-                            </div>
-                        </div>
                         <div class="col-span-10">
                             <label class="block text-xs font-semibold text-navy-950 uppercase tracking-wide mb-2">If the
                                 building used
@@ -985,6 +742,14 @@
                             <textarea rows="1"
                                 class="w-full border border-gray-200 rounded-lg px-3 py-1 text-xs bg-gray-50 font-body resize-none"></textarea>
                         </div>
+            </div>
+
+
+            <!-- SECTION B: PROPERTY DETAILS -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
+               
+            
+                
                     </div>
 
 
@@ -994,7 +759,7 @@
             </div>
 
             <!-- SECTION C: SUMS INSURED -->
-            <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow">
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden print-shadow" style="display: none;">
                 <div class="bg-tealCustom-500 px-6 py-2 flex items-center gap-3">
                     <!-- <span class="w-7 h-7 rounded-full bg-gold-400 text-navy-950 text-xs font-mono font-bold flex items-center justify-center">C</span> -->
                     <h3 class="font-heading text-white text-md font-semibold">
@@ -1359,13 +1124,12 @@
               class="w-7 h-7 rounded-full bg-gold-400 text-navy-950 text-xs font-mono font-bold flex items-center justify-center"
               >D</span
             > -->
-                    <h3 class="font-heading text-white text-md font-semibold">
-                        Peril Covers
-                    </h3>
+                   
                     <span class="ml-auto text-white text-xs font-mono"></span>
                 </div>
                 <div class="p-6">
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-2 gap-3">
                         <!-- Each cover as a toggle card -->
                         <label
                             class="flex items-center gap-3 border border-gray-200 rounded-xl px-4 py-3 cursor-pointer hover:border-navy-300 hover:bg-navy-50 transition-all has-[:checked]:border-navy-700 has-[:checked]:bg-navy-50">
@@ -1839,28 +1603,6 @@
     </div>
     </form>
     <script>
-        // Global Functions for inline event handlers
-        function toggleVatSection(radio) {
-            const vatContainer = document.getElementById('vatDetailsSection');
-            if (vatContainer) {
-                if (radio.value === 'yes') {
-                    vatContainer.classList.remove('hidden');
-                } else {
-                    vatContainer.classList.add('hidden');
-                }
-            }
-        }
-
-        function toggleOtherInput(inputId, checkbox) {
-            const inputField = document.getElementById(inputId);
-            if (inputField) {
-                if (checkbox.checked) {
-                    inputField.classList.remove('hidden');
-                } else {
-                    inputField.classList.add('hidden');
-                }
-            }
-        }
 
         function addDirectorRow() {
             const tbody = document.getElementById('directorsTableBody');
